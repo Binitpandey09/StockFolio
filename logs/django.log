@@ -1516,3 +1516,28 @@ INFO 2025-12-07 01:51:04,760 autoreload 3932 24584 C:\Users\91950\Desktop\Stock-
 INFO 2025-12-07 01:51:07,050 autoreload 26680 20984 Watching for file changes with StatReloader
 INFO 2025-12-07 01:53:44,118 autoreload 26680 20984 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\migrations\0007_watchlist_added_at_userpreference_stockcomparison_and_more.py changed, reloading.
 INFO 2025-12-07 01:53:46,513 autoreload 24500 22496 Watching for file changes with StatReloader
+INFO 2025-12-07 01:54:35,492 basehttp 24500 8016 "GET / HTTP/1.1" 302 0
+INFO 2025-12-07 01:54:35,830 basehttp 24500 8016 "GET /login/?next=/ HTTP/1.1" 200 4135
+INFO 2025-12-07 01:54:36,183 basehttp 24500 22940 "GET /static/styles.css HTTP/1.1" 200 1146
+INFO 2025-12-07 01:54:36,184 basehttp 24500 8016 "GET /static/modern-styles.css HTTP/1.1" 200 9996
+INFO 2025-12-07 01:54:36,203 basehttp 24500 26988 "GET /static/market.css HTTP/1.1" 200 1392
+INFO 2025-12-07 01:54:36,212 basehttp 24500 22940 "GET /static/form.css HTTP/1.1" 200 1313
+WARNING 2025-12-07 01:54:42,886 log 24500 18404 Not Found: /favicon.ico
+WARNING 2025-12-07 01:54:42,887 basehttp 24500 18404 "GET /favicon.ico HTTP/1.1" 404 7396
+INFO 2025-12-07 01:56:39,091 basehttp 24500 1688 "GET / HTTP/1.1" 302 0
+INFO 2025-12-07 01:56:39,121 basehttp 24500 1688 "GET /login/?next=/ HTTP/1.1" 200 4198
+INFO 2025-12-07 01:56:39,218 basehttp 24500 1688 "GET /static/enhanced-styles.css HTTP/1.1" 200 6501
+INFO 2025-12-07 01:56:39,231 basehttp 24500 25140 "GET /static/modern-styles.css HTTP/1.1" 304 0
+INFO 2025-12-07 01:56:39,239 basehttp 24500 1688 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2025-12-07 01:56:39,239 basehttp 24500 25140 "GET /static/market.css HTTP/1.1" 304 0
+INFO 2025-12-07 01:56:39,246 basehttp 24500 25140 "GET /static/form.css HTTP/1.1" 304 0
+INFO 2025-12-07 01:56:50,783 basehttp 24500 15232 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-12-07 01:56:50,827 basehttp 24500 15232 "GET / HTTP/1.1" 200 11097
+INFO 2025-12-07 01:56:50,896 basehttp 24500 15232 "GET /static/enhanced-styles.css HTTP/1.1" 304 0
+INFO 2025-12-07 01:56:55,609 basehttp 24500 15232 "GET /stocks/ HTTP/1.1" 200 8340
+INFO 2025-12-07 01:56:59,860 basehttp 24500 3844 "GET /stocks/?q= HTTP/1.1" 200 8340
+INFO 2025-12-07 01:56:59,930 basehttp 24500 3844 "GET /static/enhanced-styles.css HTTP/1.1" 304 0
+INFO 2025-12-07 01:57:01,851 basehttp 24500 3844 "GET /dashboard/ HTTP/1.1" 200 8158
+INFO 2025-12-07 01:57:03,285 basehttp 24500 3048 "GET /stocks/ HTTP/1.1" 200 8340
+INFO 2025-12-07 01:57:05,509 basehttp 24500 3048 "GET / HTTP/1.1" 200 11097
+INFO 2025-12-07 01:58:23,152 autoreload 25212 18612 Watching for file changes with StatReloader
