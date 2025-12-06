@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Analytics Dashboard - StockFolio{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <h2 class="mb-4">📊 Analytics Dashboard</h2>
+    
+    <!-- Summary Cards -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Portfolio Value</h6>
+                    <h3 class="card-title text-primary">${{ total_value|floatformat:2 }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Total Invested</h6>
+                    <h3 class="card-title">${{ invested|floatformat:2 }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Total Gain/Loss</h6>
+                    <h3 class="card-title {% if total_gain_loss >= 0 %}text-success{% else %}text-danger{% endif %}">
+                        ${{ total_gain_loss|floatformat:2 }}
+                    </h3>
+                    <p class="mb-0 {% if total_gain_loss_pct >= 0 %}text-success{% else %}text-danger{% endif %}">
+                        {{ total_gain_loss_pct|floatformat:2 }}%
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Holdings</h6>
+                    <h3 class="card-title">{{ portfolio_count }}</h3>
+                    <p class="mb-0 text-muted">
+                        <small>{{ watchlist_count }} in watchlist | {{ active_alerts }} alerts</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Breakdown -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Portfolio Breakdown</h5>
+                </div>
+                <div class="card-body">
+                    {% if portfolio_data %}
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Stock</th>
+                                        <th class="text-center">Quantity</th>
+                                        <th class="text-end">Purchase Price</th>
+                                        <th class="text-end">Current Price</th>
+                                        <th class="text-end">Invested Value</th>
+                                        <th class="text-end">Current Value</th>
+                                        <th class="text-end">Gain/Loss</th>
+                                        <th class="text-end">Return %</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for item in portfolio_data %}
+                                        <tr>
+                                            <td>
+                                                <strong>{{ item.stock.ticker }}</strong><br>
+                                                <small class="text-muted">{{ item.stock.name }}</small>
+                                            </td>
+                                            <td class="text-center">{{ item.quantity }}</td>
+                                            <td class="text-end">${{ item.purchase_price|floatformat:2 }}</td>
+                                            <td class="text-end">${{ item.current_price|floatformat:2 }}</td>
+                                            <td class="text-end">${{ item.invested_value|floatformat:2 }}</td>
+                                            <td class="text-end"><strong>${{ item.current_value|floatformat:2 }}</strong></td>
+                                            <td class="text-end {% if item.gain_loss >= 0 %}text-success{% else %}text-danger{% endif %}">
+                                                ${{ item.gain_loss|floatformat:2 }}
+                                            </td>
+                                            <td class="text-end {% if item.gain_loss_pct >= 0 %}text-success{% else %}text-danger{% endif %}">
+                                                <strong>{{ item.gain_loss_pct|floatformat:2 }}%</strong>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                                <tfoot class="table-light">
+                                    <tr>
+                                        <th colspan="4">TOTAL</th>
+                                        <th class="text-end">${{ invested|floatformat:2 }}</th>
+                                        <th class="text-end">${{ total_value|floatformat:2 }}</th>
+                                        <th class="text-end {% if total_gain_loss >= 0 %}text-success{% else %}text-danger{% endif %}">
+                                            ${{ total_gain_loss|floatformat:2 }}
+                                        </th>
+                                        <th class="text-end {% if total_gain_loss_pct >= 0 %}text-success{% else %}text-danger{% endif %}">
+                                            {{ total_gain_loss_pct|floatformat:2 }}%
+                                        </th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="text-center py-5">
+                            <p class="text-muted">No stocks in your portfolio yet.</p>
+                            <a href="{% url 'stocks' %}" class="btn btn-primary">Browse Stocks</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <a href="{% url 'stocks' %}" class="btn btn-outline-primary w-100 mb-2">
+                🛒 Browse Market
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="{% url 'watchlist_view' %}" class="btn btn-outline-success w-100 mb-2">
+                👁️ View Watchlist
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="{% url 'price_alerts' %}" class="btn btn-outline-warning w-100 mb-2">
+                🔔 Price Alerts
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="{% url 'stock_comparison' %}" class="btn btn-outline-info w-100 mb-2">
+                📊 Compare Stocks
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

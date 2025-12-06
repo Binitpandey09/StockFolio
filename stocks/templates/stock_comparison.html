@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Stock Comparison - StockFolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">📊 Stock Comparison</h2>
+    
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <!-- Stock Selection -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Select Stocks to Compare</h5>
+        </div>
+        <div class="card-body">
+            <form method="GET" action="{% url 'stock_comparison' %}">
+                <div class="row">
+                    <div class="col-md-2">
+                        <input type="text" name="symbols" class="form-control" placeholder="Symbol 1" value="{{ symbols.0 }}">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" name="symbols" class="form-control" placeholder="Symbol 2" value="{{ symbols.1 }}">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" name="symbols" class="form-control" placeholder="Symbol 3" value="{{ symbols.2 }}">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" name="symbols" class="form-control" placeholder="Symbol 4" value="{{ symbols.3 }}">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" name="symbols" class="form-control" placeholder="Symbol 5" value="{{ symbols.4 }}">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary w-100">Compare</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Comparison Results -->
+    {% if comparison_data %}
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">Comparison Results</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Metric</th>
+                                {% for stock in comparison_data %}
+                                    <th class="text-center">{{ stock.symbol }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Company Name</strong></td>
+                                {% for stock in comparison_data %}
+                                    <td>{{ stock.name }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                <td><strong>Current Price</strong></td>
+                                {% for stock in comparison_data %}
+                                    <td class="text-center">${{ stock.current_price|floatformat:2 }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                <td><strong>Day Change</strong></td>
+                                {% for stock in comparison_data %}
+                                    <td class="text-center {% if stock.day_change > 0 %}text-success{% else %}text-danger{% endif %}">
+                                        {{ stock.day_change|floatformat:2 }} ({{ stock.day_change_percent|floatformat:2 }}%)
+                                    </td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                <td><strong>Volume</strong></td>
+                                {% for stock in comparison_data %}
+                                    <td class="text-center">{{ stock.volume|floatformat:0 }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                <td><strong>Market Cap</strong></td>
+                                {% for stock in comparison_data %}
+                                    <td class="text-center">
+                                        {% if stock.market_cap %}
+                                            ${{ stock.market_cap|floatformat:0 }}
+                                        {% else %}
+                                            N/A
+                                        {% endif %}
+                                    </td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                <td><strong>Sector</strong></td>
+                                {% for stock in comparison_data %}
+                                    <td class="text-center">{{ stock.sector }}</td>
+                                {% endfor %}
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Save Comparison -->
+                <form method="POST" action="{% url 'save_comparison' %}" class="mt-3">
+                    {% csrf_token %}
+                    {% for symbol in symbols %}
+                        <input type="hidden" name="symbols" value="{{ symbol }}">
+                    {% endfor %}
+                    <div class="row">
+                        <div class="col-md-8">
+                            <input type="text" name="name" class="form-control" 
+                                   placeholder="Enter a name to save this comparison" required>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-success w-100">Save Comparison</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- Saved Comparisons -->
+    {% if comparisons %}
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Saved Comparisons</h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group">
+                    {% for comparison in comparisons %}
+                        <a href="{% url 'load_comparison' comparison.id %}" 
+                           class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">{{ comparison.name }}</h6>
+                                <small>{{ comparison.created_at|date:"M d, Y" }}</small>
+                            </div>
+                            <p class="mb-1">
+                                <small>Stocks: {{ comparison.stocks }}</small>
+                            </p>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

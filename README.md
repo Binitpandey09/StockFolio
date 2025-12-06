@@ -1,26 +1,43 @@
-# StockFolio
+# 📈 StockFolio
 
-📈 A real-time stock trading simulation platform built with Django, featuring live stock prices, portfolio management, and trading capabilities.
+**Smart Stock Trading Simulation Platform**
 
-🎯 Features
+A comprehensive real-time stock trading simulation platform built with Django. Practice trading with real market data without risking real money. Perfect for learning stock market trading and portfolio management.
 
-72+ Real Stocks - Live prices from major markets (AAPL, MSFT, GOOGL, TSLA, etc.)
+**Developed by:** Binit Pandey  
+**Version:** 2.0  
+**License:** MIT
 
-Real-Time Data - Auto-updating prices every 30 seconds
+## 🎯 Core Features
 
-Portfolio Management - Track your investments and performance
+### 📊 Trading & Portfolio
+- **Real-Time Stock Data** - Live prices from 72+ major stocks (AAPL, MSFT, GOOGL, TSLA, etc.)
+- **Buy/Sell Stocks** - Execute trades at current market prices
+- **Portfolio Management** - Track your investments with real-time valuations
+- **Transaction History** - Complete record of all your trades
+- **Analytics Dashboard** - Comprehensive portfolio performance metrics
 
-Watchlist - Monitor stocks you're interested in
+### 🔔 Advanced Features (NEW)
+- **Price Alerts** - Set custom price alerts for any stock (above/below target price)
+- **Stock Comparison** - Compare multiple stocks side-by-side with key metrics
+- **Watchlist** - Monitor stocks you're interested in with live updates
+- **User Preferences** - Customize notifications and app settings
+- **Email Notifications** - Get notified about trades, alerts, and important updates
 
-Trading Simulation - Buy and sell stocks with real market prices
+### 💼 Portfolio Analytics
+- Total portfolio value tracking
+- Gain/Loss calculations ($ and %)
+- Individual stock performance
+- Sector allocation
+- Investment returns analysis
 
-Transaction History - Complete record of all your trades
-
-Email Notifications - Get notified about successful trades
-
-Admin Dashboard - Comprehensive management interface
-
-Responsive Design - Works on desktop and mobile
+### 🎨 User Experience
+- Modern, responsive design
+- Bootstrap 5 UI
+- Mobile-friendly interface
+- Real-time price updates
+- Search functionality
+- Intuitive navigation
 
 🚀 Quick Setup & Run
 Prerequisites
@@ -154,149 +171,37 @@ python manage.py populate_stocks
 
 Check terminal logs
 
-⚙️ DevOps Integration (Docker + Ansible + Nagios + Terraform)
+## 🆕 What's New in Version 2.0
 
-This project includes a full DevOps setup inside the infra/ directory.
+### Enhanced Features
+✅ **Price Alerts System** - Never miss a price target  
+✅ **Stock Comparison Tool** - Compare up to 5 stocks simultaneously  
+✅ **Advanced Analytics Dashboard** - Detailed portfolio insights  
+✅ **User Preferences** - Customizable notifications and settings  
+✅ **Improved UI/UX** - Modern Bootstrap 5 design  
+✅ **Better Navigation** - Intuitive menu structure  
+✅ **Enhanced Admin Panel** - Better stock and user management  
 
-🐳 1. Docker + Ansible Cluster
+### Removed
+❌ Docker/Ansible/Nagios setup (simplified deployment)
 
-📍 Location: infra/ansible
+---
 
-▶️ Spin up Ansible Master & Worker Nodes
-docker compose up -d
+## 📸 Screenshots
 
+### Dashboard
+View your complete portfolio with real-time valuations and performance metrics.
 
-This creates 3 containers:
+### Market
+Browse 72+ stocks with live prices, search functionality, and quick actions.
 
-Container Name	Purpose
-ansible-master	Runs playbooks
-ansible-node1	Worker node
-ansible-node2	Worker node
-▶️ Run Playbook
-docker exec -it ansible-master bash
-cd /home/ansible/ansible-work
-ansible-playbook hello-world.yml
+### Price Alerts
+Set custom alerts and get notified when stocks hit your target prices.
 
+### Stock Comparison
+Compare multiple stocks side-by-side with key financial metrics.
 
-This will automatically:
-
-Install Python & packages
-
-Clone your Django project
-
-Install requirements
-
-Run migrations
-
-Start Django server at 0.0.0.0:8000
-
-📊 2. Nagios Monitoring System
-
-📍 Location: infra/nagios
-
-▶️ Start Nagios
-docker compose up -d
-
-▶️ Open Nagios Web UI
-
-👉 http://localhost:8081
-
-Login:
-
-Username: nagiosadmin
-
-Password: nagios
-
-Nagios Monitors:
-
-CPU Usage
-
-Memory
-
-Disk
-
-Ping (node up/down)
-
-HTTP Service (optional)
-
-🔁 3. FINAL 7 STEPS YOU MUST FOLLOW EVERY TIME
-
-These steps ensure your Ansible deployment always works, even after shutdown.
-
-1️⃣ Go to Ansible folder
-cd "C:\Users\Nitish Kumar\OneDrive\Desktop\Stock_market_Prediction\infra\ansible"
-
-2️⃣ Start Ansible containers
-docker compose up -d
-
-
-This launches:
-
-ansible-master
-
-ansible-node1
-
-ansible-node2
-
-3️⃣ Copy required Ansible files into master container
-
-Run from PowerShell:
-
-docker cp inventory.ini ansible-master:/home/ansible/ansible-work/
-docker cp ansible.cfg ansible-master:/home/ansible/ansible-work/
-docker cp hello-world.yml ansible-master:/home/ansible/ansible-work/
-
-✔ Why this is important?
-
-Fixes missing inventory error
-
-Fixes sudo password error
-
-Fixes playbook not found
-
-Permanent clean solution
-
-4️⃣ Enter Ansible master container
-docker exec -it ansible-master bash
-cd /home/ansible/ansible-work
-ls
-
-
-You MUST see:
-
-inventory.ini
-ansible.cfg
-hello-world.yml
-
-5️⃣ Test nodes
-ansible all -m ping
-
-
-Expected:
-
-node1 | SUCCESS => pong
-node2 | SUCCESS => pong
-
-6️⃣ Run deployment
-ansible-playbook hello-world.yml
-
-
-This will:
-
-✔ Install Python
-✔ Clone Stock Market App
-✔ Install dependencies
-✔ Run database migrations
-✔ Start Django server on port 8000
-
-7️⃣ Open your Django project
-
-Open browser:
-
-👉 http://localhost:8000
-
-👉 http://127.0.0.1:8000
-
+---
 
 Happy Trading! 📈💰
 

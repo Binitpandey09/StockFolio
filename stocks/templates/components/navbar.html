@@ -1,19 +1,59 @@
-<div class="nav">
-    <h3>Investing.com</h3>
-    <ul>
-        <li><a href="{% url 'index' %}">Home</a></li>
-        <li><a href="{% url 'stocks' %}">Stocks</a></li>
-        <li><a href="{% url 'transaction_history' %}">Transaction History</a></li>
-        <li><a href="{% url 'portfolio_dashboard' %}">Portfolio</a></li>
-        <li><a href="{% url 'watchlist_view' %}">Watchlist</a></li>
-
-        {% if request.user.is_authenticated %}
-            <li><a href="{% url 'logout' %}">Logout</a></li>
-            <li>{{request.user.username}}</li>
-
-        {% else %}
-            <li><a href="{% url 'login' %}">Login</a></li>
-        {% endif %}
-
-    </ul>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <strong>📈 StockFolio</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'dashboard_analytics' %}">📊 Analytics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'stocks' %}">🏪 Market</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'portfolio_dashboard' %}">💼 Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'watchlist_view' %}">👁️ Watchlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'price_alerts' %}">🔔 Alerts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'stock_comparison' %}">⚖️ Compare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'transaction_history' %}">📜 History</a>
+                    </li>
+                {% endif %}
+            </ul>
+            <ul class="navbar-nav">
+                {% if request.user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            👤 {{ request.user.username }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="{% url 'user_preferences' %}">⚙️ Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">🚪 Logout</a></li>
+                        </ul>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-primary ms-2" href="{% url 'register' %}">Register</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
