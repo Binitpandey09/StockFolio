@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+
+{% block title %}Transaction History{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="page-header">
+        <h2>Transaction History</h2>
+        <p class="text-muted">View all your past buy and sell transactions</p>
+    </div>
+    
+    {% if transactions %}
+    <div class="table-responsive">
+        <table class="table table-striped modern-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Stock</th>
+                    <th>Type</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                <tr>
+                    <td>
+                        <div class="date-info">
+                            <strong>{{ transaction.date|date:"M d, Y" }}</strong>
+                            <small class="text-muted d-block">{{ transaction.date|time:"H:i" }}</small>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="stock-info">
+                            <strong>{{ transaction.stock_name }}</strong>
+                            <small class="text-muted d-block">{{ transaction.stock_symbol }}</small>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="badge {% if transaction.type == 'BUY' %}bg-success{% else %}bg-danger{% endif %}">
+                            {{ transaction.type }}
+                        </span>
+                    </td>
+                    <td>{{ transaction.quantity }}</td>
+                    <td>${{ transaction.price|floatformat:2 }}</td>
+                    <td>
+                        <strong>${{ transaction.quantity|mul:transaction.price|floatformat:2 }}</strong>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <div class="empty-icon">📋</div>
+        <h3>No transactions yet</h3>
+        <p>Start trading to see your transaction history here!</p>
+        <a href="{% url 'stocks' %}" class="btn btn-primary">Browse Stocks</a>
+    </div>
+    {% endif %}
+</div>
+
+<style>
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h2 {
+    color: var(--gray-900);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.modern-table {
+    background: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: none;
+}
+
+.modern-table thead th {
+    background: var(--gray-50);
+    border: none;
+    font-weight: 600;
+    color: var(--gray-700);
+    padding: 1rem;
+}
+
+.modern-table tbody td {
+    border: none;
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.modern-table tbody tr:hover {
+    background: var(--gray-50);
+}
+
+.date-info strong {
+    color: var(--gray-900);
+}
+
+.stock-info strong {
+    color: var(--gray-900);
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    color: var(--gray-900);
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+}
+</style>
+{% endblock %}
+

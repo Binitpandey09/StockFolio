@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+{% block title %}Portfolio Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="page-header">
+        <h2>Portfolio Dashboard</h2>
+        <p class="text-muted">Detailed breakdown of your investment portfolio</p>
+    </div>
+
+    <!-- Portfolio Summary -->
+    <div class="row mb-4">
+        <div class="col-md-6 mb-3">
+            <div class="summary-card">
+                <div class="summary-icon">
+                    <i class="icon-portfolio">💼</i>
+                </div>
+                <div class="summary-content">
+                    <h3>${{ total_portfolio_value|floatformat:2 }}</h3>
+                    <p>Total Portfolio Value</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="summary-card">
+                <div class="summary-icon">
+                    <i class="icon-invested">💰</i>
+                </div>
+                <div class="summary-content">
+                    <h3>${{ total_invested_capital|floatformat:2 }}</h3>
+                    <p>Total Invested Capital</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% if portfolio %}
+    <div class="table-responsive">
+        <table class="table table-striped modern-table">
+            <thead>
+                <tr>
+                    <th>Stock</th>
+                    <th>Quantity Owned</th>
+                    <th>Total Invested</th>
+                    <th>Current Price</th>
+                    <th>Current Value</th>
+                    <th>P&L</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for symbol, data in portfolio.items %}
+                <tr>
+                    <td>
+                        <div class="stock-info">
+                            <strong>{{ data.stock_name }}</strong>
+                            <small class="text-muted d-block">{{ symbol }}</small>
+                        </div>
+                    </td>
+                    <td>{{ data.quantity }}</td>
+                    <td>${{ data.invested_value|floatformat:2 }}</td>
+                    <td>${{ data.current_price|floatformat:2 }}</td>
+                    <td>
+                        <strong>${{ data.current_value|floatformat:2 }}</strong>
+                    </td>
+                    <td>
+                        {% with pl=data.current_value|sub:data.invested_value %}
+                        <span class="{% if pl >= 0 %}text-success{% else %}text-danger{% endif %}">
+                            {% if pl >= 0 %}+{% endif %}${{ pl|floatformat:2 }}
+                        </span>
+                        {% endwith %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <div class="empty-icon">📊</div>
+        <h3>Your portfolio is empty</h3>
+        <p>Buy some stocks to see your portfolio dashboard here!</p>
+        <a href="{% url 'stocks' %}" class="btn btn-primary">Explore Stocks</a>
+    </div>
+    {% endif %}
+</div>
+
+<style>
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h2 {
+    color: var(--gray-900);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.summary-card {
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.summary-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    background: var(--gray-50);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.summary-content h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--gray-900);
+}
+
+.summary-content p {
+    margin: 0;
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+.modern-table {
+    background: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: none;
+}
+
+.modern-table thead th {
+    background: var(--gray-50);
+    border: none;
+    font-weight: 600;
+    color: var(--gray-700);
+    padding: 1rem;
+}
+
+.modern-table tbody td {
+    border: none;
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.modern-table tbody tr:hover {
+    background: var(--gray-50);
+}
+
+.stock-info strong {
+    color: var(--gray-900);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    color: var(--gray-900);
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+}
+</style>
+{% endblock %}
+

@@ -1,0 +1,557 @@
+/* Modern Stock Market App Styles */
+
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --success-color: #10b981;
+  --success-hover: #059669;
+  --danger-color: #ef4444;
+  --danger-hover: #dc2626;
+  --warning-color: #f59e0b;
+  --warning-hover: #d97706;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --white: #ffffff;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Modern Navigation */
+.nav {
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--gray-200);
+}
+
+.nav h3 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.nav h3:hover {
+  color: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav li {
+  position: relative;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--gray-700);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav a:hover {
+  color: var(--primary-color);
+  background: var(--gray-50);
+  transform: translateY(-2px);
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav a:hover::before {
+  width: 80%;
+}
+
+/* Modern Stock Cards */
+.wrapper {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.stock-card {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  border: 1px solid var(--gray-200);
+  position: relative;
+  overflow: hidden;
+}
+
+.stock-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--success-color));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.stock-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.stock-card:hover::before {
+  transform: scaleX(1);
+}
+
+.stock-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.stock-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0 0 0.25rem 0;
+  line-height: 1.2;
+}
+
+.stock-ticker {
+  color: var(--gray-500);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-watchlist {
+  background: var(--gray-100);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--gray-400);
+}
+
+.btn-watchlist:hover {
+  background: var(--danger-color);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.heart-icon {
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.btn-watchlist:hover .heart-icon {
+  transform: scale(1.2);
+}
+
+.stock-price {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.price-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.price-change {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--success-color);
+  background: rgba(16, 185, 129, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.stock-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn-sell, .btn-buy {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-sell {
+  background: var(--danger-color);
+  color: var(--white);
+}
+
+.btn-sell:hover {
+  background: var(--danger-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-buy {
+  background: var(--success-color);
+  color: var(--white);
+}
+
+.btn-buy:hover {
+  background: var(--success-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Modern Modals */
+.modern-modal {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-xl);
+}
+
+.modern-modal .modal-header {
+  border-bottom: 1px solid var(--gray-200);
+  padding: 1.5rem;
+}
+
+.modern-modal .modal-title {
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.modern-modal .modal-body {
+  padding: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.modern-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--gray-200);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--white);
+}
+
+.modern-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.price-info {
+  background: var(--gray-50);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.modern-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Tables */
+.table {
+  background: var(--white);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+.table thead th {
+  background: var(--gray-50);
+  border: none;
+  font-weight: 600;
+  color: var(--gray-700);
+  padding: 1rem;
+}
+
+.table tbody td {
+  border: none;
+  padding: 1rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.table tbody tr:hover {
+  background: var(--gray-50);
+}
+
+/* Search Form */
+form[method="get"] {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  margin: 2rem;
+  text-align: center;
+}
+
+form[method="get"] input[type="text"] {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--gray-200);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 300px;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+form[method="get"] input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+form[method="get"] button {
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form[method="get"] button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Pagination */
+.pagination {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: var(--shadow-md);
+  margin: 2rem 0;
+}
+
+.page-link {
+  border: none;
+  color: var(--gray-700);
+  padding: 0.75rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.page-link:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.page-item.active .page-link {
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+}
+
+/* Footer */
+.footer {
+  background: var(--white);
+  color: var(--gray-700);
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer li {
+  transition: all 0.3s ease;
+}
+
+.footer li:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--gray-700);
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .wrapper {
+    padding: 1rem;
+  }
+  
+  form[method="get"] input[type="text"] {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+  
+  .footer ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Success/Error Messages */
+.alert {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  border: none;
+}
+
+.alert-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success-color);
+  border-left: 4px solid var(--success-color);
+}
+
+.alert-danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+  border-left: 4px solid var(--danger-color);
+}
+
+.alert-warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning-color);
+  border-left: 4px solid var(--warning-color);
+}
+

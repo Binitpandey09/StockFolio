@@ -1,0 +1,8 @@
+FROM ubuntu:22.04
+
+RUN apt-get update && apt-get install -y openssh-server python3 sudo
+RUN useradd -m ansible && echo "ansible:1234" | chpasswd && usermod -aG sudo ansible
+RUN mkdir /var/run/sshd
+EXPOSE 22 8000
+
+CMD ["/usr/sbin/sshd", "-D"]

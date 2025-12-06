@@ -1,0 +1,301 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+
+{% block title %}Dashboard - Stock Market App{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <!-- Dashboard Header -->
+    <div class="dashboard-header mb-4">
+        <h1 class="dashboard-title">Welcome back, {{ request.user.first_name|default:request.user.username }}!</h1>
+        <p class="dashboard-subtitle">Here's your portfolio overview</p>
+    </div>
+
+    <!-- Portfolio Summary Cards -->
+    <div class="row mb-4">
+        <div class="col-md-4 mb-3">
+            <div class="summary-card">
+                <div class="summary-icon">
+                    <i class="icon-portfolio">📊</i>
+                </div>
+                <div class="summary-content">
+                    <h3>${{ total_value|floatformat:2 }}</h3>
+                    <p>Total Portfolio Value</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="summary-card">
+                <div class="summary-icon">
+                    <i class="icon-invested">💰</i>
+                </div>
+                <div class="summary-content">
+                    <h3>${{ invested|floatformat:2 }}</h3>
+                    <p>Total Invested</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="summary-card">
+                <div class="summary-icon">
+                    <i class="icon-gains">{% if gains >= 0 %}📈{% else %}📉{% endif %}</i>
+                </div>
+                <div class="summary-content">
+                    <h3 class="{% if gains >= 0 %}text-success{% else %}text-danger{% endif %}">{{ gains }}%</h3>
+                    <p>Total Gains/Loss</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Holdings Table -->
+    <div class="holdings-section">
+        <div class="section-header">
+            <h2>Your Holdings</h2>
+            <a href="{% url 'stocks' %}" class="btn btn-primary">Browse Stocks</a>
+        </div>
+        
+        {% if data %}
+        <div class="table-responsive">
+            <table class="table holdings-table">
+                <thead>
+                    <tr>
+                        <th>Stock</th>
+                        <th>Quantity</th>
+                        <th>Purchase Price</th>
+                        <th>Current Price</th>
+                        <th>Total Value</th>
+                        <th>P&L</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                    <tr>
+                        <td>
+                            <div class="stock-info">
+                                <strong>{{ item.stock.name }}</strong>
+                                <small class="text-muted d-block">{{ item.stock.ticker }}</small>
+                            </div>
+                        </td>
+                        <td>{{ item.purchase_quantity }}</td>
+                        <td>${{ item.purchase_price|floatformat:2 }}</td>
+                        <td>${{ item.stock.curr_price|floatformat:2 }}</td>
+                        <td>${{ item.total_value|floatformat:2 }}</td>
+                        <td>
+                            {% with pl=item.total_value|sub:item.purchase_quantity|mul:item.purchase_price %}
+                            <span class="{% if pl >= 0 %}text-success{% else %}text-danger{% endif %}">
+                                {% if pl >= 0 %}+{% endif %}${{ pl|floatformat:2 }}
+                            </span>
+                            {% endwith %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <div class="empty-icon">📈</div>
+            <h3>Start Your Investment Journey</h3>
+            <p>You haven't made any investments yet. Browse our stock market to find great opportunities!</p>
+            <a href="{% url 'stocks' %}" class="btn btn-primary btn-lg">Explore Stocks</a>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions mt-4">
+        <h3>Quick Actions</h3>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <a href="{% url 'stocks' %}" class="action-card">
+                    <div class="action-icon">🔍</div>
+                    <h4>Browse Stocks</h4>
+                    <p>Discover new investment opportunities</p>
+                </a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <a href="{% url 'transaction_history' %}" class="action-card">
+                    <div class="action-icon">📋</div>
+                    <h4>Transaction History</h4>
+                    <p>View all your past transactions</p>
+                </a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <a href="{% url 'portfolio_dashboard' %}" class="action-card">
+                    <div class="action-icon">📊</div>
+                    <h4>Portfolio Analysis</h4>
+                    <p>Detailed portfolio breakdown</p>
+                </a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <a href="{% url 'watchlist_view' %}" class="action-card">
+                    <div class="action-icon">👁️</div>
+                    <h4>Watchlist</h4>
+                    <p>Monitor your favorite stocks</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.dashboard-header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.dashboard-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    margin: 0;
+}
+
+.summary-card {
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.summary-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    background: var(--gray-50);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.summary-content h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--gray-900);
+}
+
+.summary-content p {
+    margin: 0;
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+.holdings-section {
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: var(--gray-900);
+    font-weight: 600;
+}
+
+.holdings-table {
+    margin: 0;
+}
+
+.holdings-table th {
+    font-weight: 600;
+    color: var(--gray-700);
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.stock-info strong {
+    color: var(--gray-900);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    color: var(--gray-900);
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+}
+
+.quick-actions h3 {
+    color: var(--gray-900);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.action-card {
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.action-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    text-decoration: none;
+    color: inherit;
+}
+
+.action-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.action-card h4 {
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.action-card p {
+    color: var(--gray-600);
+    margin: 0;
+    font-size: 0.875rem;
+}
+</style>
+{% endblock %}
+

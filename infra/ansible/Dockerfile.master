@@ -1,0 +1,14 @@
+FROM ubuntu:22.04
+
+RUN apt-get update && apt-get install -y python3 python3-pip openssh-client sshpass vim nano
+RUN pip install ansible
+
+RUN useradd -m ansible
+RUN mkdir -p /home/ansible/ansible-work && chown -R ansible:ansible /home/ansible/ansible-work
+COPY ansible.cfg /home/ansible/.ansible.cfg
+RUN chown ansible:ansible /home/ansible/.ansible.cfg && chmod 644 /home/ansible/.ansible.cfg
+USER ansible
+WORKDIR /home/ansible/ansible-work
+ENV ANSIBLE_CONFIG=/home/ansible/.ansible.cfg
+
+CMD ["/bin/bash"]

@@ -1,0 +1,41 @@
+services:
+  master:
+    build:
+      context: .
+      dockerfile: Dockerfile.master
+    container_name: ansible-master
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/home/ansible/ansible-work
+    depends_on:
+      - node1
+      - node2
+    networks:
+      - ansible-net
+
+  node1:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    container_name: ansible-node1
+    tty: true
+    ports:
+      - "8000:8000"   
+    networks:
+      - ansible-net
+
+  node2:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    container_name: ansible-node2
+    tty: true
+    ports:
+      - "8001:8000"
+    networks:
+      - ansible-net
+
+networks:
+  ansible-net:
+    driver: bridge

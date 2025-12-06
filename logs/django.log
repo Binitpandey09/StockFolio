@@ -1,0 +1,1486 @@
+INFO 2025-09-11 08:07:05,643 basehttp 9540 25924 "GET / HTTP/1.1" 302 0
+INFO 2025-09-11 08:07:05,876 basehttp 9540 25924 "GET /login/?next=/ HTTP/1.1" 200 2262
+INFO 2025-09-11 08:07:06,277 basehttp 9540 12440 "GET /static/styles.css HTTP/1.1" 200 1146
+INFO 2025-09-11 08:07:06,282 basehttp 9540 25924 "GET /static/modern-styles.css HTTP/1.1" 200 9996
+INFO 2025-09-11 08:07:06,289 basehttp 9540 35136 "GET /static/market.css HTTP/1.1" 200 1392
+INFO 2025-09-11 08:07:06,290 basehttp 9540 15176 "GET /static/form.css HTTP/1.1" 200 1313
+INFO 2025-09-11 08:07:10,048 basehttp 9540 15176 "POST /login/?next=/ HTTP/1.1" 200 2342
+INFO 2025-09-11 08:07:21,840 basehttp 9540 15176 "POST /login/?next=/ HTTP/1.1" 200 2342
+INFO 2025-09-11 08:07:23,551 basehttp 9540 15176 "POST /login/?next=/ HTTP/1.1" 200 2342
+INFO 2025-09-11 08:07:25,065 basehttp 9540 15176 "GET /register/ HTTP/1.1" 200 3623
+INFO 2025-09-11 08:09:14,509 basehttp 9540 15176 "POST /register/ HTTP/1.1" 302 0
+INFO 2025-09-11 08:09:14,536 basehttp 9540 15176 "GET / HTTP/1.1" 200 7729
+INFO 2025-09-11 08:09:19,553 basehttp 9540 15176 "GET / HTTP/1.1" 200 7729
+INFO 2025-09-11 08:09:21,460 basehttp 9540 15176 "GET /stocks/ HTTP/1.1" 200 4971
+INFO 2025-09-11 08:09:26,980 basehttp 9540 15176 "GET /transaction_history/ HTTP/1.1" 200 3256
+INFO 2025-09-11 08:09:28,634 basehttp 9540 15176 "GET /portfolio_dashboard/ HTTP/1.1" 200 4712
+INFO 2025-09-11 08:09:30,411 basehttp 9540 15176 "GET /watchlist/ HTTP/1.1" 200 3385
+INFO 2025-09-11 08:09:32,679 basehttp 9540 15176 "GET / HTTP/1.1" 200 7729
+INFO 2025-09-11 08:09:38,249 basehttp 9540 15176 "GET /stocks/ HTTP/1.1" 200 4971
+INFO 2025-09-11 08:13:13,578 services 5584 34964 Cached data for GOOGL
+INFO 2025-09-11 08:13:15,182 services 5584 34964 Cached data for META
+INFO 2025-09-11 08:13:16,796 services 5584 34964 Cached data for NVDA
+INFO 2025-09-11 08:13:18,308 services 5584 34964 Cached data for MSFT
+INFO 2025-09-11 08:13:19,803 services 5584 34964 Cached data for TSLA
+INFO 2025-09-11 08:13:21,350 services 5584 34964 Cached data for AAPL
+INFO 2025-09-11 08:13:22,922 services 5584 34964 Cached data for AMZN
+INFO 2025-09-11 08:13:24,359 services 5584 34964 Cached data for NFLX
+INFO 2025-09-11 08:13:46,771 autoreload 9444 34316 Watching for file changes with StatReloader
+INFO 2025-09-11 08:13:57,752 basehttp 9444 6656 "GET / HTTP/1.1" 200 7729
+INFO 2025-09-11 08:14:00,617 basehttp 9444 6656 "GET /stocks/ HTTP/1.1" 200 32020
+INFO 2025-09-11 08:14:15,722 services 9444 6656 Cached data for META
+INFO 2025-09-11 08:14:15,758 views 9444 6656 User nitishstock bought 2 shares of META at $751.97998046875
+INFO 2025-09-11 08:14:15,760 basehttp 9444 6656 "POST /buy/2/ HTTP/1.1" 302 0
+INFO 2025-09-11 08:14:15,792 basehttp 9444 6656 "GET / HTTP/1.1" 200 8733
+INFO 2025-09-11 08:14:21,360 basehttp 9444 6656 "GET /transaction_history/ HTTP/1.1" 200 4414
+ERROR 2025-09-11 08:14:23,658 log 9444 6656 Internal Server Error: /portfolio_dashboard/
+Traceback (most recent call last):
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nitish Kumar\OneDrive\Desktop\Stock_market_Prediction\stocks\views.py", line 382, in portfolio_dashboard
+    portfolio[t.stock_symbol]['invested_value'] += t.quantity * t.price
+TypeError: unsupported operand type(s) for +=: 'float' and 'decimal.Decimal'
+ERROR 2025-09-11 08:14:23,661 basehttp 9444 6656 "GET /portfolio_dashboard/ HTTP/1.1" 500 78675
+INFO 2025-09-11 08:14:35,857 basehttp 9444 6656 "GET /watchlist/ HTTP/1.1" 200 3385
+INFO 2025-09-11 08:14:39,481 basehttp 9444 6656 "GET /transaction_history/ HTTP/1.1" 200 4414
+INFO 2025-09-11 08:14:41,079 basehttp 9444 6656 "GET /stocks/ HTTP/1.1" 200 32020
+INFO 2025-09-11 08:14:48,426 basehttp 9444 6656 "POST /sell/2/ HTTP/1.1" 302 0
+INFO 2025-09-11 08:14:48,443 basehttp 9444 6656 "GET / HTTP/1.1" 200 8729
+INFO 2025-09-11 08:14:52,371 basehttp 9444 6656 "GET /transaction_history/ HTTP/1.1" 200 5349
+INFO 2025-09-11 08:14:54,566 basehttp 9444 6656 "GET /stocks/ HTTP/1.1" 200 32020
+ERROR 2025-09-11 08:14:56,399 log 9444 6656 Internal Server Error: /portfolio_dashboard/
+Traceback (most recent call last):
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nitish Kumar\OneDrive\Desktop\Stock_market_Prediction\stocks\views.py", line 385, in portfolio_dashboard
+    portfolio[t.stock_symbol]['invested_value'] -= t.quantity * t.price # This might need more sophisticated calculation for average cost
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported operand type(s) for -=: 'float' and 'decimal.Decimal'
+ERROR 2025-09-11 08:14:56,401 basehttp 9444 6656 "GET /portfolio_dashboard/ HTTP/1.1" 500 78809
+INFO 2025-09-11 08:15:14,711 basehttp 9444 30972 "GET / HTTP/1.1" 200 8729
+INFO 2025-09-11 08:15:21,456 basehttp 9444 30972 "GET /stocks/ HTTP/1.1" 200 32020
+INFO 2025-09-11 08:15:23,409 basehttp 9444 30972 "GET /transaction_history/ HTTP/1.1" 200 5349
+ERROR 2025-09-11 08:15:25,336 log 9444 28292 Internal Server Error: /portfolio_dashboard/
+Traceback (most recent call last):
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nitish Kumar\OneDrive\Desktop\Stock_market_Prediction\stocks\views.py", line 385, in portfolio_dashboard
+    portfolio[t.stock_symbol]['invested_value'] -= t.quantity * t.price # This might need more sophisticated calculation for average cost
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported operand type(s) for -=: 'float' and 'decimal.Decimal'
+ERROR 2025-09-11 08:15:25,338 basehttp 9444 28292 "GET /portfolio_dashboard/ HTTP/1.1" 500 78822
+INFO 2025-09-11 08:15:29,767 basehttp 9444 28292 "GET /watchlist/ HTTP/1.1" 200 3385
+INFO 2025-09-11 08:15:33,773 basehttp 9444 28292 "GET /stocks/ HTTP/1.1" 200 32020
+INFO 2025-09-11 08:15:39,802 basehttp 9444 35712 "GET /add_to_watchlist/META/ HTTP/1.1" 302 0
+INFO 2025-09-11 08:15:39,825 basehttp 9444 35712 "GET /stocks/ HTTP/1.1" 200 32020
+INFO 2025-09-11 08:15:42,123 basehttp 9444 35712 "GET /watchlist/ HTTP/1.1" 200 4388
+INFO 2025-09-11 08:17:33,484 services 20488 26588 Cached data for PEP
+INFO 2025-09-11 08:17:34,968 services 20488 26588 Cached data for GS
+INFO 2025-09-11 08:17:36,258 services 20488 26588 Cached data for KO
+INFO 2025-09-11 08:17:37,554 services 20488 26588 Cached data for V
+INFO 2025-09-11 08:17:38,890 services 20488 26588 Cached data for WFC
+INFO 2025-09-11 08:17:40,053 services 20488 26588 Cached data for COP
+INFO 2025-09-11 08:17:41,319 services 20488 26588 Cached data for DIS
+INFO 2025-09-11 08:17:42,946 services 20488 26588 Cached data for MRK
+INFO 2025-09-11 08:17:44,426 services 20488 26588 Cached data for SBUX
+INFO 2025-09-11 08:17:45,765 services 20488 26588 Cached data for T
+INFO 2025-09-11 08:17:46,849 services 20488 26588 Cached data for PYPL
+INFO 2025-09-11 08:17:48,135 services 20488 26588 Cached data for JPM
+INFO 2025-09-11 08:17:49,507 services 20488 26588 Cached data for UNH
+INFO 2025-09-11 08:17:50,826 services 20488 26588 Cached data for PFE
+INFO 2025-09-11 08:17:52,296 services 20488 26588 Cached data for C
+INFO 2025-09-11 08:17:53,573 services 20488 26588 Cached data for NKE
+INFO 2025-09-11 08:17:55,080 services 20488 26588 Cached data for CVX
+INFO 2025-09-11 08:17:56,185 services 20488 26588 Cached data for CRM
+INFO 2025-09-11 08:17:57,476 services 20488 26588 Cached data for PG
+INFO 2025-09-11 08:17:58,822 services 20488 26588 Cached data for ABBV
+INFO 2025-09-11 08:18:04,855 services 20488 26588 Cached data for MS
+INFO 2025-09-11 08:18:05,908 services 20488 26588 Cached data for MA
+INFO 2025-09-11 08:18:07,417 services 20488 26588 Cached data for XOM
+INFO 2025-09-11 08:18:08,450 services 20488 26588 Cached data for CSCO
+INFO 2025-09-11 08:18:09,804 services 20488 26588 Cached data for HD
+INFO 2025-09-11 08:18:11,403 services 20488 26588 Cached data for AXP
+INFO 2025-09-11 08:18:12,487 services 20488 26588 Cached data for VZ
+INFO 2025-09-11 08:18:13,992 services 20488 26588 Cached data for WMT
+INFO 2025-09-11 08:18:15,270 services 20488 26588 Cached data for JNJ
+INFO 2025-09-11 08:18:16,607 services 20488 26588 Cached data for TMO
+INFO 2025-09-11 08:18:17,812 services 20488 26588 Cached data for ADBE
+INFO 2025-09-11 08:18:18,928 services 20488 26588 Cached data for AVGO
+INFO 2025-09-11 08:18:20,087 services 20488 26588 Cached data for MCD
+INFO 2025-09-11 08:18:21,568 services 20488 26588 Cached data for SLB
+INFO 2025-09-11 08:18:22,928 services 20488 26588 Cached data for COST
+INFO 2025-09-11 08:18:24,302 services 20488 26588 Cached data for BAC
+INFO 2025-09-11 08:18:25,636 services 20488 26588 Cached data for ABT
+INFO 2025-09-11 08:18:27,042 services 20488 26588 Cached data for INTC
+INFO 2025-09-11 08:18:42,583 services 24852 22952 Cached data for PLTR
+INFO 2025-09-11 08:18:44,095 services 24852 22952 Cached data for SHOP
+INFO 2025-09-11 08:18:45,659 services 24852 22952 Cached data for ROKU
+INFO 2025-09-11 08:18:47,115 services 24852 22952 Cached data for COIN
+ERROR 2025-09-11 08:18:50,373 history 24852 22952 $TWTR: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+INFO 2025-09-11 08:18:53,272 services 24852 22952 Cached data for TWTR
+INFO 2025-09-11 08:18:54,810 services 24852 22952 Cached data for DOCU
+INFO 2025-09-11 08:18:56,437 services 24852 22952 Cached data for ORCL
+INFO 2025-09-11 08:18:58,019 services 24852 22952 Cached data for ZM
+INFO 2025-09-11 08:18:59,476 services 24852 22952 Cached data for BABA
+ERROR 2025-09-11 08:19:02,395 history 24852 22952 $SQ: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+INFO 2025-09-11 08:19:05,538 services 24852 22952 Cached data for UBER
+INFO 2025-09-11 08:19:07,272 services 24852 22952 Cached data for IBM
+INFO 2025-09-11 08:19:08,743 services 24852 22952 Cached data for SNAP
+INFO 2025-09-11 08:19:26,008 services 15452 6040 Cached data for CAT
+INFO 2025-09-11 08:19:27,623 services 15452 6040 Cached data for RTX
+INFO 2025-09-11 08:19:29,335 services 15452 6040 Cached data for MSCI
+INFO 2025-09-11 08:19:30,960 services 15452 6040 Cached data for SPY
+INFO 2025-09-11 08:19:32,413 services 15452 6040 Cached data for AMD
+INFO 2025-09-11 08:19:33,906 services 15452 6040 Cached data for IWM
+INFO 2025-09-11 08:19:35,511 services 15452 6040 Cached data for GM
+INFO 2025-09-11 08:19:37,136 services 15452 6040 Cached data for DE
+INFO 2025-09-11 08:19:38,753 services 15452 6040 Cached data for F
+INFO 2025-09-11 08:19:40,290 services 15452 6040 Cached data for VTI
+INFO 2025-09-11 08:19:41,971 services 15452 6040 Cached data for QQQ
+INFO 2025-09-11 08:19:43,491 services 15452 6040 Cached data for BLK
+INFO 2025-09-11 08:19:45,315 services 15452 6040 Cached data for LMT
+INFO 2025-09-11 08:19:47,082 services 15452 6040 Cached data for BA
+INFO 2025-09-11 08:20:11,806 autoreload 11528 2588 Watching for file changes with StatReloader
+INFO 2025-09-11 08:20:18,768 basehttp 11528 31840 "GET / HTTP/1.1" 200 8729
+INFO 2025-09-11 08:20:21,127 basehttp 11528 5900 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 08:20:25,851 basehttp 11528 5900 "GET /stocks/?q=&page=2 HTTP/1.1" 200 32233
+INFO 2025-09-11 08:20:38,816 services 11528 5900 Cached data for GS
+INFO 2025-09-11 08:20:38,849 views 11528 5900 User nitishstock bought 4 shares of GS at $769.5800170898438
+INFO 2025-09-11 08:20:38,851 basehttp 11528 5900 "POST /buy/10/ HTTP/1.1" 302 0
+INFO 2025-09-11 08:20:38,868 basehttp 11528 5900 "GET / HTTP/1.1" 200 9519
+INFO 2025-09-11 08:20:46,236 basehttp 11528 5900 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 08:20:50,117 basehttp 11528 5900 "GET /stocks/?q=&page=2 HTTP/1.1" 200 32233
+INFO 2025-09-11 08:20:57,615 basehttp 11528 5900 "POST /sell/10/ HTTP/1.1" 302 0
+INFO 2025-09-11 08:20:57,635 basehttp 11528 5900 "GET / HTTP/1.1" 200 9517
+INFO 2025-09-11 08:21:02,573 basehttp 11528 5900 "GET /transaction_history/ HTTP/1.1" 200 7235
+INFO 2025-09-11 08:21:05,116 basehttp 11528 5900 "GET /portfolio_dashboard/ HTTP/1.1" 200 6477
+INFO 2025-09-11 08:21:09,105 basehttp 11528 5900 "GET /watchlist/ HTTP/1.1" 200 4388
+INFO 2025-09-11 08:21:18,117 basehttp 11528 5900 "GET /watchlist/ HTTP/1.1" 200 4388
+INFO 2025-09-11 08:24:58,410 autoreload 28496 17884 Watching for file changes with StatReloader
+INFO 2025-09-11 08:25:04,471 basehttp 28496 13896 "GET / HTTP/1.1" 200 9517
+INFO 2025-09-11 08:25:12,801 services 28496 13896 Cached data for META
+INFO 2025-09-11 08:25:12,827 basehttp 28496 13896 - Broken pipe from ('127.0.0.1', 52770)
+INFO 2025-09-11 08:25:13,052 services 28496 14028 Cached data for META
+INFO 2025-09-11 08:25:13,071 basehttp 28496 14028 - Broken pipe from ('127.0.0.1', 50255)
+INFO 2025-09-11 08:25:14,765 basehttp 28496 16244 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 08:25:14,851 services 28496 20244 Cached data for GS
+INFO 2025-09-11 08:25:14,866 services 28496 20244 Retrieved cached data for META
+INFO 2025-09-11 08:25:14,895 basehttp 28496 20244 - Broken pipe from ('127.0.0.1', 56770)
+INFO 2025-09-11 08:25:17,181 services 28496 16244 Retrieved cached data for GS
+INFO 2025-09-11 08:25:17,199 services 28496 16244 Retrieved cached data for META
+INFO 2025-09-11 08:25:17,216 basehttp 28496 16244 "GET /portfolio_dashboard/ HTTP/1.1" 200 6477
+INFO 2025-09-11 08:25:20,152 services 28496 16244 Retrieved cached data for META
+INFO 2025-09-11 08:25:20,175 basehttp 28496 16244 "GET /watchlist/ HTTP/1.1" 200 9819
+INFO 2025-09-11 08:25:22,292 services 28496 16244 Retrieved cached data for META
+INFO 2025-09-11 08:25:22,311 basehttp 28496 16244 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 282
+INFO 2025-09-11 08:44:01,910 autoreload 36288 28856 Watching for file changes with StatReloader
+INFO 2025-09-11 08:44:09,409 basehttp 36288 12404 "GET / HTTP/1.1" 200 9517
+INFO 2025-09-11 08:44:16,760 services 36288 8516 Cached data for GS
+INFO 2025-09-11 08:44:17,371 services 36288 20784 Cached data for GS
+INFO 2025-09-11 08:44:17,387 services 36288 17232 Retrieved cached data for GS
+INFO 2025-09-11 08:44:17,567 services 36288 29460 Retrieved cached data for GS
+INFO 2025-09-11 08:44:17,701 services 36288 8516 Cached data for META
+INFO 2025-09-11 08:44:17,736 basehttp 36288 8516 - Broken pipe from ('127.0.0.1', 59013)
+INFO 2025-09-11 08:44:17,798 services 36288 10660 Retrieved cached data for GS
+INFO 2025-09-11 08:44:17,818 services 36288 10660 Retrieved cached data for META
+INFO 2025-09-11 08:44:17,847 basehttp 36288 10660 "GET /portfolio_dashboard/ HTTP/1.1" 200 6477
+INFO 2025-09-11 08:44:18,524 services 36288 20784 Cached data for META
+INFO 2025-09-11 08:44:18,558 basehttp 36288 20784 - Broken pipe from ('127.0.0.1', 51299)
+INFO 2025-09-11 08:44:18,767 services 36288 17232 Cached data for META
+INFO 2025-09-11 08:44:18,800 basehttp 36288 17232 - Broken pipe from ('127.0.0.1', 57846)
+INFO 2025-09-11 08:44:18,843 services 36288 29460 Cached data for META
+INFO 2025-09-11 08:44:18,890 services 36288 36016 Cached data for GS
+INFO 2025-09-11 08:44:18,897 basehttp 36288 29460 - Broken pipe from ('127.0.0.1', 60762)
+INFO 2025-09-11 08:44:18,922 services 36288 36016 Retrieved cached data for META
+INFO 2025-09-11 08:44:18,958 basehttp 36288 36016 - Broken pipe from ('127.0.0.1', 51629)
+INFO 2025-09-11 08:44:22,231 services 36288 10660 Retrieved cached data for META
+INFO 2025-09-11 08:44:22,260 basehttp 36288 10660 "GET /watchlist/ HTTP/1.1" 200 9819
+INFO 2025-09-11 08:44:24,422 services 36288 31852 Retrieved cached data for META
+INFO 2025-09-11 08:44:24,447 basehttp 36288 31852 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 282
+INFO 2025-09-11 08:44:25,723 basehttp 36288 31852 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 08:44:28,413 basehttp 36288 31852 "GET /add_to_watchlist/NVDA/ HTTP/1.1" 302 0
+INFO 2025-09-11 08:44:28,458 basehttp 36288 31852 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 08:44:30,653 services 36288 31852 Retrieved cached data for META
+INFO 2025-09-11 08:44:32,394 services 36288 31852 Cached data for NVDA
+INFO 2025-09-11 08:44:32,419 basehttp 36288 31852 "GET /watchlist/ HTTP/1.1" 200 11658
+INFO 2025-09-11 08:44:32,462 services 36288 31852 Retrieved cached data for META
+INFO 2025-09-11 08:44:32,484 services 36288 31852 Retrieved cached data for NVDA
+INFO 2025-09-11 08:44:32,510 basehttp 36288 31852 "GET /watchlist/ HTTP/1.1" 200 11658
+INFO 2025-09-11 08:44:34,782 services 36288 31852 Retrieved cached data for META
+INFO 2025-09-11 08:44:34,803 services 36288 31852 Retrieved cached data for NVDA
+INFO 2025-09-11 08:44:34,825 basehttp 36288 31852 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 08:44:41,524 basehttp 36288 31852 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 08:44:44,807 services 36288 29616 Retrieved cached data for META
+INFO 2025-09-11 08:44:44,831 services 36288 29616 Retrieved cached data for NVDA
+INFO 2025-09-11 08:44:44,856 basehttp 36288 29616 "GET /watchlist/ HTTP/1.1" 200 11658
+INFO 2025-09-11 08:44:46,981 services 36288 29616 Retrieved cached data for META
+INFO 2025-09-11 08:44:47,005 services 36288 29616 Retrieved cached data for NVDA
+INFO 2025-09-11 08:44:47,030 basehttp 36288 29616 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 08:44:48,158 basehttp 36288 29616 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 08:44:51,083 services 36288 29616 Retrieved cached data for META
+INFO 2025-09-11 08:44:51,104 services 36288 29616 Retrieved cached data for NVDA
+INFO 2025-09-11 08:44:51,128 basehttp 36288 29616 "GET /watchlist/ HTTP/1.1" 200 11658
+INFO 2025-09-11 08:44:53,275 services 36288 17704 Retrieved cached data for META
+INFO 2025-09-11 08:44:53,302 services 36288 17704 Retrieved cached data for NVDA
+INFO 2025-09-11 08:44:53,324 basehttp 36288 17704 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 08:44:53,360 basehttp 36288 29700 "GET / HTTP/1.1" 200 9517
+INFO 2025-09-11 08:44:57,444 basehttp 36288 29700 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 08:45:02,443 basehttp 36288 14556 "GET /stocks/?q=&page=2 HTTP/1.1" 200 32233
+INFO 2025-09-11 08:45:08,706 services 36288 14556 Retrieved cached data for GS
+INFO 2025-09-11 08:45:08,728 services 36288 14556 Retrieved cached data for META
+INFO 2025-09-11 08:45:08,753 basehttp 36288 14556 "GET /portfolio_dashboard/ HTTP/1.1" 200 6477
+INFO 2025-09-11 08:45:10,784 services 36288 14556 Retrieved cached data for META
+INFO 2025-09-11 08:45:10,816 services 36288 14556 Retrieved cached data for NVDA
+INFO 2025-09-11 08:45:10,881 basehttp 36288 14556 "GET /watchlist/ HTTP/1.1" 200 11658
+INFO 2025-09-11 08:45:13,024 services 36288 4392 Retrieved cached data for META
+INFO 2025-09-11 08:45:13,043 services 36288 4392 Retrieved cached data for NVDA
+INFO 2025-09-11 08:45:13,071 basehttp 36288 4392 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:06:19,900 autoreload 35772 22708 Watching for file changes with StatReloader
+INFO 2025-09-11 09:13:50,302 basehttp 24028 12592 "GET / HTTP/1.1" 302 0
+INFO 2025-09-11 09:13:50,435 basehttp 24028 12592 "GET /login/?next=/ HTTP/1.1" 200 2681
+INFO 2025-09-11 09:13:58,605 basehttp 24028 31332 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-09-11 09:13:58,662 basehttp 24028 31332 "GET / HTTP/1.1" 200 9517
+INFO 2025-09-11 09:14:09,889 services 24028 34464 Cached data for META
+INFO 2025-09-11 09:14:09,944 services 24028 15124 Cached data for META
+INFO 2025-09-11 09:14:09,950 services 24028 17916 Cached data for META
+INFO 2025-09-11 09:14:09,989 services 24028 17116 Cached data for META
+INFO 2025-09-11 09:14:10,027 services 24028 35384 Cached data for META
+INFO 2025-09-11 09:14:10,079 services 24028 19600 Cached data for META
+INFO 2025-09-11 09:14:10,087 services 24028 31332 Cached data for META
+INFO 2025-09-11 09:14:11,097 services 24028 31332 Cached data for NVDA
+INFO 2025-09-11 09:14:11,183 services 24028 35384 Cached data for NVDA
+INFO 2025-09-11 09:14:11,185 services 24028 19600 Cached data for NVDA
+INFO 2025-09-11 09:14:11,252 services 24028 34464 Cached data for NVDA
+INFO 2025-09-11 09:14:11,253 services 24028 17116 Cached data for NVDA
+INFO 2025-09-11 09:14:11,325 services 24028 17916 Cached data for NVDA
+INFO 2025-09-11 09:14:11,355 services 24028 15124 Cached data for NVDA
+INFO 2025-09-11 09:14:11,361 basehttp 24028 35384 - Broken pipe from ('127.0.0.1', 60652)
+INFO 2025-09-11 09:14:11,361 basehttp 24028 31332 - Broken pipe from ('127.0.0.1', 60325)
+INFO 2025-09-11 09:14:11,362 basehttp 24028 19600 - Broken pipe from ('127.0.0.1', 55046)
+INFO 2025-09-11 09:14:11,362 basehttp 24028 34464 - Broken pipe from ('127.0.0.1', 62676)
+INFO 2025-09-11 09:14:11,382 basehttp 24028 17116 "GET /watchlist/ HTTP/1.1" 200 11658
+INFO 2025-09-11 09:14:11,398 basehttp 24028 17916 - Broken pipe from ('127.0.0.1', 61186)
+INFO 2025-09-11 09:14:11,411 basehttp 24028 15124 - Broken pipe from ('127.0.0.1', 57033)
+INFO 2025-09-11 09:14:13,564 services 24028 36728 Retrieved cached data for META
+INFO 2025-09-11 09:14:13,580 services 24028 36728 Retrieved cached data for NVDA
+INFO 2025-09-11 09:14:13,598 basehttp 24028 36728 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:14:15,695 basehttp 24028 36728 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 09:14:19,509 basehttp 24028 36728 "GET /transaction_history/ HTTP/1.1" 200 7235
+INFO 2025-09-11 09:14:29,961 services 24028 25048 Cached data for GS
+INFO 2025-09-11 09:14:29,978 services 24028 25048 Retrieved cached data for META
+INFO 2025-09-11 09:14:30,005 basehttp 24028 25048 - Broken pipe from ('127.0.0.1', 58432)
+INFO 2025-09-11 09:14:30,075 services 24028 29220 Retrieved cached data for GS
+INFO 2025-09-11 09:14:30,097 services 24028 29220 Retrieved cached data for META
+INFO 2025-09-11 09:14:30,122 basehttp 24028 29220 "GET /portfolio_dashboard/ HTTP/1.1" 200 6477
+INFO 2025-09-11 09:14:31,591 services 24028 32080 Cached data for GS
+INFO 2025-09-11 09:14:31,609 services 24028 32080 Retrieved cached data for META
+INFO 2025-09-11 09:14:31,632 basehttp 24028 32080 - Broken pipe from ('127.0.0.1', 63711)
+INFO 2025-09-11 09:14:31,669 services 24028 33760 Cached data for GS
+INFO 2025-09-11 09:14:31,692 services 24028 33760 Retrieved cached data for META
+INFO 2025-09-11 09:14:31,716 basehttp 24028 33760 - Broken pipe from ('127.0.0.1', 56222)
+INFO 2025-09-11 09:14:40,600 services 24028 36760 Retrieved cached data for META
+INFO 2025-09-11 09:14:40,614 services 24028 36760 Retrieved cached data for NVDA
+INFO 2025-09-11 09:14:40,636 basehttp 24028 36760 "GET /watchlist/ HTTP/1.1" 200 11658
+INFO 2025-09-11 09:14:42,819 services 24028 36760 Retrieved cached data for META
+INFO 2025-09-11 09:14:42,839 services 24028 36760 Retrieved cached data for NVDA
+INFO 2025-09-11 09:14:42,858 basehttp 24028 36760 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:14:53,669 services 24028 12700 Retrieved cached data for META
+INFO 2025-09-11 09:14:53,687 services 24028 12700 Retrieved cached data for NVDA
+INFO 2025-09-11 09:14:53,708 basehttp 24028 12700 "GET /watchlist/ HTTP/1.1" 200 11658
+INFO 2025-09-11 09:14:55,868 services 24028 12700 Retrieved cached data for META
+INFO 2025-09-11 09:14:55,882 services 24028 12700 Retrieved cached data for NVDA
+INFO 2025-09-11 09:14:55,904 basehttp 24028 12700 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:16:29,525 autoreload 812 34792 Watching for file changes with StatReloader
+INFO 2025-09-11 09:16:37,818 basehttp 812 12008 "GET / HTTP/1.1" 200 9517
+INFO 2025-09-11 09:16:44,483 services 812 12008 Cached data for GS
+INFO 2025-09-11 09:16:45,546 services 812 12008 Cached data for META
+INFO 2025-09-11 09:16:45,582 basehttp 812 12008 "GET /portfolio_dashboard/ HTTP/1.1" 200 6477
+INFO 2025-09-11 09:16:54,073 services 812 31272 Retrieved cached data for META
+INFO 2025-09-11 09:16:55,415 services 812 31272 Cached data for NVDA
+INFO 2025-09-11 09:16:55,433 basehttp 812 31272 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:17:24,070 services 812 8164 Retrieved cached data for META
+INFO 2025-09-11 09:17:24,116 services 812 8164 Retrieved cached data for NVDA
+INFO 2025-09-11 09:17:24,174 basehttp 812 8164 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:17:54,104 services 812 8164 Retrieved cached data for META
+INFO 2025-09-11 09:17:54,120 services 812 8164 Retrieved cached data for NVDA
+INFO 2025-09-11 09:17:54,143 basehttp 812 8164 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:18:47,066 services 812 8164 Retrieved cached data for META
+INFO 2025-09-11 09:18:47,084 services 812 8164 Retrieved cached data for NVDA
+INFO 2025-09-11 09:18:47,105 basehttp 812 8164 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:19:47,055 services 812 8164 Retrieved cached data for META
+INFO 2025-09-11 09:19:47,069 services 812 8164 Retrieved cached data for NVDA
+INFO 2025-09-11 09:19:47,088 basehttp 812 8164 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:20:47,047 services 812 8164 Retrieved cached data for META
+INFO 2025-09-11 09:20:47,064 services 812 8164 Retrieved cached data for NVDA
+INFO 2025-09-11 09:20:47,084 basehttp 812 8164 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:21:49,331 services 812 8164 Cached data for META
+INFO 2025-09-11 09:21:49,349 services 812 8164 Retrieved cached data for NVDA
+INFO 2025-09-11 09:21:49,377 basehttp 812 8164 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:22:47,060 services 812 35368 Retrieved cached data for META
+INFO 2025-09-11 09:22:48,510 services 812 35368 Cached data for NVDA
+INFO 2025-09-11 09:22:48,536 basehttp 812 35368 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:23:47,054 services 812 17432 Retrieved cached data for META
+INFO 2025-09-11 09:23:47,069 services 812 17432 Retrieved cached data for NVDA
+INFO 2025-09-11 09:23:47,088 basehttp 812 17432 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:24:47,056 services 812 17432 Retrieved cached data for META
+INFO 2025-09-11 09:24:47,080 services 812 17432 Retrieved cached data for NVDA
+INFO 2025-09-11 09:24:47,106 basehttp 812 17432 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 09:25:47,075 services 812 13912 Retrieved cached data for META
+INFO 2025-09-11 09:25:47,103 services 812 13912 Retrieved cached data for NVDA
+INFO 2025-09-11 09:25:47,137 basehttp 812 13912 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+WARNING 2025-09-11 09:36:07,631 services 812 31532 yfinance failed for META: Failed to perform, curl: (6) Could not resolve host: query2.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-09-11 09:36:07,888 services 812 31532 Tiingo API failed for META: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/META?token=fced443141e501d554d0b38c4a34bba085172b1e (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000227FD960D70>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-09-11 09:36:07,904 services 812 31532 yfinance failed for NVDA: Failed to perform, curl: (6) Could not resolve host: query2.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-09-11 09:36:07,913 services 812 31532 Tiingo API failed for NVDA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/NVDA?token=fced443141e501d554d0b38c4a34bba085172b1e (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000227FDE99950>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+INFO 2025-09-11 09:36:07,915 basehttp 812 31532 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 196
+WARNING 2025-09-11 10:04:36,816 services 812 36160 yfinance failed for META: Failed to perform, curl: (28) Connection timed out after 30006 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-09-11 10:04:46,974 services 812 36160 Tiingo API failed for META: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/META?token=fced443141e501d554d0b38c4a34bba085172b1e (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000227FDC1F750>, 'Connection to api.tiingo.com timed out. (connect timeout=10)'))
+WARNING 2025-09-11 10:05:16,985 services 812 36160 yfinance failed for NVDA: Failed to perform, curl: (28) Connection timed out after 30000 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-09-11 10:05:27,019 services 812 36160 Tiingo API failed for NVDA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/NVDA?token=fced443141e501d554d0b38c4a34bba085172b1e (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000227FDC1E490>, 'Connection to api.tiingo.com timed out. (connect timeout=10)'))
+INFO 2025-09-11 10:05:27,037 basehttp 812 36160 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 196
+WARNING 2025-09-11 10:05:37,207 services 812 19004 yfinance failed for META: Failed to perform, curl: (28) Connection timed out after 30012 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-09-11 10:05:47,228 services 812 19004 Tiingo API failed for META: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/META?token=fced443141e501d554d0b38c4a34bba085172b1e (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000227FDE99D10>, 'Connection to api.tiingo.com timed out. (connect timeout=10)'))
+WARNING 2025-09-11 10:06:17,069 services 812 19724 yfinance failed for META: Failed to perform, curl: (28) Connection timed out after 30007 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-09-11 10:06:17,239 services 812 19004 yfinance failed for NVDA: Failed to perform, curl: (28) Connection timed out after 30005 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-09-11 10:06:21,734 services 812 19724 Tiingo API failed for META: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/META?token=fced443141e501d554d0b38c4a34bba085172b1e (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000227FDE99950>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine'))
+WARNING 2025-09-11 10:06:21,735 services 812 19004 Tiingo API failed for NVDA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/NVDA?token=fced443141e501d554d0b38c4a34bba085172b1e (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000227FDE99810>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine'))
+INFO 2025-09-11 10:06:21,781 basehttp 812 19004 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 196
+WARNING 2025-09-11 10:06:21,923 services 812 19724 yfinance failed for NVDA: Failed to perform, curl: (7) Failed to connect to query2.finance.yahoo.com port 443 after 34 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+INFO 2025-09-11 10:06:24,538 services 812 19724 Cached data for NVDA
+INFO 2025-09-11 10:06:24,619 basehttp 812 19724 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 273
+INFO 2025-09-11 10:06:51,102 services 812 24436 Cached data for META
+INFO 2025-09-11 10:06:51,122 services 812 24436 Retrieved cached data for NVDA
+INFO 2025-09-11 10:06:51,143 basehttp 812 24436 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 394
+INFO 2025-09-11 10:07:47,092 services 812 24436 Retrieved cached data for META
+INFO 2025-09-11 10:07:47,107 services 812 24436 Retrieved cached data for NVDA
+INFO 2025-09-11 10:07:47,126 basehttp 812 24436 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 394
+INFO 2025-09-11 10:08:47,065 services 812 24436 Retrieved cached data for META
+INFO 2025-09-11 10:08:47,082 services 812 24436 Retrieved cached data for NVDA
+INFO 2025-09-11 10:08:47,100 basehttp 812 24436 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 394
+INFO 2025-09-11 10:09:47,045 services 812 24436 Retrieved cached data for META
+INFO 2025-09-11 10:09:47,061 services 812 24436 Retrieved cached data for NVDA
+INFO 2025-09-11 10:09:47,076 basehttp 812 24436 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 394
+INFO 2025-09-11 10:10:47,078 services 812 24732 Retrieved cached data for META
+INFO 2025-09-11 10:10:47,098 services 812 24732 Retrieved cached data for NVDA
+INFO 2025-09-11 10:10:47,117 basehttp 812 24732 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 394
+INFO 2025-09-11 10:11:47,060 services 812 30544 Retrieved cached data for META
+INFO 2025-09-11 10:11:50,355 services 812 30544 Cached data for NVDA
+INFO 2025-09-11 10:11:50,373 basehttp 812 30544 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 10:13:16,340 autoreload 35620 13612 Watching for file changes with StatReloader
+INFO 2025-09-11 10:13:28,443 basehttp 35620 32896 "GET / HTTP/1.1" 200 9517
+INFO 2025-09-11 10:13:31,184 basehttp 35620 32896 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 10:13:51,733 services 35620 5640 Cached data for META
+INFO 2025-09-11 10:13:52,215 services 35620 4180 Retrieved cached data for META
+INFO 2025-09-11 10:13:53,228 services 35620 5640 Cached data for NVDA
+INFO 2025-09-11 10:13:53,256 services 35620 24348 Retrieved cached data for META
+INFO 2025-09-11 10:13:53,259 basehttp 35620 5640 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 10:13:53,286 services 35620 24348 Retrieved cached data for NVDA
+INFO 2025-09-11 10:13:53,323 basehttp 35620 24348 "GET /watchlist/ HTTP/1.1" 200 11658
+INFO 2025-09-11 10:13:54,350 services 35620 4180 Cached data for NVDA
+INFO 2025-09-11 10:13:54,376 basehttp 35620 4180 - Broken pipe from ('127.0.0.1', 50550)
+INFO 2025-09-11 10:13:55,458 services 35620 24348 Retrieved cached data for META
+INFO 2025-09-11 10:13:55,476 services 35620 24348 Retrieved cached data for NVDA
+INFO 2025-09-11 10:13:55,496 basehttp 35620 24348 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 10:14:00,916 basehttp 35620 3560 "GET /stocks/ HTTP/1.1" 302 0
+INFO 2025-09-11 10:14:00,939 basehttp 35620 3560 "GET /login/?next=/stocks/ HTTP/1.1" 200 2262
+INFO 2025-09-11 10:14:03,245 basehttp 35620 3560 "GET /stocks/ HTTP/1.1" 302 0
+INFO 2025-09-11 10:14:03,258 basehttp 35620 3560 "GET /login/?next=/stocks/ HTTP/1.1" 200 2262
+INFO 2025-09-11 10:14:07,136 basehttp 35620 3560 "POST /login/?next=/stocks/ HTTP/1.1" 302 0
+INFO 2025-09-11 10:14:07,227 basehttp 35620 3560 "GET / HTTP/1.1" 200 9517
+INFO 2025-09-11 10:14:09,220 basehttp 35620 3560 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 10:14:47,050 services 35620 19368 Retrieved cached data for META
+INFO 2025-09-11 10:14:47,066 services 35620 19368 Retrieved cached data for NVDA
+INFO 2025-09-11 10:14:47,086 basehttp 35620 19368 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 10:15:47,052 services 35620 33316 Retrieved cached data for META
+INFO 2025-09-11 10:15:47,070 services 35620 33316 Retrieved cached data for NVDA
+INFO 2025-09-11 10:15:47,093 basehttp 35620 33316 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 10:16:47,070 services 35620 5132 Retrieved cached data for META
+INFO 2025-09-11 10:16:47,086 services 35620 5132 Retrieved cached data for NVDA
+INFO 2025-09-11 10:16:47,110 basehttp 35620 5132 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 10:17:47,059 services 35620 5132 Retrieved cached data for META
+INFO 2025-09-11 10:17:47,074 services 35620 5132 Retrieved cached data for NVDA
+INFO 2025-09-11 10:17:47,097 basehttp 35620 5132 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 434
+INFO 2025-09-11 10:18:16,903 basehttp 35620 19124 "GET /add_to_watchlist/AMZN/ HTTP/1.1" 302 0
+INFO 2025-09-11 10:18:16,958 basehttp 35620 19124 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 10:18:21,031 basehttp 35620 19124 "GET /add_to_watchlist/NFLX/ HTTP/1.1" 302 0
+INFO 2025-09-11 10:18:21,083 basehttp 35620 19124 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 10:18:25,039 basehttp 35620 28252 "GET /add_to_watchlist/AAPL/ HTTP/1.1" 302 0
+INFO 2025-09-11 10:18:25,099 basehttp 35620 28252 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 10:18:27,309 services 35620 28252 Retrieved cached data for META
+INFO 2025-09-11 10:18:27,331 services 35620 28252 Retrieved cached data for NVDA
+INFO 2025-09-11 10:18:29,318 services 35620 11796 Retrieved cached data for META
+INFO 2025-09-11 10:18:29,334 services 35620 11796 Retrieved cached data for NVDA
+INFO 2025-09-11 10:18:29,955 services 35620 28252 Cached data for AMZN
+INFO 2025-09-11 10:18:30,933 services 35620 24624 Retrieved cached data for META
+INFO 2025-09-11 10:18:30,952 services 35620 24624 Retrieved cached data for NVDA
+INFO 2025-09-11 10:18:30,970 services 35620 24624 Retrieved cached data for AMZN
+INFO 2025-09-11 10:18:31,170 services 35620 14704 Retrieved cached data for META
+INFO 2025-09-11 10:18:31,187 services 35620 14704 Retrieved cached data for NVDA
+INFO 2025-09-11 10:18:31,208 services 35620 14704 Retrieved cached data for AMZN
+INFO 2025-09-11 10:18:31,482 services 35620 11796 Cached data for AMZN
+INFO 2025-09-11 10:18:31,824 services 35620 28252 Cached data for NFLX
+INFO 2025-09-11 10:18:32,454 services 35620 11796 Cached data for NFLX
+INFO 2025-09-11 10:18:32,855 services 35620 24624 Cached data for NFLX
+INFO 2025-09-11 10:18:33,197 services 35620 14704 Cached data for NFLX
+INFO 2025-09-11 10:18:33,390 services 35620 28252 Cached data for AAPL
+INFO 2025-09-11 10:18:33,441 services 35620 24624 Cached data for AAPL
+INFO 2025-09-11 10:18:33,454 basehttp 35620 28252 - Broken pipe from ('127.0.0.1', 57589)
+INFO 2025-09-11 10:18:33,475 basehttp 35620 24624 - Broken pipe from ('127.0.0.1', 51792)
+INFO 2025-09-11 10:18:33,788 services 35620 11796 Cached data for AAPL
+INFO 2025-09-11 10:18:33,821 basehttp 35620 11796 - Broken pipe from ('127.0.0.1', 54318)
+INFO 2025-09-11 10:18:34,006 services 35620 14704 Cached data for AAPL
+INFO 2025-09-11 10:18:34,041 basehttp 35620 14704 "GET /watchlist/ HTTP/1.1" 200 17177
+INFO 2025-09-11 10:18:36,154 services 35620 14704 Retrieved cached data for META
+INFO 2025-09-11 10:18:36,172 services 35620 14704 Retrieved cached data for NVDA
+INFO 2025-09-11 10:18:36,198 services 35620 14704 Retrieved cached data for AMZN
+INFO 2025-09-11 10:18:36,219 services 35620 14704 Retrieved cached data for NFLX
+INFO 2025-09-11 10:18:36,240 services 35620 14704 Retrieved cached data for AAPL
+INFO 2025-09-11 10:18:36,270 basehttp 35620 14704 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:18:47,062 services 35620 30404 Retrieved cached data for META
+INFO 2025-09-11 10:18:47,076 services 35620 30404 Retrieved cached data for NVDA
+INFO 2025-09-11 10:18:47,103 services 35620 30404 Retrieved cached data for AMZN
+INFO 2025-09-11 10:18:47,132 services 35620 30404 Retrieved cached data for NFLX
+INFO 2025-09-11 10:18:47,147 services 35620 30404 Retrieved cached data for AAPL
+INFO 2025-09-11 10:18:47,167 basehttp 35620 30404 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:19:07,883 services 35620 31840 Cached data for META
+INFO 2025-09-11 10:19:10,039 services 35620 31840 Cached data for NVDA
+INFO 2025-09-11 10:19:10,058 services 35620 31840 Retrieved cached data for AMZN
+INFO 2025-09-11 10:19:10,076 services 35620 31840 Retrieved cached data for NFLX
+INFO 2025-09-11 10:19:10,098 services 35620 31840 Retrieved cached data for AAPL
+INFO 2025-09-11 10:19:10,121 basehttp 35620 31840 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:19:34,165 services 35620 11912 Retrieved cached data for META
+INFO 2025-09-11 10:19:34,182 services 35620 11912 Retrieved cached data for NVDA
+INFO 2025-09-11 10:19:34,200 services 35620 11912 Retrieved cached data for AMZN
+INFO 2025-09-11 10:19:34,220 services 35620 11912 Retrieved cached data for NFLX
+INFO 2025-09-11 10:19:34,240 services 35620 11912 Retrieved cached data for AAPL
+INFO 2025-09-11 10:19:34,265 basehttp 35620 11912 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:19:47,055 services 35620 30556 Retrieved cached data for META
+INFO 2025-09-11 10:19:47,072 services 35620 30556 Retrieved cached data for NVDA
+INFO 2025-09-11 10:19:47,086 services 35620 30556 Retrieved cached data for AMZN
+INFO 2025-09-11 10:19:47,108 services 35620 30556 Retrieved cached data for NFLX
+INFO 2025-09-11 10:19:47,124 services 35620 30556 Retrieved cached data for AAPL
+INFO 2025-09-11 10:19:47,142 basehttp 35620 30556 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:20:04,166 services 35620 21580 Retrieved cached data for META
+INFO 2025-09-11 10:20:04,182 services 35620 21580 Retrieved cached data for NVDA
+INFO 2025-09-11 10:20:04,197 services 35620 21580 Retrieved cached data for AMZN
+INFO 2025-09-11 10:20:04,217 services 35620 21580 Retrieved cached data for NFLX
+INFO 2025-09-11 10:20:04,243 services 35620 21580 Retrieved cached data for AAPL
+INFO 2025-09-11 10:20:04,283 basehttp 35620 21580 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:20:34,167 services 35620 23072 Retrieved cached data for META
+INFO 2025-09-11 10:20:34,182 services 35620 23072 Retrieved cached data for NVDA
+INFO 2025-09-11 10:20:34,201 services 35620 23072 Retrieved cached data for AMZN
+INFO 2025-09-11 10:20:34,220 services 35620 23072 Retrieved cached data for NFLX
+INFO 2025-09-11 10:20:34,243 services 35620 23072 Retrieved cached data for AAPL
+INFO 2025-09-11 10:20:34,266 basehttp 35620 23072 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:20:47,062 services 35620 32448 Retrieved cached data for META
+INFO 2025-09-11 10:20:47,080 services 35620 32448 Retrieved cached data for NVDA
+INFO 2025-09-11 10:20:47,100 services 35620 32448 Retrieved cached data for AMZN
+INFO 2025-09-11 10:20:47,120 services 35620 32448 Retrieved cached data for NFLX
+INFO 2025-09-11 10:20:47,176 services 35620 32448 Retrieved cached data for AAPL
+INFO 2025-09-11 10:20:47,193 basehttp 35620 32448 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:21:04,172 services 35620 1444 Retrieved cached data for META
+INFO 2025-09-11 10:21:04,189 services 35620 1444 Retrieved cached data for NVDA
+INFO 2025-09-11 10:21:04,206 services 35620 1444 Retrieved cached data for AMZN
+INFO 2025-09-11 10:21:04,234 services 35620 1444 Retrieved cached data for NFLX
+INFO 2025-09-11 10:21:04,252 services 35620 1444 Retrieved cached data for AAPL
+INFO 2025-09-11 10:21:04,275 basehttp 35620 1444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:21:34,160 services 35620 1444 Retrieved cached data for META
+INFO 2025-09-11 10:21:34,181 services 35620 1444 Retrieved cached data for NVDA
+INFO 2025-09-11 10:21:34,204 services 35620 1444 Retrieved cached data for AMZN
+INFO 2025-09-11 10:21:34,218 services 35620 1444 Retrieved cached data for NFLX
+INFO 2025-09-11 10:21:34,236 services 35620 1444 Retrieved cached data for AAPL
+INFO 2025-09-11 10:21:34,259 basehttp 35620 1444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:21:47,052 services 35620 1444 Retrieved cached data for META
+INFO 2025-09-11 10:21:47,068 services 35620 1444 Retrieved cached data for NVDA
+INFO 2025-09-11 10:21:47,088 services 35620 1444 Retrieved cached data for AMZN
+INFO 2025-09-11 10:21:47,108 services 35620 1444 Retrieved cached data for NFLX
+INFO 2025-09-11 10:21:47,128 services 35620 1444 Retrieved cached data for AAPL
+INFO 2025-09-11 10:21:47,152 basehttp 35620 1444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:22:04,164 services 35620 1444 Retrieved cached data for META
+INFO 2025-09-11 10:22:04,180 services 35620 1444 Retrieved cached data for NVDA
+INFO 2025-09-11 10:22:04,197 services 35620 1444 Retrieved cached data for AMZN
+INFO 2025-09-11 10:22:04,217 services 35620 1444 Retrieved cached data for NFLX
+INFO 2025-09-11 10:22:04,237 services 35620 1444 Retrieved cached data for AAPL
+INFO 2025-09-11 10:22:04,264 basehttp 35620 1444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:22:34,151 services 35620 1444 Retrieved cached data for META
+INFO 2025-09-11 10:22:34,169 services 35620 1444 Retrieved cached data for NVDA
+INFO 2025-09-11 10:22:34,185 services 35620 1444 Retrieved cached data for AMZN
+INFO 2025-09-11 10:22:34,204 services 35620 1444 Retrieved cached data for NFLX
+INFO 2025-09-11 10:22:34,225 services 35620 1444 Retrieved cached data for AAPL
+INFO 2025-09-11 10:22:34,246 basehttp 35620 1444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:22:47,059 services 35620 1444 Retrieved cached data for META
+INFO 2025-09-11 10:22:47,079 services 35620 1444 Retrieved cached data for NVDA
+INFO 2025-09-11 10:22:47,100 services 35620 1444 Retrieved cached data for AMZN
+INFO 2025-09-11 10:22:47,119 services 35620 1444 Retrieved cached data for NFLX
+INFO 2025-09-11 10:22:47,141 services 35620 1444 Retrieved cached data for AAPL
+INFO 2025-09-11 10:22:47,165 basehttp 35620 1444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:23:04,155 services 35620 1444 Retrieved cached data for META
+INFO 2025-09-11 10:23:04,179 services 35620 1444 Retrieved cached data for NVDA
+INFO 2025-09-11 10:23:04,201 services 35620 1444 Retrieved cached data for AMZN
+INFO 2025-09-11 10:23:04,218 services 35620 1444 Retrieved cached data for NFLX
+INFO 2025-09-11 10:23:04,236 services 35620 1444 Retrieved cached data for AAPL
+INFO 2025-09-11 10:23:04,263 basehttp 35620 1444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:23:35,127 services 35620 12584 Retrieved cached data for META
+INFO 2025-09-11 10:23:35,165 services 35620 12584 Retrieved cached data for NVDA
+INFO 2025-09-11 10:23:37,712 services 35620 12584 Cached data for AMZN
+INFO 2025-09-11 10:23:38,857 services 35620 12584 Cached data for NFLX
+INFO 2025-09-11 10:23:39,965 services 35620 12584 Cached data for AAPL
+INFO 2025-09-11 10:23:39,979 basehttp 35620 12584 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:28:56,576 autoreload 17056 36808 Watching for file changes with StatReloader
+INFO 2025-09-11 10:29:10,076 basehttp 17056 9168 "GET / HTTP/1.1" 200 9517
+INFO 2025-09-11 10:29:23,943 basehttp 17056 26272 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 10:29:33,128 services 17056 26272 Cached data for META
+INFO 2025-09-11 10:29:34,147 services 17056 13792 Cached data for META
+INFO 2025-09-11 10:29:34,357 services 17056 26272 Cached data for NVDA
+INFO 2025-09-11 10:29:34,866 services 17056 13792 Cached data for NVDA
+INFO 2025-09-11 10:29:35,500 services 17056 26272 Cached data for AMZN
+INFO 2025-09-11 10:29:35,559 services 17056 13792 Cached data for AMZN
+INFO 2025-09-11 10:29:36,762 services 17056 13792 Cached data for NFLX
+INFO 2025-09-11 10:29:36,808 services 17056 26272 Cached data for NFLX
+INFO 2025-09-11 10:29:37,824 services 17056 7384 Retrieved cached data for META
+INFO 2025-09-11 10:29:37,840 services 17056 7384 Retrieved cached data for NVDA
+INFO 2025-09-11 10:29:37,872 services 17056 7384 Retrieved cached data for AMZN
+INFO 2025-09-11 10:29:37,929 services 17056 7384 Retrieved cached data for NFLX
+INFO 2025-09-11 10:29:38,298 services 17056 13792 Cached data for AAPL
+INFO 2025-09-11 10:29:38,306 services 17056 26272 Cached data for AAPL
+INFO 2025-09-11 10:29:38,364 basehttp 17056 13792 - Broken pipe from ('127.0.0.1', 60341)
+INFO 2025-09-11 10:29:38,365 basehttp 17056 26272 - Broken pipe from ('127.0.0.1', 59648)
+INFO 2025-09-11 10:29:40,020 services 17056 7384 Cached data for AAPL
+INFO 2025-09-11 10:29:40,060 basehttp 17056 7384 "GET /watchlist/ HTTP/1.1" 200 17177
+INFO 2025-09-11 10:29:42,186 services 17056 7384 Retrieved cached data for META
+INFO 2025-09-11 10:29:42,204 services 17056 7384 Retrieved cached data for NVDA
+INFO 2025-09-11 10:29:42,233 services 17056 7384 Retrieved cached data for AMZN
+INFO 2025-09-11 10:29:42,259 services 17056 7384 Retrieved cached data for NFLX
+INFO 2025-09-11 10:29:42,282 services 17056 7384 Retrieved cached data for AAPL
+INFO 2025-09-11 10:29:42,307 basehttp 17056 7384 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:29:47,066 services 17056 11572 Retrieved cached data for META
+INFO 2025-09-11 10:29:47,082 services 17056 11572 Retrieved cached data for NVDA
+INFO 2025-09-11 10:29:47,111 services 17056 11572 Retrieved cached data for AMZN
+INFO 2025-09-11 10:29:47,132 services 17056 11572 Retrieved cached data for NFLX
+INFO 2025-09-11 10:29:47,150 services 17056 11572 Retrieved cached data for AAPL
+INFO 2025-09-11 10:29:47,176 basehttp 17056 11572 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:29:51,803 services 17056 11572 Cached data for GS
+INFO 2025-09-11 10:29:51,825 services 17056 11572 Retrieved cached data for META
+INFO 2025-09-11 10:29:51,863 basehttp 17056 11572 - Broken pipe from ('127.0.0.1', 54481)
+INFO 2025-09-11 10:29:52,189 services 17056 1028 Cached data for GS
+INFO 2025-09-11 10:29:52,210 services 17056 1028 Retrieved cached data for META
+INFO 2025-09-11 10:29:52,238 basehttp 17056 1028 "GET /portfolio_dashboard/ HTTP/1.1" 200 6477
+INFO 2025-09-11 10:29:56,132 basehttp 17056 36688 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-11 10:30:07,241 services 17056 30288 Cached data for GOOGL
+INFO 2025-09-11 10:30:07,286 views 17056 30288 User nitishstock bought 3 shares of GOOGL at $239.1699981689453
+INFO 2025-09-11 10:30:07,292 basehttp 17056 30288 - Broken pipe from ('127.0.0.1', 58290)
+INFO 2025-09-11 10:30:08,202 services 17056 7200 Cached data for GOOGL
+INFO 2025-09-11 10:30:08,245 views 17056 7200 User nitishstock bought 3 shares of GOOGL at $239.1699981689453
+INFO 2025-09-11 10:30:08,264 basehttp 17056 7200 - Broken pipe from ('127.0.0.1', 59650)
+INFO 2025-09-11 10:30:08,280 services 17056 15856 Retrieved cached data for GOOGL
+INFO 2025-09-11 10:30:08,333 views 17056 15856 User nitishstock bought 3 shares of GOOGL at $239.1699981689453
+INFO 2025-09-11 10:30:08,337 basehttp 17056 15856 "POST /buy/1/ HTTP/1.1" 302 0
+INFO 2025-09-11 10:30:08,380 basehttp 17056 15856 "GET / HTTP/1.1" 200 10291
+INFO 2025-09-11 10:30:47,063 services 17056 26180 Retrieved cached data for META
+INFO 2025-09-11 10:30:47,078 services 17056 26180 Retrieved cached data for NVDA
+INFO 2025-09-11 10:30:47,095 services 17056 26180 Retrieved cached data for AMZN
+INFO 2025-09-11 10:30:47,115 services 17056 26180 Retrieved cached data for NFLX
+INFO 2025-09-11 10:30:47,131 services 17056 26180 Retrieved cached data for AAPL
+INFO 2025-09-11 10:30:47,154 basehttp 17056 26180 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:31:47,063 services 17056 16796 Retrieved cached data for META
+INFO 2025-09-11 10:31:47,080 services 17056 16796 Retrieved cached data for NVDA
+INFO 2025-09-11 10:31:47,113 services 17056 16796 Retrieved cached data for AMZN
+INFO 2025-09-11 10:31:47,152 services 17056 16796 Retrieved cached data for NFLX
+INFO 2025-09-11 10:31:47,210 services 17056 16796 Retrieved cached data for AAPL
+INFO 2025-09-11 10:31:47,240 basehttp 17056 16796 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:32:47,076 services 17056 28508 Retrieved cached data for META
+INFO 2025-09-11 10:32:47,094 services 17056 28508 Retrieved cached data for NVDA
+INFO 2025-09-11 10:32:47,111 services 17056 28508 Retrieved cached data for AMZN
+INFO 2025-09-11 10:32:47,133 services 17056 28508 Retrieved cached data for NFLX
+INFO 2025-09-11 10:32:47,151 services 17056 28508 Retrieved cached data for AAPL
+INFO 2025-09-11 10:32:47,175 basehttp 17056 28508 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:33:47,064 services 17056 28508 Retrieved cached data for META
+INFO 2025-09-11 10:33:47,082 services 17056 28508 Retrieved cached data for NVDA
+INFO 2025-09-11 10:33:47,103 services 17056 28508 Retrieved cached data for AMZN
+INFO 2025-09-11 10:33:47,121 services 17056 28508 Retrieved cached data for NFLX
+INFO 2025-09-11 10:33:47,145 services 17056 28508 Retrieved cached data for AAPL
+INFO 2025-09-11 10:33:47,165 basehttp 17056 28508 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:34:50,463 services 17056 18188 Cached data for META
+INFO 2025-09-11 10:34:52,136 services 17056 18188 Cached data for NVDA
+INFO 2025-09-11 10:34:54,381 services 17056 18188 Cached data for AMZN
+INFO 2025-09-11 10:34:55,901 services 17056 18188 Cached data for NFLX
+INFO 2025-09-11 10:34:57,892 services 17056 18188 Cached data for AAPL
+INFO 2025-09-11 10:34:57,914 basehttp 17056 18188 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:35:47,186 services 17056 21940 Retrieved cached data for META
+INFO 2025-09-11 10:35:47,203 services 17056 21940 Retrieved cached data for NVDA
+INFO 2025-09-11 10:35:47,222 services 17056 21940 Retrieved cached data for AMZN
+INFO 2025-09-11 10:35:47,241 services 17056 21940 Retrieved cached data for NFLX
+INFO 2025-09-11 10:35:47,262 services 17056 21940 Retrieved cached data for AAPL
+INFO 2025-09-11 10:35:47,291 basehttp 17056 21940 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:36:47,071 services 17056 21912 Retrieved cached data for META
+INFO 2025-09-11 10:36:47,085 services 17056 21912 Retrieved cached data for NVDA
+INFO 2025-09-11 10:36:47,098 services 17056 21912 Retrieved cached data for AMZN
+INFO 2025-09-11 10:36:47,114 services 17056 21912 Retrieved cached data for NFLX
+INFO 2025-09-11 10:36:47,131 services 17056 21912 Retrieved cached data for AAPL
+INFO 2025-09-11 10:36:47,149 basehttp 17056 21912 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:37:47,062 services 17056 13884 Retrieved cached data for META
+INFO 2025-09-11 10:37:47,083 services 17056 13884 Retrieved cached data for NVDA
+INFO 2025-09-11 10:37:47,105 services 17056 13884 Retrieved cached data for AMZN
+INFO 2025-09-11 10:37:47,129 services 17056 13884 Retrieved cached data for NFLX
+INFO 2025-09-11 10:37:47,148 services 17056 13884 Retrieved cached data for AAPL
+INFO 2025-09-11 10:37:47,169 basehttp 17056 13884 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:38:47,062 services 17056 13884 Retrieved cached data for META
+INFO 2025-09-11 10:38:47,080 services 17056 13884 Retrieved cached data for NVDA
+INFO 2025-09-11 10:38:47,106 services 17056 13884 Retrieved cached data for AMZN
+INFO 2025-09-11 10:38:47,128 services 17056 13884 Retrieved cached data for NFLX
+INFO 2025-09-11 10:38:47,153 services 17056 13884 Retrieved cached data for AAPL
+INFO 2025-09-11 10:38:47,178 basehttp 17056 13884 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:39:47,061 services 17056 11364 Retrieved cached data for META
+INFO 2025-09-11 10:39:47,081 services 17056 11364 Retrieved cached data for NVDA
+INFO 2025-09-11 10:39:47,107 services 17056 11364 Retrieved cached data for AMZN
+INFO 2025-09-11 10:39:47,125 services 17056 11364 Retrieved cached data for NFLX
+INFO 2025-09-11 10:39:47,144 services 17056 11364 Retrieved cached data for AAPL
+INFO 2025-09-11 10:39:47,168 basehttp 17056 11364 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:40:49,743 services 17056 11364 Cached data for META
+INFO 2025-09-11 10:40:51,563 services 17056 11364 Cached data for NVDA
+INFO 2025-09-11 10:40:52,936 services 17056 11364 Cached data for AMZN
+INFO 2025-09-11 10:40:53,514 services 17056 11364 Cached data for NFLX
+INFO 2025-09-11 10:40:55,256 services 17056 11364 Cached data for AAPL
+INFO 2025-09-11 10:40:55,279 basehttp 17056 11364 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:41:47,061 services 17056 22936 Retrieved cached data for META
+INFO 2025-09-11 10:41:47,080 services 17056 22936 Retrieved cached data for NVDA
+INFO 2025-09-11 10:41:47,101 services 17056 22936 Retrieved cached data for AMZN
+INFO 2025-09-11 10:41:47,121 services 17056 22936 Retrieved cached data for NFLX
+INFO 2025-09-11 10:41:47,142 services 17056 22936 Retrieved cached data for AAPL
+INFO 2025-09-11 10:41:47,165 basehttp 17056 22936 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:42:47,077 services 17056 36004 Retrieved cached data for META
+INFO 2025-09-11 10:42:47,093 services 17056 36004 Retrieved cached data for NVDA
+INFO 2025-09-11 10:42:47,113 services 17056 36004 Retrieved cached data for AMZN
+INFO 2025-09-11 10:42:47,150 services 17056 36004 Retrieved cached data for NFLX
+INFO 2025-09-11 10:42:47,183 services 17056 36004 Retrieved cached data for AAPL
+INFO 2025-09-11 10:42:47,201 basehttp 17056 36004 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:43:47,062 services 17056 33708 Retrieved cached data for META
+INFO 2025-09-11 10:43:47,081 services 17056 33708 Retrieved cached data for NVDA
+INFO 2025-09-11 10:43:47,107 services 17056 33708 Retrieved cached data for AMZN
+INFO 2025-09-11 10:43:47,126 services 17056 33708 Retrieved cached data for NFLX
+INFO 2025-09-11 10:43:47,142 services 17056 33708 Retrieved cached data for AAPL
+INFO 2025-09-11 10:43:47,165 basehttp 17056 33708 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:44:47,063 services 17056 2344 Retrieved cached data for META
+INFO 2025-09-11 10:44:47,082 services 17056 2344 Retrieved cached data for NVDA
+INFO 2025-09-11 10:44:47,103 services 17056 2344 Retrieved cached data for AMZN
+INFO 2025-09-11 10:44:47,123 services 17056 2344 Retrieved cached data for NFLX
+INFO 2025-09-11 10:44:47,145 services 17056 2344 Retrieved cached data for AAPL
+INFO 2025-09-11 10:44:47,172 basehttp 17056 2344 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:45:47,178 services 17056 12812 Retrieved cached data for META
+INFO 2025-09-11 10:45:47,194 services 17056 12812 Retrieved cached data for NVDA
+INFO 2025-09-11 10:45:47,214 services 17056 12812 Retrieved cached data for AMZN
+INFO 2025-09-11 10:45:47,238 services 17056 12812 Retrieved cached data for NFLX
+INFO 2025-09-11 10:45:47,258 services 17056 12812 Retrieved cached data for AAPL
+INFO 2025-09-11 10:45:47,280 basehttp 17056 12812 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:46:50,226 services 17056 13824 Cached data for META
+INFO 2025-09-11 10:46:52,162 services 17056 13824 Cached data for NVDA
+INFO 2025-09-11 10:46:53,468 services 17056 13824 Cached data for AMZN
+INFO 2025-09-11 10:46:54,479 services 17056 13824 Cached data for NFLX
+INFO 2025-09-11 10:46:55,877 services 17056 13824 Cached data for AAPL
+INFO 2025-09-11 10:46:55,894 basehttp 17056 13824 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 10:47:47,057 services 17056 6436 Retrieved cached data for META
+INFO 2025-09-11 10:47:47,075 services 17056 6436 Retrieved cached data for NVDA
+INFO 2025-09-11 10:47:47,092 services 17056 6436 Retrieved cached data for AMZN
+INFO 2025-09-11 10:47:47,115 services 17056 6436 Retrieved cached data for NFLX
+INFO 2025-09-11 10:47:47,134 services 17056 6436 Retrieved cached data for AAPL
+INFO 2025-09-11 10:47:47,154 basehttp 17056 6436 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-09-11 18:58:59,392 basehttp 17056 36056 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 18:58:59,611 basehttp 17056 36056 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2617
+INFO 2025-09-11 18:59:44,358 basehttp 17056 18320 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 18:59:44,368 basehttp 17056 18320 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:00:44,355 basehttp 17056 31168 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:00:44,516 basehttp 17056 31168 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:01:44,420 basehttp 17056 35220 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:01:44,435 basehttp 17056 35220 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:02:44,530 basehttp 17056 33908 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:02:44,560 basehttp 17056 33908 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:03:44,381 basehttp 17056 37592 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:03:44,416 basehttp 17056 37592 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:04:44,567 basehttp 17056 6644 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:04:44,579 basehttp 17056 6644 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:05:44,348 basehttp 17056 23456 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:05:44,360 basehttp 17056 23456 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:06:44,398 basehttp 17056 29864 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:06:44,538 basehttp 17056 29864 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:07:44,348 basehttp 17056 37300 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:07:44,358 basehttp 17056 37300 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:08:44,356 basehttp 17056 15496 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:08:44,370 basehttp 17056 15496 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:09:44,355 basehttp 17056 37288 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:09:44,372 basehttp 17056 37288 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:10:44,368 basehttp 17056 26876 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:10:44,380 basehttp 17056 26876 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:11:44,353 basehttp 17056 17568 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:11:44,360 basehttp 17056 17568 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:12:44,358 basehttp 17056 29776 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:12:44,365 basehttp 17056 29776 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:13:44,347 basehttp 17056 32880 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:13:44,356 basehttp 17056 32880 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:14:44,377 basehttp 17056 3444 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:14:44,389 basehttp 17056 3444 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:15:44,357 basehttp 17056 3444 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:15:44,367 basehttp 17056 3444 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:16:44,357 basehttp 17056 23056 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:16:44,364 basehttp 17056 23056 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:17:44,362 basehttp 17056 37248 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:17:44,373 basehttp 17056 37248 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:18:44,351 basehttp 17056 23224 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:18:44,359 basehttp 17056 23224 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:19:44,346 basehttp 17056 13028 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:19:44,358 basehttp 17056 13028 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:20:44,401 basehttp 17056 10516 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:20:44,417 basehttp 17056 10516 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:21:44,444 basehttp 17056 29420 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:21:44,455 basehttp 17056 29420 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:22:44,351 basehttp 17056 8516 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:22:44,361 basehttp 17056 8516 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:23:44,348 basehttp 17056 29736 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:23:44,357 basehttp 17056 29736 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:24:44,386 basehttp 17056 26112 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:24:44,403 basehttp 17056 26112 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:25:44,347 basehttp 17056 15000 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:25:44,357 basehttp 17056 15000 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:26:44,345 basehttp 17056 29176 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:26:44,351 basehttp 17056 29176 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:27:44,358 basehttp 17056 30960 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:27:44,367 basehttp 17056 30960 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:28:44,350 basehttp 17056 31768 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:28:44,356 basehttp 17056 31768 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:29:44,358 basehttp 17056 6196 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:29:44,366 basehttp 17056 6196 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:30:44,359 basehttp 17056 3080 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:30:44,371 basehttp 17056 3080 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:31:44,449 basehttp 17056 33200 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:31:44,463 basehttp 17056 33200 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:32:44,340 basehttp 17056 8196 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:32:44,347 basehttp 17056 8196 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:33:44,371 basehttp 17056 5264 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:33:44,380 basehttp 17056 5264 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:34:44,364 basehttp 17056 33600 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:34:44,378 basehttp 17056 33600 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:35:44,608 basehttp 17056 9988 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:35:44,674 basehttp 17056 9988 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:36:44,353 basehttp 17056 10092 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:36:44,362 basehttp 17056 10092 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:37:44,357 basehttp 17056 25324 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:37:44,367 basehttp 17056 25324 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:38:44,349 basehttp 17056 23816 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:38:44,357 basehttp 17056 23816 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:39:44,561 basehttp 17056 16940 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:39:44,611 basehttp 17056 16940 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:40:44,351 basehttp 17056 25700 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:40:44,358 basehttp 17056 25700 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:41:44,359 basehttp 17056 19988 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:41:44,367 basehttp 17056 19988 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:42:44,355 basehttp 17056 33764 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:42:44,362 basehttp 17056 33764 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:43:44,350 basehttp 17056 19992 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:43:44,357 basehttp 17056 19992 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:44:44,346 basehttp 17056 34588 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:44:44,354 basehttp 17056 34588 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:45:44,453 basehttp 17056 35392 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:45:44,460 basehttp 17056 35392 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:46:44,353 basehttp 17056 28912 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:46:44,362 basehttp 17056 28912 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:47:44,344 basehttp 17056 25276 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:47:44,352 basehttp 17056 25276 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 19:48:44,345 basehttp 17056 26820 "GET /api/watchlist/update-prices/ HTTP/1.1" 302 0
+INFO 2025-09-11 19:48:44,354 basehttp 17056 26820 "GET /login/?next=/api/watchlist/update-prices/ HTTP/1.1" 200 2262
+INFO 2025-09-11 22:19:54,858 basehttp 17056 38524 "GET /stocks/ HTTP/1.1" 302 0
+INFO 2025-09-11 22:19:54,925 basehttp 17056 38524 "GET /login/?next=/stocks/ HTTP/1.1" 200 2262
+INFO 2025-09-11 22:20:03,786 basehttp 17056 6888 "GET /watchlist/ HTTP/1.1" 302 0
+INFO 2025-09-11 22:20:03,797 basehttp 17056 6888 "GET /login/?next=/watchlist/ HTTP/1.1" 200 2262
+INFO 2025-09-11 22:20:06,573 basehttp 17056 36056 "GET / HTTP/1.1" 302 0
+INFO 2025-09-11 22:20:06,592 basehttp 17056 36056 "GET /login/?next=/ HTTP/1.1" 200 2262
+INFO 2025-09-11 22:20:07,362 basehttp 17056 31136 - Broken pipe from ('127.0.0.1', 59344)
+INFO 2025-09-11 22:20:07,368 basehttp 17056 12744 - Broken pipe from ('127.0.0.1', 60046)
+INFO 2025-09-11 22:20:07,369 basehttp 17056 36056 - Broken pipe from ('127.0.0.1', 59849)
+INFO 2025-09-11 22:20:07,426 basehttp 17056 1284 - Broken pipe from ('127.0.0.1', 54322)
+INFO 2025-09-11 22:20:07,452 basehttp 17056 17168 "GET / HTTP/1.1" 302 0
+INFO 2025-09-11 22:20:07,462 basehttp 17056 17168 "GET /login/?next=/ HTTP/1.1" 200 2262
+INFO 2025-09-11 22:20:07,589 basehttp 17056 35340 "GET /static/styles.css HTTP/1.1" 200 1146
+INFO 2025-09-11 22:20:07,592 basehttp 17056 17168 "GET /static/modern-styles.css HTTP/1.1" 200 9996
+INFO 2025-09-11 22:20:07,601 basehttp 17056 35340 "GET /static/market.css HTTP/1.1" 200 1392
+INFO 2025-09-11 22:20:07,602 basehttp 17056 17168 "GET /static/form.css HTTP/1.1" 200 1313
+WARNING 2025-09-11 22:20:08,426 log 17056 17168 Not Found: /favicon.ico
+INFO 2025-09-11 22:20:08,427 basehttp 17056 35340 "GET /admin HTTP/1.1" 301 0
+INFO 2025-09-11 22:20:08,428 basehttp 17056 17168 - Broken pipe from ('127.0.0.1', 65423)
+INFO 2025-09-11 22:20:08,489 basehttp 17056 28396 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-09-11 22:20:10,848 basehttp 17056 28396 - Broken pipe from ('127.0.0.1', 57587)
+INFO 2025-09-12 14:22:45,593 autoreload 17432 23236 Watching for file changes with StatReloader
+INFO 2025-09-12 14:22:55,931 basehttp 17432 18536 "GET / HTTP/1.1" 302 0
+INFO 2025-09-12 14:22:56,949 basehttp 17432 18536 "GET /login/?next=/ HTTP/1.1" 200 2262
+WARNING 2025-09-12 14:22:57,778 log 17432 18536 Not Found: /favicon.ico
+WARNING 2025-09-12 14:22:57,780 basehttp 17432 18536 "GET /favicon.ico HTTP/1.1" 404 5647
+INFO 2025-09-12 14:22:59,749 basehttp 17432 18536 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-09-12 14:22:59,837 basehttp 17432 18536 "GET / HTTP/1.1" 200 10291
+INFO 2025-09-12 14:23:02,351 basehttp 17432 18536 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-12 14:23:07,731 basehttp 17432 18536 "GET /transaction_history/ HTTP/1.1" 200 10022
+INFO 2025-09-12 14:23:22,906 services 17432 21576 Cached data for META
+INFO 2025-09-12 14:23:22,962 services 17432 9352 Cached data for META
+INFO 2025-09-12 14:23:22,966 services 17432 5304 Cached data for META
+INFO 2025-09-12 14:23:22,974 services 17432 20416 Cached data for GOOGL
+INFO 2025-09-12 14:23:23,046 services 17432 28228 Cached data for GOOGL
+INFO 2025-09-12 14:23:23,059 services 17432 23496 Cached data for META
+INFO 2025-09-12 14:23:23,071 services 17432 18536 Cached data for GOOGL
+INFO 2025-09-12 14:23:25,514 services 17432 21576 Cached data for NVDA
+INFO 2025-09-12 14:23:25,751 services 17432 5304 Cached data for NVDA
+INFO 2025-09-12 14:23:26,097 services 17432 18536 Cached data for GS
+INFO 2025-09-12 14:23:26,109 services 17432 20416 Cached data for GS
+INFO 2025-09-12 14:23:26,144 services 17432 28228 Cached data for GS
+INFO 2025-09-12 14:23:26,252 services 17432 23496 Cached data for NVDA
+INFO 2025-09-12 14:23:26,265 services 17432 9352 Cached data for NVDA
+INFO 2025-09-12 14:23:26,266 services 17432 18536 Retrieved cached data for META
+INFO 2025-09-12 14:23:26,307 services 17432 20416 Retrieved cached data for META
+INFO 2025-09-12 14:23:26,347 services 17432 28228 Retrieved cached data for META
+INFO 2025-09-12 14:23:26,444 basehttp 17432 18536 - Broken pipe from ('127.0.0.1', 64168)
+INFO 2025-09-12 14:23:26,445 basehttp 17432 20416 - Broken pipe from ('127.0.0.1', 55226)
+INFO 2025-09-12 14:23:26,446 basehttp 17432 28228 - Broken pipe from ('127.0.0.1', 59179)
+INFO 2025-09-12 14:23:26,795 services 17432 21576 Cached data for AMZN
+INFO 2025-09-12 14:23:26,845 services 17432 5304 Cached data for AMZN
+INFO 2025-09-12 14:23:27,021 services 17432 9352 Cached data for AMZN
+INFO 2025-09-12 14:23:27,296 services 17432 23496 Cached data for AMZN
+INFO 2025-09-12 14:23:27,688 services 17432 21576 Cached data for NFLX
+INFO 2025-09-12 14:23:27,747 services 17432 9352 Cached data for NFLX
+INFO 2025-09-12 14:23:27,798 services 17432 5304 Cached data for NFLX
+INFO 2025-09-12 14:23:28,172 services 17432 23496 Cached data for NFLX
+INFO 2025-09-12 14:23:28,972 services 17432 21576 Cached data for AAPL
+INFO 2025-09-12 14:23:29,042 services 17432 9352 Cached data for AAPL
+INFO 2025-09-12 14:23:29,089 services 17432 5304 Cached data for AAPL
+INFO 2025-09-12 14:23:29,138 services 17432 23496 Cached data for AAPL
+INFO 2025-09-12 14:23:29,324 basehttp 17432 23496 "GET /watchlist/ HTTP/1.1" 200 17175
+INFO 2025-09-12 14:23:29,325 basehttp 17432 5304 - Broken pipe from ('127.0.0.1', 54225)
+INFO 2025-09-12 14:23:29,326 basehttp 17432 21576 - Broken pipe from ('127.0.0.1', 49669)
+INFO 2025-09-12 14:23:29,327 basehttp 17432 9352 - Broken pipe from ('127.0.0.1', 51283)
+INFO 2025-09-12 14:23:31,474 services 17432 25188 Retrieved cached data for META
+INFO 2025-09-12 14:23:31,503 services 17432 25188 Retrieved cached data for NVDA
+INFO 2025-09-12 14:23:31,530 services 17432 25188 Retrieved cached data for AMZN
+INFO 2025-09-12 14:23:31,561 services 17432 25188 Retrieved cached data for NFLX
+INFO 2025-09-12 14:23:31,608 services 17432 25188 Retrieved cached data for AAPL
+INFO 2025-09-12 14:23:31,630 basehttp 17432 25188 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 887
+INFO 2025-09-12 14:23:55,917 services 17432 28720 Retrieved cached data for GOOGL
+INFO 2025-09-12 14:23:55,935 services 17432 28720 Retrieved cached data for GS
+INFO 2025-09-12 14:23:55,955 services 17432 28720 Retrieved cached data for META
+INFO 2025-09-12 14:23:55,981 basehttp 17432 28720 "GET /portfolio_dashboard/ HTTP/1.1" 200 7233
+INFO 2025-09-12 14:24:00,401 services 17432 28720 Retrieved cached data for META
+INFO 2025-09-12 14:24:00,420 services 17432 28720 Retrieved cached data for NVDA
+INFO 2025-09-12 14:24:00,436 services 17432 28720 Retrieved cached data for AMZN
+INFO 2025-09-12 14:24:00,458 services 17432 28720 Retrieved cached data for NFLX
+INFO 2025-09-12 14:24:00,480 services 17432 28720 Retrieved cached data for AAPL
+INFO 2025-09-12 14:24:00,515 basehttp 17432 28720 "GET /watchlist/ HTTP/1.1" 200 17175
+INFO 2025-09-12 14:24:02,654 services 17432 28720 Retrieved cached data for META
+INFO 2025-09-12 14:24:02,669 services 17432 28720 Retrieved cached data for NVDA
+INFO 2025-09-12 14:24:02,693 services 17432 28720 Retrieved cached data for AMZN
+INFO 2025-09-12 14:24:02,712 services 17432 28720 Retrieved cached data for NFLX
+INFO 2025-09-12 14:24:02,732 services 17432 28720 Retrieved cached data for AAPL
+INFO 2025-09-12 14:24:02,754 basehttp 17432 28720 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 887
+INFO 2025-09-12 14:24:14,890 basehttp 17432 19736 "GET /transaction_history/ HTTP/1.1" 200 10022
+INFO 2025-09-13 15:58:07,125 autoreload 20148 10248 Watching for file changes with StatReloader
+INFO 2025-09-13 15:58:23,499 basehttp 20148 20416 "GET / HTTP/1.1" 302 0
+INFO 2025-09-13 15:58:24,673 basehttp 20148 20416 "GET /login/?next=/ HTTP/1.1" 200 2262
+INFO 2025-09-13 15:58:25,304 basehttp 20148 20416 "GET /static/modern-styles.css HTTP/1.1" 200 9996
+INFO 2025-09-13 15:58:25,309 basehttp 20148 11216 "GET /static/styles.css HTTP/1.1" 200 1146
+INFO 2025-09-13 15:58:25,334 basehttp 20148 9040 "GET /static/form.css HTTP/1.1" 200 1313
+INFO 2025-09-13 15:58:25,335 basehttp 20148 20000 "GET /static/market.css HTTP/1.1" 200 1392
+WARNING 2025-09-13 15:58:26,051 log 20148 8592 Not Found: /favicon.ico
+WARNING 2025-09-13 15:58:26,053 basehttp 20148 8592 "GET /favicon.ico HTTP/1.1" 404 5647
+INFO 2025-09-13 15:58:28,543 basehttp 20148 8592 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-09-13 15:58:28,659 basehttp 20148 8592 "GET / HTTP/1.1" 200 10291
+INFO 2025-09-13 15:58:35,046 basehttp 20148 19984 "GET / HTTP/1.1" 200 10291
+INFO 2025-09-13 15:58:37,043 basehttp 20148 12148 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-13 15:58:44,219 basehttp 20148 12148 "GET /transaction_history/ HTTP/1.1" 200 10022
+INFO 2025-09-13 15:59:23,167 basehttp 20148 13228 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-13 15:59:27,252 basehttp 20148 13228 "GET /add_to_watchlist/GOOGL/ HTTP/1.1" 302 0
+INFO 2025-09-13 15:59:27,357 basehttp 20148 13228 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-13 15:59:46,315 services 20148 12568 Cached data for META
+INFO 2025-09-13 15:59:46,368 services 20148 20312 Cached data for GOOGL
+INFO 2025-09-13 15:59:46,376 services 20148 5388 Cached data for GOOGL
+INFO 2025-09-13 15:59:46,397 services 20148 15972 Cached data for GOOGL
+INFO 2025-09-13 15:59:46,446 services 20148 1768 Cached data for META
+INFO 2025-09-13 15:59:46,549 services 20148 18424 Cached data for GOOGL
+INFO 2025-09-13 15:59:46,558 services 20148 12648 Cached data for GOOGL
+INFO 2025-09-13 15:59:46,569 services 20148 13228 Cached data for META
+INFO 2025-09-13 15:59:46,590 services 20148 9104 Cached data for GOOGL
+INFO 2025-09-13 15:59:47,601 services 20148 1768 Cached data for NVDA
+INFO 2025-09-13 15:59:47,730 services 20148 12568 Cached data for NVDA
+INFO 2025-09-13 15:59:47,774 services 20148 13228 Cached data for NVDA
+INFO 2025-09-13 15:59:47,823 services 20148 15972 Cached data for GS
+INFO 2025-09-13 15:59:47,934 services 20148 5388 Cached data for GS
+INFO 2025-09-13 15:59:47,964 services 20148 12648 Cached data for GS
+INFO 2025-09-13 15:59:47,984 services 20148 9104 Cached data for GS
+INFO 2025-09-13 15:59:48,034 services 20148 18424 Cached data for GS
+INFO 2025-09-13 15:59:48,039 services 20148 15972 Retrieved cached data for META
+INFO 2025-09-13 15:59:48,086 services 20148 9104 Retrieved cached data for META
+INFO 2025-09-13 15:59:48,108 services 20148 20312 Cached data for GS
+INFO 2025-09-13 15:59:48,118 services 20148 12648 Retrieved cached data for META
+INFO 2025-09-13 15:59:48,169 services 20148 18424 Retrieved cached data for META
+INFO 2025-09-13 15:59:48,194 basehttp 20148 12648 - Broken pipe from ('127.0.0.1', 53529)
+INFO 2025-09-13 15:59:48,200 basehttp 20148 15972 - Broken pipe from ('127.0.0.1', 50236)
+INFO 2025-09-13 15:59:48,228 services 20148 20312 Retrieved cached data for META
+INFO 2025-09-13 15:59:48,253 basehttp 20148 20312 - Broken pipe from ('127.0.0.1', 64405)
+INFO 2025-09-13 15:59:48,273 basehttp 20148 9104 - Broken pipe from ('127.0.0.1', 49713)
+INFO 2025-09-13 15:59:48,290 basehttp 20148 18424 - Broken pipe from ('127.0.0.1', 55818)
+INFO 2025-09-13 15:59:48,312 services 20148 5388 Retrieved cached data for META
+INFO 2025-09-13 15:59:48,348 basehttp 20148 5388 - Broken pipe from ('127.0.0.1', 49283)
+INFO 2025-09-13 15:59:48,911 services 20148 1768 Cached data for AMZN
+INFO 2025-09-13 15:59:49,006 services 20148 12568 Cached data for AMZN
+INFO 2025-09-13 15:59:49,053 services 20148 13228 Cached data for AMZN
+INFO 2025-09-13 15:59:50,462 services 20148 1768 Cached data for NFLX
+INFO 2025-09-13 15:59:51,056 services 20148 12568 Cached data for NFLX
+INFO 2025-09-13 15:59:51,085 services 20148 13228 Cached data for NFLX
+INFO 2025-09-13 15:59:51,553 services 20148 1768 Cached data for AAPL
+INFO 2025-09-13 15:59:51,645 basehttp 20148 1768 - Broken pipe from ('127.0.0.1', 58671)
+INFO 2025-09-13 15:59:51,968 services 20148 12568 Cached data for AAPL
+INFO 2025-09-13 15:59:52,006 basehttp 20148 12568 - Broken pipe from ('127.0.0.1', 56710)
+INFO 2025-09-13 15:59:52,009 services 20148 13228 Cached data for AAPL
+INFO 2025-09-13 15:59:52,116 services 20148 13228 Retrieved cached data for GOOGL
+INFO 2025-09-13 15:59:52,193 basehttp 20148 13228 "GET /watchlist/ HTTP/1.1" 200 19024
+INFO 2025-09-13 15:59:54,673 services 20148 13228 Retrieved cached data for META
+INFO 2025-09-13 15:59:54,685 services 20148 13228 Retrieved cached data for NVDA
+INFO 2025-09-13 15:59:54,698 services 20148 13228 Retrieved cached data for AMZN
+INFO 2025-09-13 15:59:54,713 services 20148 13228 Retrieved cached data for NFLX
+INFO 2025-09-13 15:59:54,782 services 20148 13228 Retrieved cached data for AAPL
+INFO 2025-09-13 15:59:54,817 services 20148 13228 Retrieved cached data for GOOGL
+INFO 2025-09-13 15:59:54,838 basehttp 20148 13228 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 1045
+INFO 2025-09-13 15:59:56,657 services 20148 13228 Retrieved cached data for META
+INFO 2025-09-13 15:59:56,674 services 20148 13228 Retrieved cached data for NVDA
+INFO 2025-09-13 15:59:56,699 services 20148 13228 Retrieved cached data for AMZN
+INFO 2025-09-13 15:59:56,740 services 20148 13228 Retrieved cached data for NFLX
+INFO 2025-09-13 15:59:56,788 services 20148 13228 Retrieved cached data for AAPL
+INFO 2025-09-13 15:59:56,818 services 20148 13228 Retrieved cached data for GOOGL
+INFO 2025-09-13 15:59:56,841 basehttp 20148 13228 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 1045
+INFO 2025-09-13 16:00:14,458 basehttp 20148 22220 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-13 16:00:23,843 services 20148 10544 Retrieved cached data for GOOGL
+INFO 2025-09-13 16:00:23,918 views 20148 10544 User nitishstock bought 4 shares of GOOGL at $240.8000030517578
+INFO 2025-09-13 16:00:23,929 basehttp 20148 10544 "POST /buy/1/ HTTP/1.1" 302 0
+INFO 2025-09-13 16:00:24,039 basehttp 20148 10544 "GET / HTTP/1.1" 200 10292
+INFO 2025-09-13 16:00:26,433 basehttp 20148 10544 "GET /transaction_history/ HTTP/1.1" 200 10951
+INFO 2025-09-13 16:00:33,312 basehttp 20148 22172 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-13 16:00:40,524 basehttp 20148 22172 "POST /sell/1/ HTTP/1.1" 302 0
+INFO 2025-09-13 16:00:40,564 basehttp 20148 22172 "GET / HTTP/1.1" 200 10292
+INFO 2025-09-13 16:00:43,947 basehttp 20148 14764 "GET /transaction_history/ HTTP/1.1" 200 11880
+INFO 2025-09-13 16:01:02,235 services 20148 11844 Retrieved cached data for META
+INFO 2025-09-13 16:01:02,254 services 20148 11844 Retrieved cached data for NVDA
+INFO 2025-09-13 16:01:02,273 services 20148 11844 Retrieved cached data for AMZN
+INFO 2025-09-13 16:01:02,293 services 20148 11844 Retrieved cached data for NFLX
+INFO 2025-09-13 16:01:02,316 services 20148 11844 Retrieved cached data for AAPL
+INFO 2025-09-13 16:01:02,336 services 20148 11844 Retrieved cached data for GOOGL
+INFO 2025-09-13 16:01:02,362 basehttp 20148 11844 "GET /watchlist/ HTTP/1.1" 200 19024
+INFO 2025-09-13 16:01:04,481 services 20148 11844 Retrieved cached data for META
+INFO 2025-09-13 16:01:04,505 services 20148 11844 Retrieved cached data for NVDA
+INFO 2025-09-13 16:01:04,544 services 20148 11844 Retrieved cached data for AMZN
+INFO 2025-09-13 16:01:04,574 services 20148 11844 Retrieved cached data for NFLX
+INFO 2025-09-13 16:01:04,628 services 20148 11844 Retrieved cached data for AAPL
+INFO 2025-09-13 16:01:04,646 services 20148 11844 Retrieved cached data for GOOGL
+INFO 2025-09-13 16:01:04,665 basehttp 20148 11844 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 1045
+INFO 2025-09-13 16:01:19,008 basehttp 20148 13540 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-13 16:01:23,887 basehttp 20148 13540 "GET /transaction_history/ HTTP/1.1" 200 11880
+INFO 2025-09-13 16:01:50,606 basehttp 20148 5744 "GET /stocks/ HTTP/1.1" 200 32074
+INFO 2025-09-13 16:01:56,942 basehttp 20148 20740 "GET / HTTP/1.1" 200 10292
+INFO 2025-11-03 22:16:25,148 autoreload 16248 4468 Watching for file changes with StatReloader
+INFO 2025-11-03 22:18:07,108 basehttp 16248 4544 "GET / HTTP/1.1" 302 0
+INFO 2025-11-03 22:18:10,273 basehttp 16248 4544 "GET /login/?next=/ HTTP/1.1" 200 2262
+INFO 2025-11-03 22:18:14,486 basehttp 16248 11632 "GET /static/market.css HTTP/1.1" 200 1392
+INFO 2025-11-03 22:18:14,487 basehttp 16248 14112 "GET /static/form.css HTTP/1.1" 200 1313
+INFO 2025-11-03 22:18:14,487 basehttp 16248 13596 "GET /static/styles.css HTTP/1.1" 200 1146
+INFO 2025-11-03 22:18:14,568 basehttp 16248 4544 "GET /static/modern-styles.css HTTP/1.1" 200 9996
+WARNING 2025-11-03 22:18:15,424 log 16248 4544 Not Found: /favicon.ico
+WARNING 2025-11-03 22:18:15,426 basehttp 16248 4544 "GET /favicon.ico HTTP/1.1" 404 5647
+INFO 2025-11-03 22:18:53,580 basehttp 16248 9072 "POST /login/?next=/ HTTP/1.1" 200 2342
+INFO 2025-11-03 22:19:15,587 basehttp 16248 17908 "POST /login/?next=/ HTTP/1.1" 200 2342
+INFO 2025-11-03 22:19:27,438 basehttp 16248 17908 "POST /login/?next=/ HTTP/1.1" 200 2342
+INFO 2025-11-03 22:19:33,517 basehttp 16248 17908 "GET /register/ HTTP/1.1" 200 3623
+INFO 2025-11-03 22:25:37,457 basehttp 16248 8584 "POST /register/ HTTP/1.1" 200 3708
+ERROR 2025-11-03 22:26:48,382 log 16248 13016 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: stocks_userinfo.pancard_number
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nitish Kumar\OneDrive\Desktop\Stock_market_Prediction\stocks\views.py", line 217, in register
+    user_info.save()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nitish Kumar\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: stocks_userinfo.pancard_number
+ERROR 2025-11-03 22:26:48,425 basehttp 16248 13016 "POST /register/ HTTP/1.1" 500 169108
+INFO 2025-11-03 22:31:13,354 autoreload 16248 4468 C:\Users\Nitish Kumar\OneDrive\Desktop\Stock_market_Prediction\stocks\views.py changed, reloading.
+INFO 2025-11-03 22:31:17,786 autoreload 5724 24344 Watching for file changes with StatReloader
+INFO 2025-11-03 22:31:32,041 basehttp 5724 24076 "GET / HTTP/1.1" 302 0
+INFO 2025-11-03 22:31:32,872 basehttp 5724 24076 "GET /login/?next=/ HTTP/1.1" 200 2262
+INFO 2025-11-03 22:31:53,604 basehttp 5724 16792 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-11-03 22:31:53,686 basehttp 5724 16792 "GET / HTTP/1.1" 200 7730
+INFO 2025-11-03 22:31:59,068 basehttp 5724 21232 "GET / HTTP/1.1" 200 7730
+INFO 2025-11-03 22:32:01,280 basehttp 5724 21232 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-03 22:32:19,706 services 5724 15536 Cached data for META
+INFO 2025-11-03 22:32:19,742 views 5724 15536 User stock_market bought 3 shares of META at $650.8499755859375
+INFO 2025-11-03 22:32:19,745 basehttp 5724 15536 "POST /buy/2/ HTTP/1.1" 302 0
+INFO 2025-11-03 22:32:19,777 basehttp 5724 15536 "GET / HTTP/1.1" 200 8734
+INFO 2025-11-03 22:32:25,931 basehttp 5724 15460 "GET /watchlist/ HTTP/1.1" 200 7445
+INFO 2025-11-03 22:32:29,347 services 5724 15460 Retrieved cached data for META
+INFO 2025-11-03 22:32:29,402 basehttp 5724 15460 "GET /portfolio_dashboard/ HTTP/1.1" 200 5716
+INFO 2025-11-03 22:32:33,578 basehttp 5724 15460 "GET /transaction_history/ HTTP/1.1" 200 4415
+INFO 2025-11-03 22:32:35,726 basehttp 5724 21180 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-03 22:32:37,273 services 5724 21180 Retrieved cached data for META
+INFO 2025-11-03 22:32:37,294 basehttp 5724 21180 "GET /portfolio_dashboard/ HTTP/1.1" 200 5716
+INFO 2025-11-03 22:32:38,606 basehttp 5724 21180 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-03 22:32:44,724 basehttp 5724 4244 "POST /sell/2/ HTTP/1.1" 302 0
+INFO 2025-11-03 22:32:44,753 basehttp 5724 4244 "GET / HTTP/1.1" 200 8730
+INFO 2025-11-03 22:32:50,021 services 5724 4244 Retrieved cached data for META
+INFO 2025-11-03 22:32:50,043 basehttp 5724 4244 "GET /portfolio_dashboard/ HTTP/1.1" 200 5712
+INFO 2025-11-03 22:32:54,520 basehttp 5724 18380 "GET /transaction_history/ HTTP/1.1" 200 5351
+INFO 2025-11-03 22:32:56,979 basehttp 5724 18380 "GET /watchlist/ HTTP/1.1" 200 7445
+INFO 2025-11-03 22:32:59,773 basehttp 5724 18380 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-03 22:33:02,190 basehttp 5724 18380 "GET /watchlist/ HTTP/1.1" 200 7445
+INFO 2025-11-03 22:33:10,144 services 5724 13180 Retrieved cached data for META
+INFO 2025-11-03 22:33:10,163 basehttp 5724 13180 "GET /portfolio_dashboard/ HTTP/1.1" 200 5712
+INFO 2025-11-03 22:33:13,116 basehttp 5724 13180 "GET /transaction_history/ HTTP/1.1" 200 5351
+INFO 2025-11-03 22:33:15,265 basehttp 5724 17172 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-03 22:33:17,894 basehttp 5724 17172 "GET /watchlist/ HTTP/1.1" 200 7445
+INFO 2025-11-03 22:42:09,272 autoreload 7268 22820 Watching for file changes with StatReloader
+INFO 2025-11-03 22:42:15,327 basehttp 7268 20368 "GET / HTTP/1.1" 200 8730
+INFO 2025-11-03 22:42:17,853 basehttp 7268 20368 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-03 22:42:20,743 basehttp 7268 20368 "GET /watchlist/ HTTP/1.1" 200 7445
+INFO 2025-11-03 22:42:22,632 basehttp 7268 20368 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-03 22:50:26,950 autoreload 14792 11956 Watching for file changes with StatReloader
+INFO 2025-11-03 22:50:32,804 basehttp 14792 18576 "GET / HTTP/1.1" 200 8730
+INFO 2025-11-03 22:50:38,134 basehttp 14792 18576 "GET /watchlist/ HTTP/1.1" 200 7445
+INFO 2025-11-03 22:50:41,135 services 14792 18576 Cached data for META
+INFO 2025-11-03 22:50:41,159 basehttp 14792 18576 - Broken pipe from ('127.0.0.1', 56072)
+INFO 2025-11-03 22:50:41,398 services 14792 2820 Cached data for META
+INFO 2025-11-03 22:50:41,414 basehttp 14792 2820 "GET /portfolio_dashboard/ HTTP/1.1" 200 5714
+INFO 2025-11-03 22:50:43,167 basehttp 14792 2820 "GET /transaction_history/ HTTP/1.1" 200 5351
+INFO 2025-11-03 22:50:49,662 services 14792 2820 Retrieved cached data for META
+INFO 2025-11-03 22:50:49,683 basehttp 14792 2820 "GET /portfolio_dashboard/ HTTP/1.1" 200 5714
+INFO 2025-11-03 22:50:50,254 services 14792 2820 Retrieved cached data for META
+INFO 2025-11-03 22:50:50,274 basehttp 14792 2820 "GET /portfolio_dashboard/ HTTP/1.1" 200 5714
+INFO 2025-11-03 22:50:53,942 services 14792 24288 Retrieved cached data for META
+INFO 2025-11-03 22:50:53,957 basehttp 14792 24288 "GET /portfolio_dashboard/ HTTP/1.1" 200 5714
+INFO 2025-11-03 22:50:55,564 basehttp 14792 24288 "GET /watchlist/ HTTP/1.1" 200 7445
+INFO 2025-11-03 22:50:57,193 basehttp 14792 24288 "GET /transaction_history/ HTTP/1.1" 200 5351
+INFO 2025-11-03 22:50:58,925 basehttp 14792 24288 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-03 23:28:50,501 basehttp 14792 17536 "GET / HTTP/1.1" 200 8730
+INFO 2025-11-03 23:29:06,670 basehttp 14792 17536 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-03 23:29:18,641 basehttp 14792 8840 "GET /transaction_history/ HTTP/1.1" 200 5351
+INFO 2025-11-03 23:29:30,346 services 14792 17308 Cached data for META
+INFO 2025-11-03 23:29:30,349 services 14792 7304 Cached data for META
+INFO 2025-11-03 23:29:30,372 basehttp 14792 17308 - Broken pipe from ('127.0.0.1', 57924)
+INFO 2025-11-03 23:29:30,382 basehttp 14792 7304 "GET /portfolio_dashboard/ HTTP/1.1" 200 5713
+INFO 2025-11-03 23:29:32,999 basehttp 14792 7304 "GET /watchlist/ HTTP/1.1" 200 7445
+INFO 2025-11-03 23:29:35,587 services 14792 7304 Retrieved cached data for META
+INFO 2025-11-03 23:29:35,602 basehttp 14792 7304 "GET /portfolio_dashboard/ HTTP/1.1" 200 5713
+INFO 2025-11-04 13:41:32,301 autoreload 28304 13808 Watching for file changes with StatReloader
+INFO 2025-11-04 13:41:49,923 basehttp 28304 16008 "GET / HTTP/1.1" 302 0
+INFO 2025-11-04 13:41:50,821 basehttp 28304 16008 "GET /login/?next=/ HTTP/1.1" 200 2262
+WARNING 2025-11-04 13:41:51,161 log 28304 16008 Not Found: /favicon.ico
+WARNING 2025-11-04 13:41:51,162 basehttp 28304 16008 "GET /favicon.ico HTTP/1.1" 404 5647
+INFO 2025-11-04 13:41:54,081 basehttp 28304 16008 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-11-04 13:41:54,147 basehttp 28304 16008 "GET / HTTP/1.1" 200 8730
+INFO 2025-11-04 13:41:57,539 basehttp 28304 11168 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-04 13:42:12,618 services 28304 11168 Cached data for MSFT
+INFO 2025-11-04 13:42:12,642 views 28304 11168 User stock_market bought 4 shares of MSFT at $517.030029296875
+INFO 2025-11-04 13:42:12,645 basehttp 28304 11168 "POST /buy/4/ HTTP/1.1" 302 0
+INFO 2025-11-04 13:42:12,669 basehttp 28304 11168 "GET / HTTP/1.1" 200 9514
+INFO 2025-11-04 13:42:20,031 basehttp 28304 23704 "GET /transaction_history/ HTTP/1.1" 200 6288
+INFO 2025-11-04 13:42:21,910 services 28304 23704 Retrieved cached data for MSFT
+INFO 2025-11-04 13:42:23,925 services 28304 23704 Cached data for META
+INFO 2025-11-04 13:42:23,967 basehttp 28304 23704 "GET /portfolio_dashboard/ HTTP/1.1" 200 6476
+INFO 2025-11-04 13:42:26,069 services 28304 28220 Retrieved cached data for MSFT
+INFO 2025-11-04 13:42:26,082 services 28304 28220 Retrieved cached data for META
+INFO 2025-11-04 13:42:26,100 basehttp 28304 28220 "GET /portfolio_dashboard/ HTTP/1.1" 200 6476
+INFO 2025-11-04 13:42:30,216 basehttp 28304 28220 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-14 11:28:07,213 autoreload 21208 21448 Watching for file changes with StatReloader
+INFO 2025-11-14 11:30:15,164 basehttp 21208 19800 "GET / HTTP/1.1" 302 0
+INFO 2025-11-14 11:30:18,634 basehttp 21208 19800 "GET /login/?next=/ HTTP/1.1" 200 2262
+INFO 2025-11-14 11:30:23,175 basehttp 21208 15464 "GET /static/form.css HTTP/1.1" 200 1313
+INFO 2025-11-14 11:30:23,175 basehttp 21208 10128 "GET /static/styles.css HTTP/1.1" 200 1146
+INFO 2025-11-14 11:30:23,175 basehttp 21208 23172 "GET /static/market.css HTTP/1.1" 200 1392
+INFO 2025-11-14 11:30:23,257 basehttp 21208 19800 "GET /static/modern-styles.css HTTP/1.1" 200 9996
+WARNING 2025-11-14 11:30:28,507 log 21208 19800 Not Found: /favicon.ico
+WARNING 2025-11-14 11:30:28,508 basehttp 21208 19800 "GET /favicon.ico HTTP/1.1" 404 5647
+INFO 2025-11-14 11:30:36,207 basehttp 21208 11720 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-11-14 11:30:36,708 basehttp 21208 11720 "GET / HTTP/1.1" 200 9514
+INFO 2025-11-14 11:30:48,612 basehttp 21208 15276 "GET /transaction_history/ HTTP/1.1" 200 6288
+INFO 2025-11-14 11:30:48,862 basehttp 21208 15276 "GET /transaction_history/ HTTP/1.1" 200 6288
+INFO 2025-11-14 11:30:49,259 basehttp 21208 15276 "GET /transaction_history/ HTTP/1.1" 200 6288
+INFO 2025-11-14 11:31:10,905 basehttp 21208 20520 "GET /watchlist/ HTTP/1.1" 200 7445
+INFO 2025-11-14 11:31:22,117 basehttp 21208 19532 "GET /transaction_history/ HTTP/1.1" 200 6288
+INFO 2025-11-14 11:31:38,319 services 21208 21776 Cached data for MSFT
+INFO 2025-11-14 11:31:38,323 services 21208 1568 Cached data for MSFT
+INFO 2025-11-14 11:31:38,331 services 21208 18888 Cached data for MSFT
+INFO 2025-11-14 11:31:38,344 services 21208 15760 Cached data for MSFT
+INFO 2025-11-14 11:31:39,168 services 21208 15760 Cached data for META
+INFO 2025-11-14 11:31:39,311 services 21208 21776 Cached data for META
+INFO 2025-11-14 11:31:39,348 services 21208 1568 Cached data for META
+INFO 2025-11-14 11:31:39,378 services 21208 18888 Cached data for META
+INFO 2025-11-14 11:31:39,532 basehttp 21208 15760 "GET /portfolio_dashboard/ HTTP/1.1" 200 6476
+INFO 2025-11-14 11:31:39,588 basehttp 21208 1568 - Broken pipe from ('127.0.0.1', 53584)
+INFO 2025-11-14 11:31:39,589 basehttp 21208 18888 - Broken pipe from ('127.0.0.1', 60908)
+INFO 2025-11-14 11:31:39,589 basehttp 21208 21776 - Broken pipe from ('127.0.0.1', 51671)
+INFO 2025-11-14 11:31:56,217 basehttp 21208 18232 "GET /watchlist/ HTTP/1.1" 200 7445
+INFO 2025-11-14 11:31:59,636 basehttp 21208 18232 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-14 11:32:03,402 basehttp 21208 18628 "GET /add_to_watchlist/GOOGL/ HTTP/1.1" 302 0
+INFO 2025-11-14 11:32:03,478 basehttp 21208 18628 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-14 11:32:07,322 services 21208 18628 Cached data for GOOGL
+INFO 2025-11-14 11:32:07,452 basehttp 21208 18628 "GET /watchlist/ HTTP/1.1" 200 9816
+INFO 2025-11-14 11:32:09,677 services 21208 18628 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:32:09,978 basehttp 21208 18628 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:32:17,900 basehttp 21208 3304 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-14 11:52:47,081 autoreload 13316 4120 Watching for file changes with StatReloader
+INFO 2025-11-14 11:52:59,782 basehttp 13316 17484 "GET / HTTP/1.1" 302 0
+INFO 2025-11-14 11:53:00,911 basehttp 13316 17484 "GET /login/?next=/ HTTP/1.1" 200 2262
+WARNING 2025-11-14 11:53:01,318 log 13316 17484 Not Found: /favicon.ico
+WARNING 2025-11-14 11:53:01,320 basehttp 13316 17484 "GET /favicon.ico HTTP/1.1" 404 5647
+INFO 2025-11-14 11:53:05,077 basehttp 13316 17484 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-11-14 11:53:05,191 basehttp 13316 17484 "GET / HTTP/1.1" 200 9514
+INFO 2025-11-14 11:53:19,047 services 13316 17504 Cached data for GOOGL
+INFO 2025-11-14 11:53:19,196 basehttp 13316 17504 "GET /watchlist/ HTTP/1.1" 200 9816
+INFO 2025-11-14 11:53:21,257 services 13316 19412 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:53:21,273 basehttp 13316 19412 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:53:49,389 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:53:51,207 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:54:19,270 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:54:19,754 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:54:49,249 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:54:49,268 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:55:19,242 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:55:19,258 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:55:49,240 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:55:49,257 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:56:19,241 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:56:19,259 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:56:49,253 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:56:49,270 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:57:19,252 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:57:19,271 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:57:49,503 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:57:49,753 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:58:34,569 services 13316 8000 Cached data for GOOGL
+INFO 2025-11-14 11:58:37,070 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:58:49,546 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:58:49,830 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:59:19,539 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:59:20,341 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 11:59:51,499 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 11:59:51,546 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:00:51,478 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:00:51,497 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:01:51,500 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:01:51,520 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:02:51,464 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:02:51,484 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:03:52,130 services 13316 8000 Cached data for GOOGL
+INFO 2025-11-14 12:03:52,146 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:04:51,463 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:04:51,480 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:05:51,460 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:05:51,479 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:06:51,477 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:06:51,526 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:07:51,468 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:07:51,486 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:08:51,463 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:08:51,486 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:09:52,145 services 13316 8000 Cached data for GOOGL
+INFO 2025-11-14 12:09:52,165 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:10:51,462 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:10:51,483 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:11:51,466 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:11:51,489 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:12:51,463 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:12:51,481 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:13:51,465 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:13:51,484 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:14:51,465 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:14:51,486 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:15:52,922 services 13316 8000 Cached data for GOOGL
+INFO 2025-11-14 12:15:52,952 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:16:51,463 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:16:51,475 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:17:51,456 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:17:51,469 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:18:51,899 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:18:51,915 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:19:51,453 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:19:51,469 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:20:51,470 services 13316 8000 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:20:51,488 basehttp 13316 8000 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:21:52,361 services 13316 22384 Cached data for GOOGL
+INFO 2025-11-14 12:21:52,374 basehttp 13316 22384 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:22:51,509 services 13316 22384 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:22:51,534 basehttp 13316 22384 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:23:51,475 services 13316 22340 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:23:51,487 basehttp 13316 22340 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:24:51,453 services 13316 22340 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:24:51,468 basehttp 13316 22340 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:25:51,463 services 13316 22340 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:25:51,475 basehttp 13316 22340 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 12:26:51,458 services 13316 22340 Retrieved cached data for GOOGL
+INFO 2025-11-14 12:26:51,473 basehttp 13316 22340 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 13:52:56,325 autoreload 16232 21704 Watching for file changes with StatReloader
+INFO 2025-11-14 13:53:07,354 basehttp 16232 18772 "GET / HTTP/1.1" 302 0
+INFO 2025-11-14 13:53:07,594 basehttp 16232 18772 "GET /login/?next=/ HTTP/1.1" 200 2262
+WARNING 2025-11-14 13:53:08,216 log 16232 18772 Not Found: /favicon.ico
+WARNING 2025-11-14 13:53:08,218 basehttp 16232 18772 "GET /favicon.ico HTTP/1.1" 404 5647
+INFO 2025-11-14 13:53:10,953 basehttp 16232 18772 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-11-14 13:53:11,003 basehttp 16232 18772 "GET / HTTP/1.1" 200 9514
+INFO 2025-11-14 13:53:22,316 services 16232 18772 Cached data for GOOGL
+INFO 2025-11-14 13:53:22,334 basehttp 16232 18772 "GET /watchlist/ HTTP/1.1" 200 9816
+INFO 2025-11-14 13:53:24,416 services 16232 18772 Retrieved cached data for GOOGL
+INFO 2025-11-14 13:53:24,429 basehttp 16232 18772 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 13:53:52,458 services 16232 18772 Retrieved cached data for GOOGL
+INFO 2025-11-14 13:53:52,473 basehttp 16232 18772 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 13:54:22,447 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 13:54:22,463 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 13:54:52,449 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 13:54:52,465 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 13:55:22,450 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 13:55:22,462 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 13:55:52,475 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 13:55:52,491 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 13:56:22,481 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 13:56:22,524 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 13:56:52,497 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 13:56:52,524 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 13:57:48,259 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 13:57:48,365 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 13:58:47,805 services 16232 22444 Cached data for GOOGL
+INFO 2025-11-14 13:58:47,863 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 13:59:46,764 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 13:59:46,843 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 14:00:46,457 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 14:00:46,704 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 14:01:46,490 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 14:01:46,532 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 14:02:46,573 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 14:02:46,605 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 14:03:46,465 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 14:03:46,494 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 14:04:47,639 services 16232 22444 Cached data for GOOGL
+INFO 2025-11-14 14:04:47,674 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 14:05:46,453 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 14:05:46,468 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 14:06:46,455 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 14:06:46,475 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 14:07:46,459 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 14:07:46,480 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 14:08:46,691 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 14:08:46,749 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 14:09:46,455 services 16232 22444 Retrieved cached data for GOOGL
+INFO 2025-11-14 14:09:46,470 basehttp 16232 22444 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:22:16,596 autoreload 14212 10412 Watching for file changes with StatReloader
+INFO 2025-11-14 15:22:37,063 basehttp 14212 16484 "GET / HTTP/1.1" 302 0
+INFO 2025-11-14 15:22:38,239 basehttp 14212 16484 "GET /login/?next=/ HTTP/1.1" 200 2262
+WARNING 2025-11-14 15:22:38,761 log 14212 16484 Not Found: /favicon.ico
+WARNING 2025-11-14 15:22:38,763 basehttp 14212 16484 "GET /favicon.ico HTTP/1.1" 404 5647
+INFO 2025-11-14 15:22:41,933 basehttp 14212 16484 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-11-14 15:22:41,989 basehttp 14212 16484 "GET / HTTP/1.1" 200 9514
+INFO 2025-11-14 15:22:44,271 basehttp 14212 16484 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-14 15:22:46,026 basehttp 14212 16484 "GET /transaction_history/ HTTP/1.1" 200 6288
+INFO 2025-11-14 15:22:56,571 services 14212 13352 Cached data for MSFT
+INFO 2025-11-14 15:22:57,075 services 14212 13352 Cached data for META
+INFO 2025-11-14 15:22:57,102 basehttp 14212 13352 "GET /portfolio_dashboard/ HTTP/1.1" 200 6476
+INFO 2025-11-14 15:23:00,909 services 14212 13352 Cached data for GOOGL
+INFO 2025-11-14 15:23:00,928 basehttp 14212 13352 "GET /watchlist/ HTTP/1.1" 200 9816
+INFO 2025-11-14 15:23:03,007 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:23:03,023 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:23:30,987 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:23:31,002 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:24:00,987 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:24:01,003 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:24:30,997 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:24:31,011 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:25:00,997 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:25:01,015 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:25:30,993 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:25:31,008 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:26:00,993 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:26:01,007 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:26:30,989 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:26:31,004 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:27:00,985 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:27:01,111 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:27:30,994 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:27:31,264 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:28:01,692 services 14212 13352 Cached data for GOOGL
+INFO 2025-11-14 15:28:01,707 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:28:30,987 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:28:31,001 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:29:00,997 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:29:01,011 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:29:30,990 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:29:31,002 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:30:00,995 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:30:01,011 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:30:31,002 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:30:31,016 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:31:00,994 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:31:01,009 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:31:31,650 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:31:31,667 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:32:01,652 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:32:01,669 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:32:48,663 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:32:48,678 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:33:49,229 services 14212 13352 Cached data for GOOGL
+INFO 2025-11-14 15:33:49,240 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:34:48,648 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:34:48,670 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:35:48,659 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:35:48,677 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:36:48,652 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:36:48,663 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:37:48,664 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:37:48,680 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:38:48,665 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:38:48,679 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:39:49,246 services 14212 13352 Cached data for GOOGL
+INFO 2025-11-14 15:39:49,265 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:40:48,668 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:40:48,683 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:41:48,650 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:41:48,664 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:42:48,659 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:42:48,670 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:43:48,653 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:43:48,666 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:44:48,651 services 14212 13352 Retrieved cached data for GOOGL
+INFO 2025-11-14 15:44:48,662 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-14 15:45:49,381 services 14212 13352 Cached data for GOOGL
+INFO 2025-11-14 15:45:49,396 basehttp 14212 13352 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 284
+INFO 2025-11-19 04:21:08,777 autoreload 21804 8324 Watching for file changes with StatReloader
+INFO 2025-11-19 04:21:20,325 basehttp 21804 9092 "GET / HTTP/1.1" 302 0
+INFO 2025-11-19 04:21:21,335 basehttp 21804 9092 "GET /login/?next=/ HTTP/1.1" 200 2262
+INFO 2025-11-19 04:21:21,877 basehttp 21804 24556 "GET /static/market.css HTTP/1.1" 200 1392
+INFO 2025-11-19 04:21:21,877 basehttp 21804 9092 "GET /static/modern-styles.css HTTP/1.1" 200 9996
+INFO 2025-11-19 04:21:21,906 basehttp 21804 24096 "GET /static/form.css HTTP/1.1" 200 1313
+INFO 2025-11-19 04:21:21,918 basehttp 21804 18796 "GET /static/styles.css HTTP/1.1" 200 1146
+WARNING 2025-11-19 04:21:22,209 log 21804 18796 Not Found: /favicon.ico
+WARNING 2025-11-19 04:21:22,210 basehttp 21804 18796 "GET /favicon.ico HTTP/1.1" 404 5647
+INFO 2025-11-19 04:21:26,334 basehttp 21804 18796 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-11-19 04:21:26,405 basehttp 21804 18796 "GET / HTTP/1.1" 200 9514
+INFO 2025-11-19 04:21:29,680 basehttp 21804 18796 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-19 04:21:30,878 basehttp 21804 18796 "GET / HTTP/1.1" 200 9514
+INFO 2025-11-19 04:21:37,544 basehttp 21804 18796 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-19 04:21:57,202 services 21804 18796 Cached data for MSFT
+INFO 2025-11-19 04:21:57,203 services 21804 24096 Cached data for MSFT
+INFO 2025-11-19 04:21:57,230 views 21804 18796 User stock_market bought 4 shares of MSFT at $493.7900085449219
+INFO 2025-11-19 04:21:57,236 basehttp 21804 18796 - Broken pipe from ('127.0.0.1', 60082)
+INFO 2025-11-19 04:21:57,272 views 21804 24096 User stock_market bought 4 shares of MSFT at $493.7900085449219
+INFO 2025-11-19 04:21:57,275 basehttp 21804 24096 "POST /buy/4/ HTTP/1.1" 302 0
+INFO 2025-11-19 04:21:57,309 basehttp 21804 24096 "GET / HTTP/1.1" 200 9515
+INFO 2025-11-19 04:22:02,785 basehttp 21804 24096 "GET /transaction_history/ HTTP/1.1" 200 8162
+INFO 2025-11-19 04:22:12,886 basehttp 21804 24096 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-19 04:22:16,322 basehttp 21804 24096 "GET / HTTP/1.1" 200 9515
+INFO 2025-11-19 04:22:28,022 services 21804 24096 Retrieved cached data for MSFT
+INFO 2025-11-19 04:22:28,491 services 21804 24096 Cached data for META
+INFO 2025-11-19 04:22:28,535 basehttp 21804 24096 "GET /portfolio_dashboard/ HTTP/1.1" 200 6477
+INFO 2025-11-19 04:22:33,376 basehttp 21804 24096 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-19 04:22:34,609 basehttp 21804 24096 "GET /transaction_history/ HTTP/1.1" 200 8162
+INFO 2025-11-19 04:22:38,060 basehttp 21804 24096 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-19 04:22:45,915 basehttp 21804 24096 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-19 04:22:49,994 basehttp 21804 24096 "GET /add_to_watchlist/NVDA/ HTTP/1.1" 302 0
+INFO 2025-11-19 04:22:50,019 basehttp 21804 24096 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-19 04:22:52,417 services 21804 24096 Cached data for GOOGL
+INFO 2025-11-19 04:22:52,895 services 21804 24096 Cached data for NVDA
+INFO 2025-11-19 04:22:52,993 basehttp 21804 24096 "GET /watchlist/ HTTP/1.1" 200 11655
+INFO 2025-11-19 04:22:55,057 services 21804 24096 Retrieved cached data for GOOGL
+INFO 2025-11-19 04:22:55,069 services 21804 24096 Retrieved cached data for NVDA
+INFO 2025-11-19 04:22:55,089 basehttp 21804 24096 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 439
+INFO 2025-11-19 04:23:11,449 basehttp 21804 24096 "GET /stocks/ HTTP/1.1" 200 32075
+INFO 2025-11-19 04:23:13,223 basehttp 21804 24096 "GET / HTTP/1.1" 200 9515
+INFO 2025-12-07 00:19:16,455 autoreload 17808 23444 Watching for file changes with StatReloader
+INFO 2025-12-07 00:21:46,072 autoreload 7076 24700 Watching for file changes with StatReloader
+INFO 2025-12-07 00:22:39,527 autoreload 16296 6680 Watching for file changes with StatReloader
+INFO 2025-12-07 00:24:27,030 basehttp 16296 10552 "GET / HTTP/1.1" 302 0
+INFO 2025-12-07 00:24:27,416 basehttp 16296 10552 "GET /login/?next=/ HTTP/1.1" 200 2262
+INFO 2025-12-07 00:24:27,506 basehttp 16296 10840 "GET /static/styles.css HTTP/1.1" 200 1146
+INFO 2025-12-07 00:24:27,509 basehttp 16296 10552 "GET /static/modern-styles.css HTTP/1.1" 200 9996
+INFO 2025-12-07 00:24:27,514 basehttp 16296 24636 "GET /static/market.css HTTP/1.1" 200 1392
+INFO 2025-12-07 00:24:27,525 basehttp 16296 10840 "GET /static/form.css HTTP/1.1" 200 1313
+WARNING 2025-12-07 00:24:28,766 log 16296 17008 Not Found: /favicon.ico
+WARNING 2025-12-07 00:24:28,767 basehttp 16296 17008 "GET /favicon.ico HTTP/1.1" 404 5647
+INFO 2025-12-07 00:35:26,191 autoreload 26524 7172 Watching for file changes with StatReloader
