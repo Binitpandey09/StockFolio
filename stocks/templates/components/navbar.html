@@ -10,25 +10,32 @@
             <ul class="navbar-nav me-auto">
                 {% if request.user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'dashboard_analytics' %}">📊 Analytics</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'dashboard_analytics' %}active{% endif %}" 
+                           href="{% url 'dashboard_analytics' %}">📊 Analytics</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'stocks' %}">🏪 Market</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'stocks' %}active{% endif %}" 
+                           href="{% url 'stocks' %}">🏪 Market</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'portfolio_dashboard' %}">💼 Portfolio</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'portfolio_dashboard' %}active{% endif %}" 
+                           href="{% url 'portfolio_dashboard' %}">💼 Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'watchlist_view' %}">👁️ Watchlist</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'watchlist_view' %}active{% endif %}" 
+                           href="{% url 'watchlist_view' %}">👁️ Watchlist</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'price_alerts' %}">🔔 Alerts</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'price_alerts' %}active{% endif %}" 
+                           href="{% url 'price_alerts' %}">🔔 Alerts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'stock_comparison' %}">⚖️ Compare</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'stock_comparison' %}active{% endif %}" 
+                           href="{% url 'stock_comparison' %}">⚖️ Compare</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'transaction_history' %}">📜 History</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'transaction_history' %}active{% endif %}" 
+                           href="{% url 'transaction_history' %}">📜 History</a>
                     </li>
                 {% endif %}
             </ul>
@@ -57,3 +64,65 @@
         </div>
     </div>
 </nav>
+
+<style>
+/* Navbar Active State Styling */
+.navbar-dark .navbar-nav .nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin: 0 2px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-dark .navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: white;
+    border-radius: 2px 2px 0 0;
+}
+
+/* Navbar Brand Hover */
+.navbar-brand {
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: none;
+    margin-top: 8px;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: translateX(4px);
+}
+</style>

@@ -21,7 +21,7 @@ from .views import (
     index, populate_stock_data, stocks, loginView, logoutView, register,
     buy, sell, transaction_history, portfolio_dashboard,
     watchlist_view, add_to_watchlist, remove_from_watchlist,
-    get_stock_price_api, update_watchlist_prices_api
+    get_stock_price_api, update_watchlist_prices_api, stock_detail
 )
 from .health_views import health_check, readiness_check, liveness_check
 from .enhanced_views import (
@@ -35,6 +35,7 @@ urlpatterns = [
     path('', index, name='index'),
     path('dashboard/', dashboard_analytics, name='dashboard_analytics'),
     path('stocks/', stocks, name='stocks'),
+    path('stock/<str:ticker>/', stock_detail, name='stock_detail'),  # Stock detail page
     path('admin/populate-stocks/', populate_stock_data, name='populate_stock_data'),
     
     # Authentication

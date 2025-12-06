@@ -3,192 +3,628 @@
 {% block title %}Portfolio Dashboard{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <div class="page-header">
-        <h2>Portfolio Dashboard</h2>
-        <p class="text-muted">Detailed breakdown of your investment portfolio</p>
+<div class="container-fluid py-4">
+    <!-- Page Header -->
+    <div class="portfolio-header mb-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h2 class="mb-1">💼 Portfolio</h2>
+                <p class="text-muted mb-0">Track your investments and performance</p>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-primary" onclick="window.location.reload()">
+                    🔄 Refresh Prices
+                </button>
+                <a href="{% url 'stocks' %}" class="btn btn-primary">
+                    🛒 Buy Stocks
+                </a>
+            </div>
+        </div>
     </div>
 
-    <!-- Portfolio Summary -->
+    <!-- Portfolio Summary Cards -->
+    {% with total_gain_loss=total_portfolio_value|sub:total_invested_capital %}
+    {% with gain_loss_percent=total_gain_loss|div:total_invested_capital|mul:100 %}
     <div class="row mb-4">
-        <div class="col-md-6 mb-3">
-            <div class="summary-card">
-                <div class="summary-icon">
-                    <i class="icon-portfolio">💼</i>
-                </div>
-                <div class="summary-content">
-                    <h3>${{ total_portfolio_value|floatformat:2 }}</h3>
-                    <p>Total Portfolio Value</p>
+        <div class="col-lg-3 col-md-6 mb-3">
+            <div class="portfolio-stat-card">
+                <div class="stat-label">Total Value</div>
+                <div class="stat-value">${{ total_portfolio_value|floatformat:2 }}</div>
+                <div class="stat-change {% if total_gain_loss >= 0 %}positive{% else %}negative{% endif %}">
+                    {% if total_gain_loss >= 0 %}▲{% else %}▼{% endif %}
+                    ${{ total_gain_loss|abs_value|floatformat:2 }}
+                    ({{ gain_loss_percent|abs_value|floatformat:2 }}%)
                 </div>
             </div>
         </div>
-        <div class="col-md-6 mb-3">
-            <div class="summary-card">
-                <div class="summary-icon">
-                    <i class="icon-invested">💰</i>
+        <div class="col-lg-3 col-md-6 mb-3">
+            <div class="portfolio-stat-card">
+                <div class="stat-label">Total Invested</div>
+                <div class="stat-value">${{ total_invested_capital|floatformat:2 }}</div>
+                <div class="stat-subtitle">Your capital</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+            <div class="portfolio-stat-card">
+                <div class="stat-label">Total Return</div>
+                <div class="stat-value {% if total_gain_loss >= 0 %}text-success{% else %}text-danger{% endif %}">
+                    {% if total_gain_loss >= 0 %}+{% endif %}${{ total_gain_loss|floatformat:2 }}
                 </div>
-                <div class="summary-content">
-                    <h3>${{ total_invested_capital|floatformat:2 }}</h3>
-                    <p>Total Invested Capital</p>
+                <div class="stat-subtitle {% if total_gain_loss >= 0 %}text-success{% else %}text-danger{% endif %}">
+                    {% if total_gain_loss >= 0 %}+{% endif %}{{ gain_loss_percent|floatformat:2 }}%
                 </div>
             </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+            <div class="portfolio-stat-card">
+                <div class="stat-label">Holdings</div>
+                <div class="stat-value">{{ portfolio|length }}</div>
+                <div class="stat-subtitle">{{ portfolio|length }} stock{% if portfolio|length != 1 %}s{% endif %}</div>
+            </div>
+        </div>
+    </div>
+    {% endwith %}
+    {% endwith %}
+    
+    <!-- Holdings Table -->
+    {% if portfolio %}
+    <div class="card portfolio-holdings-card">
+        <div class="card-header">
+            <h5 class="mb-0">📊 Your Holdings</h5>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table portfolio-table mb-0">
+                    <thead>
+                        <tr>
+                            <th>Stock</th>
+                            <th class="text-center">Shares</th>
+                            <th class="text-end">Avg Cost</th>
+                            <th class="text-end">Current Price</th>
+                            <th class="text-end">Market Value</th>
+                            <th class="text-end">Total Return</th>
+                            <th class="text-end">Today's Return</th>
+                            <th class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for symbol, data in portfolio.items %}
+                        {% with pl=data.current_value|sub:data.invested_value %}
+                        {% with pl_percent=pl|div:data.invested_value|mul:100 %}
+                        {% with avg_cost=data.invested_value|div:data.quantity %}
+                        {% with today_return=data.day_change|mul:data.quantity %}
+                        <tr class="portfolio-row">
+                            <td>
+                                <a href="{% url 'stock_detail' symbol %}" class="stock-link">
+                                    <div class="stock-cell">
+                                        <div class="stock-name">{{ data.stock_name|short_name }}</div>
+                                        <div class="stock-ticker">{{ symbol }}</div>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <strong>{{ data.quantity }}</strong>
+                            </td>
+                            <td class="text-end">
+                                <div class="price-cell">
+                                    ${{ avg_cost|floatformat:2 }}
+                                </div>
+                            </td>
+                            <td class="text-end">
+                                <div class="price-cell">
+                                    <strong>${{ data.current_price|floatformat:2 }}</strong>
+                                    {% if data.day_change_percent %}
+                                    <small class="d-block {% if data.day_change >= 0 %}text-success{% else %}text-danger{% endif %}">
+                                        {% if data.day_change >= 0 %}▲{% else %}▼{% endif %}
+                                        {{ data.day_change_percent|abs_value|floatformat:2 }}%
+                                    </small>
+                                    {% endif %}
+                                </div>
+                            </td>
+                            <td class="text-end">
+                                <strong>${{ data.current_value|floatformat:2 }}</strong>
+                            </td>
+                            <td class="text-end">
+                                <div class="return-cell {% if pl >= 0 %}positive{% else %}negative{% endif %}">
+                                    <div class="return-amount">
+                                        {% if pl >= 0 %}+{% endif %}${{ pl|floatformat:2 }}
+                                    </div>
+                                    <div class="return-percent">
+                                        {% if pl >= 0 %}+{% endif %}{{ pl_percent|floatformat:2 }}%
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-end">
+                                <div class="return-cell {% if today_return >= 0 %}positive{% else %}negative{% endif %}">
+                                    <div class="return-amount">
+                                        {% if today_return >= 0 %}+{% endif %}${{ today_return|floatformat:2 }}
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="action-buttons">
+                                    <a href="{% url 'stock_detail' symbol %}" class="btn btn-sm btn-outline-primary" title="View Details">
+                                        📊
+                                    </a>
+                                    <button class="btn btn-sm btn-danger" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#sellModal-{{ data.stock_id }}"
+                                            title="Sell Stock">
+                                        💰
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endwith %}
+                        {% endwith %}
+                        {% endwith %}
+                        {% endwith %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sell Modals -->
+    {% for symbol, data in portfolio.items %}
+    <div class="modal fade" id="sellModal-{{ data.stock_id }}" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <form method="POST" action="{% url 'sell' data.stock_id %}" class="modal-content">
+                {% csrf_token %}
+                <div class="modal-header">
+                    <h5 class="modal-title">💰 Sell {{ symbol }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="alert alert-info">
+                            <strong>{{ data.stock_name|short_name }}</strong><br>
+                            <small>You own: <strong>{{ data.quantity }}</strong> shares</small><br>
+                            <small>Current Price: <strong>${{ data.current_price|floatformat:2 }}</strong></small>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sell-qty-{{ data.stock_id }}" class="form-label">Quantity to Sell</label>
+                        <input type="number" 
+                               class="form-control form-control-lg" 
+                               id="sell-qty-{{ data.stock_id }}" 
+                               name="quantity" 
+                               min="1" 
+                               max="{{ data.quantity }}"
+                               placeholder="Enter quantity" 
+                               required>
+                        <small class="text-muted">Maximum: {{ data.quantity }} shares</small>
+                    </div>
+                    <div class="estimated-value">
+                        <p class="mb-0">Estimated Value: <span id="sell-value-{{ data.stock_id }}" class="text-success fw-bold">$0.00</span></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Confirm Sell</button>
+                </div>
+            </form>
         </div>
     </div>
     
-    {% if portfolio %}
-    <div class="table-responsive">
-        <table class="table table-striped modern-table">
-            <thead>
-                <tr>
-                    <th>Stock</th>
-                    <th>Quantity Owned</th>
-                    <th>Total Invested</th>
-                    <th>Current Price</th>
-                    <th>Current Value</th>
-                    <th>P&L</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for symbol, data in portfolio.items %}
-                <tr>
-                    <td>
-                        <div class="stock-info">
-                            <strong>{{ data.stock_name }}</strong>
-                            <small class="text-muted d-block">{{ symbol }}</small>
+    <script>
+        // Calculate estimated value for {{ symbol }}
+        document.getElementById('sell-qty-{{ data.stock_id }}').addEventListener('input', function() {
+            const quantity = parseFloat(this.value) || 0;
+            const price = {{ data.current_price }};
+            const estimatedValue = quantity * price;
+            document.getElementById('sell-value-{{ data.stock_id }}').textContent = '$' + estimatedValue.toFixed(2);
+        });
+    </script>
+    {% endfor %}
+
+    <!-- Portfolio Allocation -->
+    <div class="row mt-4">
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">📈 Top Holdings</h5>
+                </div>
+                <div class="card-body">
+                    {% for symbol, data in portfolio.items|slice:":5" %}
+                    {% with percentage=data.current_value|div:total_portfolio_value|mul:100 %}
+                    <div class="holding-item">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div>
+                                <strong>{{ data.stock_name|short_name }}</strong>
+                                <small class="text-muted ms-2">{{ symbol }}</small>
+                            </div>
+                            <div class="text-end">
+                                <div><strong>${{ data.current_value|floatformat:2 }}</strong></div>
+                                <small class="text-muted">{{ percentage|floatformat:1 }}%</small>
+                            </div>
                         </div>
-                    </td>
-                    <td>{{ data.quantity }}</td>
-                    <td>${{ data.invested_value|floatformat:2 }}</td>
-                    <td>${{ data.current_price|floatformat:2 }}</td>
-                    <td>
-                        <strong>${{ data.current_value|floatformat:2 }}</strong>
-                    </td>
-                    <td>
-                        {% with pl=data.current_value|sub:data.invested_value %}
-                        <span class="{% if pl >= 0 %}text-success{% else %}text-danger{% endif %}">
-                            {% if pl >= 0 %}+{% endif %}${{ pl|floatformat:2 }}
-                        </span>
-                        {% endwith %}
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-primary" role="progressbar" 
+                                 style="width: {{ percentage }}%" 
+                                 aria-valuenow="{{ percentage }}" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                    {% endwith %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">🎯 Performance Summary</h5>
+                </div>
+                <div class="card-body">
+                    {% with total_gain_loss=total_portfolio_value|sub:total_invested_capital %}
+                    <div class="performance-item">
+                        <div class="d-flex justify-content-between">
+                            <span>Best Performer</span>
+                            <span class="text-success">
+                                {% for symbol, data in portfolio.items %}
+                                {% with pl_percent=data.current_value|sub:data.invested_value|div:data.invested_value|mul:100 %}
+                                {% if forloop.first or pl_percent > best_percent %}
+                                    {{ data.stock_name|short_name }} (+{{ pl_percent|floatformat:1 }}%)
+                                {% endif %}
+                                {% endwith %}
+                                {% endfor %}
+                            </span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="performance-item">
+                        <div class="d-flex justify-content-between">
+                            <span>Total Stocks</span>
+                            <strong>{{ portfolio|length }}</strong>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="performance-item">
+                        <div class="d-flex justify-content-between">
+                            <span>Portfolio Diversity</span>
+                            <strong>
+                                {% if portfolio|length <= 3 %}Low
+                                {% elif portfolio|length <= 7 %}Medium
+                                {% else %}High{% endif %}
+                            </strong>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="performance-item">
+                        <div class="d-flex justify-content-between">
+                            <span>Overall Return</span>
+                            <strong class="{% if total_gain_loss >= 0 %}text-success{% else %}text-danger{% endif %}">
+                                {% if total_gain_loss >= 0 %}+{% endif %}{{ total_gain_loss|div:total_invested_capital|mul:100|floatformat:2 }}%
+                            </strong>
+                        </div>
+                    </div>
+                    {% endwith %}
+                </div>
+            </div>
+        </div>
     </div>
+
     {% else %}
-    <div class="empty-state">
+    <div class="empty-portfolio-state">
         <div class="empty-icon">📊</div>
-        <h3>Your portfolio is empty</h3>
-        <p>Buy some stocks to see your portfolio dashboard here!</p>
-        <a href="{% url 'stocks' %}" class="btn btn-primary">Explore Stocks</a>
+        <h3>Start Building Your Portfolio</h3>
+        <p class="text-muted">You haven't invested yet. Browse the market and make your first investment!</p>
+        <div class="d-flex gap-3 justify-content-center mt-4">
+            <a href="{% url 'stocks' %}" class="btn btn-primary btn-lg">
+                🛒 Browse Market
+            </a>
+            <a href="{% url 'watchlist_view' %}" class="btn btn-outline-primary btn-lg">
+                👁️ View Watchlist
+            </a>
+        </div>
     </div>
     {% endif %}
 </div>
 
 <style>
-.page-header {
-    text-align: center;
-    margin-bottom: 2rem;
+/* Portfolio Header */
+.portfolio-header h2 {
+    font-weight: 700;
+    color: #1a1a1a;
 }
 
-.page-header h2 {
-    color: var(--gray-900);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.summary-card {
-    background: var(--white);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--gray-200);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+/* Portfolio Stat Cards */
+.portfolio-stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
     transition: all 0.3s ease;
+    height: 100%;
 }
 
-.summary-card:hover {
+.portfolio-stat-card:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
 
-.summary-icon {
+.stat-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
     font-size: 2rem;
-    width: 60px;
-    height: 60px;
-    background: var(--gray-50);
-    border-radius: 50%;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.stat-change {
+    font-size: 0.875rem;
+    font-weight: 600;
     display: flex;
     align-items: center;
+    gap: 4px;
+}
+
+.stat-change.positive {
+    color: #10b981;
+}
+
+.stat-change.negative {
+    color: #ef4444;
+}
+
+.stat-subtitle {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+/* Portfolio Holdings Card */
+.portfolio-holdings-card {
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.portfolio-holdings-card .card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 24px;
+    border: none;
+}
+
+.portfolio-holdings-card .card-header h5 {
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Portfolio Table */
+.portfolio-table {
+    font-size: 0.9rem;
+}
+
+.portfolio-table thead th {
+    background: #f9fafb;
+    border-bottom: 2px solid #e5e7eb;
+    color: #6b7280;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 16px 20px;
+}
+
+.portfolio-table tbody tr {
+    border-bottom: 1px solid #f3f4f6;
+    transition: all 0.2s ease;
+}
+
+.portfolio-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.portfolio-table tbody td {
+    padding: 20px;
+    vertical-align: middle;
+}
+
+/* Stock Cell */
+.stock-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.stock-link:hover .stock-name {
+    color: #667eea;
+}
+
+.stock-cell {
+    display: flex;
+    flex-direction: column;
+}
+
+.stock-name {
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.stock-ticker {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+/* Price Cell */
+.price-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Return Cell */
+.return-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.return-cell.positive {
+    color: #10b981;
+}
+
+.return-cell.negative {
+    color: #ef4444;
+}
+
+.return-amount {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.return-percent {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 8px;
     justify-content: center;
 }
 
-.summary-content h3 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin: 0;
-    color: var(--gray-900);
+.action-buttons .btn {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 1rem;
 }
 
-.summary-content p {
-    margin: 0;
-    color: var(--gray-600);
-    font-weight: 500;
+/* Holding Item */
+.holding-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #f3f4f6;
 }
 
-.modern-table {
-    background: var(--white);
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-    border: none;
+.holding-item:last-child {
+    border-bottom: none;
 }
 
-.modern-table thead th {
-    background: var(--gray-50);
-    border: none;
-    font-weight: 600;
-    color: var(--gray-700);
-    padding: 1rem;
+.holding-item .progress {
+    border-radius: 4px;
+    background: #f3f4f6;
 }
 
-.modern-table tbody td {
-    border: none;
-    padding: 1rem;
-    border-bottom: 1px solid var(--gray-100);
+.holding-item .progress-bar {
+    border-radius: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
 }
 
-.modern-table tbody tr:hover {
-    background: var(--gray-50);
+/* Performance Item */
+.performance-item {
+    padding: 12px 0;
 }
 
-.stock-info strong {
-    color: var(--gray-900);
+.performance-item span {
+    color: #6b7280;
 }
 
-.empty-state {
+.performance-item strong {
+    color: #1a1a1a;
+}
+
+/* Empty Portfolio State */
+.empty-portfolio-state {
     text-align: center;
-    padding: 4rem 2rem;
-    background: var(--white);
-    border-radius: 1rem;
-    box-shadow: var(--shadow-md);
+    padding: 80px 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
 }
 
 .empty-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+    font-size: 5rem;
+    margin-bottom: 24px;
+    opacity: 0.5;
 }
 
-.empty-state h3 {
-    color: var(--gray-900);
-    margin-bottom: 1rem;
+.empty-portfolio-state h3 {
+    color: #1a1a1a;
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
-.empty-state p {
-    color: var(--gray-600);
-    margin-bottom: 2rem;
+.empty-portfolio-state p {
+    color: #6b7280;
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+}
+
+/* Sell Modal Styling */
+.modal-content {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 16px 16px 0 0;
+    border: none;
+    padding: 20px 24px;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.modal-footer {
+    border-top: 1px solid #e5e7eb;
+    padding: 16px 24px;
+}
+
+.estimated-value {
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stat-value {
+        font-size: 1.5rem;
+    }
+    
+    .portfolio-table {
+        font-size: 0.8rem;
+    }
+    
+    .portfolio-table thead th,
+    .portfolio-table tbody td {
+        padding: 12px 8px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
 }
 </style>
 {% endblock %}

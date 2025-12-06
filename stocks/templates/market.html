@@ -1,133 +1,471 @@
 {% extends 'base.html' %}
+{% load custom_filters %}
 
-{% block title %}Stock Market{% endblock %}
+{% block title %}Stock Market - StockFolio{% endblock %}
 
 {% block content %}
-<!-- Search bar -->
-<form method="get" action="">
-  <input
-    type="text"
-    name="q"
-    placeholder="Search stocks..."
-    value="{{ query }}"
-  />
-  <button type="submit">
-    Search
-  </button>
-</form>
+<div class="container-fluid py-4">
+    <!-- Page Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="market-header">
+                <h1 class="mb-3">🏪 Stock Market</h1>
+                <p class="text-muted">Browse and trade from 16+ available stocks</p>
+            </div>
+        </div>
+    </div>
 
-<div class="wrapper">
-  <div class="card-container">
-    {% for i in data %}
-      {% include 'components/card.html' with ticker=i.ticker name=i.name curr_price=i.curr_price stock_id=i.id %}
-    {% empty %}
-      <div class="empty-state">
-        <div class="empty-icon">🔍</div>
-        <h3>No stocks found</h3>
-        <p>Try adjusting your search terms or browse all available stocks.</p>
-      </div>
-    {% endfor %}
-  </div>
-</div>
+    <!-- Search and Filters -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <form method="get" action="" class="row g-3">
+                        <div class="col-md-8">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text bg-white">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                </span>
+                                <input type="text" name="q" class="form-control form-control-lg" 
+                                       placeholder="Search stocks by name or ticker..." 
+                                       value="{{ query }}" autofocus>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-grid gap-2 d-md-flex">
+                                <button type="submit" class="btn btn-primary btn-lg flex-fill">
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-2">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                    Search
+                                </button>
+                                {% if query %}
+                                <a href="{% url 'stocks' %}" class="btn btn-outline-secondary btn-lg">Clear</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!-- Pagination Controls -->
-<div style="text-align: center; margin-top: 30px;">
-  <nav aria-label="Page navigation">
-    <ul class="pagination justify-content-center">
+    <!-- Stock Grid -->
+    <div class="row">
+        {% for stock in data %}
+        <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+            <div class="stock-card-modern position-relative">
+                <!-- Trending/Hot Badge -->
+                {% if stock.day_change_percent > 5 %}
+                <div class="trending-badge fast-mover-badge">
+                    🚀 +{{ stock.day_change_percent|floatformat:1 }}%
+                </div>
+                {% elif stock.day_change_percent < -5 %}
+                <div class="trending-badge hot-badge">
+                    📉 {{ stock.day_change_percent|floatformat:1 }}%
+                </div>
+                {% elif stock.volume > stock.average_volume|mul:1.5 %}
+                <div class="trending-badge">
+                    🔥 High Volume
+                </div>
+                {% endif %}
 
-      {% if data.has_previous %}
-        <li class="page-item">
-          <a class="page-link" href="?q={{ query }}&page=1">&laquo; First</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="?q={{ query }}&page={{ data.previous_page_number }}">Previous</a>
-        </li>
-      {% else %}
-        <li class="page-item disabled"><span class="page-link">First</span></li>
-        <li class="page-item disabled"><span class="page-link">Previous</span></li>
-      {% endif %}
+                <!-- Card Header -->
+                <div class="stock-card-top">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div class="flex-grow-1 me-2">
+                            <a href="{% url 'stock_detail' stock.ticker %}" class="text-decoration-none">
+                                <h5 class="stock-ticker-modern mb-1">{{ stock.name|short_name }}</h5>
+                            </a>
+                            <p class="stock-company-name mb-0" title="{{ stock.name }}">
+                                <a href="{% url 'stock_detail' stock.ticker %}" class="text-decoration-none text-muted">
+                                    {{ stock.ticker }}
+                                </a> • 
+                                <span class="sector-badge {{ stock.sector|lower|cut:" " }}">{{ stock.sector|default:"N/A" }}</span>
+                            </p>
+                        </div>
+                        <a href="{% url 'add_to_watchlist' stock.ticker %}" 
+                           class="btn-watchlist-modern" 
+                           title="Add to Watchlist">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Price Section -->
+                    <div class="stock-price-section">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="current-price-large">${{ stock.curr_price|floatformat:2 }}</div>
+                                <div class="price-change-badge {% if stock.day_change > 0 %}positive{% elif stock.day_change < 0 %}negative{% else %}neutral{% endif %}">
+                                    {% if stock.day_change > 0 %}
+                                        ▲ +${{ stock.day_change|floatformat:2 }} ({{ stock.day_change_percent|format_percent }})
+                                    {% elif stock.day_change < 0 %}
+                                        ▼ ${{ stock.day_change|abs_value|floatformat:2 }} ({{ stock.day_change_percent|format_percent }})
+                                    {% else %}
+                                        ━ $0.00 (0.00%)
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-      <li class="page-item active">
-        <span class="page-link">
-          Page {{ data.number }} of {{ data.paginator.num_pages }}
-        </span>
-      </li>
+                    <!-- Sparkline Chart -->
+                    {% if stock.sparkline_prices %}
+                    <div class="sparkline-container">
+                        <canvas class="sparkline-canvas" 
+                                data-prices="{{ stock.sparkline_prices|join:',' }}"
+                                data-color="{% if stock.day_change >= 0 %}#10b981{% else %}#ef4444{% endif %}">
+                        </canvas>
+                    </div>
+                    {% endif %}
 
-      {% if data.has_next %}
-        <li class="page-item">
-          <a class="page-link" href="?q={{ query }}&page={{ data.next_page_number }}">Next</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="?q={{ query }}&page={{ data.paginator.num_pages }}">Last &raquo;</a>
-        </li>
-      {% else %}
-        <li class="page-item disabled"><span class="page-link">Next</span></li>
-        <li class="page-item disabled"><span class="page-link">Last</span></li>
-      {% endif %}
+                    <!-- Day Range -->
+                    <div class="day-range-container">
+                        <div class="day-range-label">Day Range</div>
+                        <div class="day-range-bar">
+                            {% with range=stock.day_high|sub:stock.day_low %}
+                            {% with price_from_low=stock.curr_price|sub:stock.day_low %}
+                            {% if range > 0 %}
+                                {% widthratio price_from_low range 100 as position %}
+                                <div class="day-range-indicator" style="left: {{ position }}%;"></div>
+                            {% else %}
+                                <div class="day-range-indicator" style="left: 50%;"></div>
+                            {% endif %}
+                            {% endwith %}
+                            {% endwith %}
+                        </div>
+                        <div class="day-range-values">
+                            <span>${{ stock.day_low|floatformat:2 }}</span>
+                            <span>${{ stock.day_high|floatformat:2 }}</span>
+                        </div>
+                    </div>
 
-    </ul>
-  </nav>
+                    <!-- Key Metrics Grid -->
+                    <div class="stock-metrics">
+                        <div class="metric-item">
+                            <div class="metric-label">Market Cap</div>
+                            <div class="metric-value">{{ stock.market_cap|format_market_cap }}</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-label">Volume</div>
+                            <div class="metric-value">{{ stock.volume|format_volume }}</div>
+                        </div>
+                        {% if stock.pe_ratio %}
+                        <div class="metric-item">
+                            <div class="metric-label">P/E Ratio</div>
+                            <div class="metric-value">{{ stock.pe_ratio|floatformat:2 }}</div>
+                        </div>
+                        {% endif %}
+                        <div class="metric-item">
+                            <div class="metric-label">52W High</div>
+                            <div class="metric-value">${{ stock.fifty_two_week_high|floatformat:2 }}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="stock-actions-modern">
+                    <button class="btn btn-outline-secondary btn-sm" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#sellModal-{{ stock.id }}">
+                        Sell
+                    </button>
+                    <button class="btn btn-success btn-sm" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#buyModal-{{ stock.id }}">
+                        Buy
+                    </button>
+                </div>
+            </div>
+
+            <!-- Buy Modal -->
+            <div class="modal fade" id="buyModal-{{ stock.id }}" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <form method="POST" action="{% url 'buy' stock.id %}" class="modal-content">
+                        {% csrf_token %}
+                        <div class="modal-header">
+                            <h5 class="modal-title">Buy {{ stock.ticker }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Stock: {{ stock.name }}</label>
+                                <div class="alert alert-info mb-3">
+                                    Current Price: <strong>${{ stock.curr_price|floatformat:2 }}</strong>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="buy-qty-{{ stock.id }}" class="form-label">Quantity</label>
+                                <input type="number" class="form-control form-control-lg" 
+                                       id="buy-qty-{{ stock.id }}" 
+                                       name="quantity" 
+                                       min="1" 
+                                       placeholder="Enter quantity" 
+                                       required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-success">Confirm Purchase</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sell Modal -->
+            <div class="modal fade" id="sellModal-{{ stock.id }}" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <form method="POST" action="{% url 'sell' stock.id %}" class="modal-content">
+                        {% csrf_token %}
+                        <div class="modal-header">
+                            <h5 class="modal-title">Sell {{ stock.ticker }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Stock: {{ stock.name }}</label>
+                                <div class="alert alert-warning mb-3">
+                                    Current Price: <strong>${{ stock.curr_price|floatformat:2 }}</strong>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="sell-qty-{{ stock.id }}" class="form-label">Quantity</label>
+                                <input type="number" class="form-control form-control-lg" 
+                                       id="sell-qty-{{ stock.id }}" 
+                                       name="quantity" 
+                                       min="1" 
+                                       placeholder="Enter quantity" 
+                                       required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-danger">Confirm Sale</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="empty-state-modern">
+                <div class="empty-icon-modern">🔍</div>
+                <h3>No Stocks Found</h3>
+                <p class="text-muted">Try adjusting your search terms or browse all available stocks.</p>
+                <a href="{% url 'stocks' %}" class="btn btn-primary">View All Stocks</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if data.has_other_pages %}
+    <div class="row mt-4">
+        <div class="col-12">
+            <nav>
+                <ul class="pagination justify-content-center">
+                    {% if data.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?q={{ query }}&page=1">First</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?q={{ query }}&page={{ data.previous_page_number }}">Previous</a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled"><span class="page-link">First</span></li>
+                    <li class="page-item disabled"><span class="page-link">Previous</span></li>
+                    {% endif %}
+
+                    <li class="page-item active">
+                        <span class="page-link">Page {{ data.number }} of {{ data.paginator.num_pages }}</span>
+                    </li>
+
+                    {% if data.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?q={{ query }}&page={{ data.next_page_number }}">Next</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?q={{ query }}&page={{ data.paginator.num_pages }}">Last</a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled"><span class="page-link">Next</span></li>
+                    <li class="page-item disabled"><span class="page-link">Last</span></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+    {% endif %}
 </div>
 
 <script>
-    const ws = new WebSocket('wss://ws.finnhub.io?token=d1hqgb1r01qsvr2bqhc0d1hqgb1r01qsvr2bqhcg');
-
-      const nasdaq_tickers = [
-        "AAPL", "MSFT", "GOOGL", "GOOG", "AMZN", "META", "NVDA", "TSLA", "PEP", "INTC", "CSCO",
-        "ADBE", "CMCSA", "AVGO", "COST", "TMUS", "TXN", "AMGN", "QCOM", "INTU", "PYPL", "BKNG",
-        "GILD", "SBUX", "MU", "ADP", "MDLZ", "ISRG", "ADI", "MAR", "LRCX", "REGN", "ATVI", "ILMN",
-        "WDAY", "SNPS", "ASML", "EBAY", "ROST", "CTAS", "BIIB", "MELI", "ORLY", "VRTX", "DLTR",
-        "KHC", "EXC", "FAST", "JD", "CRWD"
-    ];
-
-      ws.addEventListener('open', () => {
-        console.log('Connected to WebSocket');
-
-         for (let ticker of nasdaq_tickers) {
-            ws.send(JSON.stringify({ type: 'subscribe', symbol: ticker }));
-            console.log(`${ticker} subscribed`);
+// Interactive Sparkline Chart with Tooltip
+document.addEventListener('DOMContentLoaded', function() {
+    const sparklineCanvases = document.querySelectorAll('.sparkline-canvas');
+    
+    sparklineCanvases.forEach(canvas => {
+        const pricesStr = canvas.getAttribute('data-prices');
+        const color = canvas.getAttribute('data-color');
+        
+        if (!pricesStr) return;
+        
+        const prices = pricesStr.split(',').map(p => parseFloat(p)).filter(p => !isNaN(p));
+        if (prices.length < 2) return;
+        
+        const container = canvas.parentElement;
+        const ctx = canvas.getContext('2d');
+        const width = canvas.offsetWidth;
+        const height = canvas.offsetHeight;
+        
+        canvas.width = width;
+        canvas.height = height;
+        
+        const minPrice = Math.min(...prices);
+        const maxPrice = Math.max(...prices);
+        const priceRange = maxPrice - minPrice || 1;
+        
+        // Calculate points for the line
+        const points = prices.map((price, index) => ({
+            x: (index / (prices.length - 1)) * width,
+            y: height - ((price - minPrice) / priceRange) * (height - 10) - 5,
+            price: price,
+            index: index
+        }));
+        
+        // Create tooltip element
+        let tooltip = container.querySelector('.sparkline-tooltip');
+        if (!tooltip) {
+            tooltip = document.createElement('div');
+            tooltip.className = 'sparkline-tooltip';
+            tooltip.style.cssText = `
+                position: absolute;
+                background: rgba(0, 0, 0, 0.9);
+                color: white;
+                padding: 8px 12px;
+                border-radius: 6px;
+                font-size: 12px;
+                font-weight: 600;
+                pointer-events: none;
+                opacity: 0;
+                transition: opacity 0.2s;
+                z-index: 1000;
+                white-space: nowrap;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            `;
+            container.appendChild(tooltip);
         }
-
-         ws.send(JSON.stringify({ type: 'subscribe', symbol: 'BINANCE:BTCUSDT' }));
-    });
-
-       ws.addEventListener('message', (event) => {
-        try {
-            const dataJson = JSON.parse(event.data);
-            if (dataJson.data && dataJson.data.length > 0) {
-                const trade = dataJson.data[0];
-                const price = trade.p;
-                const ticker = trade.s;
-
-                // Update price in the DOM if element exists
-                const priceElem = document.getElementById(ticker);
-                if (priceElem) {
-                    priceElem.innerHTML = `$ ${price}`;
+        
+        // Draw function
+        function draw(highlightIndex = -1) {
+            ctx.clearRect(0, 0, width, height);
+            
+            // Draw gradient fill
+            ctx.beginPath();
+            points.forEach((point, index) => {
+                if (index === 0) {
+                    ctx.moveTo(point.x, point.y);
+                } else {
+                    ctx.lineTo(point.x, point.y);
                 }
-
-                const realtimePrice =  document.getElementById('real_time_buy_price')
-                if (realtimePrice) {
-                    realtimePrice.value = price;
+            });
+            
+            const gradient = ctx.createLinearGradient(0, 0, 0, height);
+            gradient.addColorStop(0, color + '40');
+            gradient.addColorStop(1, color + '00');
+            
+            ctx.lineTo(width, height);
+            ctx.lineTo(0, height);
+            ctx.closePath();
+            ctx.fillStyle = gradient;
+            ctx.fill();
+            
+            // Draw line
+            ctx.beginPath();
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 2;
+            ctx.lineJoin = 'round';
+            ctx.lineCap = 'round';
+            
+            points.forEach((point, index) => {
+                if (index === 0) {
+                    ctx.moveTo(point.x, point.y);
+                } else {
+                    ctx.lineTo(point.x, point.y);
                 }
-                const realtimeSellPrice =  document.getElementById('real_time_sell_price')
-                if (realtimeSellPrice) {
-                    realtimeSellPrice.value = price;
-                }
-
-                console.log('Received:', { price, ticker });
+            });
+            
+            ctx.stroke();
+            
+            // Draw highlight point if hovering
+            if (highlightIndex >= 0 && highlightIndex < points.length) {
+                const point = points[highlightIndex];
+                
+                // Draw vertical line
+                ctx.beginPath();
+                ctx.strokeStyle = color + '80';
+                ctx.lineWidth = 1;
+                ctx.setLineDash([3, 3]);
+                ctx.moveTo(point.x, 0);
+                ctx.lineTo(point.x, height);
+                ctx.stroke();
+                ctx.setLineDash([]);
+                
+                // Draw point circle
+                ctx.beginPath();
+                ctx.arc(point.x, point.y, 5, 0, 2 * Math.PI);
+                ctx.fillStyle = color;
+                ctx.fill();
+                ctx.strokeStyle = 'white';
+                ctx.lineWidth = 2;
+                ctx.stroke();
             }
-        } catch (e) {
-            console.error('Error parsing message', e);
         }
+        
+        // Initial draw
+        draw();
+        
+        // Mouse move handler
+        canvas.addEventListener('mousemove', function(e) {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            
+            // Find closest point
+            let closestIndex = 0;
+            let closestDistance = Math.abs(points[0].x - mouseX);
+            
+            points.forEach((point, index) => {
+                const distance = Math.abs(point.x - mouseX);
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    closestIndex = index;
+                }
+            });
+            
+            // Redraw with highlight
+            draw(closestIndex);
+            
+            // Show tooltip
+            const point = points[closestIndex];
+            tooltip.textContent = `$${point.price.toFixed(2)}`;
+            tooltip.style.opacity = '1';
+            tooltip.style.left = `${point.x}px`;
+            tooltip.style.top = `${point.y - 35}px`;
+            tooltip.style.transform = 'translateX(-50%)';
+        });
+        
+        // Mouse leave handler
+        canvas.addEventListener('mouseleave', function() {
+            draw();
+            tooltip.style.opacity = '0';
+        });
+        
+        // Make canvas cursor pointer
+        canvas.style.cursor = 'crosshair';
     });
-
-        ws.addEventListener('error', (err) => {
-        console.error('WebSocket error:', err);
-    });
-
-    ws.addEventListener('close', () => {
-        console.log('### closed ###');
-    });
+});
 </script>
 {% endblock %}
-

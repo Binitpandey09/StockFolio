@@ -44,12 +44,13 @@ logger = logging.getLogger(__name__)
 @login_required
 def index(request):
     user = request.user
-    user_stocks = UserStock.objects.select_related('stock').filter(user=user)
+    # Get all user stocks for calculations
+    all_user_stocks = UserStock.objects.select_related('stock').filter(user=user)
 
     total_value = 0
     invested = 0
 
-    for item in user_stocks:
+    for item in all_user_stocks:
         stock_value = item.purchase_quantity * item.stock.curr_price
         invested_value = item.purchase_quantity * item.purchase_price
 
@@ -59,11 +60,47 @@ def index(request):
 
     gains = ((total_value - invested) / invested) * 100 if invested != 0 else 0
 
+    # Limit holdings display to most recent 3 for home page
+    recent_holdings = all_user_stocks.order_by('-id')[:3]
+
+    # Get trending/popular stocks for display with live data (reduced from 8 to 6 for performance)
+    trending_stocks_query = Stocks.objects.filter(is_active=True).order_by('-volume')[:6]
+    trending_stocks = []
+    for stock in trending_stocks_query:
+        stock_data = stock_service.get_stock_data(stock.ticker)
+        if stock_data:
+            stock.day_change = stock_data.get('day_change', 0)
+            stock.day_change_percent = stock_data.get('day_change_percent', 0)
+            stock.sparkline_prices = stock_data.get('sparkline_prices', [])
+        trending_stocks.append(stock)
+    
+    # Get top stocks with live data (reduced from 6 to 4 for performance)
+    top_stocks_query = Stocks.objects.filter(is_active=True).order_by('-curr_price')[:4]
+    top_stocks = []
+    for stock in top_stocks_query:
+        stock_data = stock_service.get_stock_data(stock.ticker)
+        if stock_data:
+            stock.day_change = stock_data.get('day_change', 0)
+            stock.day_change_percent = stock_data.get('day_change_percent', 0)
+        top_stocks.append(stock)
+    
+    # Get watchlist count
+    watchlist_count = Watchlist.objects.filter(user=user).count()
+    
+    # Get recent transactions - limit to 4 for home page
+    recent_transactions = Transaction.objects.filter(user=user).order_by('-date')[:4]
+
     context = {
-        'data': user_stocks,
+        'data': recent_holdings,  # Only show recent 5 holdings
         'total_value': total_value,
         'invested': invested,
         'gains': round(gains, 2),
+        'trending_stocks': trending_stocks,
+        'top_stocks': top_stocks,
+        'watchlist_count': watchlist_count,
+        'recent_transactions': recent_transactions,
+        'portfolio_count': all_user_stocks.count(),  # Total count for display
+        'has_more_holdings': all_user_stocks.count() > 3,  # Flag to show "View All" link
     }
 
     return render(request, 'index.html', context)
@@ -141,21 +178,40 @@ def stocks(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     
-    # Optionally update prices for the current page
-    if update_prices:
-        try:
-            for stock in page_obj:
-                stock_data = stock_service.get_stock_data(stock.ticker)
-                if stock_data:
-                    stock.curr_price = Decimal(str(stock_data['current_price']))
-                    stock.volume = stock_data.get('volume', stock.volume)
-                    stock.market_cap = stock_data.get('market_cap', stock.market_cap)
-                    stock.last_updated = timezone.now()
-                    stock.save()
-                    logger.info(f"Updated price for {stock.ticker}: ${stock.curr_price}")
-        except Exception as e:
-            logger.error(f"Error updating stock prices: {str(e)}")
-            messages.warning(request, "Some stock prices could not be updated.")
+    # Fetch live data for each stock to show on cards
+    stocks_with_data = []
+    for stock in page_obj:
+        stock_data = stock_service.get_stock_data(stock.ticker)
+        if stock_data:
+            # Attach live data to stock object
+            stock.live_data = stock_data
+            stock.previous_close = stock_data.get('previous_close', stock.curr_price)
+            stock.day_change = stock_data.get('day_change', 0)
+            stock.day_change_percent = stock_data.get('day_change_percent', 0)
+            stock.day_high = stock_data.get('day_high', stock.curr_price)
+            stock.day_low = stock_data.get('day_low', stock.curr_price)
+            stock.pe_ratio = stock_data.get('pe_ratio')
+            stock.fifty_two_week_high = stock_data.get('fifty_two_week_high', stock.curr_price)
+            stock.fifty_two_week_low = stock_data.get('fifty_two_week_low', stock.curr_price)
+            stock.average_volume = stock_data.get('average_volume', 0)
+            stock.sparkline_prices = stock_data.get('sparkline_prices', [])
+        else:
+            # Use database values if live data unavailable
+            stock.previous_close = stock.curr_price
+            stock.day_change = 0
+            stock.day_change_percent = 0
+            stock.day_high = stock.curr_price
+            stock.day_low = stock.curr_price
+            stock.pe_ratio = None
+            stock.fifty_two_week_high = stock.curr_price
+            stock.fifty_two_week_low = stock.curr_price
+            stock.average_volume = stock.volume
+            stock.sparkline_prices = []
+        
+        stocks_with_data.append(stock)
+    
+    # Update page_obj with enhanced stocks
+    page_obj.object_list = stocks_with_data
     
     context = {
         'data': page_obj,
@@ -338,7 +394,11 @@ def buy(request, id):
         logger.error(f"Error in buy transaction for user {request.user.username}: {str(e)}")
         messages.error(request, "An error occurred during the purchase. Please try again.")
     
-    return redirect('index')
+    # Redirect back to the referring page (market page or stock detail page)
+    referer = request.META.get('HTTP_REFERER')
+    if referer:
+        return redirect(referer)
+    return redirect('stocks')  # Default to market page if no referer
 
 
 
@@ -375,7 +435,13 @@ def  sell(request , id) :
     )
     t1.start()
 
-    return redirect('index')
+    messages.success(request, f"Successfully sold {sell_quantity} shares of {stock.name}")
+
+    # Redirect back to the referring page (market page, portfolio, or stock detail page)
+    referer = request.META.get('HTTP_REFERER')
+    if referer:
+        return redirect(referer)
+    return redirect('portfolio_dashboard')  # Default to portfolio if no referer
 
 
 
@@ -423,6 +489,11 @@ def portfolio_dashboard(request):
     # Get current live prices for portfolio stocks
     for symbol, data in portfolio.items():
         try:
+            # Get stock object from database
+            stock = Stocks.objects.filter(ticker=symbol).first()
+            if stock:
+                data['stock_id'] = stock.id  # Add stock ID for sell functionality
+            
             # Get live price data
             stock_data = stock_service.get_stock_data(symbol)
             if stock_data:
@@ -432,14 +503,12 @@ def portfolio_dashboard(request):
                 data['sector'] = stock_data.get('sector', 'N/A')
                 
                 # Update database price
-                stock = Stocks.objects.filter(ticker=symbol).first()
                 if stock:
                     stock.curr_price = Decimal(str(stock_data['current_price']))
                     stock.last_updated = timezone.now()
                     stock.save()
             else:
                 # Fallback to database price
-                stock = Stocks.objects.filter(ticker=symbol).first()
                 data['current_price'] = float(stock.curr_price) if stock else 0.0
                 data['day_change'] = 0
                 data['day_change_percent'] = 0
@@ -448,6 +517,8 @@ def portfolio_dashboard(request):
             logger.error(f"Error fetching live price for {symbol}: {str(e)}")
             # Use database price as fallback
             stock = Stocks.objects.filter(ticker=symbol).first()
+            if stock:
+                data['stock_id'] = stock.id
             data['current_price'] = float(stock.curr_price) if stock else 0.0
             data['day_change'] = 0
             data['day_change_percent'] = 0
@@ -648,3 +719,83 @@ def update_watchlist_prices_api(request):
         }, status=500)
 
 
+
+
+@login_required
+def stock_detail(request, ticker):
+    """
+    Detailed stock page with large chart, metrics, and company info
+    """
+    # Get stock from database
+    stock = get_object_or_404(Stocks, ticker=ticker.upper())
+    
+    # Get live stock data
+    stock_data = stock_service.get_stock_data(ticker)
+    
+    if stock_data:
+        # Attach live data to stock object
+        stock.live_data = stock_data
+        stock.previous_close = stock_data.get('previous_close', stock.curr_price)
+        stock.day_change = stock_data.get('day_change', 0)
+        stock.day_change_percent = stock_data.get('day_change_percent', 0)
+        stock.day_high = stock_data.get('day_high', stock.curr_price)
+        stock.day_low = stock_data.get('day_low', stock.curr_price)
+        stock.open_price = stock_data.get('open_price', stock.curr_price)
+        stock.pe_ratio = stock_data.get('pe_ratio')
+        stock.forward_pe = stock_data.get('forward_pe')
+        stock.fifty_two_week_high = stock_data.get('fifty_two_week_high', stock.curr_price)
+        stock.fifty_two_week_low = stock_data.get('fifty_two_week_low', stock.curr_price)
+        stock.average_volume = stock_data.get('average_volume', 0)
+        stock.dividend_yield = stock_data.get('dividend_yield', 0)
+        stock.beta = stock_data.get('beta')
+        stock.eps = stock_data.get('eps')
+    else:
+        # Use database values if live data unavailable
+        stock.previous_close = stock.curr_price
+        stock.day_change = 0
+        stock.day_change_percent = 0
+        stock.day_high = stock.curr_price
+        stock.day_low = stock.curr_price
+        stock.open_price = stock.curr_price
+        stock.pe_ratio = None
+        stock.forward_pe = None
+        stock.fifty_two_week_high = stock.curr_price
+        stock.fifty_two_week_low = stock.curr_price
+        stock.average_volume = stock.volume
+        stock.dividend_yield = 0
+        stock.beta = None
+        stock.eps = None
+    
+    # Check if user owns this stock
+    user_stock = None
+    if request.user.is_authenticated:
+        try:
+            user_stock = UserStock.objects.get(user=request.user, stock=stock)
+        except UserStock.DoesNotExist:
+            pass
+    
+    # Check if in watchlist
+    in_watchlist = False
+    if request.user.is_authenticated:
+        in_watchlist = Watchlist.objects.filter(user=request.user, stock_symbol=ticker.upper()).exists()
+    
+    # Get similar stocks (same sector)
+    similar_stocks = Stocks.objects.filter(
+        sector=stock.sector,
+        is_active=True
+    ).exclude(ticker=ticker.upper())[:4]
+    
+    # Enhance similar stocks with live data
+    for similar_stock in similar_stocks:
+        similar_data = stock_service.get_stock_data(similar_stock.ticker)
+        if similar_data:
+            similar_stock.day_change_percent = similar_data.get('day_change_percent', 0)
+    
+    context = {
+        'stock': stock,
+        'user_stock': user_stock,
+        'in_watchlist': in_watchlist,
+        'similar_stocks': similar_stocks,
+    }
+    
+    return render(request, 'stock_detail.html', context)

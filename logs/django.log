@@ -1541,3 +1541,1046 @@ INFO 2025-12-07 01:57:01,851 basehttp 24500 3844 "GET /dashboard/ HTTP/1.1" 200 
 INFO 2025-12-07 01:57:03,285 basehttp 24500 3048 "GET /stocks/ HTTP/1.1" 200 8340
 INFO 2025-12-07 01:57:05,509 basehttp 24500 3048 "GET / HTTP/1.1" 200 11097
 INFO 2025-12-07 01:58:23,152 autoreload 25212 18612 Watching for file changes with StatReloader
+INFO 2025-12-07 02:08:21,537 autoreload 25212 18612 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\views.py changed, reloading.
+INFO 2025-12-07 02:08:25,593 autoreload 1808 13080 Watching for file changes with StatReloader
+INFO 2025-12-07 02:10:30,934 services 21576 26892 Cached data for META
+INFO 2025-12-07 02:10:32,535 services 21576 26892 Cached data for V
+INFO 2025-12-07 02:10:33,970 services 21576 26892 Cached data for TSLA
+INFO 2025-12-07 02:10:35,923 services 21576 26892 Cached data for KO
+INFO 2025-12-07 02:10:37,783 services 21576 26892 Cached data for PEP
+INFO 2025-12-07 02:10:39,388 services 21576 26892 Cached data for WMT
+INFO 2025-12-07 02:10:40,730 services 21576 26892 Cached data for AMZN
+INFO 2025-12-07 02:10:42,467 services 21576 26892 Cached data for BAC
+INFO 2025-12-07 02:10:44,110 services 21576 26892 Cached data for NVDA
+INFO 2025-12-07 02:10:45,644 services 21576 26892 Cached data for GOOGL
+INFO 2025-12-07 02:10:47,587 services 21576 26892 Cached data for AAPL
+INFO 2025-12-07 02:10:49,119 services 21576 26892 Cached data for NFLX
+INFO 2025-12-07 02:10:50,663 services 21576 26892 Cached data for JPM
+INFO 2025-12-07 02:10:52,400 services 21576 26892 Cached data for DIS
+INFO 2025-12-07 02:10:53,838 services 21576 26892 Cached data for MA
+INFO 2025-12-07 02:10:55,479 services 21576 26892 Cached data for MSFT
+INFO 2025-12-07 02:11:22,240 autoreload 25516 17512 Watching for file changes with StatReloader
+INFO 2025-12-07 02:13:06,366 basehttp 25516 26572 "GET / HTTP/1.1" 200 27769
+INFO 2025-12-07 02:13:06,710 basehttp 25516 26572 "GET /static/modern-styles.css HTTP/1.1" 304 0
+INFO 2025-12-07 02:13:06,714 basehttp 25516 1448 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2025-12-07 02:13:06,717 basehttp 25516 26428 "GET /static/enhanced-styles.css HTTP/1.1" 304 0
+INFO 2025-12-07 02:13:06,720 basehttp 25516 12136 "GET /static/market.css HTTP/1.1" 304 0
+INFO 2025-12-07 02:13:06,722 basehttp 25516 4324 "GET /static/form.css HTTP/1.1" 304 0
+INFO 2025-12-07 02:13:13,415 basehttp 25516 15344 "GET /stocks/ HTTP/1.1" 200 35422
+INFO 2025-12-07 02:13:17,310 basehttp 25516 15344 "GET / HTTP/1.1" 200 27769
+INFO 2025-12-07 02:17:46,835 basehttp 25516 4324 "GET / HTTP/1.1" 200 33019
+INFO 2025-12-07 02:17:46,892 basehttp 25516 4324 "GET /static/enhanced-styles.css HTTP/1.1" 304 0
+INFO 2025-12-07 02:21:51,936 basehttp 25516 27588 "GET / HTTP/1.1" 200 26623
+INFO 2025-12-07 02:21:51,987 basehttp 25516 27588 "GET /static/enhanced-styles.css HTTP/1.1" 304 0
+INFO 2025-12-07 02:24:28,614 basehttp 25516 22788 "GET / HTTP/1.1" 200 26623
+INFO 2025-12-07 02:31:59,719 autoreload 25256 24788 Watching for file changes with StatReloader
+INFO 2025-12-07 02:33:17,044 basehttp 25256 22488 "GET / HTTP/1.1" 200 22978
+INFO 2025-12-07 02:33:17,152 basehttp 25256 22488 "GET /static/main.css HTTP/1.1" 200 3519
+INFO 2025-12-07 02:33:23,708 basehttp 25256 22488 "GET /stocks/ HTTP/1.1" 200 35190
+INFO 2025-12-07 02:33:39,497 basehttp 25256 8972 "GET /add_to_watchlist/TSLA/ HTTP/1.1" 302 0
+INFO 2025-12-07 02:33:39,551 basehttp 25256 8972 "GET /stocks/ HTTP/1.1" 200 35190
+INFO 2025-12-07 02:33:39,643 basehttp 25256 8972 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 02:33:51,776 basehttp 25256 23748 "GET /stocks/ HTTP/1.1" 200 35190
+INFO 2025-12-07 02:33:59,245 basehttp 25256 27612 "GET / HTTP/1.1" 200 22978
+INFO 2025-12-07 02:33:59,320 basehttp 25256 27612 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 02:34:28,753 basehttp 25256 21024 "GET /stocks/ HTTP/1.1" 200 35190
+INFO 2025-12-07 02:34:28,824 basehttp 25256 21024 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 02:37:42,923 basehttp 25256 25612 "GET /stocks/ HTTP/1.1" 200 68084
+INFO 2025-12-07 02:37:43,015 basehttp 25256 25612 "GET /static/main.css HTTP/1.1" 200 7574
+INFO 2025-12-07 02:37:55,593 basehttp 25256 2700 "GET /stocks/?q=&page=2 HTTP/1.1" 200 68224
+INFO 2025-12-07 02:37:55,686 basehttp 25256 13172 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 02:40:18,218 basehttp 25256 3288 "GET /stocks/?q=&page=2 HTTP/1.1" 200 68224
+INFO 2025-12-07 02:40:18,278 basehttp 25256 3288 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 02:47:23,811 basehttp 25256 24372 "GET /stocks/?q=&page=2 HTTP/1.1" 200 72954
+INFO 2025-12-07 02:47:23,868 basehttp 25256 24372 "GET /static/main.css HTTP/1.1" 200 11830
+INFO 2025-12-07 02:47:27,639 basehttp 25256 21756 "GET / HTTP/1.1" 200 27708
+INFO 2025-12-07 02:56:50,921 basehttp 25256 13552 "GET / HTTP/1.1" 302 0
+INFO 2025-12-07 02:56:50,947 basehttp 25256 13552 "GET /login/?next=/ HTTP/1.1" 200 8788
+INFO 2025-12-07 02:56:51,078 basehttp 25256 13552 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 02:57:00,399 basehttp 25256 25704 "GET /login/?next=/ HTTP/1.1" 200 8696
+INFO 2025-12-07 02:58:48,547 basehttp 25256 7492 "GET /login/?next=/ HTTP/1.1" 200 8696
+INFO 2025-12-07 02:58:48,573 basehttp 25256 7492 "GET /static/main.css HTTP/1.1" 200 12030
+INFO 2025-12-07 02:58:51,655 basehttp 25256 7492 "GET /login/?next=/ HTTP/1.1" 200 8696
+INFO 2025-12-07 02:58:52,761 basehttp 25256 17864 "GET /login/?next=/ HTTP/1.1" 200 8696
+INFO 2025-12-07 02:58:53,521 basehttp 25256 17864 "GET /login/?next=/ HTTP/1.1" 200 8696
+INFO 2025-12-07 02:58:53,751 basehttp 25256 17864 "GET /login/?next=/ HTTP/1.1" 200 8696
+INFO 2025-12-07 02:59:03,317 basehttp 25256 3968 "GET /static/main.css HTTP/1.1" 304 0
+WARNING 2025-12-07 02:59:03,364 log 25256 3968 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-07 02:59:03,365 basehttp 25256 3968 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7507
+INFO 2025-12-07 02:59:09,290 basehttp 25256 3968 "GET /login/?next=/ HTTP/1.1" 200 8696
+WARNING 2025-12-07 02:59:09,319 log 25256 3968 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-07 02:59:09,321 basehttp 25256 3968 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7507
+INFO 2025-12-07 02:59:10,215 basehttp 25256 3968 "GET /login/?next=/ HTTP/1.1" 200 8696
+INFO 2025-12-07 02:59:10,515 basehttp 25256 27052 "GET /static/main.css HTTP/1.1" 304 0
+WARNING 2025-12-07 02:59:10,709 log 25256 3968 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-07 02:59:10,711 basehttp 25256 3968 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7507
+INFO 2025-12-07 02:59:12,043 basehttp 25256 3968 "GET /login/?next=/ HTTP/1.1" 200 8696
+WARNING 2025-12-07 02:59:12,308 log 25256 3968 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-12-07 02:59:12,309 basehttp 25256 3968 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7507
+INFO 2025-12-07 02:59:17,789 basehttp 25256 10896 "GET /login/?next=/ HTTP/1.1" 200 8696
+INFO 2025-12-07 03:00:21,572 basehttp 25256 23416 "GET /login/?next=/ HTTP/1.1" 200 8696
+INFO 2025-12-07 03:00:21,594 basehttp 25256 23416 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:00:23,855 basehttp 25256 4512 "GET /login/?next=/ HTTP/1.1" 200 8696
+INFO 2025-12-07 03:00:24,081 basehttp 25256 4512 "GET /login/?next=/ HTTP/1.1" 200 8696
+INFO 2025-12-07 03:02:10,921 basehttp 25256 8428 "GET /login/?next=/ HTTP/1.1" 200 12506
+INFO 2025-12-07 03:02:10,954 basehttp 25256 8428 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:02:20,688 basehttp 25256 14408 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-12-07 03:02:20,734 basehttp 25256 14408 "GET / HTTP/1.1" 200 27927
+INFO 2025-12-07 03:03:08,619 basehttp 25256 2416 "GET /add_to_watchlist/AMZN/ HTTP/1.1" 302 0
+INFO 2025-12-07 03:03:08,653 basehttp 25256 2416 "GET /stocks/ HTTP/1.1" 200 73223
+INFO 2025-12-07 03:03:08,689 basehttp 25256 2416 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:06:59,114 basehttp 25256 7332 "GET /stocks/ HTTP/1.1" 200 73441
+INFO 2025-12-07 03:06:59,156 basehttp 25256 7332 "GET /static/main.css HTTP/1.1" 200 12496
+INFO 2025-12-07 03:07:10,943 basehttp 25256 10420 "GET / HTTP/1.1" 200 28241
+INFO 2025-12-07 03:07:10,977 basehttp 25256 10420 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:07:12,805 basehttp 25256 10420 "GET / HTTP/1.1" 200 28241
+INFO 2025-12-07 03:07:14,415 basehttp 25256 10420 "GET / HTTP/1.1" 200 28241
+INFO 2025-12-07 03:07:14,436 basehttp 25256 10420 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:07:18,233 basehttp 25256 10420 "GET / HTTP/1.1" 200 28241
+INFO 2025-12-07 03:07:18,252 basehttp 25256 10420 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:11:44,811 services 18772 27064 Cached data for ORCL
+INFO 2025-12-07 03:11:47,247 services 18772 27064 Cached data for INTC
+INFO 2025-12-07 03:11:50,724 services 18772 27064 Cached data for PYPL
+INFO 2025-12-07 03:11:53,789 basehttp 25256 14536 "GET / HTTP/1.1" 200 28241
+INFO 2025-12-07 03:11:53,822 basehttp 25256 14536 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:11:53,910 services 18772 27064 Cached data for IBM
+INFO 2025-12-07 03:11:58,204 services 18772 27064 Cached data for AMD
+INFO 2025-12-07 03:12:32,805 basehttp 25256 19136 "GET /dashboard/ HTTP/1.1" 200 12656
+INFO 2025-12-07 03:12:32,846 basehttp 25256 19136 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:12:35,484 basehttp 25256 2312 "GET /stocks/ HTTP/1.1" 200 73441
+INFO 2025-12-07 03:12:44,140 services 25256 2312 Cached data for TSLA
+INFO 2025-12-07 03:12:44,162 views 25256 2312 User binit bought 2 shares of TSLA at $455.0
+INFO 2025-12-07 03:12:44,164 basehttp 25256 2312 "POST /buy/3/ HTTP/1.1" 302 0
+INFO 2025-12-07 03:12:44,214 basehttp 25256 2312 "GET / HTTP/1.1" 200 30100
+INFO 2025-12-07 03:12:56,771 services 25256 14924 Retrieved cached data for TSLA
+INFO 2025-12-07 03:12:56,780 basehttp 25256 14924 "GET /dashboard/ HTTP/1.1" 200 15394
+INFO 2025-12-07 03:13:09,820 basehttp 25256 8204 "GET /stock-comparison/ HTTP/1.1" 200 11627
+INFO 2025-12-07 03:13:09,860 basehttp 25256 8204 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:13:17,116 basehttp 25256 18428 "GET /stock-comparison/?symbols=&symbols=&symbols=&symbols=&symbols= HTTP/1.1" 200 11075
+INFO 2025-12-07 03:13:20,149 basehttp 25256 18428 "GET / HTTP/1.1" 200 30100
+INFO 2025-12-07 03:14:41,650 basehttp 25256 23436 "GET / HTTP/1.1" 200 30100
+INFO 2025-12-07 03:14:41,672 basehttp 25256 23436 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:14:44,412 basehttp 25256 13868 "GET / HTTP/1.1" 200 30100
+INFO 2025-12-07 03:14:49,842 basehttp 25256 13868 "GET /add_to_watchlist/AMZN/ HTTP/1.1" 302 0
+INFO 2025-12-07 03:14:49,864 basehttp 25256 13868 "GET /stocks/ HTTP/1.1" 200 73441
+INFO 2025-12-07 03:15:10,550 basehttp 25256 14924 "GET /stocks/?q=&page=2 HTTP/1.1" 200 73677
+INFO 2025-12-07 03:22:52,366 basehttp 25256 10564 "GET /stocks/?q=&page=2 HTTP/1.1" 200 73677
+INFO 2025-12-07 03:22:52,426 basehttp 25256 10564 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:22:55,776 basehttp 25256 4248 "GET / HTTP/1.1" 200 30100
+INFO 2025-12-07 03:26:13,910 basehttp 25256 10868 "GET / HTTP/1.1" 200 30100
+INFO 2025-12-07 03:26:13,937 basehttp 25256 10868 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:26:17,316 basehttp 25256 17188 "GET / HTTP/1.1" 200 30100
+INFO 2025-12-07 03:26:17,696 basehttp 25256 17188 "GET / HTTP/1.1" 200 30100
+INFO 2025-12-07 03:28:37,522 autoreload 25256 24788 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\templatetags\custom_filters.py changed, reloading.
+INFO 2025-12-07 03:28:39,333 autoreload 20680 25304 Watching for file changes with StatReloader
+INFO 2025-12-07 03:30:05,467 basehttp 20680 9008 "GET / HTTP/1.1" 200 30168
+INFO 2025-12-07 03:30:05,504 basehttp 20680 9008 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:30:13,377 basehttp 20680 9008 "GET /add_to_watchlist/NFLX/ HTTP/1.1" 302 0
+INFO 2025-12-07 03:30:13,466 basehttp 20680 9008 "GET /stocks/ HTTP/1.1" 200 73556
+INFO 2025-12-07 03:30:25,912 basehttp 20680 20420 "GET / HTTP/1.1" 200 30168
+INFO 2025-12-07 03:30:30,802 basehttp 20680 20420 "GET / HTTP/1.1" 200 30168
+INFO 2025-12-07 03:30:32,579 basehttp 20680 20420 "GET / HTTP/1.1" 200 30168
+INFO 2025-12-07 03:32:16,777 basehttp 20680 25508 "GET /stocks/ HTTP/1.1" 200 73556
+INFO 2025-12-07 03:34:15,769 basehttp 20680 25300 "GET / HTTP/1.1" 200 30168
+INFO 2025-12-07 03:34:15,846 basehttp 20680 25300 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:40:45,549 autoreload 20680 25304 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\services.py changed, reloading.
+INFO 2025-12-07 03:40:47,643 autoreload 5716 11776 Watching for file changes with StatReloader
+INFO 2025-12-07 03:41:03,580 autoreload 5716 11776 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\templatetags\custom_filters.py changed, reloading.
+INFO 2025-12-07 03:41:05,075 autoreload 20452 27560 Watching for file changes with StatReloader
+INFO 2025-12-07 03:41:28,397 autoreload 20452 27560 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\views.py changed, reloading.
+INFO 2025-12-07 03:41:29,953 autoreload 22096 21596 Watching for file changes with StatReloader
+INFO 2025-12-07 03:44:49,047 autoreload 22096 21596 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\views.py changed, reloading.
+INFO 2025-12-07 03:44:50,696 autoreload 24240 26620 Watching for file changes with StatReloader
+INFO 2025-12-07 03:46:33,656 services 24240 6424 Cached data for NVDA
+INFO 2025-12-07 03:46:34,259 services 24240 6424 Cached data for NFLX
+INFO 2025-12-07 03:46:34,931 services 24240 6424 Cached data for INTC
+INFO 2025-12-07 03:46:35,545 services 24240 6424 Cached data for TSLA
+INFO 2025-12-07 03:46:36,295 services 24240 6424 Cached data for AAPL
+INFO 2025-12-07 03:46:37,078 services 24240 6424 Cached data for BAC
+INFO 2025-12-07 03:46:37,692 services 24240 6424 Cached data for AMD
+INFO 2025-12-07 03:46:38,311 services 24240 6424 Cached data for AMZN
+INFO 2025-12-07 03:46:38,935 services 24240 6424 Cached data for META
+INFO 2025-12-07 03:46:39,584 services 24240 6424 Cached data for MA
+INFO 2025-12-07 03:46:40,253 services 24240 6424 Cached data for MSFT
+INFO 2025-12-07 03:46:40,253 services 24240 6424 Retrieved cached data for TSLA
+INFO 2025-12-07 03:46:40,915 services 24240 6424 Cached data for V
+INFO 2025-12-07 03:46:41,522 services 24240 6424 Cached data for GOOGL
+INFO 2025-12-07 03:46:41,594 basehttp 24240 6424 "GET / HTTP/1.1" 200 37558
+INFO 2025-12-07 03:46:41,679 basehttp 24240 6424 "GET /static/main.css HTTP/1.1" 200 17715
+INFO 2025-12-07 03:46:47,983 basehttp 24240 10624 "GET /add_to_watchlist/NFLX/ HTTP/1.1" 302 0
+INFO 2025-12-07 03:46:48,010 services 24240 10624 Retrieved cached data for META
+INFO 2025-12-07 03:46:48,010 services 24240 10624 Retrieved cached data for V
+INFO 2025-12-07 03:46:48,011 services 24240 10624 Retrieved cached data for TSLA
+INFO 2025-12-07 03:46:49,175 services 24240 10624 Cached data for KO
+INFO 2025-12-07 03:46:49,897 services 24240 10624 Cached data for PEP
+INFO 2025-12-07 03:46:50,565 services 24240 10624 Cached data for WMT
+INFO 2025-12-07 03:46:50,566 services 24240 10624 Retrieved cached data for AMZN
+INFO 2025-12-07 03:46:50,567 services 24240 10624 Retrieved cached data for BAC
+INFO 2025-12-07 03:46:50,587 basehttp 24240 10624 "GET /stocks/ HTTP/1.1" 200 85952
+INFO 2025-12-07 03:51:11,465 services 24240 3304 Retrieved cached data for META
+INFO 2025-12-07 03:51:11,469 services 24240 3304 Retrieved cached data for V
+INFO 2025-12-07 03:51:11,470 services 24240 3304 Retrieved cached data for TSLA
+INFO 2025-12-07 03:51:11,471 services 24240 3304 Retrieved cached data for KO
+INFO 2025-12-07 03:51:11,472 services 24240 3304 Retrieved cached data for PEP
+INFO 2025-12-07 03:51:11,472 services 24240 3304 Retrieved cached data for WMT
+INFO 2025-12-07 03:51:11,474 services 24240 3304 Retrieved cached data for AMZN
+INFO 2025-12-07 03:51:11,474 services 24240 3304 Retrieved cached data for BAC
+INFO 2025-12-07 03:51:11,525 basehttp 24240 3304 "GET /stocks/ HTTP/1.1" 200 89844
+INFO 2025-12-07 03:51:11,581 basehttp 24240 3304 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:51:23,246 services 24240 24412 Retrieved cached data for META
+INFO 2025-12-07 03:51:23,247 services 24240 24412 Retrieved cached data for V
+INFO 2025-12-07 03:51:23,247 services 24240 24412 Retrieved cached data for TSLA
+INFO 2025-12-07 03:51:23,248 services 24240 24412 Retrieved cached data for KO
+INFO 2025-12-07 03:51:23,248 services 24240 24412 Retrieved cached data for PEP
+INFO 2025-12-07 03:51:23,248 services 24240 24412 Retrieved cached data for WMT
+INFO 2025-12-07 03:51:23,249 services 24240 24412 Retrieved cached data for AMZN
+INFO 2025-12-07 03:51:23,249 services 24240 24412 Retrieved cached data for BAC
+INFO 2025-12-07 03:51:23,267 basehttp 24240 24412 "GET /stocks/ HTTP/1.1" 200 89844
+INFO 2025-12-07 03:51:26,603 services 24240 24412 Retrieved cached data for NVDA
+INFO 2025-12-07 03:51:26,605 services 24240 24412 Retrieved cached data for NFLX
+INFO 2025-12-07 03:51:26,606 services 24240 24412 Retrieved cached data for INTC
+INFO 2025-12-07 03:51:26,606 services 24240 24412 Retrieved cached data for TSLA
+INFO 2025-12-07 03:51:26,607 services 24240 24412 Retrieved cached data for AAPL
+INFO 2025-12-07 03:51:26,607 services 24240 24412 Retrieved cached data for BAC
+INFO 2025-12-07 03:51:26,607 services 24240 24412 Retrieved cached data for AMD
+INFO 2025-12-07 03:51:26,608 services 24240 24412 Retrieved cached data for AMZN
+INFO 2025-12-07 03:51:26,610 services 24240 24412 Retrieved cached data for META
+INFO 2025-12-07 03:51:26,610 services 24240 24412 Retrieved cached data for MA
+INFO 2025-12-07 03:51:26,611 services 24240 24412 Retrieved cached data for MSFT
+INFO 2025-12-07 03:51:26,611 services 24240 24412 Retrieved cached data for TSLA
+INFO 2025-12-07 03:51:26,611 services 24240 24412 Retrieved cached data for V
+INFO 2025-12-07 03:51:26,613 services 24240 24412 Retrieved cached data for GOOGL
+INFO 2025-12-07 03:51:26,634 basehttp 24240 24412 "GET / HTTP/1.1" 200 37558
+INFO 2025-12-07 03:51:30,249 basehttp 24240 25844 "GET /add_to_watchlist/NFLX/ HTTP/1.1" 302 0
+INFO 2025-12-07 03:51:30,260 services 24240 25844 Retrieved cached data for META
+INFO 2025-12-07 03:51:30,261 services 24240 25844 Retrieved cached data for V
+INFO 2025-12-07 03:51:30,261 services 24240 25844 Retrieved cached data for TSLA
+INFO 2025-12-07 03:51:30,261 services 24240 25844 Retrieved cached data for KO
+INFO 2025-12-07 03:51:30,262 services 24240 25844 Retrieved cached data for PEP
+INFO 2025-12-07 03:51:30,262 services 24240 25844 Retrieved cached data for WMT
+INFO 2025-12-07 03:51:30,262 services 24240 25844 Retrieved cached data for AMZN
+INFO 2025-12-07 03:51:30,263 services 24240 25844 Retrieved cached data for BAC
+INFO 2025-12-07 03:51:30,277 basehttp 24240 25844 "GET /stocks/ HTTP/1.1" 200 89844
+INFO 2025-12-07 03:53:48,347 services 24240 14188 Cached data for TSLA
+INFO 2025-12-07 03:53:48,381 views 24240 14188 User binit bought 5 shares of TSLA at $455.0
+INFO 2025-12-07 03:53:48,389 basehttp 24240 14188 "POST /buy/3/ HTTP/1.1" 302 0
+INFO 2025-12-07 03:53:48,925 services 24240 14188 Cached data for NVDA
+INFO 2025-12-07 03:53:49,372 services 24240 14188 Cached data for NFLX
+INFO 2025-12-07 03:53:49,902 services 24240 14188 Cached data for INTC
+INFO 2025-12-07 03:53:49,904 services 24240 14188 Retrieved cached data for TSLA
+INFO 2025-12-07 03:53:50,434 services 24240 14188 Cached data for AAPL
+INFO 2025-12-07 03:53:50,991 services 24240 14188 Cached data for BAC
+INFO 2025-12-07 03:53:51,427 services 24240 14188 Cached data for AMD
+INFO 2025-12-07 03:53:51,883 services 24240 14188 Cached data for AMZN
+INFO 2025-12-07 03:53:52,330 services 24240 14188 Cached data for META
+INFO 2025-12-07 03:53:52,860 services 24240 14188 Cached data for MA
+INFO 2025-12-07 03:53:53,364 services 24240 14188 Cached data for MSFT
+INFO 2025-12-07 03:53:53,365 services 24240 14188 Retrieved cached data for TSLA
+INFO 2025-12-07 03:53:53,862 services 24240 14188 Cached data for V
+INFO 2025-12-07 03:53:54,323 services 24240 14188 Cached data for GOOGL
+INFO 2025-12-07 03:53:54,366 basehttp 24240 14188 "GET / HTTP/1.1" 200 38428
+INFO 2025-12-07 03:53:54,476 basehttp 24240 14188 "GET /static/main.css HTTP/1.1" 200 19561
+INFO 2025-12-07 03:56:08,605 services 24240 11804 Retrieved cached data for NVDA
+INFO 2025-12-07 03:56:08,606 services 24240 11804 Retrieved cached data for NFLX
+INFO 2025-12-07 03:56:08,606 services 24240 11804 Retrieved cached data for INTC
+INFO 2025-12-07 03:56:08,607 services 24240 11804 Retrieved cached data for TSLA
+INFO 2025-12-07 03:56:08,607 services 24240 11804 Retrieved cached data for AAPL
+INFO 2025-12-07 03:56:08,607 services 24240 11804 Retrieved cached data for BAC
+INFO 2025-12-07 03:56:08,607 services 24240 11804 Retrieved cached data for AMD
+INFO 2025-12-07 03:56:08,607 services 24240 11804 Retrieved cached data for AMZN
+INFO 2025-12-07 03:56:08,609 services 24240 11804 Retrieved cached data for META
+INFO 2025-12-07 03:56:08,610 services 24240 11804 Retrieved cached data for MA
+INFO 2025-12-07 03:56:08,612 services 24240 11804 Retrieved cached data for MSFT
+INFO 2025-12-07 03:56:08,612 services 24240 11804 Retrieved cached data for TSLA
+INFO 2025-12-07 03:56:08,612 services 24240 11804 Retrieved cached data for V
+INFO 2025-12-07 03:56:08,613 services 24240 11804 Retrieved cached data for GOOGL
+INFO 2025-12-07 03:56:08,635 basehttp 24240 11804 "GET / HTTP/1.1" 200 38428
+INFO 2025-12-07 03:56:08,667 basehttp 24240 11804 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:56:08,941 services 24240 11804 Retrieved cached data for NVDA
+INFO 2025-12-07 03:56:08,942 services 24240 11804 Retrieved cached data for NFLX
+INFO 2025-12-07 03:56:08,942 services 24240 11804 Retrieved cached data for INTC
+INFO 2025-12-07 03:56:08,942 services 24240 11804 Retrieved cached data for TSLA
+INFO 2025-12-07 03:56:08,943 services 24240 11804 Retrieved cached data for AAPL
+INFO 2025-12-07 03:56:08,943 services 24240 11804 Retrieved cached data for BAC
+INFO 2025-12-07 03:56:08,943 services 24240 11804 Retrieved cached data for AMD
+INFO 2025-12-07 03:56:08,944 services 24240 11804 Retrieved cached data for AMZN
+INFO 2025-12-07 03:56:08,946 services 24240 11804 Retrieved cached data for META
+INFO 2025-12-07 03:56:08,947 services 24240 11804 Retrieved cached data for MA
+INFO 2025-12-07 03:56:08,947 services 24240 11804 Retrieved cached data for MSFT
+INFO 2025-12-07 03:56:08,947 services 24240 11804 Retrieved cached data for TSLA
+INFO 2025-12-07 03:56:08,947 services 24240 11804 Retrieved cached data for V
+INFO 2025-12-07 03:56:08,948 services 24240 11804 Retrieved cached data for GOOGL
+INFO 2025-12-07 03:56:08,962 basehttp 24240 11804 "GET / HTTP/1.1" 200 38428
+INFO 2025-12-07 03:56:19,275 basehttp 24240 10804 "GET /add_to_watchlist/NFLX/ HTTP/1.1" 302 0
+INFO 2025-12-07 03:56:19,288 services 24240 10804 Retrieved cached data for META
+INFO 2025-12-07 03:56:19,288 services 24240 10804 Retrieved cached data for V
+INFO 2025-12-07 03:56:19,289 services 24240 10804 Retrieved cached data for TSLA
+INFO 2025-12-07 03:56:20,338 services 24240 10804 Cached data for KO
+INFO 2025-12-07 03:56:20,920 services 24240 10804 Cached data for PEP
+INFO 2025-12-07 03:56:21,507 services 24240 10804 Cached data for WMT
+INFO 2025-12-07 03:56:21,508 services 24240 10804 Retrieved cached data for AMZN
+INFO 2025-12-07 03:56:21,509 services 24240 10804 Retrieved cached data for BAC
+INFO 2025-12-07 03:56:21,533 basehttp 24240 10804 "GET /stocks/ HTTP/1.1" 200 91299
+INFO 2025-12-07 03:56:42,939 services 24240 7424 Retrieved cached data for META
+INFO 2025-12-07 03:56:42,939 services 24240 7424 Retrieved cached data for V
+INFO 2025-12-07 03:56:42,940 services 24240 7424 Retrieved cached data for TSLA
+INFO 2025-12-07 03:56:42,940 services 24240 7424 Retrieved cached data for KO
+INFO 2025-12-07 03:56:42,940 services 24240 7424 Retrieved cached data for PEP
+INFO 2025-12-07 03:56:42,940 services 24240 7424 Retrieved cached data for WMT
+INFO 2025-12-07 03:56:42,940 services 24240 7424 Retrieved cached data for AMZN
+INFO 2025-12-07 03:56:42,940 services 24240 7424 Retrieved cached data for BAC
+INFO 2025-12-07 03:56:42,954 basehttp 24240 7424 "GET /stocks/ HTTP/1.1" 200 91299
+INFO 2025-12-07 03:56:42,984 basehttp 24240 7424 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:56:44,717 services 24240 7424 Retrieved cached data for NVDA
+INFO 2025-12-07 03:56:44,718 services 24240 7424 Retrieved cached data for NFLX
+INFO 2025-12-07 03:56:44,718 services 24240 7424 Retrieved cached data for INTC
+INFO 2025-12-07 03:56:44,718 services 24240 7424 Retrieved cached data for TSLA
+INFO 2025-12-07 03:56:44,719 services 24240 7424 Retrieved cached data for AAPL
+INFO 2025-12-07 03:56:44,719 services 24240 7424 Retrieved cached data for BAC
+INFO 2025-12-07 03:56:44,719 services 24240 7424 Retrieved cached data for AMD
+INFO 2025-12-07 03:56:44,719 services 24240 7424 Retrieved cached data for AMZN
+INFO 2025-12-07 03:56:44,721 services 24240 7424 Retrieved cached data for META
+INFO 2025-12-07 03:56:44,721 services 24240 7424 Retrieved cached data for MA
+INFO 2025-12-07 03:56:44,722 services 24240 7424 Retrieved cached data for MSFT
+INFO 2025-12-07 03:56:44,723 services 24240 7424 Retrieved cached data for TSLA
+INFO 2025-12-07 03:56:44,723 services 24240 7424 Retrieved cached data for V
+INFO 2025-12-07 03:56:44,724 services 24240 7424 Retrieved cached data for GOOGL
+INFO 2025-12-07 03:56:44,740 basehttp 24240 7424 "GET / HTTP/1.1" 200 38428
+INFO 2025-12-07 03:56:46,190 services 24240 7424 Retrieved cached data for NVDA
+INFO 2025-12-07 03:56:46,191 services 24240 7424 Retrieved cached data for NFLX
+INFO 2025-12-07 03:56:46,191 services 24240 7424 Retrieved cached data for INTC
+INFO 2025-12-07 03:56:46,191 services 24240 7424 Retrieved cached data for TSLA
+INFO 2025-12-07 03:56:46,191 services 24240 7424 Retrieved cached data for AAPL
+INFO 2025-12-07 03:56:46,191 services 24240 7424 Retrieved cached data for BAC
+INFO 2025-12-07 03:56:46,191 services 24240 7424 Retrieved cached data for AMD
+INFO 2025-12-07 03:56:46,193 services 24240 7424 Retrieved cached data for AMZN
+INFO 2025-12-07 03:56:46,194 services 24240 7424 Retrieved cached data for META
+INFO 2025-12-07 03:56:46,195 services 24240 7424 Retrieved cached data for MA
+INFO 2025-12-07 03:56:46,195 services 24240 7424 Retrieved cached data for MSFT
+INFO 2025-12-07 03:56:46,195 services 24240 7424 Retrieved cached data for TSLA
+INFO 2025-12-07 03:56:46,195 services 24240 7424 Retrieved cached data for V
+INFO 2025-12-07 03:56:46,196 services 24240 7424 Retrieved cached data for GOOGL
+INFO 2025-12-07 03:56:46,208 basehttp 24240 7424 "GET / HTTP/1.1" 200 38428
+INFO 2025-12-07 03:58:26,175 basehttp 24240 10816 "GET /add_to_watchlist/INTC/ HTTP/1.1" 302 0
+INFO 2025-12-07 03:58:26,192 services 24240 10816 Retrieved cached data for META
+INFO 2025-12-07 03:58:26,192 services 24240 10816 Retrieved cached data for V
+INFO 2025-12-07 03:58:26,194 services 24240 10816 Retrieved cached data for TSLA
+INFO 2025-12-07 03:58:26,195 services 24240 10816 Retrieved cached data for KO
+INFO 2025-12-07 03:58:26,195 services 24240 10816 Retrieved cached data for PEP
+INFO 2025-12-07 03:58:26,196 services 24240 10816 Retrieved cached data for WMT
+INFO 2025-12-07 03:58:26,196 services 24240 10816 Retrieved cached data for AMZN
+INFO 2025-12-07 03:58:26,197 services 24240 10816 Retrieved cached data for BAC
+INFO 2025-12-07 03:58:26,214 basehttp 24240 10816 "GET /stocks/ HTTP/1.1" 200 91299
+INFO 2025-12-07 03:58:26,256 basehttp 24240 10816 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 03:58:29,003 services 24240 25992 Retrieved cached data for NVDA
+INFO 2025-12-07 03:58:29,003 services 24240 25992 Retrieved cached data for NFLX
+INFO 2025-12-07 03:58:29,003 services 24240 25992 Retrieved cached data for INTC
+INFO 2025-12-07 03:58:29,004 services 24240 25992 Retrieved cached data for TSLA
+INFO 2025-12-07 03:58:29,005 services 24240 25992 Retrieved cached data for AAPL
+INFO 2025-12-07 03:58:29,005 services 24240 25992 Retrieved cached data for BAC
+INFO 2025-12-07 03:58:29,005 services 24240 25992 Retrieved cached data for AMD
+INFO 2025-12-07 03:58:29,006 services 24240 25992 Retrieved cached data for AMZN
+INFO 2025-12-07 03:58:29,007 services 24240 25992 Retrieved cached data for META
+INFO 2025-12-07 03:58:29,008 services 24240 25992 Retrieved cached data for MA
+INFO 2025-12-07 03:58:29,008 services 24240 25992 Retrieved cached data for MSFT
+INFO 2025-12-07 03:58:29,009 services 24240 25992 Retrieved cached data for TSLA
+INFO 2025-12-07 03:58:29,009 services 24240 25992 Retrieved cached data for V
+INFO 2025-12-07 03:58:29,010 services 24240 25992 Retrieved cached data for GOOGL
+INFO 2025-12-07 03:58:29,019 basehttp 24240 25992 "GET / HTTP/1.1" 200 38428
+INFO 2025-12-07 03:58:32,489 services 24240 25992 Retrieved cached data for META
+INFO 2025-12-07 03:58:32,489 services 24240 25992 Retrieved cached data for V
+INFO 2025-12-07 03:58:32,490 services 24240 25992 Retrieved cached data for TSLA
+INFO 2025-12-07 03:58:32,490 services 24240 25992 Retrieved cached data for KO
+INFO 2025-12-07 03:58:32,490 services 24240 25992 Retrieved cached data for PEP
+INFO 2025-12-07 03:58:32,492 services 24240 25992 Retrieved cached data for WMT
+INFO 2025-12-07 03:58:32,492 services 24240 25992 Retrieved cached data for AMZN
+INFO 2025-12-07 03:58:32,492 services 24240 25992 Retrieved cached data for BAC
+INFO 2025-12-07 03:58:32,504 basehttp 24240 25992 "GET /stocks/ HTTP/1.1" 200 91299
+INFO 2025-12-07 04:02:20,377 services 24240 6672 Cached data for TSLA
+INFO 2025-12-07 04:02:20,398 basehttp 24240 6672 "GET /portfolio_dashboard/ HTTP/1.1" 200 13575
+INFO 2025-12-07 04:02:20,468 basehttp 24240 6672 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:02:25,431 basehttp 24240 10680 "GET /portfolio_dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-07 04:02:25,443 basehttp 24240 10680 "GET /login/?next=/portfolio_dashboard/ HTTP/1.1" 200 14930
+INFO 2025-12-07 04:02:33,923 basehttp 24240 15220 "GET /portfolio_dashboard/ HTTP/1.1" 302 0
+INFO 2025-12-07 04:02:33,932 basehttp 24240 15220 "GET /login/?next=/portfolio_dashboard/ HTTP/1.1" 200 12506
+INFO 2025-12-07 04:02:36,683 basehttp 24240 15220 "GET / HTTP/1.1" 302 0
+INFO 2025-12-07 04:02:36,693 basehttp 24240 15220 "GET /login/?next=/ HTTP/1.1" 200 12506
+INFO 2025-12-07 04:02:42,805 basehttp 24240 15220 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-12-07 04:02:43,776 services 24240 15220 Cached data for NVDA
+INFO 2025-12-07 04:02:44,210 services 24240 15220 Cached data for NFLX
+INFO 2025-12-07 04:02:44,774 services 24240 15220 Cached data for INTC
+INFO 2025-12-07 04:02:44,775 services 24240 15220 Retrieved cached data for TSLA
+INFO 2025-12-07 04:02:45,299 services 24240 15220 Cached data for AAPL
+INFO 2025-12-07 04:02:45,871 services 24240 15220 Cached data for BAC
+INFO 2025-12-07 04:02:46,329 services 24240 15220 Cached data for AMD
+INFO 2025-12-07 04:02:46,765 services 24240 15220 Cached data for AMZN
+INFO 2025-12-07 04:02:47,202 services 24240 15220 Cached data for META
+INFO 2025-12-07 04:02:47,684 services 24240 15220 Cached data for MA
+INFO 2025-12-07 04:02:48,220 services 24240 15220 Cached data for MSFT
+INFO 2025-12-07 04:02:48,221 services 24240 15220 Retrieved cached data for TSLA
+INFO 2025-12-07 04:02:48,720 services 24240 15220 Cached data for V
+INFO 2025-12-07 04:02:49,176 services 24240 15220 Cached data for GOOGL
+INFO 2025-12-07 04:02:49,192 basehttp 24240 15220 "GET / HTTP/1.1" 200 38428
+INFO 2025-12-07 04:07:21,961 autoreload 24240 26620 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\urls.py changed, reloading.
+INFO 2025-12-07 04:07:23,887 autoreload 23948 18544 Watching for file changes with StatReloader
+INFO 2025-12-07 04:07:30,633 autoreload 23948 18544 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\urls.py changed, reloading.
+INFO 2025-12-07 04:07:32,052 autoreload 12248 26504 Watching for file changes with StatReloader
+INFO 2025-12-07 04:07:38,251 autoreload 12248 26504 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\urls.py changed, reloading.
+INFO 2025-12-07 04:07:39,509 autoreload 13248 14340 Watching for file changes with StatReloader
+INFO 2025-12-07 04:08:02,346 autoreload 13248 14340 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\views.py changed, reloading.
+INFO 2025-12-07 04:08:03,800 autoreload 22156 15264 Watching for file changes with StatReloader
+INFO 2025-12-07 04:11:08,283 services 22156 21068 Cached data for NVDA
+INFO 2025-12-07 04:11:08,862 services 22156 21068 Cached data for NFLX
+INFO 2025-12-07 04:11:09,513 services 22156 21068 Cached data for INTC
+INFO 2025-12-07 04:11:10,100 services 22156 21068 Cached data for TSLA
+INFO 2025-12-07 04:11:10,768 services 22156 21068 Cached data for AAPL
+INFO 2025-12-07 04:11:11,480 services 22156 21068 Cached data for BAC
+INFO 2025-12-07 04:11:12,065 services 22156 21068 Cached data for AMD
+INFO 2025-12-07 04:11:12,648 services 22156 21068 Cached data for AMZN
+INFO 2025-12-07 04:11:13,245 services 22156 21068 Cached data for META
+INFO 2025-12-07 04:11:13,864 services 22156 21068 Cached data for MA
+INFO 2025-12-07 04:11:14,497 services 22156 21068 Cached data for MSFT
+INFO 2025-12-07 04:11:14,497 services 22156 21068 Retrieved cached data for TSLA
+INFO 2025-12-07 04:11:15,140 services 22156 21068 Cached data for V
+INFO 2025-12-07 04:11:15,743 services 22156 21068 Cached data for GOOGL
+INFO 2025-12-07 04:11:15,833 basehttp 22156 21068 "GET / HTTP/1.1" 200 38428
+INFO 2025-12-07 04:11:15,919 basehttp 22156 21068 "GET /static/main.css HTTP/1.1" 200 22019
+INFO 2025-12-07 04:11:19,731 basehttp 22156 21068 "GET /add_to_watchlist/NFLX/ HTTP/1.1" 302 0
+INFO 2025-12-07 04:11:19,740 services 22156 21068 Retrieved cached data for META
+INFO 2025-12-07 04:11:19,741 services 22156 21068 Retrieved cached data for V
+INFO 2025-12-07 04:11:19,741 services 22156 21068 Retrieved cached data for TSLA
+INFO 2025-12-07 04:11:20,457 services 22156 21068 Cached data for KO
+INFO 2025-12-07 04:11:21,212 services 22156 21068 Cached data for PEP
+INFO 2025-12-07 04:11:21,941 services 22156 21068 Cached data for WMT
+INFO 2025-12-07 04:11:21,941 services 22156 21068 Retrieved cached data for AMZN
+INFO 2025-12-07 04:11:21,943 services 22156 21068 Retrieved cached data for BAC
+INFO 2025-12-07 04:11:21,969 basehttp 22156 21068 "GET /stocks/ HTTP/1.1" 200 93323
+INFO 2025-12-07 04:11:31,280 services 22156 18316 Retrieved cached data for V
+INFO 2025-12-07 04:11:31,284 services 22156 18316 Retrieved cached data for BAC
+INFO 2025-12-07 04:11:32,453 services 22156 18316 Cached data for JPM
+INFO 2025-12-07 04:11:32,453 services 22156 18316 Retrieved cached data for MA
+INFO 2025-12-07 04:11:33,115 services 22156 18316 Cached data for PYPL
+INFO 2025-12-07 04:11:33,125 basehttp 22156 18316 "GET /stock/V/ HTTP/1.1" 200 25866
+INFO 2025-12-07 04:11:33,167 basehttp 22156 18316 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:12:07,794 services 22156 25180 Retrieved cached data for META
+INFO 2025-12-07 04:12:07,795 services 22156 25180 Retrieved cached data for V
+INFO 2025-12-07 04:12:07,795 services 22156 25180 Retrieved cached data for TSLA
+INFO 2025-12-07 04:12:07,795 services 22156 25180 Retrieved cached data for KO
+INFO 2025-12-07 04:12:07,796 services 22156 25180 Retrieved cached data for PEP
+INFO 2025-12-07 04:12:07,796 services 22156 25180 Retrieved cached data for WMT
+INFO 2025-12-07 04:12:07,797 services 22156 25180 Retrieved cached data for AMZN
+INFO 2025-12-07 04:12:07,797 services 22156 25180 Retrieved cached data for BAC
+INFO 2025-12-07 04:12:07,810 basehttp 22156 25180 "GET /stocks/ HTTP/1.1" 200 93323
+INFO 2025-12-07 04:12:07,849 basehttp 22156 25180 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:12:14,194 services 22156 25180 Retrieved cached data for NVDA
+INFO 2025-12-07 04:12:14,195 services 22156 25180 Retrieved cached data for NFLX
+INFO 2025-12-07 04:12:14,195 services 22156 25180 Retrieved cached data for INTC
+INFO 2025-12-07 04:12:14,196 services 22156 25180 Retrieved cached data for TSLA
+INFO 2025-12-07 04:12:14,196 services 22156 25180 Retrieved cached data for AAPL
+INFO 2025-12-07 04:12:14,197 services 22156 25180 Retrieved cached data for BAC
+INFO 2025-12-07 04:12:14,197 services 22156 25180 Retrieved cached data for AMD
+INFO 2025-12-07 04:12:14,197 services 22156 25180 Retrieved cached data for AMZN
+INFO 2025-12-07 04:12:14,199 services 22156 25180 Retrieved cached data for META
+INFO 2025-12-07 04:12:14,199 services 22156 25180 Retrieved cached data for MA
+INFO 2025-12-07 04:12:14,201 services 22156 25180 Retrieved cached data for MSFT
+INFO 2025-12-07 04:12:14,201 services 22156 25180 Retrieved cached data for TSLA
+INFO 2025-12-07 04:12:14,202 services 22156 25180 Retrieved cached data for V
+INFO 2025-12-07 04:12:14,202 services 22156 25180 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:12:14,213 basehttp 22156 25180 "GET / HTTP/1.1" 200 38428
+INFO 2025-12-07 04:14:45,592 services 22156 18356 Retrieved cached data for TSLA
+INFO 2025-12-07 04:14:45,601 services 22156 18356 Retrieved cached data for AMZN
+INFO 2025-12-07 04:14:45,609 services 22156 18356 Retrieved cached data for NFLX
+INFO 2025-12-07 04:14:45,619 services 22156 18356 Retrieved cached data for INTC
+INFO 2025-12-07 04:14:45,638 basehttp 22156 18356 "GET /watchlist/ HTTP/1.1" 200 23196
+INFO 2025-12-07 04:14:45,682 basehttp 22156 18356 "GET /static/main.css HTTP/1.1" 200 22579
+INFO 2025-12-07 04:14:47,761 services 22156 18356 Retrieved cached data for TSLA
+INFO 2025-12-07 04:14:47,770 services 22156 18356 Retrieved cached data for AMZN
+INFO 2025-12-07 04:14:47,778 services 22156 18356 Retrieved cached data for NFLX
+INFO 2025-12-07 04:14:47,784 services 22156 18356 Retrieved cached data for INTC
+INFO 2025-12-07 04:14:47,793 basehttp 22156 18356 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 732
+INFO 2025-12-07 04:14:55,816 services 22156 19416 Retrieved cached data for TSLA
+INFO 2025-12-07 04:14:55,824 services 22156 19416 Retrieved cached data for AMZN
+INFO 2025-12-07 04:14:55,832 services 22156 19416 Retrieved cached data for NFLX
+INFO 2025-12-07 04:14:55,841 services 22156 19416 Retrieved cached data for INTC
+INFO 2025-12-07 04:14:55,849 basehttp 22156 19416 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 732
+INFO 2025-12-07 04:14:58,251 services 22156 19416 Retrieved cached data for META
+INFO 2025-12-07 04:14:58,251 services 22156 19416 Retrieved cached data for V
+INFO 2025-12-07 04:14:58,252 services 22156 19416 Retrieved cached data for TSLA
+INFO 2025-12-07 04:14:58,253 services 22156 19416 Retrieved cached data for KO
+INFO 2025-12-07 04:14:58,253 services 22156 19416 Retrieved cached data for PEP
+INFO 2025-12-07 04:14:58,254 services 22156 19416 Retrieved cached data for WMT
+INFO 2025-12-07 04:14:58,255 services 22156 19416 Retrieved cached data for AMZN
+INFO 2025-12-07 04:14:58,255 services 22156 19416 Retrieved cached data for BAC
+INFO 2025-12-07 04:14:58,281 basehttp 22156 19416 "GET /stocks/ HTTP/1.1" 200 93323
+INFO 2025-12-07 04:14:58,327 basehttp 22156 19416 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:15:04,403 services 22156 19416 Retrieved cached data for NVDA
+INFO 2025-12-07 04:15:04,404 services 22156 19416 Retrieved cached data for NFLX
+INFO 2025-12-07 04:15:04,404 services 22156 19416 Retrieved cached data for INTC
+INFO 2025-12-07 04:15:04,405 services 22156 19416 Retrieved cached data for TSLA
+INFO 2025-12-07 04:15:04,405 services 22156 19416 Retrieved cached data for AAPL
+INFO 2025-12-07 04:15:04,406 services 22156 19416 Retrieved cached data for BAC
+INFO 2025-12-07 04:15:04,407 services 22156 19416 Retrieved cached data for AMD
+INFO 2025-12-07 04:15:04,407 services 22156 19416 Retrieved cached data for AMZN
+INFO 2025-12-07 04:15:04,410 services 22156 19416 Retrieved cached data for META
+INFO 2025-12-07 04:15:04,410 services 22156 19416 Retrieved cached data for MA
+INFO 2025-12-07 04:15:04,411 services 22156 19416 Retrieved cached data for MSFT
+INFO 2025-12-07 04:15:04,411 services 22156 19416 Retrieved cached data for TSLA
+INFO 2025-12-07 04:15:04,411 services 22156 19416 Retrieved cached data for V
+INFO 2025-12-07 04:15:04,412 services 22156 19416 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:15:04,426 basehttp 22156 19416 "GET / HTTP/1.1" 200 47594
+INFO 2025-12-07 04:15:04,458 basehttp 22156 19416 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:15:05,603 services 22156 21080 Retrieved cached data for TSLA
+INFO 2025-12-07 04:15:05,613 basehttp 22156 21080 "GET /dashboard/ HTTP/1.1" 200 15400
+INFO 2025-12-07 04:15:14,574 services 22156 21080 Retrieved cached data for NVDA
+INFO 2025-12-07 04:15:14,574 services 22156 21080 Retrieved cached data for NFLX
+INFO 2025-12-07 04:15:14,575 services 22156 21080 Retrieved cached data for INTC
+INFO 2025-12-07 04:15:14,575 services 22156 21080 Retrieved cached data for TSLA
+INFO 2025-12-07 04:15:14,575 services 22156 21080 Retrieved cached data for AAPL
+INFO 2025-12-07 04:15:14,576 services 22156 21080 Retrieved cached data for BAC
+INFO 2025-12-07 04:15:14,576 services 22156 21080 Retrieved cached data for AMD
+INFO 2025-12-07 04:15:14,576 services 22156 21080 Retrieved cached data for AMZN
+INFO 2025-12-07 04:15:14,581 services 22156 21080 Retrieved cached data for META
+INFO 2025-12-07 04:15:14,581 services 22156 21080 Retrieved cached data for MA
+INFO 2025-12-07 04:15:14,581 services 22156 21080 Retrieved cached data for MSFT
+INFO 2025-12-07 04:15:14,582 services 22156 21080 Retrieved cached data for TSLA
+INFO 2025-12-07 04:15:14,582 services 22156 21080 Retrieved cached data for V
+INFO 2025-12-07 04:15:14,582 services 22156 21080 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:15:14,604 basehttp 22156 21080 "GET / HTTP/1.1" 200 47594
+INFO 2025-12-07 04:15:14,647 basehttp 22156 21080 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:15:17,867 services 22156 21080 Retrieved cached data for NFLX
+INFO 2025-12-07 04:15:19,172 services 22156 21080 Cached data for DIS
+INFO 2025-12-07 04:15:19,173 services 22156 21080 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:15:19,173 services 22156 21080 Retrieved cached data for META
+INFO 2025-12-07 04:15:19,184 basehttp 22156 21080 "GET /stock/NFLX/ HTTP/1.1" 200 24299
+INFO 2025-12-07 04:16:02,944 services 22156 2776 Retrieved cached data for INTC
+INFO 2025-12-07 04:16:02,951 services 22156 2776 Retrieved cached data for AAPL
+INFO 2025-12-07 04:16:02,952 services 22156 2776 Retrieved cached data for AMD
+INFO 2025-12-07 04:16:04,130 services 22156 2776 Cached data for IBM
+INFO 2025-12-07 04:16:04,131 services 22156 2776 Retrieved cached data for MSFT
+INFO 2025-12-07 04:16:04,135 basehttp 22156 2776 "GET /stock/INTC/ HTTP/1.1" 200 26349
+INFO 2025-12-07 04:16:04,177 basehttp 22156 2776 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:16:07,092 services 22156 2776 Retrieved cached data for META
+INFO 2025-12-07 04:16:07,093 services 22156 2776 Retrieved cached data for V
+INFO 2025-12-07 04:16:07,093 services 22156 2776 Retrieved cached data for TSLA
+INFO 2025-12-07 04:16:07,093 services 22156 2776 Retrieved cached data for KO
+INFO 2025-12-07 04:16:07,094 services 22156 2776 Retrieved cached data for PEP
+INFO 2025-12-07 04:16:07,095 services 22156 2776 Retrieved cached data for WMT
+INFO 2025-12-07 04:16:07,095 services 22156 2776 Retrieved cached data for AMZN
+INFO 2025-12-07 04:16:07,096 services 22156 2776 Retrieved cached data for BAC
+INFO 2025-12-07 04:16:07,111 basehttp 22156 2776 "GET /stocks/ HTTP/1.1" 200 93323
+INFO 2025-12-07 04:16:32,251 services 22156 24268 Cached data for NVDA
+INFO 2025-12-07 04:16:32,690 services 22156 24268 Cached data for NFLX
+INFO 2025-12-07 04:16:33,186 services 22156 24268 Cached data for INTC
+INFO 2025-12-07 04:16:33,615 services 22156 24268 Cached data for TSLA
+INFO 2025-12-07 04:16:34,139 services 22156 24268 Cached data for AAPL
+INFO 2025-12-07 04:16:34,651 services 22156 24268 Cached data for BAC
+INFO 2025-12-07 04:16:35,088 services 22156 24268 Cached data for AMD
+INFO 2025-12-07 04:16:35,520 services 22156 24268 Cached data for AMZN
+INFO 2025-12-07 04:16:35,971 services 22156 24268 Cached data for META
+INFO 2025-12-07 04:16:36,447 services 22156 24268 Cached data for MA
+INFO 2025-12-07 04:16:36,936 services 22156 24268 Cached data for MSFT
+INFO 2025-12-07 04:16:36,936 services 22156 24268 Retrieved cached data for TSLA
+INFO 2025-12-07 04:16:37,401 services 22156 24268 Cached data for V
+INFO 2025-12-07 04:16:37,833 services 22156 24268 Cached data for GOOGL
+INFO 2025-12-07 04:16:37,860 basehttp 22156 24268 "GET / HTTP/1.1" 200 40722
+INFO 2025-12-07 04:16:37,893 basehttp 22156 24268 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:16:46,059 services 22156 24620 Retrieved cached data for TSLA
+INFO 2025-12-07 04:16:46,069 basehttp 22156 24620 "GET /dashboard/ HTTP/1.1" 200 15400
+INFO 2025-12-07 04:16:54,989 services 22156 25244 Retrieved cached data for NVDA
+INFO 2025-12-07 04:16:54,991 services 22156 25244 Retrieved cached data for NFLX
+INFO 2025-12-07 04:16:54,991 services 22156 25244 Retrieved cached data for INTC
+INFO 2025-12-07 04:16:54,991 services 22156 25244 Retrieved cached data for TSLA
+INFO 2025-12-07 04:16:54,992 services 22156 25244 Retrieved cached data for AAPL
+INFO 2025-12-07 04:16:54,992 services 22156 25244 Retrieved cached data for BAC
+INFO 2025-12-07 04:16:54,993 services 22156 25244 Retrieved cached data for AMD
+INFO 2025-12-07 04:16:54,993 services 22156 25244 Retrieved cached data for AMZN
+INFO 2025-12-07 04:16:54,994 services 22156 25244 Retrieved cached data for META
+INFO 2025-12-07 04:16:54,995 services 22156 25244 Retrieved cached data for MA
+INFO 2025-12-07 04:16:54,995 services 22156 25244 Retrieved cached data for MSFT
+INFO 2025-12-07 04:16:54,995 services 22156 25244 Retrieved cached data for TSLA
+INFO 2025-12-07 04:16:54,996 services 22156 25244 Retrieved cached data for V
+INFO 2025-12-07 04:16:54,996 services 22156 25244 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:16:55,010 basehttp 22156 25244 "GET / HTTP/1.1" 200 40722
+INFO 2025-12-07 04:16:55,040 basehttp 22156 25244 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:18:30,462 services 22156 7200 Retrieved cached data for NFLX
+INFO 2025-12-07 04:18:30,468 services 22156 7200 Retrieved cached data for DIS
+INFO 2025-12-07 04:18:30,469 services 22156 7200 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:18:30,469 services 22156 7200 Retrieved cached data for META
+INFO 2025-12-07 04:18:30,481 basehttp 22156 7200 "GET /stock/NFLX/ HTTP/1.1" 200 24299
+INFO 2025-12-07 04:18:30,531 basehttp 22156 7200 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:18:38,253 services 22156 18268 Retrieved cached data for NFLX
+INFO 2025-12-07 04:18:38,286 views 22156 18268 User binit bought 3 shares of NFLX at $100.23999786376953
+INFO 2025-12-07 04:18:38,299 basehttp 22156 18268 "POST /buy/12/ HTTP/1.1" 302 0
+INFO 2025-12-07 04:18:38,324 services 22156 18268 Retrieved cached data for NVDA
+INFO 2025-12-07 04:18:38,334 services 22156 18268 Retrieved cached data for NFLX
+INFO 2025-12-07 04:18:38,334 services 22156 18268 Retrieved cached data for INTC
+INFO 2025-12-07 04:18:38,335 services 22156 18268 Retrieved cached data for TSLA
+INFO 2025-12-07 04:18:38,335 services 22156 18268 Retrieved cached data for AAPL
+INFO 2025-12-07 04:18:38,335 services 22156 18268 Retrieved cached data for BAC
+INFO 2025-12-07 04:18:38,339 services 22156 18268 Retrieved cached data for AMD
+INFO 2025-12-07 04:18:38,339 services 22156 18268 Retrieved cached data for AMZN
+INFO 2025-12-07 04:18:38,341 services 22156 18268 Retrieved cached data for META
+INFO 2025-12-07 04:18:38,342 services 22156 18268 Retrieved cached data for MA
+INFO 2025-12-07 04:18:38,342 services 22156 18268 Retrieved cached data for MSFT
+INFO 2025-12-07 04:18:38,343 services 22156 18268 Retrieved cached data for TSLA
+INFO 2025-12-07 04:18:38,343 services 22156 18268 Retrieved cached data for V
+INFO 2025-12-07 04:18:38,344 services 22156 18268 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:18:38,355 basehttp 22156 18268 "GET / HTTP/1.1" 200 42311
+INFO 2025-12-07 04:18:42,562 services 22156 18268 Retrieved cached data for TSLA
+INFO 2025-12-07 04:18:42,563 services 22156 18268 Retrieved cached data for NFLX
+INFO 2025-12-07 04:18:42,574 basehttp 22156 18268 "GET /dashboard/ HTTP/1.1" 200 16578
+INFO 2025-12-07 04:23:56,379 services 22156 344 Cached data for NFLX
+INFO 2025-12-07 04:23:57,713 services 22156 344 Cached data for TSLA
+INFO 2025-12-07 04:23:57,731 basehttp 22156 344 "GET /portfolio_dashboard/ HTTP/1.1" 200 14323
+INFO 2025-12-07 04:23:57,770 basehttp 22156 344 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:24:04,342 services 22156 344 Retrieved cached data for TSLA
+INFO 2025-12-07 04:24:04,343 services 22156 344 Retrieved cached data for NFLX
+INFO 2025-12-07 04:24:04,353 basehttp 22156 344 "GET /dashboard/ HTTP/1.1" 200 16578
+INFO 2025-12-07 04:24:08,490 services 22156 17308 Retrieved cached data for NFLX
+INFO 2025-12-07 04:24:08,500 services 22156 17308 Retrieved cached data for TSLA
+INFO 2025-12-07 04:24:08,508 basehttp 22156 17308 "GET /portfolio_dashboard/ HTTP/1.1" 200 14323
+INFO 2025-12-07 04:26:34,079 autoreload 22156 15264 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\templatetags\custom_filters.py changed, reloading.
+INFO 2025-12-07 04:26:37,199 autoreload 3220 10460 Watching for file changes with StatReloader
+INFO 2025-12-07 04:27:07,862 services 3220 2852 Cached data for NFLX
+INFO 2025-12-07 04:27:08,938 services 3220 2852 Cached data for TSLA
+INFO 2025-12-07 04:27:09,092 basehttp 3220 2852 "GET /portfolio_dashboard/ HTTP/1.1" 200 28372
+INFO 2025-12-07 04:27:09,168 basehttp 3220 2852 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:27:23,176 services 3220 6560 Retrieved cached data for TSLA
+INFO 2025-12-07 04:27:23,177 services 3220 6560 Retrieved cached data for NFLX
+INFO 2025-12-07 04:27:23,212 basehttp 3220 6560 "GET /dashboard/ HTTP/1.1" 200 16578
+INFO 2025-12-07 04:27:29,809 services 3220 6560 Retrieved cached data for NFLX
+INFO 2025-12-07 04:27:29,826 services 3220 6560 Retrieved cached data for TSLA
+INFO 2025-12-07 04:27:29,857 basehttp 3220 6560 "GET /portfolio_dashboard/ HTTP/1.1" 200 28372
+INFO 2025-12-07 04:29:20,411 services 3220 24792 Cached data for NVDA
+INFO 2025-12-07 04:29:20,419 services 3220 24792 Retrieved cached data for NFLX
+INFO 2025-12-07 04:29:21,505 services 3220 24792 Cached data for INTC
+INFO 2025-12-07 04:29:21,506 services 3220 24792 Retrieved cached data for TSLA
+INFO 2025-12-07 04:29:22,425 services 3220 24792 Cached data for AAPL
+INFO 2025-12-07 04:29:23,353 services 3220 24792 Cached data for BAC
+INFO 2025-12-07 04:29:24,371 services 3220 24792 Cached data for AMD
+INFO 2025-12-07 04:29:25,600 services 3220 24792 Cached data for AMZN
+INFO 2025-12-07 04:29:26,620 services 3220 24792 Cached data for META
+INFO 2025-12-07 04:29:27,390 services 3220 24792 Cached data for MA
+INFO 2025-12-07 04:29:28,267 services 3220 24792 Cached data for MSFT
+INFO 2025-12-07 04:29:28,269 services 3220 24792 Retrieved cached data for TSLA
+INFO 2025-12-07 04:29:29,264 services 3220 24792 Cached data for V
+INFO 2025-12-07 04:29:30,313 services 3220 24792 Cached data for GOOGL
+INFO 2025-12-07 04:29:30,376 basehttp 3220 24792 "GET / HTTP/1.1" 200 42508
+INFO 2025-12-07 04:29:30,549 basehttp 3220 24792 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:30:14,681 services 3220 26620 Retrieved cached data for NVDA
+INFO 2025-12-07 04:30:14,682 services 3220 26620 Retrieved cached data for NFLX
+INFO 2025-12-07 04:30:14,683 services 3220 26620 Retrieved cached data for INTC
+INFO 2025-12-07 04:30:14,683 services 3220 26620 Retrieved cached data for TSLA
+INFO 2025-12-07 04:30:14,684 services 3220 26620 Retrieved cached data for AAPL
+INFO 2025-12-07 04:30:14,685 services 3220 26620 Retrieved cached data for BAC
+INFO 2025-12-07 04:30:14,687 services 3220 26620 Retrieved cached data for AMD
+INFO 2025-12-07 04:30:14,689 services 3220 26620 Retrieved cached data for AMZN
+INFO 2025-12-07 04:30:14,694 services 3220 26620 Retrieved cached data for META
+INFO 2025-12-07 04:30:14,695 services 3220 26620 Retrieved cached data for MA
+INFO 2025-12-07 04:30:14,696 services 3220 26620 Retrieved cached data for MSFT
+INFO 2025-12-07 04:30:14,697 services 3220 26620 Retrieved cached data for TSLA
+INFO 2025-12-07 04:30:14,699 services 3220 26620 Retrieved cached data for V
+INFO 2025-12-07 04:30:14,699 services 3220 26620 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:30:14,757 basehttp 3220 26620 "GET / HTTP/1.1" 200 43952
+INFO 2025-12-07 04:30:17,000 services 3220 26152 Retrieved cached data for NVDA
+INFO 2025-12-07 04:30:17,001 services 3220 26152 Retrieved cached data for NFLX
+INFO 2025-12-07 04:30:17,002 services 3220 26152 Retrieved cached data for INTC
+INFO 2025-12-07 04:30:17,003 services 3220 26152 Retrieved cached data for TSLA
+INFO 2025-12-07 04:30:17,004 services 3220 26152 Retrieved cached data for AAPL
+INFO 2025-12-07 04:30:17,005 services 3220 26152 Retrieved cached data for BAC
+INFO 2025-12-07 04:30:17,005 services 3220 26152 Retrieved cached data for AMD
+INFO 2025-12-07 04:30:17,007 services 3220 26152 Retrieved cached data for AMZN
+INFO 2025-12-07 04:30:17,009 services 3220 26152 Retrieved cached data for META
+INFO 2025-12-07 04:30:17,011 services 3220 26152 Retrieved cached data for MA
+INFO 2025-12-07 04:30:17,011 services 3220 26152 Retrieved cached data for MSFT
+INFO 2025-12-07 04:30:17,013 services 3220 26152 Retrieved cached data for TSLA
+INFO 2025-12-07 04:30:17,013 services 3220 26152 Retrieved cached data for V
+INFO 2025-12-07 04:30:17,014 services 3220 26152 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:30:17,043 basehttp 3220 26152 "GET / HTTP/1.1" 200 43952
+INFO 2025-12-07 04:30:18,974 services 3220 26152 Retrieved cached data for NVDA
+INFO 2025-12-07 04:30:18,974 services 3220 26152 Retrieved cached data for NFLX
+INFO 2025-12-07 04:30:18,975 services 3220 26152 Retrieved cached data for INTC
+INFO 2025-12-07 04:30:18,976 services 3220 26152 Retrieved cached data for TSLA
+INFO 2025-12-07 04:30:18,977 services 3220 26152 Retrieved cached data for AAPL
+INFO 2025-12-07 04:30:18,977 services 3220 26152 Retrieved cached data for BAC
+INFO 2025-12-07 04:30:18,979 services 3220 26152 Retrieved cached data for AMD
+INFO 2025-12-07 04:30:18,979 services 3220 26152 Retrieved cached data for AMZN
+INFO 2025-12-07 04:30:18,985 services 3220 26152 Retrieved cached data for META
+INFO 2025-12-07 04:30:18,990 services 3220 26152 Retrieved cached data for MA
+INFO 2025-12-07 04:30:18,994 services 3220 26152 Retrieved cached data for MSFT
+INFO 2025-12-07 04:30:18,994 services 3220 26152 Retrieved cached data for TSLA
+INFO 2025-12-07 04:30:18,996 services 3220 26152 Retrieved cached data for V
+INFO 2025-12-07 04:30:18,996 services 3220 26152 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:30:19,044 basehttp 3220 26152 "GET / HTTP/1.1" 200 43952
+INFO 2025-12-07 04:30:26,166 services 3220 23108 Retrieved cached data for NFLX
+INFO 2025-12-07 04:30:26,182 services 3220 23108 Retrieved cached data for TSLA
+INFO 2025-12-07 04:30:26,222 basehttp 3220 23108 "GET /portfolio_dashboard/ HTTP/1.1" 200 29822
+INFO 2025-12-07 04:30:29,157 services 3220 23108 Retrieved cached data for TSLA
+INFO 2025-12-07 04:30:29,158 services 3220 23108 Retrieved cached data for NFLX
+INFO 2025-12-07 04:30:29,185 basehttp 3220 23108 "GET /dashboard/ HTTP/1.1" 200 18028
+INFO 2025-12-07 04:30:30,663 services 3220 23108 Retrieved cached data for NVDA
+INFO 2025-12-07 04:30:30,664 services 3220 23108 Retrieved cached data for NFLX
+INFO 2025-12-07 04:30:30,664 services 3220 23108 Retrieved cached data for INTC
+INFO 2025-12-07 04:30:30,665 services 3220 23108 Retrieved cached data for TSLA
+INFO 2025-12-07 04:30:30,666 services 3220 23108 Retrieved cached data for AAPL
+INFO 2025-12-07 04:30:30,667 services 3220 23108 Retrieved cached data for BAC
+INFO 2025-12-07 04:30:30,668 services 3220 23108 Retrieved cached data for AMD
+INFO 2025-12-07 04:30:30,670 services 3220 23108 Retrieved cached data for AMZN
+INFO 2025-12-07 04:30:30,673 services 3220 23108 Retrieved cached data for META
+INFO 2025-12-07 04:30:30,674 services 3220 23108 Retrieved cached data for MA
+INFO 2025-12-07 04:30:30,675 services 3220 23108 Retrieved cached data for MSFT
+INFO 2025-12-07 04:30:30,675 services 3220 23108 Retrieved cached data for TSLA
+INFO 2025-12-07 04:30:30,677 services 3220 23108 Retrieved cached data for V
+INFO 2025-12-07 04:30:30,678 services 3220 23108 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:30:30,764 basehttp 3220 23108 "GET / HTTP/1.1" 200 43952
+INFO 2025-12-07 04:32:25,834 autoreload 3220 10460 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\views.py changed, reloading.
+INFO 2025-12-07 04:32:28,872 autoreload 5412 10872 Watching for file changes with StatReloader
+INFO 2025-12-07 04:33:51,773 services 5412 11556 Cached data for NVDA
+INFO 2025-12-07 04:33:52,776 services 5412 11556 Cached data for NFLX
+INFO 2025-12-07 04:33:53,795 services 5412 11556 Cached data for INTC
+INFO 2025-12-07 04:33:54,615 services 5412 11556 Cached data for TSLA
+INFO 2025-12-07 04:33:55,518 services 5412 11556 Cached data for AAPL
+INFO 2025-12-07 04:33:56,680 services 5412 11556 Cached data for BAC
+INFO 2025-12-07 04:33:57,795 services 5412 11556 Cached data for AMD
+INFO 2025-12-07 04:33:58,830 services 5412 11556 Cached data for AMZN
+INFO 2025-12-07 04:33:59,642 services 5412 11556 Cached data for META
+INFO 2025-12-07 04:34:00,558 services 5412 11556 Cached data for MA
+INFO 2025-12-07 04:34:01,479 services 5412 11556 Cached data for MSFT
+INFO 2025-12-07 04:34:01,479 services 5412 11556 Retrieved cached data for TSLA
+INFO 2025-12-07 04:34:02,302 services 5412 11556 Cached data for V
+INFO 2025-12-07 04:34:03,225 services 5412 11556 Cached data for GOOGL
+INFO 2025-12-07 04:34:03,463 basehttp 5412 11556 "GET / HTTP/1.1" 200 43952
+INFO 2025-12-07 04:34:03,534 basehttp 5412 11556 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:34:39,139 services 5412 18716 Retrieved cached data for META
+INFO 2025-12-07 04:34:39,140 services 5412 18716 Retrieved cached data for V
+INFO 2025-12-07 04:34:39,140 services 5412 18716 Retrieved cached data for TSLA
+INFO 2025-12-07 04:34:41,324 services 5412 18716 Cached data for KO
+INFO 2025-12-07 04:34:42,474 services 5412 18716 Cached data for PEP
+INFO 2025-12-07 04:34:43,693 services 5412 18716 Cached data for WMT
+INFO 2025-12-07 04:34:43,694 services 5412 18716 Retrieved cached data for AMZN
+INFO 2025-12-07 04:34:43,694 services 5412 18716 Retrieved cached data for BAC
+INFO 2025-12-07 04:34:43,761 basehttp 5412 18716 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 04:34:54,635 services 5412 17860 Retrieved cached data for AMZN
+INFO 2025-12-07 04:34:54,666 views 5412 17860 User binit bought 1 shares of AMZN at $229.52999877929688
+INFO 2025-12-07 04:34:54,672 basehttp 5412 17860 "POST /buy/7/ HTTP/1.1" 302 0
+INFO 2025-12-07 04:34:54,698 services 5412 17860 Retrieved cached data for NVDA
+INFO 2025-12-07 04:34:54,699 services 5412 17860 Retrieved cached data for NFLX
+INFO 2025-12-07 04:34:54,700 services 5412 17860 Retrieved cached data for INTC
+INFO 2025-12-07 04:34:54,701 services 5412 17860 Retrieved cached data for TSLA
+INFO 2025-12-07 04:34:54,701 services 5412 17860 Retrieved cached data for AAPL
+INFO 2025-12-07 04:34:54,701 services 5412 17860 Retrieved cached data for BAC
+INFO 2025-12-07 04:34:54,703 services 5412 17860 Retrieved cached data for AMD
+INFO 2025-12-07 04:34:54,703 services 5412 17860 Retrieved cached data for AMZN
+INFO 2025-12-07 04:34:54,708 services 5412 17860 Retrieved cached data for META
+INFO 2025-12-07 04:34:54,709 services 5412 17860 Retrieved cached data for MA
+INFO 2025-12-07 04:34:54,709 services 5412 17860 Retrieved cached data for MSFT
+INFO 2025-12-07 04:34:54,711 services 5412 17860 Retrieved cached data for TSLA
+INFO 2025-12-07 04:34:54,712 services 5412 17860 Retrieved cached data for V
+INFO 2025-12-07 04:34:54,712 services 5412 17860 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:34:54,738 basehttp 5412 17860 "GET / HTTP/1.1" 200 45547
+INFO 2025-12-07 04:35:00,459 services 5412 17860 Retrieved cached data for META
+INFO 2025-12-07 04:35:00,460 services 5412 17860 Retrieved cached data for V
+INFO 2025-12-07 04:35:00,461 services 5412 17860 Retrieved cached data for TSLA
+INFO 2025-12-07 04:35:00,463 services 5412 17860 Retrieved cached data for KO
+INFO 2025-12-07 04:35:00,463 services 5412 17860 Retrieved cached data for PEP
+INFO 2025-12-07 04:35:00,464 services 5412 17860 Retrieved cached data for WMT
+INFO 2025-12-07 04:35:00,465 services 5412 17860 Retrieved cached data for AMZN
+INFO 2025-12-07 04:35:00,465 services 5412 17860 Retrieved cached data for BAC
+INFO 2025-12-07 04:35:00,512 basehttp 5412 17860 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 04:35:07,904 services 5412 17860 Retrieved cached data for BAC
+INFO 2025-12-07 04:35:07,939 views 5412 17860 User binit bought 3 shares of BAC at $53.95000076293945
+INFO 2025-12-07 04:35:07,942 basehttp 5412 17860 "POST /buy/8/ HTTP/1.1" 302 0
+INFO 2025-12-07 04:35:07,963 services 5412 17860 Retrieved cached data for NVDA
+INFO 2025-12-07 04:35:07,965 services 5412 17860 Retrieved cached data for NFLX
+INFO 2025-12-07 04:35:07,966 services 5412 17860 Retrieved cached data for INTC
+INFO 2025-12-07 04:35:07,966 services 5412 17860 Retrieved cached data for TSLA
+INFO 2025-12-07 04:35:07,967 services 5412 17860 Retrieved cached data for AAPL
+INFO 2025-12-07 04:35:07,967 services 5412 17860 Retrieved cached data for BAC
+INFO 2025-12-07 04:35:07,967 services 5412 17860 Retrieved cached data for AMD
+INFO 2025-12-07 04:35:07,968 services 5412 17860 Retrieved cached data for AMZN
+INFO 2025-12-07 04:35:07,972 services 5412 17860 Retrieved cached data for META
+INFO 2025-12-07 04:35:07,973 services 5412 17860 Retrieved cached data for MA
+INFO 2025-12-07 04:35:07,974 services 5412 17860 Retrieved cached data for MSFT
+INFO 2025-12-07 04:35:07,975 services 5412 17860 Retrieved cached data for TSLA
+INFO 2025-12-07 04:35:07,976 services 5412 17860 Retrieved cached data for V
+INFO 2025-12-07 04:35:07,976 services 5412 17860 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:35:08,003 basehttp 5412 17860 "GET / HTTP/1.1" 200 47159
+INFO 2025-12-07 04:35:22,565 services 5412 13028 Retrieved cached data for BAC
+INFO 2025-12-07 04:35:22,579 services 5412 13028 Retrieved cached data for AMZN
+INFO 2025-12-07 04:35:22,599 services 5412 13028 Retrieved cached data for NFLX
+INFO 2025-12-07 04:35:22,614 services 5412 13028 Retrieved cached data for TSLA
+INFO 2025-12-07 04:35:22,678 basehttp 5412 13028 "GET /portfolio_dashboard/ HTTP/1.1" 200 50437
+INFO 2025-12-07 04:35:40,573 services 5412 26388 Retrieved cached data for NVDA
+INFO 2025-12-07 04:35:40,574 services 5412 26388 Retrieved cached data for NFLX
+INFO 2025-12-07 04:35:40,575 services 5412 26388 Retrieved cached data for INTC
+INFO 2025-12-07 04:35:40,575 services 5412 26388 Retrieved cached data for TSLA
+INFO 2025-12-07 04:35:40,576 services 5412 26388 Retrieved cached data for AAPL
+INFO 2025-12-07 04:35:40,576 services 5412 26388 Retrieved cached data for BAC
+INFO 2025-12-07 04:35:40,578 services 5412 26388 Retrieved cached data for AMD
+INFO 2025-12-07 04:35:40,578 services 5412 26388 Retrieved cached data for AMZN
+INFO 2025-12-07 04:35:40,582 services 5412 26388 Retrieved cached data for META
+INFO 2025-12-07 04:35:40,584 services 5412 26388 Retrieved cached data for MA
+INFO 2025-12-07 04:35:40,584 services 5412 26388 Retrieved cached data for MSFT
+INFO 2025-12-07 04:35:40,584 services 5412 26388 Retrieved cached data for TSLA
+INFO 2025-12-07 04:35:40,587 services 5412 26388 Retrieved cached data for V
+INFO 2025-12-07 04:35:40,589 services 5412 26388 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:35:40,626 basehttp 5412 26388 "GET / HTTP/1.1" 200 47159
+INFO 2025-12-07 04:37:45,991 autoreload 5412 10872 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\views.py changed, reloading.
+INFO 2025-12-07 04:37:48,570 autoreload 16804 20232 Watching for file changes with StatReloader
+INFO 2025-12-07 04:39:42,696 services 16804 15800 Cached data for NVDA
+INFO 2025-12-07 04:39:43,639 services 16804 15800 Cached data for NFLX
+INFO 2025-12-07 04:39:44,851 services 16804 15800 Cached data for INTC
+INFO 2025-12-07 04:39:46,494 services 16804 15800 Cached data for TSLA
+INFO 2025-12-07 04:39:47,726 services 16804 15800 Cached data for AAPL
+INFO 2025-12-07 04:39:48,851 services 16804 15800 Cached data for BAC
+INFO 2025-12-07 04:39:49,977 services 16804 15800 Cached data for AMD
+INFO 2025-12-07 04:39:50,901 services 16804 15800 Cached data for AMZN
+INFO 2025-12-07 04:39:52,031 services 16804 15800 Cached data for META
+INFO 2025-12-07 04:39:52,943 services 16804 15800 Cached data for MA
+INFO 2025-12-07 04:39:54,574 services 16804 15800 Cached data for MSFT
+INFO 2025-12-07 04:39:54,575 services 16804 15800 Retrieved cached data for TSLA
+INFO 2025-12-07 04:39:55,498 services 16804 15800 Cached data for V
+INFO 2025-12-07 04:39:56,489 services 16804 15800 Cached data for GOOGL
+INFO 2025-12-07 04:39:56,707 basehttp 16804 15800 "GET / HTTP/1.1" 200 46559
+INFO 2025-12-07 04:39:56,778 basehttp 16804 15800 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:40:07,594 services 16804 25616 Retrieved cached data for META
+INFO 2025-12-07 04:40:07,596 services 16804 25616 Retrieved cached data for V
+INFO 2025-12-07 04:40:07,596 services 16804 25616 Retrieved cached data for TSLA
+INFO 2025-12-07 04:40:09,738 services 16804 25616 Cached data for KO
+INFO 2025-12-07 04:40:10,868 services 16804 25616 Cached data for PEP
+INFO 2025-12-07 04:40:11,863 services 16804 25616 Cached data for WMT
+INFO 2025-12-07 04:40:11,864 services 16804 25616 Retrieved cached data for AMZN
+INFO 2025-12-07 04:40:11,865 services 16804 25616 Retrieved cached data for BAC
+INFO 2025-12-07 04:40:11,934 basehttp 16804 25616 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 04:40:38,467 services 16804 10420 Retrieved cached data for NVDA
+INFO 2025-12-07 04:40:38,470 services 16804 10420 Retrieved cached data for NFLX
+INFO 2025-12-07 04:40:38,473 services 16804 10420 Retrieved cached data for INTC
+INFO 2025-12-07 04:40:38,474 services 16804 10420 Retrieved cached data for TSLA
+INFO 2025-12-07 04:40:38,480 services 16804 10420 Retrieved cached data for AAPL
+INFO 2025-12-07 04:40:38,483 services 16804 10420 Retrieved cached data for BAC
+INFO 2025-12-07 04:40:38,485 services 16804 10420 Retrieved cached data for AMD
+INFO 2025-12-07 04:40:38,487 services 16804 10420 Retrieved cached data for AMZN
+INFO 2025-12-07 04:40:38,492 services 16804 10420 Retrieved cached data for META
+INFO 2025-12-07 04:40:38,495 services 16804 10420 Retrieved cached data for MA
+INFO 2025-12-07 04:40:38,501 services 16804 10420 Retrieved cached data for MSFT
+INFO 2025-12-07 04:40:38,502 services 16804 10420 Retrieved cached data for TSLA
+INFO 2025-12-07 04:40:38,502 services 16804 10420 Retrieved cached data for V
+INFO 2025-12-07 04:40:38,503 services 16804 10420 Retrieved cached data for GOOGL
+INFO 2025-12-07 04:40:38,539 basehttp 16804 10420 "GET / HTTP/1.1" 200 46559
+INFO 2025-12-07 04:40:50,054 services 16804 22876 Retrieved cached data for META
+INFO 2025-12-07 04:40:50,056 services 16804 22876 Retrieved cached data for V
+INFO 2025-12-07 04:40:50,057 services 16804 22876 Retrieved cached data for TSLA
+INFO 2025-12-07 04:40:50,058 services 16804 22876 Retrieved cached data for KO
+INFO 2025-12-07 04:40:50,059 services 16804 22876 Retrieved cached data for PEP
+INFO 2025-12-07 04:40:50,060 services 16804 22876 Retrieved cached data for WMT
+INFO 2025-12-07 04:40:50,062 services 16804 22876 Retrieved cached data for AMZN
+INFO 2025-12-07 04:40:50,064 services 16804 22876 Retrieved cached data for BAC
+INFO 2025-12-07 04:40:50,110 basehttp 16804 22876 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 04:42:46,633 autoreload 16804 20232 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\views.py changed, reloading.
+INFO 2025-12-07 04:42:49,566 autoreload 14248 11000 Watching for file changes with StatReloader
+INFO 2025-12-07 04:43:02,891 autoreload 14248 11000 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\views.py changed, reloading.
+INFO 2025-12-07 04:43:05,380 autoreload 16280 12140 Watching for file changes with StatReloader
+INFO 2025-12-07 04:43:56,344 services 16280 24628 Cached data for META
+INFO 2025-12-07 04:43:57,171 services 16280 24628 Cached data for V
+INFO 2025-12-07 04:43:58,209 services 16280 24628 Cached data for TSLA
+INFO 2025-12-07 04:43:59,206 services 16280 24628 Cached data for KO
+INFO 2025-12-07 04:44:00,014 services 16280 24628 Cached data for PEP
+INFO 2025-12-07 04:44:00,778 services 16280 24628 Cached data for WMT
+INFO 2025-12-07 04:44:01,468 services 16280 24628 Cached data for AMZN
+INFO 2025-12-07 04:44:02,234 services 16280 24628 Cached data for BAC
+INFO 2025-12-07 04:44:02,461 basehttp 16280 24628 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 04:44:02,534 basehttp 16280 24628 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:44:13,494 services 16280 12084 Retrieved cached data for META
+INFO 2025-12-07 04:44:13,495 services 16280 12084 Retrieved cached data for V
+INFO 2025-12-07 04:44:13,496 services 16280 12084 Retrieved cached data for TSLA
+INFO 2025-12-07 04:44:13,497 services 16280 12084 Retrieved cached data for KO
+INFO 2025-12-07 04:44:13,498 services 16280 12084 Retrieved cached data for PEP
+INFO 2025-12-07 04:44:13,499 services 16280 12084 Retrieved cached data for WMT
+INFO 2025-12-07 04:44:13,499 services 16280 12084 Retrieved cached data for AMZN
+INFO 2025-12-07 04:44:13,500 services 16280 12084 Retrieved cached data for BAC
+INFO 2025-12-07 04:44:13,544 basehttp 16280 12084 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 04:44:20,171 services 16280 12084 Retrieved cached data for META
+INFO 2025-12-07 04:44:20,171 services 16280 12084 Retrieved cached data for V
+INFO 2025-12-07 04:44:20,172 services 16280 12084 Retrieved cached data for TSLA
+INFO 2025-12-07 04:44:20,174 services 16280 12084 Retrieved cached data for KO
+INFO 2025-12-07 04:44:20,175 services 16280 12084 Retrieved cached data for PEP
+INFO 2025-12-07 04:44:20,176 services 16280 12084 Retrieved cached data for WMT
+INFO 2025-12-07 04:44:20,177 services 16280 12084 Retrieved cached data for AMZN
+INFO 2025-12-07 04:44:20,177 services 16280 12084 Retrieved cached data for BAC
+INFO 2025-12-07 04:44:20,211 basehttp 16280 12084 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 04:44:21,041 services 16280 12084 Retrieved cached data for META
+INFO 2025-12-07 04:44:21,042 services 16280 12084 Retrieved cached data for V
+INFO 2025-12-07 04:44:21,043 services 16280 12084 Retrieved cached data for TSLA
+INFO 2025-12-07 04:44:21,046 services 16280 12084 Retrieved cached data for KO
+INFO 2025-12-07 04:44:21,048 services 16280 12084 Retrieved cached data for PEP
+INFO 2025-12-07 04:44:21,048 services 16280 12084 Retrieved cached data for WMT
+INFO 2025-12-07 04:44:21,049 services 16280 12084 Retrieved cached data for AMZN
+INFO 2025-12-07 04:44:21,050 services 16280 12084 Retrieved cached data for BAC
+INFO 2025-12-07 04:44:21,090 basehttp 16280 12084 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 04:44:21,739 services 16280 12084 Retrieved cached data for META
+INFO 2025-12-07 04:44:21,740 services 16280 12084 Retrieved cached data for V
+INFO 2025-12-07 04:44:21,741 services 16280 12084 Retrieved cached data for TSLA
+INFO 2025-12-07 04:44:21,741 services 16280 12084 Retrieved cached data for KO
+INFO 2025-12-07 04:44:21,743 services 16280 12084 Retrieved cached data for PEP
+INFO 2025-12-07 04:44:21,744 services 16280 12084 Retrieved cached data for WMT
+INFO 2025-12-07 04:44:21,744 services 16280 12084 Retrieved cached data for AMZN
+INFO 2025-12-07 04:44:21,747 services 16280 12084 Retrieved cached data for BAC
+INFO 2025-12-07 04:44:21,789 basehttp 16280 12084 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 04:44:22,527 services 16280 25612 Retrieved cached data for META
+INFO 2025-12-07 04:44:22,527 services 16280 25612 Retrieved cached data for V
+INFO 2025-12-07 04:44:22,528 services 16280 25612 Retrieved cached data for TSLA
+INFO 2025-12-07 04:44:22,529 services 16280 25612 Retrieved cached data for KO
+INFO 2025-12-07 04:44:22,530 services 16280 25612 Retrieved cached data for PEP
+INFO 2025-12-07 04:44:22,531 services 16280 25612 Retrieved cached data for WMT
+INFO 2025-12-07 04:44:22,532 services 16280 25612 Retrieved cached data for AMZN
+INFO 2025-12-07 04:44:22,534 services 16280 25612 Retrieved cached data for BAC
+INFO 2025-12-07 04:44:22,570 basehttp 16280 25612 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 04:44:37,717 services 16280 25948 Retrieved cached data for KO
+INFO 2025-12-07 04:44:37,754 views 16280 25948 User binit bought 4 shares of KO at $70.0
+INFO 2025-12-07 04:44:37,758 basehttp 16280 25948 "POST /buy/4/ HTTP/1.1" 302 0
+INFO 2025-12-07 04:44:37,783 services 16280 25948 Retrieved cached data for META
+INFO 2025-12-07 04:44:37,785 services 16280 25948 Retrieved cached data for V
+INFO 2025-12-07 04:44:37,785 services 16280 25948 Retrieved cached data for TSLA
+INFO 2025-12-07 04:44:37,786 services 16280 25948 Retrieved cached data for KO
+INFO 2025-12-07 04:44:37,786 services 16280 25948 Retrieved cached data for PEP
+INFO 2025-12-07 04:44:37,786 services 16280 25948 Retrieved cached data for WMT
+INFO 2025-12-07 04:44:37,788 services 16280 25948 Retrieved cached data for AMZN
+INFO 2025-12-07 04:44:37,789 services 16280 25948 Retrieved cached data for BAC
+INFO 2025-12-07 04:44:37,820 basehttp 16280 25948 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 04:44:58,743 services 16280 23332 Cached data for NVDA
+INFO 2025-12-07 04:44:59,744 services 16280 23332 Cached data for NFLX
+INFO 2025-12-07 04:45:00,669 services 16280 23332 Cached data for INTC
+INFO 2025-12-07 04:45:00,669 services 16280 23332 Retrieved cached data for TSLA
+INFO 2025-12-07 04:45:01,589 services 16280 23332 Cached data for AAPL
+INFO 2025-12-07 04:45:01,590 services 16280 23332 Retrieved cached data for BAC
+INFO 2025-12-07 04:45:02,722 services 16280 23332 Cached data for AMD
+INFO 2025-12-07 04:45:02,723 services 16280 23332 Retrieved cached data for AMZN
+INFO 2025-12-07 04:45:02,727 services 16280 23332 Retrieved cached data for META
+INFO 2025-12-07 04:45:03,739 services 16280 23332 Cached data for MA
+INFO 2025-12-07 04:45:04,660 services 16280 23332 Cached data for MSFT
+INFO 2025-12-07 04:45:04,661 services 16280 23332 Retrieved cached data for TSLA
+INFO 2025-12-07 04:45:04,662 services 16280 23332 Retrieved cached data for V
+INFO 2025-12-07 04:45:05,484 services 16280 23332 Cached data for GOOGL
+INFO 2025-12-07 04:45:05,544 basehttp 16280 23332 "GET / HTTP/1.1" 200 47284
+INFO 2025-12-07 04:47:04,304 autoreload 16280 12140 C:\Users\91950\Desktop\Stock-Market-Place-main\marketplace\settings.py changed, reloading.
+INFO 2025-12-07 04:47:06,899 autoreload 3928 9876 Watching for file changes with StatReloader
+INFO 2025-12-07 04:47:16,583 autoreload 3928 9876 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\views.py changed, reloading.
+INFO 2025-12-07 04:47:18,994 autoreload 14960 22488 Watching for file changes with StatReloader
+INFO 2025-12-07 04:47:46,664 services 14960 5980 Cached data for NVDA
+INFO 2025-12-07 04:47:47,285 services 14960 5980 Cached data for NFLX
+INFO 2025-12-07 04:47:48,107 services 14960 5980 Cached data for INTC
+INFO 2025-12-07 04:47:49,018 services 14960 5980 Cached data for TSLA
+INFO 2025-12-07 04:47:50,351 services 14960 5980 Cached data for AAPL
+INFO 2025-12-07 04:47:51,505 services 14960 5980 Cached data for BAC
+INFO 2025-12-07 04:47:52,311 services 14960 5980 Cached data for META
+INFO 2025-12-07 04:47:53,239 services 14960 5980 Cached data for MA
+INFO 2025-12-07 04:47:54,066 services 14960 5980 Cached data for MSFT
+INFO 2025-12-07 04:47:54,070 services 14960 5980 Retrieved cached data for TSLA
+INFO 2025-12-07 04:47:54,190 basehttp 14960 5980 "GET / HTTP/1.1" 200 40960
+INFO 2025-12-07 04:47:54,250 basehttp 14960 5980 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:50:17,032 autoreload 14960 22488 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\views.py changed, reloading.
+INFO 2025-12-07 04:50:19,744 autoreload 3048 20332 Watching for file changes with StatReloader
+INFO 2025-12-07 04:50:26,596 autoreload 3048 20332 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\views.py changed, reloading.
+INFO 2025-12-07 04:50:28,938 autoreload 17272 24920 Watching for file changes with StatReloader
+INFO 2025-12-07 04:52:55,213 services 17272 26320 Cached data for NVDA
+INFO 2025-12-07 04:52:55,835 services 17272 26320 Cached data for NFLX
+INFO 2025-12-07 04:52:56,528 services 17272 26320 Cached data for INTC
+INFO 2025-12-07 04:52:57,133 services 17272 26320 Cached data for TSLA
+INFO 2025-12-07 04:52:57,852 services 17272 26320 Cached data for AAPL
+INFO 2025-12-07 04:52:58,604 services 17272 26320 Cached data for BAC
+INFO 2025-12-07 04:52:59,520 services 17272 26320 Cached data for META
+INFO 2025-12-07 04:53:00,543 services 17272 26320 Cached data for MA
+INFO 2025-12-07 04:53:01,363 services 17272 26320 Cached data for MSFT
+INFO 2025-12-07 04:53:01,364 services 17272 26320 Retrieved cached data for TSLA
+INFO 2025-12-07 04:53:01,621 basehttp 17272 26320 "GET / HTTP/1.1" 200 48061
+INFO 2025-12-07 04:53:01,686 basehttp 17272 26320 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 04:54:12,173 services 17272 25944 Retrieved cached data for META
+INFO 2025-12-07 04:54:13,764 services 17272 25944 Cached data for V
+INFO 2025-12-07 04:54:13,765 services 17272 25944 Retrieved cached data for TSLA
+INFO 2025-12-07 04:54:14,837 services 17272 25944 Cached data for KO
+INFO 2025-12-07 04:54:15,847 services 17272 25944 Cached data for PEP
+INFO 2025-12-07 04:54:17,043 services 17272 25944 Cached data for WMT
+INFO 2025-12-07 04:54:17,960 services 17272 25944 Cached data for AMZN
+INFO 2025-12-07 04:54:17,961 services 17272 25944 Retrieved cached data for BAC
+INFO 2025-12-07 04:54:18,027 basehttp 17272 25944 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 04:54:27,142 services 17272 15876 Retrieved cached data for TSLA
+INFO 2025-12-07 04:54:27,144 services 17272 15876 Retrieved cached data for NFLX
+INFO 2025-12-07 04:54:27,144 services 17272 15876 Retrieved cached data for AMZN
+INFO 2025-12-07 04:54:27,145 services 17272 15876 Retrieved cached data for BAC
+INFO 2025-12-07 04:54:27,146 services 17272 15876 Retrieved cached data for KO
+INFO 2025-12-07 04:54:27,172 basehttp 17272 15876 "GET /dashboard/ HTTP/1.1" 200 21596
+INFO 2025-12-07 04:54:28,591 services 17272 24424 Retrieved cached data for META
+INFO 2025-12-07 04:54:28,592 services 17272 24424 Retrieved cached data for V
+INFO 2025-12-07 04:54:28,595 services 17272 24424 Retrieved cached data for TSLA
+INFO 2025-12-07 04:54:28,596 services 17272 24424 Retrieved cached data for KO
+INFO 2025-12-07 04:54:28,597 services 17272 24424 Retrieved cached data for PEP
+INFO 2025-12-07 04:54:28,598 services 17272 24424 Retrieved cached data for WMT
+INFO 2025-12-07 04:54:28,598 services 17272 24424 Retrieved cached data for AMZN
+INFO 2025-12-07 04:54:28,599 services 17272 24424 Retrieved cached data for BAC
+INFO 2025-12-07 04:54:28,644 basehttp 17272 24424 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 04:54:34,576 services 17272 24424 Retrieved cached data for NVDA
+INFO 2025-12-07 04:54:34,577 services 17272 24424 Retrieved cached data for NFLX
+INFO 2025-12-07 04:54:34,578 services 17272 24424 Retrieved cached data for INTC
+INFO 2025-12-07 04:54:34,579 services 17272 24424 Retrieved cached data for TSLA
+INFO 2025-12-07 04:54:34,579 services 17272 24424 Retrieved cached data for AAPL
+INFO 2025-12-07 04:54:34,580 services 17272 24424 Retrieved cached data for BAC
+INFO 2025-12-07 04:54:34,584 services 17272 24424 Retrieved cached data for META
+INFO 2025-12-07 04:54:34,585 services 17272 24424 Retrieved cached data for MA
+INFO 2025-12-07 04:54:34,586 services 17272 24424 Retrieved cached data for MSFT
+INFO 2025-12-07 04:54:34,588 services 17272 24424 Retrieved cached data for TSLA
+INFO 2025-12-07 04:54:34,650 basehttp 17272 24424 "GET / HTTP/1.1" 200 49172
+INFO 2025-12-07 04:54:38,759 services 17272 27068 Retrieved cached data for NVDA
+INFO 2025-12-07 04:54:38,760 services 17272 27068 Retrieved cached data for NFLX
+INFO 2025-12-07 04:54:38,760 services 17272 27068 Retrieved cached data for INTC
+INFO 2025-12-07 04:54:38,762 services 17272 27068 Retrieved cached data for TSLA
+INFO 2025-12-07 04:54:38,763 services 17272 27068 Retrieved cached data for AAPL
+INFO 2025-12-07 04:54:38,763 services 17272 27068 Retrieved cached data for BAC
+INFO 2025-12-07 04:54:38,767 services 17272 27068 Retrieved cached data for META
+INFO 2025-12-07 04:54:38,768 services 17272 27068 Retrieved cached data for MA
+INFO 2025-12-07 04:54:38,768 services 17272 27068 Retrieved cached data for MSFT
+INFO 2025-12-07 04:54:38,769 services 17272 27068 Retrieved cached data for TSLA
+INFO 2025-12-07 04:54:38,801 basehttp 17272 27068 "GET / HTTP/1.1" 200 49172
+INFO 2025-12-07 04:55:36,177 services 17272 2588 Retrieved cached data for NVDA
+INFO 2025-12-07 04:55:36,180 services 17272 2588 Retrieved cached data for NFLX
+INFO 2025-12-07 04:55:36,181 services 17272 2588 Retrieved cached data for INTC
+INFO 2025-12-07 04:55:36,181 services 17272 2588 Retrieved cached data for TSLA
+INFO 2025-12-07 04:55:36,182 services 17272 2588 Retrieved cached data for AAPL
+INFO 2025-12-07 04:55:36,182 services 17272 2588 Retrieved cached data for BAC
+INFO 2025-12-07 04:55:36,185 services 17272 2588 Retrieved cached data for META
+INFO 2025-12-07 04:55:36,185 services 17272 2588 Retrieved cached data for MA
+INFO 2025-12-07 04:55:36,186 services 17272 2588 Retrieved cached data for MSFT
+INFO 2025-12-07 04:55:36,187 services 17272 2588 Retrieved cached data for TSLA
+INFO 2025-12-07 04:55:36,243 basehttp 17272 2588 "GET / HTTP/1.1" 200 49469
+INFO 2025-12-07 04:55:41,227 services 17272 20696 Retrieved cached data for NVDA
+INFO 2025-12-07 04:55:41,230 services 17272 20696 Retrieved cached data for NFLX
+INFO 2025-12-07 04:55:41,231 services 17272 20696 Retrieved cached data for INTC
+INFO 2025-12-07 04:55:41,231 services 17272 20696 Retrieved cached data for TSLA
+INFO 2025-12-07 04:55:41,232 services 17272 20696 Retrieved cached data for AAPL
+INFO 2025-12-07 04:55:41,232 services 17272 20696 Retrieved cached data for BAC
+INFO 2025-12-07 04:55:41,238 services 17272 20696 Retrieved cached data for META
+INFO 2025-12-07 04:55:41,239 services 17272 20696 Retrieved cached data for MA
+INFO 2025-12-07 04:55:41,244 services 17272 20696 Retrieved cached data for MSFT
+INFO 2025-12-07 04:55:41,245 services 17272 20696 Retrieved cached data for TSLA
+INFO 2025-12-07 04:55:41,285 basehttp 17272 20696 "GET / HTTP/1.1" 200 49469
+INFO 2025-12-07 05:16:06,389 basehttp 17272 22516 "GET / HTTP/1.1" 302 0
+INFO 2025-12-07 05:16:06,447 basehttp 17272 22516 "GET /login/?next=/ HTTP/1.1" 200 15601
+INFO 2025-12-07 05:16:06,573 basehttp 17272 22516 "GET /static/main.css HTTP/1.1" 304 0
+INFO 2025-12-07 05:16:10,845 basehttp 17272 10320 "GET /login/?next=/ HTTP/1.1" 200 13747
+INFO 2025-12-07 05:16:18,655 basehttp 17272 10320 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-12-07 05:16:20,638 services 17272 10320 Cached data for NVDA
+INFO 2025-12-07 05:16:21,655 services 17272 10320 Cached data for NFLX
+INFO 2025-12-07 05:16:22,535 services 17272 10320 Cached data for INTC
+INFO 2025-12-07 05:16:23,395 services 17272 10320 Cached data for TSLA
+INFO 2025-12-07 05:16:24,213 services 17272 10320 Cached data for AAPL
+INFO 2025-12-07 05:16:25,043 services 17272 10320 Cached data for BAC
+INFO 2025-12-07 05:16:26,132 services 17272 10320 Cached data for META
+INFO 2025-12-07 05:16:27,283 services 17272 10320 Cached data for MA
+INFO 2025-12-07 05:16:28,373 services 17272 10320 Cached data for MSFT
+INFO 2025-12-07 05:16:28,375 services 17272 10320 Retrieved cached data for TSLA
+INFO 2025-12-07 05:16:28,413 basehttp 17272 10320 "GET / HTTP/1.1" 200 49469
+INFO 2025-12-07 05:16:45,654 services 17272 5604 Retrieved cached data for INTC
+INFO 2025-12-07 05:16:45,672 services 17272 5604 Retrieved cached data for AAPL
+INFO 2025-12-07 05:16:47,555 services 17272 5604 Cached data for AMD
+INFO 2025-12-07 05:16:48,787 services 17272 5604 Cached data for IBM
+INFO 2025-12-07 05:16:48,788 services 17272 5604 Retrieved cached data for MSFT
+INFO 2025-12-07 05:16:48,821 basehttp 17272 5604 "GET /stock/INTC/ HTTP/1.1" 200 27793

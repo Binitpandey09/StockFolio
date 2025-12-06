@@ -230,7 +230,7 @@ STOCK_API_SETTINGS = {
     'TIINGO_API_TOKEN': config('TIINGO_API_TOKEN', default=''),
     'ALPHA_VANTAGE_API_KEY': config('ALPHA_VANTAGE_API_KEY', default=''),
     'FINNHUB_API_KEY': config('FINNHUB_API_KEY', default=''),
-    'CACHE_TIMEOUT': 300,  # 5 minutes
+    'CACHE_TIMEOUT': 900,  # 15 minutes (increased from 5 for better performance)
     'MAX_REQUESTS_PER_MINUTE': 60,
 }
 

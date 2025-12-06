@@ -1,301 +1,602 @@
 {% extends 'base.html' %}
 {% load custom_filters %}
 
-{% block title %}Dashboard - Stock Market App{% endblock %}
+{% block title %}Dashboard - StockFolio{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <!-- Dashboard Header -->
-    <div class="dashboard-header mb-4">
-        <h1 class="dashboard-title">Welcome back, {{ request.user.first_name|default:request.user.username }}!</h1>
-        <p class="dashboard-subtitle">Here's your portfolio overview</p>
+<div class="container-fluid py-4">
+    <!-- Welcome Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="welcome-header">
+                <h1>Welcome back, {{ request.user.first_name|default:request.user.username }}! 👋</h1>
+                <p>Here's your portfolio overview and market insights</p>
+            </div>
+        </div>
     </div>
 
     <!-- Portfolio Summary Cards -->
     <div class="row mb-4">
-        <div class="col-md-4 mb-3">
-            <div class="summary-card">
-                <div class="summary-icon">
-                    <i class="icon-portfolio">📊</i>
-                </div>
-                <div class="summary-content">
+        <div class="col-md-3 mb-3">
+            <div class="summary-card bg-primary">
+                <div class="summary-icon">💼</div>
+                <div class="summary-info">
+                    <h6>Portfolio Value</h6>
                     <h3>${{ total_value|floatformat:2 }}</h3>
-                    <p>Total Portfolio Value</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-3">
-            <div class="summary-card">
-                <div class="summary-icon">
-                    <i class="icon-invested">💰</i>
-                </div>
-                <div class="summary-content">
+        <div class="col-md-3 mb-3">
+            <div class="summary-card bg-success">
+                <div class="summary-icon">💰</div>
+                <div class="summary-info">
+                    <h6>Total Invested</h6>
                     <h3>${{ invested|floatformat:2 }}</h3>
-                    <p>Total Invested</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-3">
-            <div class="summary-card">
-                <div class="summary-icon">
-                    <i class="icon-gains">{% if gains >= 0 %}📈{% else %}📉{% endif %}</i>
+        <div class="col-md-3 mb-3">
+            <div class="summary-card {% if gains >= 0 %}bg-info{% else %}bg-danger{% endif %}">
+                <div class="summary-icon">{% if gains >= 0 %}📈{% else %}📉{% endif %}</div>
+                <div class="summary-info">
+                    <h6>Total Return</h6>
+                    <h3>{{ gains|floatformat:2 }}%</h3>
                 </div>
-                <div class="summary-content">
-                    <h3 class="{% if gains >= 0 %}text-success{% else %}text-danger{% endif %}">{{ gains }}%</h3>
-                    <p>Total Gains/Loss</p>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="summary-card bg-warning">
+                <div class="summary-icon">📊</div>
+                <div class="summary-info">
+                    <h6>Holdings</h6>
+                    <h3>{{ portfolio_count }}</h3>
+                    <small>{{ watchlist_count }} in watchlist</small>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Holdings Table -->
-    <div class="holdings-section">
-        <div class="section-header">
-            <h2>Your Holdings</h2>
-            <a href="{% url 'stocks' %}" class="btn btn-primary">Browse Stocks</a>
-        </div>
-        
-        {% if data %}
-        <div class="table-responsive">
-            <table class="table holdings-table">
-                <thead>
-                    <tr>
-                        <th>Stock</th>
-                        <th>Quantity</th>
-                        <th>Purchase Price</th>
-                        <th>Current Price</th>
-                        <th>Total Value</th>
-                        <th>P&L</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for item in data %}
-                    <tr>
-                        <td>
-                            <div class="stock-info">
-                                <strong>{{ item.stock.name }}</strong>
-                                <small class="text-muted d-block">{{ item.stock.ticker }}</small>
+    <div class="row">
+        <!-- Left Column -->
+        <div class="col-lg-8 mb-4">
+            <!-- Your Holdings -->
+            <div class="card holdings-card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-0 fw-bold">📈 Your Holdings</h5>
+                        {% if has_more_holdings %}
+                        <small class="text-muted">Top 3 holdings • <a href="{% url 'portfolio_dashboard' %}" class="text-decoration-none">View all {{ portfolio_count }}</a></small>
+                        {% elif data %}
+                        <small class="text-muted">{{ portfolio_count }} holding{% if portfolio_count != 1 %}s{% endif %}</small>
+                        {% endif %}
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="{% url 'portfolio_dashboard' %}" class="btn btn-sm btn-outline-primary">
+                            <i class="bi bi-briefcase"></i> Portfolio
+                        </a>
+                        <a href="{% url 'stocks' %}" class="btn btn-sm btn-primary">
+                            <i class="bi bi-shop"></i> Browse Market
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    {% if data %}
+                        {% for item in data %}
+                        <div class="holding-item">
+                            <div class="holding-rank">
+                                <div class="rank-number">#{{ forloop.counter }}</div>
                             </div>
-                        </td>
-                        <td>{{ item.purchase_quantity }}</td>
-                        <td>${{ item.purchase_price|floatformat:2 }}</td>
-                        <td>${{ item.stock.curr_price|floatformat:2 }}</td>
-                        <td>${{ item.total_value|floatformat:2 }}</td>
-                        <td>
-                            {% with pl=item.total_value|sub:item.purchase_quantity|mul:item.purchase_price %}
-                            <span class="{% if pl >= 0 %}text-success{% else %}text-danger{% endif %}">
-                                {% if pl >= 0 %}+{% endif %}${{ pl|floatformat:2 }}
-                            </span>
-                            {% endwith %}
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-        {% else %}
-        <div class="empty-state">
-            <div class="empty-icon">📈</div>
-            <h3>Start Your Investment Journey</h3>
-            <p>You haven't made any investments yet. Browse our stock market to find great opportunities!</p>
-            <a href="{% url 'stocks' %}" class="btn btn-primary btn-lg">Explore Stocks</a>
-        </div>
-        {% endif %}
-    </div>
+                            <div class="holding-main">
+                                <div class="holding-info">
+                                    <a href="{% url 'stock_detail' item.stock.ticker %}" class="holding-link">
+                                        <div class="holding-ticker">{{ item.stock.ticker }}</div>
+                                        <div class="holding-name">{{ item.stock.name|short_name }}</div>
+                                    </a>
+                                </div>
+                                <div class="holding-quantity">
+                                    <div class="quantity-label">Shares</div>
+                                    <div class="quantity-value">{{ item.purchase_quantity }}</div>
+                                </div>
+                                <div class="holding-prices">
+                                    <div class="price-item">
+                                        <div class="price-label">Avg Cost</div>
+                                        <div class="price-value">${{ item.purchase_price|floatformat:2 }}</div>
+                                    </div>
+                                    <div class="price-item">
+                                        <div class="price-label">Current</div>
+                                        <div class="price-value current">${{ item.stock.curr_price|floatformat:2 }}</div>
+                                    </div>
+                                </div>
+                                <div class="holding-value">
+                                    <div class="value-label">Total Value</div>
+                                    <div class="value-amount">${{ item.total_value|floatformat:2 }}</div>
+                                    {% with invested=item.purchase_quantity|mul:item.purchase_price %}
+                                    {% with gain_loss=item.total_value|sub:invested %}
+                                    {% with gain_loss_pct=gain_loss|div:invested|mul:100 %}
+                                    <div class="value-change {% if gain_loss >= 0 %}positive{% else %}negative{% endif %}">
+                                        {% if gain_loss >= 0 %}+{% endif %}${{ gain_loss|floatformat:2 }}
+                                        ({% if gain_loss >= 0 %}+{% endif %}{{ gain_loss_pct|floatformat:2 }}%)
+                                    </div>
+                                    {% endwith %}
+                                    {% endwith %}
+                                    {% endwith %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        
+                        {% if has_more_holdings %}
+                        <div class="holdings-footer">
+                            <a href="{% url 'portfolio_dashboard' %}" class="view-all-link">
+                                View All {{ portfolio_count }} Holdings
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        {% endif %}
+                    {% else %}
+                        <div class="empty-holdings-state">
+                            <div class="empty-icon">📊</div>
+                            <h4>Start Your Investment Journey</h4>
+                            <p>You haven't made any investments yet. Browse our stock market to find great opportunities!</p>
+                            <a href="{% url 'stocks' %}" class="btn btn-primary btn-lg mt-3">
+                                <i class="bi bi-shop"></i> Explore Stocks
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
 
-    <!-- Quick Actions -->
-    <div class="quick-actions mt-4">
-        <h3>Quick Actions</h3>
-        <div class="row">
-            <div class="col-md-3 mb-3">
-                <a href="{% url 'stocks' %}" class="action-card">
-                    <div class="action-icon">🔍</div>
-                    <h4>Browse Stocks</h4>
-                    <p>Discover new investment opportunities</p>
-                </a>
+            <!-- Trending Stocks -->
+            <div class="card mt-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 fw-bold">🔥 Trending Stocks</h5>
+                    <a href="{% url 'stocks' %}" class="btn btn-sm btn-outline-primary">View All</a>
+                </div>
+                <div class="card-body">
+                    {% if trending_stocks %}
+                        <div class="row g-3">
+                            {% for stock in trending_stocks %}
+                            <div class="col-md-6 col-lg-4">
+                                <div class="stock-card">
+                                    <a href="{% url 'stock_detail' stock.ticker %}" class="text-decoration-none">
+                                        <div class="stock-card-header">
+                                            <span class="stock-ticker">{{ stock.name|short_name }}</span>
+                                            <span class="stock-price {% if stock.day_change > 0 %}price-change-positive{% elif stock.day_change < 0 %}price-change-negative{% endif %}">
+                                                ${{ stock.curr_price|floatformat:2 }}
+                                            </span>
+                                        </div>
+                                        <div class="stock-card-body">
+                                            <p class="stock-name mb-2" title="{{ stock.name }}">{{ stock.ticker }} • {{ stock.name }}</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="sector-badge {{ stock.sector|lower|cut:" " }}">{{ stock.sector|default:"N/A" }}</span>
+                                                {% if stock.day_change_percent %}
+                                                <small class="{% if stock.day_change > 0 %}price-change-positive{% elif stock.day_change < 0 %}price-change-negative{% else %}price-change-neutral{% endif %}">
+                                                    {% if stock.day_change > 0 %}▲{% elif stock.day_change < 0 %}▼{% else %}━{% endif %}
+                                                    {{ stock.day_change_percent|abs_value|floatformat:2 }}%
+                                                </small>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="stock-card-footer mt-3">
+                                        <div class="d-grid gap-2">
+                                            <a href="{% url 'stock_detail' stock.ticker %}" class="btn btn-sm btn-outline-primary">
+                                                📊 View Details
+                                            </a>
+                                            <a href="{% url 'stocks' %}" class="btn btn-sm btn-primary">🛒 Buy</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <p class="text-center text-muted py-3">No trending stocks available.</p>
+                    {% endif %}
+                </div>
             </div>
-            <div class="col-md-3 mb-3">
-                <a href="{% url 'transaction_history' %}" class="action-card">
-                    <div class="action-icon">📋</div>
-                    <h4>Transaction History</h4>
-                    <p>View all your past transactions</p>
-                </a>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-lg-4">
+            <!-- Quick Actions -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0 fw-bold">⚡ Quick Actions</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <a href="{% url 'stocks' %}" class="btn btn-outline-primary">🛒 Browse Market</a>
+                        <a href="{% url 'dashboard_analytics' %}" class="btn btn-outline-success">📊 Analytics</a>
+                        <a href="{% url 'watchlist_view' %}" class="btn btn-outline-info">👁️ Watchlist</a>
+                        <a href="{% url 'price_alerts' %}" class="btn btn-outline-warning">🔔 Alerts</a>
+                        <a href="{% url 'stock_comparison' %}" class="btn btn-outline-secondary">⚖️ Compare</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3 mb-3">
-                <a href="{% url 'portfolio_dashboard' %}" class="action-card">
-                    <div class="action-icon">📊</div>
-                    <h4>Portfolio Analysis</h4>
-                    <p>Detailed portfolio breakdown</p>
-                </a>
+
+            <!-- Recent Activity -->
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-0 fw-bold">📜 Recent Activity</h5>
+                        {% if recent_transactions %}
+                        <small class="text-muted">Last 4 transactions</small>
+                        {% endif %}
+                    </div>
+                    <a href="{% url 'transaction_history' %}" class="btn btn-sm btn-link text-decoration-none">View All</a>
+                </div>
+                <div class="card-body">
+                    {% if recent_transactions %}
+                        {% for txn in recent_transactions %}
+                        <div class="activity-item">
+                            <div class="activity-icon {% if txn.type == 'BUY' %}bg-success{% else %}bg-danger{% endif %}">
+                                {% if txn.type == 'BUY' %}📈{% else %}📉{% endif %}
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <span class="badge {% if txn.type == 'BUY' %}bg-success{% else %}bg-danger{% endif %} me-1">{{ txn.type }}</span>
+                                        <strong>{{ txn.stock_symbol }}</strong>
+                                        <div><small class="text-muted">{{ txn.quantity }} shares @ ${{ txn.price|floatformat:2 }}</small></div>
+                                    </div>
+                                    <small class="text-muted">{{ txn.date|date:"M d" }}</small>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="text-center py-3">
+                            <p class="text-muted mb-0">No recent transactions</p>
+                        </div>
+                    {% endif %}
+                </div>
             </div>
-            <div class="col-md-3 mb-3">
-                <a href="{% url 'watchlist_view' %}" class="action-card">
-                    <div class="action-icon">👁️</div>
-                    <h4>Watchlist</h4>
-                    <p>Monitor your favorite stocks</p>
-                </a>
+
+            <!-- Top Stocks -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0 fw-bold">⭐ Top Stocks</h5>
+                </div>
+                <div class="card-body">
+                    {% if top_stocks %}
+                        {% for stock in top_stocks %}
+                        <div class="top-stock-item">
+                            <div class="flex-grow-1">
+                                <strong>{{ stock.name|short_name }}</strong>
+                                <div>
+                                    <small class="text-muted" title="{{ stock.name }}">{{ stock.ticker }}</small>
+                                    {% if stock.day_change_percent %}
+                                    <small class="ms-2 {% if stock.day_change > 0 %}price-change-positive{% elif stock.day_change < 0 %}price-change-negative{% else %}price-change-neutral{% endif %}">
+                                        {% if stock.day_change > 0 %}▲{% elif stock.day_change < 0 %}▼{% else %}━{% endif %}
+                                        {{ stock.day_change_percent|abs_value|floatformat:1 }}%
+                                    </small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="text-end ms-2">
+                                <strong class="{% if stock.day_change > 0 %}price-change-positive{% elif stock.day_change < 0 %}price-change-negative{% endif %}">
+                                    ${{ stock.curr_price|floatformat:2 }}
+                                </strong>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-center text-muted py-3">No stocks available</p>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <style>
-.dashboard-header {
-    text-align: center;
-    padding: 2rem 0;
+/* Holdings Card Styling */
+.holdings-card {
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
 }
 
-.dashboard-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--gray-900);
-    margin-bottom: 0.5rem;
+.holdings-card .card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 24px;
+    border: none;
 }
 
-.dashboard-subtitle {
-    font-size: 1.125rem;
-    color: var(--gray-600);
+.holdings-card .card-header h5 {
+    font-weight: 600;
     margin: 0;
 }
 
-.summary-card {
-    background: var(--white);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--gray-200);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    transition: all 0.3s ease;
+.holdings-card .card-header small {
+    opacity: 0.9;
 }
 
-.summary-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
-.summary-icon {
-    font-size: 2rem;
-    width: 60px;
-    height: 60px;
-    background: var(--gray-50);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.summary-content h3 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin: 0;
-    color: var(--gray-900);
-}
-
-.summary-content p {
-    margin: 0;
-    color: var(--gray-600);
+.holdings-card .card-header small a {
+    color: white;
     font-weight: 500;
 }
 
-.holdings-section {
-    background: var(--white);
-    border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--gray-200);
+.holdings-card .card-header small a:hover {
+    text-decoration: underline !important;
 }
 
-.section-header {
+/* Holding Item */
+.holding-item {
+    padding: 20px 24px;
+    border-bottom: 1px solid #f3f4f6;
+    transition: all 0.2s ease;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    gap: 16px;
 }
 
-.section-header h2 {
-    margin: 0;
-    color: var(--gray-900);
-    font-weight: 600;
+.holding-item:last-child {
+    border-bottom: none;
 }
 
-.holdings-table {
-    margin: 0;
+.holding-item:hover {
+    background: #f9fafb;
 }
 
-.holdings-table th {
-    font-weight: 600;
-    color: var(--gray-700);
-    border-bottom: 2px solid var(--gray-200);
+.holding-item:hover .holding-rank {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: scale(1.05);
 }
 
-.stock-info strong {
-    color: var(--gray-900);
-}
-
-.empty-state {
-    text-align: center;
-    padding: 3rem 1rem;
-}
-
-.empty-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-
-.empty-state h3 {
-    color: var(--gray-900);
-    margin-bottom: 1rem;
-}
-
-.empty-state p {
-    color: var(--gray-600);
-    margin-bottom: 2rem;
-}
-
-.quick-actions h3 {
-    color: var(--gray-900);
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-}
-
-.action-card {
-    background: var(--white);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--gray-200);
-    text-decoration: none;
-    color: inherit;
-    display: block;
+/* Holding Rank */
+.holding-rank {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;
+    border-radius: 12px;
     transition: all 0.3s ease;
-    text-align: center;
 }
 
-.action-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+.rank-number {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #6b7280;
+    transition: color 0.3s ease;
+}
+
+.holding-item:hover .rank-number {
+    color: white;
+}
+
+.holding-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Holding Info */
+.holding-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.holding-link {
     text-decoration: none;
     color: inherit;
 }
 
-.action-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.holding-link:hover .holding-ticker {
+    color: #667eea;
 }
 
-.action-card h4 {
-    color: var(--gray-900);
-    margin-bottom: 0.5rem;
+.holding-ticker {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+    transition: color 0.2s ease;
+}
+
+.holding-name {
+    font-size: 0.875rem;
+    color: #6b7280;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Holding Quantity */
+.holding-quantity {
+    text-align: center;
+    padding: 0 16px;
+}
+
+.quantity-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.quantity-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+/* Holding Prices */
+.holding-prices {
+    display: flex;
+    gap: 24px;
+}
+
+.price-item {
+    text-align: right;
+}
+
+.price-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.price-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.price-value.current {
+    color: #667eea;
+    font-size: 1rem;
+}
+
+/* Holding Value */
+.holding-value {
+    text-align: right;
+    min-width: 140px;
+}
+
+.value-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.value-amount {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.value-change {
+    font-size: 0.875rem;
     font-weight: 600;
 }
 
-.action-card p {
-    color: var(--gray-600);
-    margin: 0;
-    font-size: 0.875rem;
+.value-change.positive {
+    color: #10b981;
+}
+
+.value-change.negative {
+    color: #ef4444;
+}
+
+/* Holdings Footer */
+.holdings-footer {
+    padding: 16px 24px;
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.view-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.view-all-link:hover {
+    color: #764ba2;
+    gap: 12px;
+}
+
+/* Empty Holdings State */
+.empty-holdings-state {
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.empty-holdings-state .empty-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.empty-holdings-state h4 {
+    color: #1a1a1a;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.empty-holdings-state p {
+    color: #6b7280;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .holding-main {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    
+    .holding-info {
+        flex: 1 1 100%;
+    }
+    
+    .holding-quantity,
+    .holding-prices,
+    .holding-value {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .holding-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .holding-rank {
+        width: 40px;
+        height: 40px;
+        align-self: flex-start;
+    }
+    
+    .rank-number {
+        font-size: 1rem;
+    }
+    
+    .holding-main {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    .holding-quantity,
+    .price-item,
+    .holding-value {
+        text-align: left;
+    }
+    
+    .holding-prices {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .holding-value {
+        width: 100%;
+    }
 }
 </style>
 {% endblock %}
-

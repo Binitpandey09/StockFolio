@@ -1,0 +1,1223 @@
+/* StockFolio - Main Stylesheet */
+
+/* Global Styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f5f7fa !important;
+}
+
+/* Welcome Header */
+.welcome-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.welcome-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-header p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Summary Cards */
+.summary-card {
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: white !important;
+}
+
+.summary-icon {
+    font-size: 2.5rem;
+}
+
+.summary-info h6 {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+    color: white !important;
+}
+
+.summary-info h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    color: white !important;
+}
+
+.summary-info small {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    color: white !important;
+}
+
+/* Cards */
+.card {
+    border: none !important;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: white;
+}
+
+.card-header {
+    background: white !important;
+    border-bottom: 1px solid #e9ecef;
+    padding: 1rem 1.5rem;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.card-header h5 {
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Stock Cards */
+.stock-card {
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+    height: 100%;
+}
+
+.stock-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+    transform: translateY(-2px);
+}
+
+.stock-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.stock-ticker {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.stock-price {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.stock-name {
+    font-size: 0.8rem;
+    color: #718096;
+    min-height: 2.5rem;
+    line-height: 1.3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Activity Items */
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+/* Top Stock Items */
+.top-stock-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    gap: 0.5rem;
+}
+
+.top-stock-item:last-child {
+    border-bottom: none;
+}
+
+.top-stock-item small {
+    display: block;
+    line-height: 1.3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state h4 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    color: #718096;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .welcome-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .summary-card {
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* ========================================
+   MARKET PAGE STYLES
+   ======================================== */
+
+.market-header {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.market-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+/* Stock Card Modern */
+.stock-card-modern {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.stock-card-modern:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border-color: #667eea;
+}
+
+.stock-card-top {
+    flex: 1;
+}
+
+.stock-ticker-modern {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #667eea;
+    margin: 0;
+}
+
+.stock-company-name {
+    font-size: 0.8rem;
+    color: #718096;
+    margin: 0;
+    line-height: 1.3;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2rem;
+}
+
+.btn-watchlist-modern {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f7fafc;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: #718096;
+    text-decoration: none;
+}
+
+.btn-watchlist-modern:hover {
+    background: #667eea;
+    color: white;
+    transform: scale(1.1);
+}
+
+.stock-price-display {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    margin: 1rem 0;
+}
+
+.current-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.25rem;
+}
+
+.price-change {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.stock-info-section {
+    padding: 1rem 0;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.info-label {
+    font-size: 0.875rem;
+    color: #718096;
+}
+
+.info-value {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #2d3748;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.3;
+}
+
+.stock-actions-modern {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.stock-actions-modern .btn {
+    font-weight: 600;
+}
+
+/* Empty State Modern */
+.empty-state-modern {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.empty-icon-modern {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.empty-state-modern h3 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+/* Search Bar Improvements */
+.input-group-text {
+    border-right: none;
+}
+
+.input-group .form-control {
+    border-left: none;
+}
+
+.input-group .form-control:focus {
+    border-color: #ced4da;
+    box-shadow: none;
+}
+
+.input-group-text {
+    background: white;
+    color: #718096;
+}
+
+/* Modal Improvements */
+.modal-content {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid #e2e8f0;
+    padding: 1.5rem;
+}
+
+/* Pagination Improvements */
+.pagination {
+    margin: 0;
+}
+
+.page-link {
+    color: #667eea;
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.page-link:hover {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.page-item.active .page-link {
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
+}
+
+.page-item.disabled .page-link {
+    background: #f7fafc;
+    border-color: #e2e8f0;
+    color: #a0aec0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .market-header h1 {
+        font-size: 2rem;
+    }
+    
+    .stock-ticker-modern {
+        font-size: 1.25rem;
+    }
+    
+    .current-price {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ========================================
+   MODERN FOOTER STYLES
+   ======================================== */
+
+.modern-footer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin-top: 4rem;
+    padding: 3rem 0 1rem;
+}
+
+.footer-main {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1.5rem;
+}
+
+/* Brand Section */
+.footer-brand {
+    padding-right: 2rem;
+}
+
+.brand-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.brand-tagline {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    opacity: 0.95;
+}
+
+.brand-description {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Horizontal Links */
+.footer-links-horizontal {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.link-group h5 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+    color: white;
+    opacity: 0.9;
+}
+
+.link-group a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.link-group a:hover {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/* Footer Info Section */
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: white;
+    color: #667eea;
+    transform: translateY(-3px);
+}
+
+.footer-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-item strong {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.stat-item span {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    padding-top: 1.5rem;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    color: white;
+}
+
+.footer-bottom strong {
+    font-weight: 600;
+}
+
+.disclaimer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.disclaimer svg {
+    opacity: 0.8;
+}
+
+/* Responsive Footer */
+@media (max-width: 991px) {
+    .footer-links-horizontal {
+        justify-content: flex-start;
+    }
+    
+    .footer-info {
+        align-items: flex-start;
+        margin-top: 2rem;
+    }
+    
+    .footer-stats {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .modern-footer {
+        padding: 2rem 0 1rem;
+    }
+    
+    .footer-main {
+        padding-bottom: 1.5rem;
+    }
+    
+    .footer-brand {
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .brand-name {
+        font-size: 1.5rem;
+    }
+    
+    .footer-links-horizontal {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .link-group {
+        text-align: center;
+    }
+    
+    .link-group a:hover {
+        transform: translateX(0);
+    }
+    
+    .footer-info {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-stats {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        text-align: center !important;
+    }
+    
+    .footer-bottom .col-md-6 {
+        text-align: center !important;
+    }
+    
+    .disclaimer {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+
+/* Enhanced Stock Card Styles */
+.price-change-positive {
+    color: #10b981 !important;
+    font-weight: 600;
+}
+
+.price-change-negative {
+    color: #ef4444 !important;
+    font-weight: 600;
+}
+
+.price-change-neutral {
+    color: #6b7280 !important;
+}
+
+.stock-price-section {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.current-price-large {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.price-change-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+.price-change-badge.positive {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.price-change-badge.negative {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.price-change-badge.neutral {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+/* Sparkline Chart */
+.sparkline-container {
+    height: 60px;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.sparkline-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Day Range Bar */
+.day-range-container {
+    margin: 0.75rem 0;
+}
+
+.day-range-label {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.day-range-bar {
+    position: relative;
+    height: 6px;
+    background: linear-gradient(to right, #ef4444, #fbbf24, #10b981);
+    border-radius: 3px;
+    margin: 0.5rem 0;
+}
+
+.day-range-indicator {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: white;
+    border: 2px solid #667eea;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.day-range-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
+/* Stock Metrics Grid */
+.stock-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.metric-label {
+    font-size: 0.7rem;
+    color: #64748b;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.metric-value {
+    font-size: 0.9rem;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* Volume Indicator */
+.volume-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.volume-bar {
+    flex: 1;
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.volume-fill {
+    height: 100%;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.volume-fill.high {
+    background: linear-gradient(to right, #10b981, #059669);
+}
+
+.volume-fill.medium {
+    background: linear-gradient(to right, #f59e0b, #d97706);
+}
+
+.volume-fill.low {
+    background: linear-gradient(to right, #6b7280, #4b5563);
+}
+
+/* Sector Badge Enhanced */
+.sector-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.sector-badge.technology {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.sector-badge.healthcare {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.sector-badge.finance,
+.sector-badge.financial {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.sector-badge.energy {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.sector-badge.consumer {
+    background: #e9d5ff;
+    color: #6b21a8;
+}
+
+.sector-badge.industrial {
+    background: #fed7aa;
+    color: #9a3412;
+}
+
+.sector-badge.communication {
+    background: #fce7f3;
+    color: #831843;
+}
+
+/* Stock Actions Enhanced */
+.stock-actions-modern {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.stock-actions-modern .btn {
+    flex: 1;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.stock-actions-modern .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Trending Badge */
+.trending-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Hot Stock Badge */
+.hot-badge {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+/* Fast Mover Badge */
+.fast-mover-badge {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stock-metrics {
+        grid-template-columns: 1fr;
+    }
+    
+    .current-price-large {
+        font-size: 1.5rem;
+    }
+    
+    .sparkline-container {
+        height: 50px;
+    }
+}
+
+
+/* Interactive Sparkline Enhancements */
+.sparkline-container {
+    position: relative;
+    cursor: crosshair;
+}
+
+.sparkline-canvas {
+    cursor: crosshair;
+    transition: opacity 0.2s;
+}
+
+.sparkline-canvas:hover {
+    opacity: 1;
+}
+
+.sparkline-tooltip {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.sparkline-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgba(0, 0, 0, 0.9);
+}
+
+/* Enhanced stock card hover for better interactivity */
+.stock-card-modern:hover .sparkline-container {
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: 8px;
+    padding: 0.25rem;
+    margin: -0.25rem;
+}
+
+/* Day range bar interactive */
+.day-range-bar {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.day-range-bar:hover {
+    height: 8px;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.day-range-indicator {
+    transition: all 0.2s ease;
+}
+
+.day-range-bar:hover .day-range-indicator {
+    width: 14px;
+    height: 14px;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.5);
+}
+
+/* Metric items hover effect */
+.metric-item {
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 6px;
+}
+
+.metric-item:hover {
+    background: rgba(102, 126, 234, 0.05);
+    transform: translateY(-1px);
+}
+
+/* Price section interactive */
+.stock-price-section {
+    transition: all 0.2s ease;
+}
+
+.stock-price-section:hover {
+    background: #f1f5f9;
+    transform: scale(1.02);
+}
+
+/* Smooth animations for all interactive elements */
+.stock-card-modern * {
+    transition: all 0.2s ease;
+}
+
+
+/* Stock Detail Page Styles */
+.stock-detail-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.stock-detail-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+}
+
+.stock-detail-ticker {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+}
+
+.stock-detail-price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+/* TradingView Widget Container */
+.tradingview-widget-container {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#tradingview_chart {
+    width: 100%;
+    height: 100%;
+}
+
+/* Statistics Items */
+.stat-item {
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.stat-item:hover {
+    background: #f1f5f9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+/* Position Items */
+.position-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.position-item:last-child {
+    border-bottom: none;
+}
+
+.position-label {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.position-value {
+    font-size: 1rem;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* Similar Stocks */
+.similar-stock-item {
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+.similar-stock-item:last-child {
+    border-bottom: none;
+}
+
+.similar-stock-item:hover {
+    background: #f8fafc;
+    transform: translateX(4px);
+}
+
+/* Responsive adjustments for stock detail */
+@media (max-width: 768px) {
+    .stock-detail-title {
+        font-size: 1.75rem;
+    }
+    
+    .stock-detail-price {
+        font-size: 2rem;
+    }
+    
+    .tradingview-widget-container {
+        height: 400px;
+    }
+}
+
+
+/* Clickable Stock Cards */
+.stock-card a {
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+.stock-card a:hover .stock-ticker {
+    color: #667eea;
+}
+
+.stock-card a:hover .stock-price {
+    transform: scale(1.05);
+}
+
+.stock-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* Stock card footer buttons */
+.stock-card-footer .btn {
+    transition: all 0.2s ease;
+}
+
+.stock-card-footer .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}

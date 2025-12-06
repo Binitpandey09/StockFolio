@@ -59,24 +59,48 @@ class StockDataService:
             ticker = yf.Ticker(symbol)
             info = ticker.info
             hist = ticker.history(period="1d")
+            hist_7d = ticker.history(period="7d")  # For sparkline
             
             if hist.empty:
                 return None
                 
             current_price = hist['Close'].iloc[-1]
+            previous_close = info.get('previousClose', current_price)
+            
+            # Calculate day change
+            day_change = float(current_price - previous_close)
+            day_change_percent = float((day_change / previous_close) * 100) if previous_close else 0
+            
+            # Get 7-day prices for sparkline
+            sparkline_prices = []
+            if not hist_7d.empty:
+                sparkline_prices = [float(price) for price in hist_7d['Close'].tolist()]
             
             return {
                 'symbol': symbol.upper(),
                 'name': info.get('longName', symbol),
                 'current_price': float(current_price),
-                'previous_close': float(info.get('previousClose', current_price)),
-                'day_change': float(current_price - info.get('previousClose', current_price)),
-                'day_change_percent': float((current_price - info.get('previousClose', current_price)) / info.get('previousClose', current_price) * 100) if info.get('previousClose') else 0,
+                'previous_close': float(previous_close),
+                'day_change': day_change,
+                'day_change_percent': day_change_percent,
                 'volume': int(info.get('volume', 0)),
                 'market_cap': info.get('marketCap', 0),
                 'description': info.get('longBusinessSummary', ''),
                 'sector': info.get('sector', ''),
                 'industry': info.get('industry', ''),
+                # New fields for improved cards
+                'day_high': float(info.get('dayHigh', current_price)),
+                'day_low': float(info.get('dayLow', current_price)),
+                'open_price': float(info.get('open', current_price)),
+                'fifty_two_week_high': float(info.get('fiftyTwoWeekHigh', current_price)),
+                'fifty_two_week_low': float(info.get('fiftyTwoWeekLow', current_price)),
+                'pe_ratio': info.get('trailingPE', None),
+                'forward_pe': info.get('forwardPE', None),
+                'dividend_yield': info.get('dividendYield', 0),
+                'average_volume': int(info.get('averageVolume', 0)),
+                'beta': info.get('beta', None),
+                'eps': info.get('trailingEps', None),
+                'sparkline_prices': sparkline_prices,
                 'last_updated': datetime.now().isoformat(),
                 'source': 'yfinance'
             }
