@@ -39,8 +39,11 @@
             <div class="summary-card {% if gains >= 0 %}bg-info{% else %}bg-danger{% endif %}">
                 <div class="summary-icon">{% if gains >= 0 %}📈{% else %}📉{% endif %}</div>
                 <div class="summary-info">
-                    <h6>Total Return</h6>
-                    <h3>{{ gains|floatformat:2 }}%</h3>
+                    <h6>Total Profit/Loss</h6>
+                    {% with profit=total_value|sub:invested %}
+                    <h3>{% if profit >= 0 %}+{% endif %} ${{ profit|floatformat:2 }}</h3>
+                    <small>{{ gains|floatformat:2 }}% return</small>
+                    {% endwith %}
                 </div>
             </div>
         </div>
@@ -89,8 +92,8 @@
                             <div class="holding-main">
                                 <div class="holding-info">
                                     <a href="{% url 'stock_detail' item.stock.ticker %}" class="holding-link">
-                                        <div class="holding-ticker">{{ item.stock.ticker }}</div>
-                                        <div class="holding-name">{{ item.stock.name|short_name }}</div>
+                                        <div class="holding-ticker">{{ item.stock.name }}</div>
+                                        <div class="holding-name">{{ item.stock.ticker }}</div>
                                     </a>
                                 </div>
                                 <div class="holding-quantity">
@@ -162,13 +165,13 @@
                                 <div class="stock-card">
                                     <a href="{% url 'stock_detail' stock.ticker %}" class="text-decoration-none">
                                         <div class="stock-card-header">
-                                            <span class="stock-ticker">{{ stock.name|short_name }}</span>
+                                            <span class="stock-ticker">{{ stock.name }}</span>
                                             <span class="stock-price {% if stock.day_change > 0 %}price-change-positive{% elif stock.day_change < 0 %}price-change-negative{% endif %}">
                                                 ${{ stock.curr_price|floatformat:2 }}
                                             </span>
                                         </div>
                                         <div class="stock-card-body">
-                                            <p class="stock-name mb-2" title="{{ stock.name }}">{{ stock.ticker }} • {{ stock.name }}</p>
+                                            <p class="stock-name mb-2">{{ stock.ticker }}</p>
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <span class="sector-badge {{ stock.sector|lower|cut:" " }}">{{ stock.sector|default:"N/A" }}</span>
                                                 {% if stock.day_change_percent %}
@@ -185,7 +188,11 @@
                                             <a href="{% url 'stock_detail' stock.ticker %}" class="btn btn-sm btn-outline-primary">
                                                 📊 View Details
                                             </a>
-                                            <a href="{% url 'stocks' %}" class="btn btn-sm btn-primary">🛒 Buy</a>
+                                            <button class="btn btn-sm btn-primary" 
+                                                    data-bs-toggle="modal" 
+                                                    data-bs-target="#buyModal-{{ stock.id }}">
+                                                🛒 Buy
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -197,6 +204,56 @@
                     {% endif %}
                 </div>
             </div>
+
+            <!-- Buy Modals for Trending Stocks -->
+            {% for stock in trending_stocks %}
+            <div class="modal fade" id="buyModal-{{ stock.id }}" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <form method="POST" action="{% url 'buy' stock.id %}" class="modal-content">
+                        {% csrf_token %}
+                        <div class="modal-header">
+                            <h5 class="modal-title">🛒 Buy {{ stock.ticker }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <div class="alert alert-info">
+                                    <strong>{{ stock.name }}</strong><br>
+                                    <small>Current Price: <strong>${{ stock.curr_price|floatformat:2 }}</strong></small>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="buy-qty-{{ stock.id }}" class="form-label">Quantity</label>
+                                <input type="number" 
+                                       class="form-control form-control-lg" 
+                                       id="buy-qty-{{ stock.id }}" 
+                                       name="quantity" 
+                                       min="1" 
+                                       placeholder="Enter quantity" 
+                                       required>
+                            </div>
+                            <div class="estimated-cost">
+                                <p class="mb-0">Estimated Cost: <span id="buy-cost-{{ stock.id }}" class="text-primary fw-bold">$0.00</span></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Confirm Purchase</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <script>
+                // Calculate estimated cost for {{ stock.ticker }}
+                document.getElementById('buy-qty-{{ stock.id }}').addEventListener('input', function() {
+                    const quantity = parseFloat(this.value) || 0;
+                    const price = {{ stock.curr_price }};
+                    const estimatedCost = quantity * price;
+                    document.getElementById('buy-cost-{{ stock.id }}').textContent = '$' + estimatedCost.toFixed(2);
+                });
+            </script>
+            {% endfor %}
         </div>
 
         <!-- Right Column -->
@@ -239,8 +296,8 @@
                                 <div class="d-flex justify-content-between">
                                     <div>
                                         <span class="badge {% if txn.type == 'BUY' %}bg-success{% else %}bg-danger{% endif %} me-1">{{ txn.type }}</span>
-                                        <strong>{{ txn.stock_symbol }}</strong>
-                                        <div><small class="text-muted">{{ txn.quantity }} shares @ ${{ txn.price|floatformat:2 }}</small></div>
+                                        <strong>{{ txn.stock_name }}</strong>
+                                        <div><small class="text-muted">{{ txn.stock_symbol }} • {{ txn.quantity }} shares @ ${{ txn.price|floatformat:2 }}</small></div>
                                     </div>
                                     <small class="text-muted">{{ txn.date|date:"M d" }}</small>
                                 </div>
@@ -265,9 +322,9 @@
                         {% for stock in top_stocks %}
                         <div class="top-stock-item">
                             <div class="flex-grow-1">
-                                <strong>{{ stock.name|short_name }}</strong>
+                                <strong>{{ stock.name }}</strong>
                                 <div>
-                                    <small class="text-muted" title="{{ stock.name }}">{{ stock.ticker }}</small>
+                                    <small class="text-muted">{{ stock.ticker }}</small>
                                     {% if stock.day_change_percent %}
                                     <small class="ms-2 {% if stock.day_change > 0 %}price-change-positive{% elif stock.day_change < 0 %}price-change-negative{% else %}price-change-neutral{% endif %}">
                                         {% if stock.day_change > 0 %}▲{% elif stock.day_change < 0 %}▼{% else %}━{% endif %}
@@ -407,9 +464,7 @@
 .holding-name {
     font-size: 0.875rem;
     color: #6b7280;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    line-height: 1.4;
 }
 
 /* Holding Quantity */
@@ -540,6 +595,42 @@
     color: #6b7280;
     font-size: 1rem;
     margin-bottom: 0;
+}
+
+/* Buy Modal Styling */
+.modal-content {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 16px 16px 0 0;
+    border: none;
+    padding: 20px 24px;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.modal-footer {
+    border-top: 1px solid #e5e7eb;
+    padding: 16px 24px;
+}
+
+.estimated-cost {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 16px;
 }
 
 /* Responsive Design */

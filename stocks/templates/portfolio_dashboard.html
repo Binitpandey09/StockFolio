@@ -97,7 +97,7 @@
                             <td>
                                 <a href="{% url 'stock_detail' symbol %}" class="stock-link">
                                     <div class="stock-cell">
-                                        <div class="stock-name">{{ data.stock_name|short_name }}</div>
+                                        <div class="stock-name">{{ data.stock_name }}</div>
                                         <div class="stock-ticker">{{ symbol }}</div>
                                     </div>
                                 </a>
@@ -179,7 +179,7 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <div class="alert alert-info">
-                            <strong>{{ data.stock_name|short_name }}</strong><br>
+                            <strong>{{ data.stock_name }}</strong><br>
                             <small>You own: <strong>{{ data.quantity }}</strong> shares</small><br>
                             <small>Current Price: <strong>${{ data.current_price|floatformat:2 }}</strong></small>
                         </div>
@@ -232,7 +232,7 @@
                     <div class="holding-item">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <div>
-                                <strong>{{ data.stock_name|short_name }}</strong>
+                                <strong>{{ data.stock_name }}</strong>
                                 <small class="text-muted ms-2">{{ symbol }}</small>
                             </div>
                             <div class="text-end">
@@ -269,7 +269,7 @@
                                 {% for symbol, data in portfolio.items %}
                                 {% with pl_percent=data.current_value|sub:data.invested_value|div:data.invested_value|mul:100 %}
                                 {% if forloop.first or pl_percent > best_percent %}
-                                    {{ data.stock_name|short_name }} (+{{ pl_percent|floatformat:1 }}%)
+                                    {{ data.stock_name }} (+{{ pl_percent|floatformat:1 }}%)
                                 {% endif %}
                                 {% endwith %}
                                 {% endfor %}

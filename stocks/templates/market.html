@@ -77,9 +77,9 @@
                     <div class="d-flex justify-content-between align-items-start mb-2">
                         <div class="flex-grow-1 me-2">
                             <a href="{% url 'stock_detail' stock.ticker %}" class="text-decoration-none">
-                                <h5 class="stock-ticker-modern mb-1">{{ stock.name|short_name }}</h5>
+                                <h5 class="stock-ticker-modern mb-1">{{ stock.name }}</h5>
                             </a>
-                            <p class="stock-company-name mb-0" title="{{ stock.name }}">
+                            <p class="stock-company-name mb-0">
                                 <a href="{% url 'stock_detail' stock.ticker %}" class="text-decoration-none text-muted">
                                     {{ stock.ticker }}
                                 </a> • 

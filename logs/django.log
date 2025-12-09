@@ -2584,3 +2584,683 @@ INFO 2025-12-07 05:16:47,555 services 17272 5604 Cached data for AMD
 INFO 2025-12-07 05:16:48,787 services 17272 5604 Cached data for IBM
 INFO 2025-12-07 05:16:48,788 services 17272 5604 Retrieved cached data for MSFT
 INFO 2025-12-07 05:16:48,821 basehttp 17272 5604 "GET /stock/INTC/ HTTP/1.1" 200 27793
+INFO 2025-12-07 14:09:28,922 autoreload 11436 12196 Watching for file changes with StatReloader
+INFO 2025-12-07 14:10:15,835 basehttp 11436 5720 "GET / HTTP/1.1" 302 0
+INFO 2025-12-07 14:10:15,963 basehttp 11436 5720 "GET /login/?next=/ HTTP/1.1" 200 13747
+INFO 2025-12-07 14:10:16,250 basehttp 11436 5720 "GET /static/main.css HTTP/1.1" 304 0
+WARNING 2025-12-07 14:10:17,140 log 11436 5720 Not Found: /favicon.ico
+WARNING 2025-12-07 14:10:17,145 basehttp 11436 5720 "GET /favicon.ico HTTP/1.1" 404 7589
+INFO 2025-12-07 14:10:25,966 basehttp 11436 9824 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-12-07 14:10:42,456 services 11436 9824 Cached data for NVDA
+INFO 2025-12-07 14:10:44,555 services 11436 9824 Cached data for NFLX
+INFO 2025-12-07 14:10:47,094 services 11436 9824 Cached data for INTC
+INFO 2025-12-07 14:10:50,605 services 11436 9824 Cached data for TSLA
+INFO 2025-12-07 14:10:55,501 services 11436 9824 Cached data for AAPL
+INFO 2025-12-07 14:11:03,746 services 11436 9824 Cached data for BAC
+INFO 2025-12-07 14:11:11,029 services 11436 9824 Cached data for META
+INFO 2025-12-07 14:11:17,271 services 11436 9824 Cached data for MA
+INFO 2025-12-07 14:11:20,510 services 11436 9824 Cached data for MSFT
+INFO 2025-12-07 14:11:20,511 services 11436 9824 Retrieved cached data for TSLA
+INFO 2025-12-07 14:11:20,780 basehttp 11436 9824 "GET / HTTP/1.1" 200 49469
+INFO 2025-12-07 14:13:08,568 services 11436 6672 Retrieved cached data for META
+INFO 2025-12-07 14:13:10,995 services 11436 6672 Cached data for V
+INFO 2025-12-07 14:13:10,997 services 11436 6672 Retrieved cached data for TSLA
+INFO 2025-12-07 14:13:12,771 services 11436 6672 Cached data for KO
+INFO 2025-12-07 14:13:13,989 services 11436 6672 Cached data for PEP
+INFO 2025-12-07 14:13:15,622 services 11436 6672 Cached data for WMT
+INFO 2025-12-07 14:13:16,953 services 11436 6672 Cached data for AMZN
+INFO 2025-12-07 14:13:16,954 services 11436 6672 Retrieved cached data for BAC
+INFO 2025-12-07 14:13:17,025 basehttp 11436 6672 "GET /stocks/ HTTP/1.1" 200 94773
+INFO 2025-12-07 14:13:40,191 services 11436 18096 Retrieved cached data for NVDA
+INFO 2025-12-07 14:13:40,195 services 11436 18096 Retrieved cached data for NFLX
+INFO 2025-12-07 14:13:40,196 services 11436 18096 Retrieved cached data for INTC
+INFO 2025-12-07 14:13:40,197 services 11436 18096 Retrieved cached data for TSLA
+INFO 2025-12-07 14:13:40,198 services 11436 18096 Retrieved cached data for AAPL
+INFO 2025-12-07 14:13:40,200 services 11436 18096 Retrieved cached data for BAC
+INFO 2025-12-07 14:13:40,203 services 11436 18096 Retrieved cached data for META
+INFO 2025-12-07 14:13:40,204 services 11436 18096 Retrieved cached data for MA
+INFO 2025-12-07 14:13:40,204 services 11436 18096 Retrieved cached data for MSFT
+INFO 2025-12-07 14:13:40,206 services 11436 18096 Retrieved cached data for TSLA
+INFO 2025-12-07 14:13:40,256 basehttp 11436 18096 "GET / HTTP/1.1" 200 49469
+INFO 2025-12-07 14:24:34,918 services 11436 8812 Retrieved cached data for NVDA
+INFO 2025-12-07 14:24:34,924 services 11436 8812 Retrieved cached data for NFLX
+INFO 2025-12-07 14:24:34,924 services 11436 8812 Retrieved cached data for INTC
+INFO 2025-12-07 14:24:34,925 services 11436 8812 Retrieved cached data for TSLA
+INFO 2025-12-07 14:24:34,926 services 11436 8812 Retrieved cached data for AAPL
+INFO 2025-12-07 14:24:34,926 services 11436 8812 Retrieved cached data for BAC
+INFO 2025-12-07 14:24:34,931 services 11436 8812 Retrieved cached data for META
+INFO 2025-12-07 14:24:34,932 services 11436 8812 Retrieved cached data for MA
+INFO 2025-12-07 14:24:34,933 services 11436 8812 Retrieved cached data for MSFT
+INFO 2025-12-07 14:24:34,933 services 11436 8812 Retrieved cached data for TSLA
+INFO 2025-12-07 14:24:35,240 basehttp 11436 8812 "GET / HTTP/1.1" 200 49295
+INFO 2025-12-07 14:24:39,243 services 11436 8812 Retrieved cached data for NVDA
+INFO 2025-12-07 14:24:39,244 services 11436 8812 Retrieved cached data for NFLX
+INFO 2025-12-07 14:24:39,245 services 11436 8812 Retrieved cached data for INTC
+INFO 2025-12-07 14:24:39,245 services 11436 8812 Retrieved cached data for TSLA
+INFO 2025-12-07 14:24:39,246 services 11436 8812 Retrieved cached data for AAPL
+INFO 2025-12-07 14:24:39,247 services 11436 8812 Retrieved cached data for BAC
+INFO 2025-12-07 14:24:39,250 services 11436 8812 Retrieved cached data for META
+INFO 2025-12-07 14:24:39,252 services 11436 8812 Retrieved cached data for MA
+INFO 2025-12-07 14:24:39,253 services 11436 8812 Retrieved cached data for MSFT
+INFO 2025-12-07 14:24:39,255 services 11436 8812 Retrieved cached data for TSLA
+INFO 2025-12-07 14:24:39,311 basehttp 11436 8812 "GET / HTTP/1.1" 200 49295
+INFO 2025-12-07 14:28:55,093 services 11436 13620 Cached data for NVDA
+INFO 2025-12-07 14:28:56,629 services 11436 13620 Cached data for NFLX
+INFO 2025-12-07 14:28:57,727 services 11436 13620 Cached data for INTC
+INFO 2025-12-07 14:28:58,652 services 11436 13620 Cached data for TSLA
+INFO 2025-12-07 14:28:59,673 services 11436 13620 Cached data for AAPL
+INFO 2025-12-07 14:29:01,024 services 11436 13620 Cached data for BAC
+INFO 2025-12-07 14:29:02,033 services 11436 13620 Cached data for META
+INFO 2025-12-07 14:29:03,262 services 11436 13620 Cached data for MA
+INFO 2025-12-07 14:29:04,395 services 11436 13620 Cached data for MSFT
+INFO 2025-12-07 14:29:04,397 services 11436 13620 Retrieved cached data for TSLA
+INFO 2025-12-07 14:29:04,479 basehttp 11436 13620 "GET / HTTP/1.1" 200 49241
+INFO 2025-12-07 14:31:14,855 services 11436 25348 Cached data for KO
+INFO 2025-12-07 14:31:14,897 services 11436 25348 Retrieved cached data for BAC
+INFO 2025-12-07 14:31:15,873 services 11436 25348 Cached data for AMZN
+INFO 2025-12-07 14:31:15,890 services 11436 25348 Retrieved cached data for NFLX
+INFO 2025-12-07 14:31:15,907 services 11436 25348 Retrieved cached data for TSLA
+INFO 2025-12-07 14:31:16,151 basehttp 11436 25348 "GET /portfolio_dashboard/ HTTP/1.1" 200 57767
+INFO 2025-12-07 14:31:27,816 services 11436 26712 Retrieved cached data for TSLA
+INFO 2025-12-07 14:31:27,817 services 11436 26712 Retrieved cached data for NFLX
+INFO 2025-12-07 14:31:27,818 services 11436 26712 Retrieved cached data for AMZN
+INFO 2025-12-07 14:31:27,819 services 11436 26712 Retrieved cached data for BAC
+INFO 2025-12-07 14:31:27,819 services 11436 26712 Retrieved cached data for KO
+INFO 2025-12-07 14:31:27,878 basehttp 11436 26712 "GET /dashboard/ HTTP/1.1" 200 21596
+INFO 2025-12-07 14:31:31,988 services 11436 26712 Retrieved cached data for KO
+INFO 2025-12-07 14:31:32,002 services 11436 26712 Retrieved cached data for BAC
+INFO 2025-12-07 14:31:32,020 services 11436 26712 Retrieved cached data for AMZN
+INFO 2025-12-07 14:31:32,037 services 11436 26712 Retrieved cached data for NFLX
+INFO 2025-12-07 14:31:32,050 services 11436 26712 Retrieved cached data for TSLA
+INFO 2025-12-07 14:31:32,082 basehttp 11436 26712 "GET /portfolio_dashboard/ HTTP/1.1" 200 57767
+INFO 2025-12-07 14:31:34,128 services 11436 22428 Retrieved cached data for TSLA
+INFO 2025-12-07 14:31:34,138 services 11436 22428 Retrieved cached data for AMZN
+INFO 2025-12-07 14:31:34,150 services 11436 22428 Retrieved cached data for NFLX
+INFO 2025-12-07 14:31:34,162 services 11436 22428 Retrieved cached data for INTC
+INFO 2025-12-07 14:31:34,299 basehttp 11436 22428 "GET /watchlist/ HTTP/1.1" 200 24646
+INFO 2025-12-07 14:31:36,378 services 11436 22428 Retrieved cached data for TSLA
+INFO 2025-12-07 14:31:36,389 services 11436 22428 Retrieved cached data for AMZN
+INFO 2025-12-07 14:31:36,405 services 11436 22428 Retrieved cached data for NFLX
+INFO 2025-12-07 14:31:36,417 services 11436 22428 Retrieved cached data for INTC
+INFO 2025-12-07 14:31:36,435 basehttp 11436 22428 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 732
+INFO 2025-12-07 14:31:39,358 basehttp 11436 22428 "GET /price-alerts/ HTTP/1.1" 200 14321
+INFO 2025-12-07 14:31:43,211 basehttp 11436 26096 "GET /stock-comparison/ HTTP/1.1" 200 12525
+INFO 2025-12-07 14:31:45,191 basehttp 11436 26096 "GET /transaction_history/ HTTP/1.1" 200 18380
+INFO 2025-12-07 14:31:48,947 services 11436 26096 Retrieved cached data for NVDA
+INFO 2025-12-07 14:31:48,948 services 11436 26096 Retrieved cached data for NFLX
+INFO 2025-12-07 14:31:48,949 services 11436 26096 Retrieved cached data for INTC
+INFO 2025-12-07 14:31:48,950 services 11436 26096 Retrieved cached data for TSLA
+INFO 2025-12-07 14:31:48,951 services 11436 26096 Retrieved cached data for AAPL
+INFO 2025-12-07 14:31:48,952 services 11436 26096 Retrieved cached data for BAC
+INFO 2025-12-07 14:31:48,956 services 11436 26096 Retrieved cached data for META
+INFO 2025-12-07 14:31:48,957 services 11436 26096 Retrieved cached data for MA
+INFO 2025-12-07 14:31:48,960 services 11436 26096 Retrieved cached data for MSFT
+INFO 2025-12-07 14:31:48,962 services 11436 26096 Retrieved cached data for TSLA
+INFO 2025-12-07 14:31:49,026 basehttp 11436 26096 "GET / HTTP/1.1" 200 49241
+INFO 2025-12-07 14:31:58,119 services 11436 8724 Retrieved cached data for NFLX
+INFO 2025-12-07 14:32:00,021 services 11436 8724 Cached data for DIS
+INFO 2025-12-07 14:32:01,239 services 11436 8724 Cached data for GOOGL
+INFO 2025-12-07 14:32:01,240 services 11436 8724 Retrieved cached data for META
+INFO 2025-12-07 14:32:01,293 basehttp 11436 8724 "GET /stock/NFLX/ HTTP/1.1" 200 29226
+INFO 2025-12-07 14:32:30,353 services 11436 24916 Retrieved cached data for NVDA
+INFO 2025-12-07 14:32:30,355 services 11436 24916 Retrieved cached data for NFLX
+INFO 2025-12-07 14:32:30,355 services 11436 24916 Retrieved cached data for INTC
+INFO 2025-12-07 14:32:30,356 services 11436 24916 Retrieved cached data for TSLA
+INFO 2025-12-07 14:32:30,359 services 11436 24916 Retrieved cached data for AAPL
+INFO 2025-12-07 14:32:30,360 services 11436 24916 Retrieved cached data for BAC
+INFO 2025-12-07 14:32:30,367 services 11436 24916 Retrieved cached data for META
+INFO 2025-12-07 14:32:30,371 services 11436 24916 Retrieved cached data for MA
+INFO 2025-12-07 14:32:30,374 services 11436 24916 Retrieved cached data for MSFT
+INFO 2025-12-07 14:32:30,377 services 11436 24916 Retrieved cached data for TSLA
+INFO 2025-12-07 14:32:30,418 basehttp 11436 24916 "GET / HTTP/1.1" 200 49241
+INFO 2025-12-08 00:12:12,909 autoreload 2944 12212 Watching for file changes with StatReloader
+INFO 2025-12-08 00:14:04,266 basehttp 2944 6300 "GET / HTTP/1.1" 302 0
+INFO 2025-12-08 00:14:05,187 basehttp 2944 6300 "GET /login/?next=/ HTTP/1.1" 200 13747
+INFO 2025-12-08 00:14:05,588 basehttp 2944 21596 "GET /static/main.css HTTP/1.1" 304 0
+WARNING 2025-12-08 00:14:06,269 log 2944 21596 Not Found: /favicon.ico
+WARNING 2025-12-08 00:14:06,271 basehttp 2944 21596 "GET /favicon.ico HTTP/1.1" 404 7589
+INFO 2025-12-08 00:14:47,031 basehttp 2944 17524 "POST /login/?next=/ HTTP/1.1" 302 0
+WARNING 2025-12-08 00:14:58,995 services 2944 17524 yfinance failed for NVDA: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:14:59,023 services 2944 17524 Tiingo API failed for NVDA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/NVDA?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D86299FBB0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:14:59,029 services 2944 17524 yfinance failed for NFLX: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:14:59,037 services 2944 17524 Tiingo API failed for NFLX: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/NFLX?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D86280C820>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:14:59,042 services 2944 17524 yfinance failed for INTC: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:14:59,048 services 2944 17524 Tiingo API failed for INTC: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/INTC?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D86299F340>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:14:59,054 services 2944 17524 yfinance failed for TSLA: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:14:59,060 services 2944 17524 Tiingo API failed for TSLA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/TSLA?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862BB09A0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:14:59,066 services 2944 17524 yfinance failed for AAPL: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:14:59,074 services 2944 17524 Tiingo API failed for AAPL: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/AAPL?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D86299FAC0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:14:59,079 services 2944 17524 yfinance failed for BAC: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:14:59,084 services 2944 17524 Tiingo API failed for BAC: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/BAC?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862BB0940>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:14:59,095 services 2944 17524 yfinance failed for META: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:14:59,101 services 2944 17524 Tiingo API failed for META: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/META?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862932880>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:14:59,107 services 2944 17524 yfinance failed for MA: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:14:59,118 services 2944 17524 Tiingo API failed for MA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/MA?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862931280>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:14:59,123 services 2944 17524 yfinance failed for MSFT: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:14:59,129 services 2944 17524 Tiingo API failed for MSFT: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/MSFT?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862BB0BE0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:14:59,135 services 2944 17524 yfinance failed for TSLA: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:14:59,140 services 2944 17524 Tiingo API failed for TSLA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/TSLA?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862932460>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+INFO 2025-12-08 00:14:59,489 basehttp 2944 17524 "GET / HTTP/1.1" 200 46195
+WARNING 2025-12-08 00:15:07,479 services 2944 20964 yfinance failed for KO: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:07,485 services 2944 20964 Tiingo API failed for KO: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/KO?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862665E50>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:07,493 services 2944 20964 yfinance failed for BAC: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:07,502 services 2944 20964 Tiingo API failed for BAC: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/BAC?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625FA430>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:07,509 services 2944 20964 yfinance failed for AMZN: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:07,514 services 2944 20964 Tiingo API failed for AMZN: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/AMZN?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862665F10>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:07,522 services 2944 20964 yfinance failed for NFLX: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:07,527 services 2944 20964 Tiingo API failed for NFLX: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/NFLX?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625B0820>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:07,535 services 2944 20964 yfinance failed for TSLA: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:07,539 services 2944 20964 Tiingo API failed for TSLA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/TSLA?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862620730>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+INFO 2025-12-08 00:15:07,590 basehttp 2944 20964 "GET /portfolio_dashboard/ HTTP/1.1" 200 56512
+WARNING 2025-12-08 00:15:18,053 services 2944 24824 yfinance failed for NVDA: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:18,057 services 2944 24824 Tiingo API failed for NVDA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/NVDA?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625AB0D0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:18,063 services 2944 24824 yfinance failed for NFLX: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:18,070 services 2944 24824 Tiingo API failed for NFLX: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/NFLX?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8627A4490>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:18,074 services 2944 24824 yfinance failed for INTC: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:18,079 services 2944 24824 Tiingo API failed for INTC: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/INTC?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625AB940>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:18,085 services 2944 24824 yfinance failed for TSLA: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:18,090 services 2944 24824 Tiingo API failed for TSLA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/TSLA?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625B3AC0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:18,096 services 2944 24824 yfinance failed for AAPL: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:18,103 services 2944 24824 Tiingo API failed for AAPL: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/AAPL?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625BFD60>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:18,109 services 2944 24824 yfinance failed for BAC: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:18,114 services 2944 24824 Tiingo API failed for BAC: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/BAC?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625C36A0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:18,122 services 2944 24824 yfinance failed for META: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:18,127 services 2944 24824 Tiingo API failed for META: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/META?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8627A4310>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:18,131 services 2944 24824 yfinance failed for MA: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:18,137 services 2944 24824 Tiingo API failed for MA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/MA?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862590850>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:18,144 services 2944 24824 yfinance failed for MSFT: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:18,149 services 2944 24824 Tiingo API failed for MSFT: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/MSFT?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625B33A0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:18,155 services 2944 24824 yfinance failed for TSLA: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:18,160 services 2944 24824 Tiingo API failed for TSLA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/TSLA?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625B0640>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+INFO 2025-12-08 00:15:18,194 basehttp 2944 24824 "GET / HTTP/1.1" 200 46195
+WARNING 2025-12-08 00:15:44,638 services 2944 14888 yfinance failed for META: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:56,516 services 2944 14888 Tiingo API failed for META: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/META?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862716490>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:56,523 services 2944 14888 yfinance failed for V: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:56,528 services 2944 14888 Tiingo API failed for V: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/V?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8627A4370>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:56,534 services 2944 14888 yfinance failed for TSLA: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:56,541 services 2944 14888 Tiingo API failed for TSLA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/TSLA?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625BFC70>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:56,548 services 2944 14888 yfinance failed for KO: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:56,554 services 2944 14888 Tiingo API failed for KO: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/KO?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862716220>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:56,561 services 2944 14888 yfinance failed for PEP: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:56,566 services 2944 14888 Tiingo API failed for PEP: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/PEP?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862702AC0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:56,572 services 2944 14888 yfinance failed for WMT: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:56,577 services 2944 14888 Tiingo API failed for WMT: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/WMT?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8627A4BB0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:56,582 services 2944 14888 yfinance failed for AMZN: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:56,587 services 2944 14888 Tiingo API failed for AMZN: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/AMZN?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625B7970>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:15:56,593 services 2944 14888 yfinance failed for BAC: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:15:56,599 services 2944 14888 Tiingo API failed for BAC: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/BAC?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625BF2B0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+INFO 2025-12-08 00:15:56,646 basehttp 2944 14888 "GET /stocks/ HTTP/1.1" 200 89058
+WARNING 2025-12-08 00:16:23,957 services 2944 20160 yfinance failed for META: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:23,961 services 2944 20160 Tiingo API failed for META: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/META?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862B93370>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:23,970 services 2944 20160 yfinance failed for V: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:23,975 services 2944 20160 Tiingo API failed for V: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/V?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862B97610>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:23,983 services 2944 20160 yfinance failed for TSLA: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:23,989 services 2944 20160 Tiingo API failed for TSLA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/TSLA?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862BB6C10>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:23,994 services 2944 20160 yfinance failed for KO: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:23,999 services 2944 20160 Tiingo API failed for KO: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/KO?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862B93460>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:24,007 services 2944 20160 yfinance failed for PEP: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:24,012 services 2944 20160 Tiingo API failed for PEP: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/PEP?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862BB5700>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:24,019 services 2944 20160 yfinance failed for WMT: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:24,025 services 2944 20160 Tiingo API failed for WMT: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/WMT?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8627027F0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:24,031 services 2944 20160 yfinance failed for AMZN: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:24,037 services 2944 20160 Tiingo API failed for AMZN: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/AMZN?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862BB5550>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:24,042 services 2944 20160 yfinance failed for BAC: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:24,047 services 2944 20160 Tiingo API failed for BAC: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/BAC?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862B91DF0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+INFO 2025-12-08 00:16:24,079 basehttp 2944 20160 "GET /stocks/ HTTP/1.1" 200 89058
+WARNING 2025-12-08 00:16:30,046 services 2944 4908 yfinance failed for META: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:30,051 services 2944 4908 Tiingo API failed for META: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/META?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8627BBC10>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:30,057 services 2944 4908 yfinance failed for V: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:30,063 services 2944 4908 Tiingo API failed for V: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/V?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862B97460>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:30,068 services 2944 4908 yfinance failed for TSLA: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:30,073 services 2944 4908 Tiingo API failed for TSLA: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/TSLA?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862BB6D30>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:30,079 services 2944 4908 yfinance failed for KO: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:30,084 services 2944 4908 Tiingo API failed for KO: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/KO?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625FF490>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:30,091 services 2944 4908 yfinance failed for PEP: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:30,096 services 2944 4908 Tiingo API failed for PEP: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/PEP?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862602730>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:30,103 services 2944 4908 yfinance failed for WMT: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:30,107 services 2944 4908 Tiingo API failed for WMT: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/WMT?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862BB5D60>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:30,113 services 2944 4908 yfinance failed for AMZN: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:30,119 services 2944 4908 Tiingo API failed for AMZN: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/AMZN?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862B97C10>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:16:30,124 services 2944 4908 yfinance failed for BAC: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:16:30,129 services 2944 4908 Tiingo API failed for BAC: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/BAC?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862602D90>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+INFO 2025-12-08 00:16:30,165 basehttp 2944 4908 "GET /stocks/ HTTP/1.1" 200 89058
+WARNING 2025-12-08 00:17:17,990 services 2944 25692 yfinance failed for META: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:17:17,995 services 2944 25692 Tiingo API failed for META: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/META?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862B91D30>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:17:18,018 services 2944 25692 yfinance failed for DIS: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:17:18,025 services 2944 25692 Tiingo API failed for DIS: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/DIS?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D862602B50>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:17:18,030 services 2944 25692 yfinance failed for GOOGL: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:17:18,040 services 2944 25692 Tiingo API failed for GOOGL: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/GOOGL?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625F70A0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+WARNING 2025-12-08 00:17:18,047 services 2944 25692 yfinance failed for NFLX: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+WARNING 2025-12-08 00:17:18,053 services 2944 25692 Tiingo API failed for NFLX: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/NFLX?token=test123 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8625FC4F0>: Failed to resolve 'api.tiingo.com' ([Errno 11001] getaddrinfo failed)"))
+INFO 2025-12-08 00:17:18,076 basehttp 2944 25692 "GET /stock/META/ HTTP/1.1" 200 24692
+INFO 2025-12-08 00:18:52,995 autoreload 11844 6108 Watching for file changes with StatReloader
+INFO 2025-12-08 00:20:34,329 services 2944 24044 Cached data for META
+INFO 2025-12-08 00:20:34,391 services 2944 16116 Cached data for META
+INFO 2025-12-08 00:20:34,452 services 2944 26488 Cached data for META
+INFO 2025-12-08 00:20:34,465 services 2944 18216 Cached data for META
+INFO 2025-12-08 00:20:34,492 services 2944 22460 Cached data for META
+INFO 2025-12-08 00:20:36,139 services 2944 24044 Cached data for DIS
+INFO 2025-12-08 00:20:36,182 services 2944 16116 Cached data for DIS
+INFO 2025-12-08 00:20:36,238 services 2944 26488 Cached data for DIS
+INFO 2025-12-08 00:20:36,276 services 2944 22460 Cached data for DIS
+INFO 2025-12-08 00:20:36,299 services 2944 18216 Cached data for DIS
+INFO 2025-12-08 00:20:37,326 services 2944 24044 Cached data for GOOGL
+INFO 2025-12-08 00:20:37,539 services 2944 16116 Cached data for GOOGL
+INFO 2025-12-08 00:20:37,579 services 2944 18216 Cached data for GOOGL
+INFO 2025-12-08 00:20:37,619 services 2944 22460 Cached data for GOOGL
+INFO 2025-12-08 00:20:38,236 services 2944 26488 Cached data for GOOGL
+INFO 2025-12-08 00:20:38,614 services 2944 18216 Cached data for NFLX
+INFO 2025-12-08 00:20:38,647 basehttp 2944 18216 - Broken pipe from ('127.0.0.1', 53832)
+INFO 2025-12-08 00:20:38,666 services 2944 22460 Cached data for NFLX
+INFO 2025-12-08 00:20:38,730 services 2944 16116 Cached data for NFLX
+INFO 2025-12-08 00:20:38,758 services 2944 24044 Cached data for NFLX
+INFO 2025-12-08 00:20:38,768 basehttp 2944 22460 - Broken pipe from ('127.0.0.1', 62443)
+INFO 2025-12-08 00:20:38,769 basehttp 2944 16116 - Broken pipe from ('127.0.0.1', 54081)
+INFO 2025-12-08 00:20:38,771 basehttp 2944 24044 "GET /stock/META/ HTTP/1.1" 200 26603
+INFO 2025-12-08 00:20:39,429 services 2944 26488 Cached data for NFLX
+INFO 2025-12-08 00:20:39,438 basehttp 2944 26488 - Broken pipe from ('127.0.0.1', 62003)
+INFO 2025-12-08 00:21:02,313 services 2944 21020 Cached data for NVDA
+INFO 2025-12-08 00:21:02,314 services 2944 21020 Retrieved cached data for NFLX
+INFO 2025-12-08 00:21:03,495 services 2944 21020 Cached data for INTC
+INFO 2025-12-08 00:21:04,077 services 2944 3224 Retrieved cached data for META
+INFO 2025-12-08 00:21:04,630 services 2944 21020 Cached data for TSLA
+INFO 2025-12-08 00:21:06,060 services 2944 21020 Cached data for AAPL
+INFO 2025-12-08 00:21:06,683 services 2944 3224 Cached data for V
+INFO 2025-12-08 00:21:06,684 services 2944 3224 Retrieved cached data for TSLA
+INFO 2025-12-08 00:21:07,508 services 2944 21020 Cached data for BAC
+INFO 2025-12-08 00:21:07,513 services 2944 21020 Retrieved cached data for META
+INFO 2025-12-08 00:21:08,374 services 2944 3224 Cached data for KO
+INFO 2025-12-08 00:21:08,617 services 2944 21020 Cached data for MA
+INFO 2025-12-08 00:21:09,682 services 2944 3224 Cached data for PEP
+INFO 2025-12-08 00:21:09,856 services 2944 21020 Cached data for MSFT
+INFO 2025-12-08 00:21:09,856 services 2944 21020 Retrieved cached data for TSLA
+INFO 2025-12-08 00:21:09,927 basehttp 2944 21020 - Broken pipe from ('127.0.0.1', 62927)
+INFO 2025-12-08 00:21:10,874 services 2944 3224 Cached data for WMT
+INFO 2025-12-08 00:21:12,005 services 2944 3224 Cached data for AMZN
+INFO 2025-12-08 00:21:12,008 services 2944 3224 Retrieved cached data for BAC
+INFO 2025-12-08 00:21:12,049 basehttp 2944 3224 "GET /stocks/ HTTP/1.1" 200 94626
+INFO 2025-12-08 00:21:22,734 services 2944 23120 Retrieved cached data for NVDA
+INFO 2025-12-08 00:21:22,734 services 2944 23120 Retrieved cached data for NFLX
+INFO 2025-12-08 00:21:22,734 services 2944 23120 Retrieved cached data for INTC
+INFO 2025-12-08 00:21:22,736 services 2944 23120 Retrieved cached data for TSLA
+INFO 2025-12-08 00:21:22,736 services 2944 23120 Retrieved cached data for AAPL
+INFO 2025-12-08 00:21:22,737 services 2944 23120 Retrieved cached data for BAC
+INFO 2025-12-08 00:21:22,742 services 2944 23120 Retrieved cached data for META
+INFO 2025-12-08 00:21:22,742 services 2944 23120 Retrieved cached data for MA
+INFO 2025-12-08 00:21:22,743 services 2944 23120 Retrieved cached data for MSFT
+INFO 2025-12-08 00:21:22,744 services 2944 23120 Retrieved cached data for TSLA
+INFO 2025-12-08 00:21:22,774 basehttp 2944 23120 "GET / HTTP/1.1" 200 49241
+INFO 2025-12-08 00:30:35,696 services 2944 16980 Retrieved cached data for NVDA
+INFO 2025-12-08 00:30:35,704 services 2944 16980 Retrieved cached data for NFLX
+INFO 2025-12-08 00:30:35,707 services 2944 16980 Retrieved cached data for INTC
+INFO 2025-12-08 00:30:35,709 services 2944 16980 Retrieved cached data for TSLA
+INFO 2025-12-08 00:30:35,711 services 2944 16980 Retrieved cached data for AAPL
+INFO 2025-12-08 00:30:35,711 services 2944 16980 Retrieved cached data for BAC
+INFO 2025-12-08 00:30:35,718 services 2944 16980 Retrieved cached data for META
+INFO 2025-12-08 00:30:35,719 services 2944 16980 Retrieved cached data for MA
+INFO 2025-12-08 00:30:35,720 services 2944 16980 Retrieved cached data for MSFT
+INFO 2025-12-08 00:30:35,721 services 2944 16980 Retrieved cached data for TSLA
+INFO 2025-12-08 00:30:35,884 basehttp 2944 16980 "GET / HTTP/1.1" 200 67764
+INFO 2025-12-08 00:32:45,778 services 2944 17796 Retrieved cached data for META
+INFO 2025-12-08 00:32:45,780 services 2944 17796 Retrieved cached data for V
+INFO 2025-12-08 00:32:45,780 services 2944 17796 Retrieved cached data for TSLA
+INFO 2025-12-08 00:32:45,781 services 2944 17796 Retrieved cached data for KO
+INFO 2025-12-08 00:32:45,784 services 2944 17796 Retrieved cached data for PEP
+INFO 2025-12-08 00:32:45,784 services 2944 17796 Retrieved cached data for WMT
+INFO 2025-12-08 00:32:45,784 services 2944 17796 Retrieved cached data for AMZN
+INFO 2025-12-08 00:32:45,784 services 2944 17796 Retrieved cached data for BAC
+INFO 2025-12-08 00:32:45,835 basehttp 2944 17796 "GET /stocks/ HTTP/1.1" 200 94626
+INFO 2025-12-08 00:32:58,493 services 2944 17796 Retrieved cached data for TSLA
+INFO 2025-12-08 00:32:58,494 services 2944 17796 Retrieved cached data for NFLX
+INFO 2025-12-08 00:32:58,496 services 2944 17796 Retrieved cached data for AMZN
+INFO 2025-12-08 00:32:58,497 services 2944 17796 Retrieved cached data for BAC
+INFO 2025-12-08 00:32:58,498 services 2944 17796 Retrieved cached data for KO
+INFO 2025-12-08 00:32:58,535 basehttp 2944 17796 "GET /dashboard/ HTTP/1.1" 200 21596
+INFO 2025-12-08 00:33:04,075 services 2944 17796 Retrieved cached data for META
+INFO 2025-12-08 00:33:04,076 services 2944 17796 Retrieved cached data for V
+INFO 2025-12-08 00:33:04,076 services 2944 17796 Retrieved cached data for TSLA
+INFO 2025-12-08 00:33:04,078 services 2944 17796 Retrieved cached data for KO
+INFO 2025-12-08 00:33:04,078 services 2944 17796 Retrieved cached data for PEP
+INFO 2025-12-08 00:33:04,080 services 2944 17796 Retrieved cached data for WMT
+INFO 2025-12-08 00:33:04,082 services 2944 17796 Retrieved cached data for AMZN
+INFO 2025-12-08 00:33:04,082 services 2944 17796 Retrieved cached data for BAC
+INFO 2025-12-08 00:33:04,125 basehttp 2944 17796 "GET /stocks/ HTTP/1.1" 200 94626
+INFO 2025-12-08 00:33:05,182 services 2944 17796 Retrieved cached data for KO
+INFO 2025-12-08 00:33:05,202 services 2944 17796 Retrieved cached data for BAC
+INFO 2025-12-08 00:33:05,213 services 2944 17796 Retrieved cached data for AMZN
+INFO 2025-12-08 00:33:05,226 services 2944 17796 Retrieved cached data for NFLX
+INFO 2025-12-08 00:33:05,239 services 2944 17796 Retrieved cached data for TSLA
+INFO 2025-12-08 00:33:05,294 basehttp 2944 17796 "GET /portfolio_dashboard/ HTTP/1.1" 200 57767
+INFO 2025-12-08 00:33:27,842 basehttp 2944 17796 "POST /sell/8/ HTTP/1.1" 302 0
+INFO 2025-12-08 00:33:27,875 services 2944 17796 Retrieved cached data for KO
+INFO 2025-12-08 00:33:27,897 services 2944 17796 Retrieved cached data for AMZN
+INFO 2025-12-08 00:33:27,912 services 2944 17796 Retrieved cached data for NFLX
+INFO 2025-12-08 00:33:27,925 services 2944 17796 Retrieved cached data for TSLA
+INFO 2025-12-08 00:33:27,962 basehttp 2944 17796 "GET /portfolio_dashboard/ HTTP/1.1" 200 50493
+INFO 2025-12-08 00:33:33,160 services 2944 17796 Retrieved cached data for KO
+INFO 2025-12-08 00:33:33,173 services 2944 17796 Retrieved cached data for AMZN
+INFO 2025-12-08 00:33:33,187 services 2944 17796 Retrieved cached data for NFLX
+INFO 2025-12-08 00:33:33,200 services 2944 17796 Retrieved cached data for TSLA
+INFO 2025-12-08 00:33:33,238 basehttp 2944 17796 "GET /portfolio_dashboard/ HTTP/1.1" 200 50493
+INFO 2025-12-08 00:33:42,258 services 2944 4920 Retrieved cached data for TSLA
+INFO 2025-12-08 00:33:42,259 services 2944 4920 Retrieved cached data for NFLX
+INFO 2025-12-08 00:33:42,260 services 2944 4920 Retrieved cached data for AMZN
+INFO 2025-12-08 00:33:42,261 services 2944 4920 Retrieved cached data for BAC
+INFO 2025-12-08 00:33:42,262 services 2944 4920 Retrieved cached data for KO
+INFO 2025-12-08 00:33:42,277 basehttp 2944 4920 "GET /dashboard/ HTTP/1.1" 200 21592
+INFO 2025-12-08 00:33:45,020 services 2944 4920 Retrieved cached data for TSLA
+INFO 2025-12-08 00:33:45,021 services 2944 4920 Retrieved cached data for NFLX
+INFO 2025-12-08 00:33:45,022 services 2944 4920 Retrieved cached data for AMZN
+INFO 2025-12-08 00:33:45,022 services 2944 4920 Retrieved cached data for BAC
+INFO 2025-12-08 00:33:45,024 services 2944 4920 Retrieved cached data for KO
+INFO 2025-12-08 00:33:45,043 basehttp 2944 4920 "GET /dashboard/ HTTP/1.1" 200 21592
+INFO 2025-12-08 00:33:48,138 services 2944 4920 Retrieved cached data for KO
+INFO 2025-12-08 00:33:48,152 services 2944 4920 Retrieved cached data for AMZN
+INFO 2025-12-08 00:33:48,166 services 2944 4920 Retrieved cached data for NFLX
+INFO 2025-12-08 00:33:48,178 services 2944 4920 Retrieved cached data for TSLA
+INFO 2025-12-08 00:33:48,212 basehttp 2944 4920 "GET /portfolio_dashboard/ HTTP/1.1" 200 50493
+INFO 2025-12-08 00:33:49,219 services 2944 4920 Retrieved cached data for TSLA
+INFO 2025-12-08 00:33:49,230 services 2944 4920 Retrieved cached data for AMZN
+INFO 2025-12-08 00:33:49,244 services 2944 4920 Retrieved cached data for NFLX
+INFO 2025-12-08 00:33:49,256 services 2944 4920 Retrieved cached data for INTC
+INFO 2025-12-08 00:33:49,283 basehttp 2944 4920 "GET /watchlist/ HTTP/1.1" 200 24647
+INFO 2025-12-08 00:33:51,120 services 2944 4920 Retrieved cached data for TSLA
+INFO 2025-12-08 00:33:51,134 services 2944 4920 Retrieved cached data for AMZN
+INFO 2025-12-08 00:33:51,148 services 2944 4920 Retrieved cached data for NFLX
+INFO 2025-12-08 00:33:51,161 services 2944 4920 Retrieved cached data for INTC
+INFO 2025-12-08 00:33:51,187 basehttp 2944 4920 "GET /watchlist/ HTTP/1.1" 200 24647
+INFO 2025-12-08 00:33:51,658 basehttp 2944 4920 "GET /price-alerts/ HTTP/1.1" 200 14670
+INFO 2025-12-08 00:33:53,249 basehttp 2944 23052 "GET /stock-comparison/ HTTP/1.1" 200 12525
+INFO 2025-12-08 00:33:54,083 basehttp 2944 23052 "GET /stock-comparison/ HTTP/1.1" 200 12525
+INFO 2025-12-08 00:33:55,024 basehttp 2944 23052 "GET /transaction_history/ HTTP/1.1" 200 19320
+INFO 2025-12-08 00:33:58,435 services 2944 23052 Retrieved cached data for TSLA
+INFO 2025-12-08 00:33:58,438 services 2944 23052 Retrieved cached data for NFLX
+INFO 2025-12-08 00:33:58,438 services 2944 23052 Retrieved cached data for AMZN
+INFO 2025-12-08 00:33:58,439 services 2944 23052 Retrieved cached data for BAC
+INFO 2025-12-08 00:33:58,440 services 2944 23052 Retrieved cached data for KO
+INFO 2025-12-08 00:33:58,460 basehttp 2944 23052 "GET /dashboard/ HTTP/1.1" 200 21592
+INFO 2025-12-08 00:34:09,897 services 2944 23052 Retrieved cached data for NVDA
+INFO 2025-12-08 00:34:09,899 services 2944 23052 Retrieved cached data for NFLX
+INFO 2025-12-08 00:34:09,899 services 2944 23052 Retrieved cached data for INTC
+INFO 2025-12-08 00:34:09,900 services 2944 23052 Retrieved cached data for TSLA
+INFO 2025-12-08 00:34:09,901 services 2944 23052 Retrieved cached data for AAPL
+INFO 2025-12-08 00:34:09,901 services 2944 23052 Retrieved cached data for BAC
+INFO 2025-12-08 00:34:09,906 services 2944 23052 Retrieved cached data for META
+INFO 2025-12-08 00:34:09,906 services 2944 23052 Retrieved cached data for MA
+INFO 2025-12-08 00:34:09,908 services 2944 23052 Retrieved cached data for MSFT
+INFO 2025-12-08 00:34:09,909 services 2944 23052 Retrieved cached data for TSLA
+INFO 2025-12-08 00:34:09,946 basehttp 2944 23052 "GET / HTTP/1.1" 200 67775
+INFO 2025-12-08 00:37:34,598 basehttp 2944 21388 "GET /stock-comparison/ HTTP/1.1" 200 12525
+INFO 2025-12-08 00:37:35,749 basehttp 2944 21388 "GET /price-alerts/ HTTP/1.1" 200 14321
+INFO 2025-12-08 00:37:41,649 services 2944 15748 Cached data for TSLA
+INFO 2025-12-08 00:37:42,462 services 2944 15748 Cached data for AMZN
+INFO 2025-12-08 00:37:43,380 services 2944 15748 Cached data for NFLX
+INFO 2025-12-08 00:37:44,301 services 2944 15748 Cached data for INTC
+INFO 2025-12-08 00:37:44,324 basehttp 2944 15748 "GET /watchlist/ HTTP/1.1" 200 24647
+INFO 2025-12-08 00:37:46,401 services 2944 15748 Retrieved cached data for TSLA
+INFO 2025-12-08 00:37:46,413 services 2944 15748 Retrieved cached data for AMZN
+INFO 2025-12-08 00:37:46,427 services 2944 15748 Retrieved cached data for NFLX
+INFO 2025-12-08 00:37:46,439 services 2944 15748 Retrieved cached data for INTC
+INFO 2025-12-08 00:37:46,453 basehttp 2944 15748 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 733
+INFO 2025-12-08 00:37:48,214 services 2944 15748 Cached data for KO
+INFO 2025-12-08 00:37:48,227 services 2944 15748 Retrieved cached data for AMZN
+INFO 2025-12-08 00:37:48,239 services 2944 15748 Retrieved cached data for NFLX
+INFO 2025-12-08 00:37:48,249 services 2944 15748 Retrieved cached data for TSLA
+INFO 2025-12-08 00:37:48,784 basehttp 2944 15748 "GET /portfolio_dashboard/ HTTP/1.1" 200 50493
+INFO 2025-12-08 00:37:56,187 services 2944 1420 Cached data for META
+INFO 2025-12-08 00:37:57,105 services 2944 1420 Cached data for V
+INFO 2025-12-08 00:37:57,106 services 2944 1420 Retrieved cached data for TSLA
+INFO 2025-12-08 00:37:57,107 services 2944 1420 Retrieved cached data for KO
+INFO 2025-12-08 00:37:58,039 services 2944 1420 Cached data for PEP
+INFO 2025-12-08 00:37:58,951 services 2944 1420 Cached data for WMT
+INFO 2025-12-08 00:37:58,952 services 2944 1420 Retrieved cached data for AMZN
+INFO 2025-12-08 00:37:59,777 services 2944 1420 Cached data for BAC
+INFO 2025-12-08 00:37:59,829 basehttp 2944 1420 "GET /stocks/ HTTP/1.1" 200 94626
+INFO 2025-12-08 00:38:04,848 services 2944 25512 Retrieved cached data for TSLA
+INFO 2025-12-08 00:38:04,850 services 2944 25512 Retrieved cached data for NFLX
+INFO 2025-12-08 00:38:04,850 services 2944 25512 Retrieved cached data for AMZN
+INFO 2025-12-08 00:38:04,851 services 2944 25512 Retrieved cached data for BAC
+INFO 2025-12-08 00:38:04,853 services 2944 25512 Retrieved cached data for KO
+INFO 2025-12-08 00:38:04,880 basehttp 2944 25512 "GET /dashboard/ HTTP/1.1" 200 21592
+INFO 2025-12-08 00:38:13,611 services 2944 25512 Cached data for NVDA
+INFO 2025-12-08 00:38:13,611 services 2944 25512 Retrieved cached data for NFLX
+INFO 2025-12-08 00:38:13,612 services 2944 25512 Retrieved cached data for INTC
+INFO 2025-12-08 00:38:13,613 services 2944 25512 Retrieved cached data for TSLA
+INFO 2025-12-08 00:38:14,513 services 2944 25512 Cached data for AAPL
+INFO 2025-12-08 00:38:14,513 services 2944 25512 Retrieved cached data for BAC
+INFO 2025-12-08 00:38:14,517 services 2944 25512 Retrieved cached data for META
+INFO 2025-12-08 00:38:15,431 services 2944 25512 Cached data for MA
+INFO 2025-12-08 00:38:16,365 services 2944 25512 Cached data for MSFT
+INFO 2025-12-08 00:38:16,367 services 2944 25512 Retrieved cached data for TSLA
+INFO 2025-12-08 00:38:16,438 basehttp 2944 25512 "GET / HTTP/1.1" 200 67872
+INFO 2025-12-08 00:53:42,662 services 2944 6200 Cached data for NVDA
+INFO 2025-12-08 00:53:44,072 services 2944 6200 Cached data for NFLX
+INFO 2025-12-08 00:53:45,808 services 2944 6200 Cached data for INTC
+INFO 2025-12-08 00:53:47,735 services 2944 6200 Cached data for TSLA
+INFO 2025-12-08 00:53:49,694 services 2944 6200 Cached data for AAPL
+INFO 2025-12-08 00:53:51,650 services 2944 6200 Cached data for BAC
+INFO 2025-12-08 00:53:53,555 services 2944 6200 Cached data for META
+INFO 2025-12-08 00:53:55,320 services 2944 6200 Cached data for MA
+INFO 2025-12-08 00:53:57,264 services 2944 6200 Cached data for MSFT
+INFO 2025-12-08 00:53:57,265 services 2944 6200 Retrieved cached data for TSLA
+INFO 2025-12-08 00:53:57,327 basehttp 2944 6200 "GET / HTTP/1.1" 200 67872
+INFO 2025-12-08 00:54:01,991 services 2944 10912 Cached data for KO
+INFO 2025-12-08 00:54:02,793 services 2944 10912 Cached data for AMZN
+INFO 2025-12-08 00:54:02,805 services 2944 10912 Retrieved cached data for NFLX
+INFO 2025-12-08 00:54:02,816 services 2944 10912 Retrieved cached data for TSLA
+INFO 2025-12-08 00:54:02,844 basehttp 2944 10912 "GET /portfolio_dashboard/ HTTP/1.1" 200 50493
+INFO 2025-12-08 00:54:17,405 services 2944 25164 Retrieved cached data for NVDA
+INFO 2025-12-08 00:54:17,406 services 2944 25164 Retrieved cached data for NFLX
+INFO 2025-12-08 00:54:17,407 services 2944 25164 Retrieved cached data for INTC
+INFO 2025-12-08 00:54:17,407 services 2944 25164 Retrieved cached data for TSLA
+INFO 2025-12-08 00:54:17,408 services 2944 25164 Retrieved cached data for AAPL
+INFO 2025-12-08 00:54:17,409 services 2944 25164 Retrieved cached data for BAC
+INFO 2025-12-08 00:54:17,411 services 2944 25164 Retrieved cached data for META
+INFO 2025-12-08 00:54:17,411 services 2944 25164 Retrieved cached data for MA
+INFO 2025-12-08 00:54:17,413 services 2944 25164 Retrieved cached data for MSFT
+INFO 2025-12-08 00:54:17,414 services 2944 25164 Retrieved cached data for TSLA
+INFO 2025-12-08 00:54:17,456 basehttp 2944 25164 "GET / HTTP/1.1" 200 67872
+INFO 2025-12-09 17:22:55,169 autoreload 8904 24912 Watching for file changes with StatReloader
+INFO 2025-12-09 17:23:06,736 basehttp 8904 20784 "GET / HTTP/1.1" 302 0
+INFO 2025-12-09 17:23:07,821 basehttp 8904 20784 "GET /login/?next=/ HTTP/1.1" 200 13747
+INFO 2025-12-09 17:23:08,232 basehttp 8904 20784 "GET /static/main.css HTTP/1.1" 200 22579
+WARNING 2025-12-09 17:23:13,032 log 8904 25804 Not Found: /favicon.ico
+WARNING 2025-12-09 17:23:13,033 basehttp 8904 25804 "GET /favicon.ico HTTP/1.1" 404 7589
+INFO 2025-12-09 17:23:23,824 basehttp 8904 14512 "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-12-09 17:23:33,237 services 8904 14512 Cached data for NVDA
+INFO 2025-12-09 17:23:33,950 services 8904 14512 Cached data for NFLX
+INFO 2025-12-09 17:23:34,666 services 8904 14512 Cached data for INTC
+INFO 2025-12-09 17:23:35,365 services 8904 14512 Cached data for TSLA
+INFO 2025-12-09 17:23:36,112 services 8904 14512 Cached data for AAPL
+INFO 2025-12-09 17:23:36,876 services 8904 14512 Cached data for BAC
+INFO 2025-12-09 17:23:37,585 services 8904 14512 Cached data for META
+INFO 2025-12-09 17:23:38,345 services 8904 14512 Cached data for MA
+INFO 2025-12-09 17:23:39,098 services 8904 14512 Cached data for MSFT
+INFO 2025-12-09 17:23:39,099 services 8904 14512 Retrieved cached data for TSLA
+INFO 2025-12-09 17:23:39,252 basehttp 8904 14512 "GET / HTTP/1.1" 200 67872
+INFO 2025-12-09 17:24:04,774 services 8904 24924 Retrieved cached data for META
+INFO 2025-12-09 17:24:05,661 services 8904 27056 Cached data for KO
+INFO 2025-12-09 17:24:06,921 services 8904 27056 Cached data for AMZN
+INFO 2025-12-09 17:24:06,926 services 8904 24924 Cached data for V
+INFO 2025-12-09 17:24:06,928 services 8904 24924 Retrieved cached data for TSLA
+INFO 2025-12-09 17:24:06,929 services 8904 24924 Retrieved cached data for KO
+INFO 2025-12-09 17:24:06,942 services 8904 27056 Retrieved cached data for NFLX
+INFO 2025-12-09 17:24:06,961 services 8904 27056 Retrieved cached data for TSLA
+INFO 2025-12-09 17:24:07,115 basehttp 8904 27056 - Broken pipe from ('127.0.0.1', 58490)
+INFO 2025-12-09 17:24:08,007 services 8904 24924 Cached data for PEP
+INFO 2025-12-09 17:24:09,152 services 8904 24924 Cached data for WMT
+INFO 2025-12-09 17:24:09,153 services 8904 24924 Retrieved cached data for AMZN
+INFO 2025-12-09 17:24:09,153 services 8904 24924 Retrieved cached data for BAC
+INFO 2025-12-09 17:24:09,356 basehttp 8904 24924 "GET /stocks/ HTTP/1.1" 200 94708
+INFO 2025-12-09 17:24:27,755 services 8904 22740 Retrieved cached data for WMT
+INFO 2025-12-09 17:24:27,793 views 8904 22740 User binit bought 3 shares of WMT at $113.55999755859375
+INFO 2025-12-09 17:24:27,796 basehttp 8904 22740 "POST /buy/6/ HTTP/1.1" 302 0
+INFO 2025-12-09 17:24:27,820 services 8904 22740 Retrieved cached data for META
+INFO 2025-12-09 17:24:27,820 services 8904 22740 Retrieved cached data for V
+INFO 2025-12-09 17:24:27,822 services 8904 22740 Retrieved cached data for TSLA
+INFO 2025-12-09 17:24:27,822 services 8904 22740 Retrieved cached data for KO
+INFO 2025-12-09 17:24:27,825 services 8904 22740 Retrieved cached data for PEP
+INFO 2025-12-09 17:24:27,826 services 8904 22740 Retrieved cached data for WMT
+INFO 2025-12-09 17:24:27,826 services 8904 22740 Retrieved cached data for AMZN
+INFO 2025-12-09 17:24:27,827 services 8904 22740 Retrieved cached data for BAC
+INFO 2025-12-09 17:24:27,865 basehttp 8904 22740 "GET /stocks/ HTTP/1.1" 200 94706
+INFO 2025-12-09 17:24:40,199 services 8904 15500 Retrieved cached data for TSLA
+INFO 2025-12-09 17:24:40,199 services 8904 15500 Retrieved cached data for NFLX
+INFO 2025-12-09 17:24:40,201 services 8904 15500 Retrieved cached data for AMZN
+INFO 2025-12-09 17:24:40,202 services 8904 15500 Retrieved cached data for BAC
+INFO 2025-12-09 17:24:40,203 services 8904 15500 Retrieved cached data for KO
+INFO 2025-12-09 17:24:40,204 services 8904 15500 Retrieved cached data for WMT
+INFO 2025-12-09 17:24:40,268 basehttp 8904 15500 "GET /dashboard/ HTTP/1.1" 200 22786
+INFO 2025-12-09 17:24:46,820 services 8904 11632 Retrieved cached data for TSLA
+INFO 2025-12-09 17:24:46,847 services 8904 11632 Retrieved cached data for AMZN
+INFO 2025-12-09 17:24:46,867 services 8904 11632 Retrieved cached data for NFLX
+INFO 2025-12-09 17:24:46,885 services 8904 11632 Retrieved cached data for INTC
+INFO 2025-12-09 17:24:46,985 basehttp 8904 11632 "GET /watchlist/ HTTP/1.1" 200 24634
+INFO 2025-12-09 17:24:49,079 services 8904 11632 Retrieved cached data for TSLA
+INFO 2025-12-09 17:24:49,093 services 8904 11632 Retrieved cached data for AMZN
+INFO 2025-12-09 17:24:49,107 services 8904 11632 Retrieved cached data for NFLX
+INFO 2025-12-09 17:24:49,121 services 8904 11632 Retrieved cached data for INTC
+INFO 2025-12-09 17:24:49,134 basehttp 8904 11632 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 734
+INFO 2025-12-09 17:24:56,132 basehttp 8904 27076 "GET /price-alerts/ HTTP/1.1" 200 14672
+INFO 2025-12-09 17:25:01,697 services 8904 27076 Retrieved cached data for TSLA
+INFO 2025-12-09 17:25:01,713 services 8904 27076 Retrieved cached data for AMZN
+INFO 2025-12-09 17:25:01,729 services 8904 27076 Retrieved cached data for NFLX
+INFO 2025-12-09 17:25:01,740 services 8904 27076 Retrieved cached data for INTC
+INFO 2025-12-09 17:25:01,757 basehttp 8904 27076 "GET /watchlist/ HTTP/1.1" 200 24634
+INFO 2025-12-09 17:25:03,014 services 8904 27076 Retrieved cached data for WMT
+INFO 2025-12-09 17:25:03,029 services 8904 27076 Retrieved cached data for KO
+INFO 2025-12-09 17:25:03,043 services 8904 27076 Retrieved cached data for AMZN
+INFO 2025-12-09 17:25:03,057 services 8904 27076 Retrieved cached data for NFLX
+INFO 2025-12-09 17:25:03,067 services 8904 27076 Retrieved cached data for TSLA
+INFO 2025-12-09 17:25:03,098 basehttp 8904 27076 "GET /portfolio_dashboard/ HTTP/1.1" 200 57738
+INFO 2025-12-09 17:25:05,368 services 8904 27076 Retrieved cached data for META
+INFO 2025-12-09 17:25:05,369 services 8904 27076 Retrieved cached data for V
+INFO 2025-12-09 17:25:05,369 services 8904 27076 Retrieved cached data for TSLA
+INFO 2025-12-09 17:25:05,370 services 8904 27076 Retrieved cached data for KO
+INFO 2025-12-09 17:25:05,370 services 8904 27076 Retrieved cached data for PEP
+INFO 2025-12-09 17:25:05,371 services 8904 27076 Retrieved cached data for WMT
+INFO 2025-12-09 17:25:05,372 services 8904 27076 Retrieved cached data for AMZN
+INFO 2025-12-09 17:25:05,373 services 8904 27076 Retrieved cached data for BAC
+INFO 2025-12-09 17:25:05,420 basehttp 8904 27076 "GET /stocks/ HTTP/1.1" 200 94706
+INFO 2025-12-09 17:25:07,925 basehttp 8904 27076 "GET /add_to_watchlist/V/ HTTP/1.1" 302 0
+INFO 2025-12-09 17:25:07,965 services 8904 27076 Retrieved cached data for META
+INFO 2025-12-09 17:25:07,966 services 8904 27076 Retrieved cached data for V
+INFO 2025-12-09 17:25:07,968 services 8904 27076 Retrieved cached data for TSLA
+INFO 2025-12-09 17:25:07,969 services 8904 27076 Retrieved cached data for KO
+INFO 2025-12-09 17:25:07,970 services 8904 27076 Retrieved cached data for PEP
+INFO 2025-12-09 17:25:07,971 services 8904 27076 Retrieved cached data for WMT
+INFO 2025-12-09 17:25:07,972 services 8904 27076 Retrieved cached data for AMZN
+INFO 2025-12-09 17:25:07,986 services 8904 27076 Retrieved cached data for BAC
+INFO 2025-12-09 17:25:08,096 basehttp 8904 27076 "GET /stocks/ HTTP/1.1" 200 94706
+INFO 2025-12-09 17:25:12,178 services 8904 8096 Retrieved cached data for TSLA
+INFO 2025-12-09 17:25:12,191 services 8904 8096 Retrieved cached data for AMZN
+INFO 2025-12-09 17:25:12,205 services 8904 8096 Retrieved cached data for NFLX
+INFO 2025-12-09 17:25:12,222 services 8904 8096 Retrieved cached data for INTC
+INFO 2025-12-09 17:25:12,236 services 8904 8096 Retrieved cached data for V
+INFO 2025-12-09 17:25:12,262 basehttp 8904 8096 "GET /watchlist/ HTTP/1.1" 200 26458
+INFO 2025-12-09 17:25:14,358 services 8904 8096 Retrieved cached data for TSLA
+INFO 2025-12-09 17:25:14,370 services 8904 8096 Retrieved cached data for AMZN
+INFO 2025-12-09 17:25:14,384 services 8904 8096 Retrieved cached data for NFLX
+INFO 2025-12-09 17:25:14,399 services 8904 8096 Retrieved cached data for INTC
+INFO 2025-12-09 17:25:14,410 services 8904 8096 Retrieved cached data for V
+INFO 2025-12-09 17:25:14,426 basehttp 8904 8096 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-12-09 17:25:17,619 basehttp 8904 8096 "GET /price-alerts/ HTTP/1.1" 200 14642
+INFO 2025-12-09 17:25:20,228 basehttp 8904 8096 "GET /stock-comparison/ HTTP/1.1" 200 12525
+INFO 2025-12-09 17:25:23,250 basehttp 8904 10352 "GET /transaction_history/ HTTP/1.1" 200 20246
+INFO 2025-12-09 17:25:32,747 basehttp 8904 10352 "GET /stock-comparison/ HTTP/1.1" 200 12525
+INFO 2025-12-09 17:25:44,912 basehttp 8904 10352 "GET /price-alerts/ HTTP/1.1" 200 14321
+INFO 2025-12-09 17:25:55,162 services 8904 14212 Retrieved cached data for TSLA
+INFO 2025-12-09 17:25:55,188 services 8904 14212 Retrieved cached data for AMZN
+INFO 2025-12-09 17:25:55,205 services 8904 14212 Retrieved cached data for NFLX
+INFO 2025-12-09 17:25:55,223 services 8904 14212 Retrieved cached data for INTC
+INFO 2025-12-09 17:25:55,240 services 8904 14212 Retrieved cached data for V
+INFO 2025-12-09 17:25:55,267 basehttp 8904 14212 "GET /watchlist/ HTTP/1.1" 200 26458
+INFO 2025-12-09 17:25:57,433 services 8904 22316 Retrieved cached data for TSLA
+INFO 2025-12-09 17:25:57,446 basehttp 8904 14752 "GET /price-alerts/ HTTP/1.1" 200 14321
+INFO 2025-12-09 17:25:57,449 services 8904 22316 Retrieved cached data for AMZN
+INFO 2025-12-09 17:25:57,463 services 8904 22316 Retrieved cached data for NFLX
+INFO 2025-12-09 17:25:57,479 services 8904 22316 Retrieved cached data for INTC
+INFO 2025-12-09 17:25:57,492 services 8904 22316 Retrieved cached data for V
+INFO 2025-12-09 17:25:57,511 basehttp 8904 22316 "GET /api/watchlist/update-prices/ HTTP/1.1" 200 883
+INFO 2025-12-09 17:26:02,586 services 8904 22316 Retrieved cached data for TSLA
+INFO 2025-12-09 17:26:02,603 services 8904 22316 Retrieved cached data for AMZN
+INFO 2025-12-09 17:26:02,619 services 8904 22316 Retrieved cached data for NFLX
+INFO 2025-12-09 17:26:02,633 services 8904 22316 Retrieved cached data for INTC
+INFO 2025-12-09 17:26:02,649 services 8904 22316 Retrieved cached data for V
+INFO 2025-12-09 17:26:02,671 basehttp 8904 22316 "GET /watchlist/ HTTP/1.1" 200 26458
+INFO 2025-12-09 17:26:04,471 services 8904 22316 Retrieved cached data for WMT
+INFO 2025-12-09 17:26:04,485 services 8904 22316 Retrieved cached data for KO
+INFO 2025-12-09 17:26:04,495 services 8904 22316 Retrieved cached data for AMZN
+INFO 2025-12-09 17:26:04,507 services 8904 22316 Retrieved cached data for NFLX
+INFO 2025-12-09 17:26:04,520 services 8904 22316 Retrieved cached data for TSLA
+INFO 2025-12-09 17:26:04,554 basehttp 8904 22316 "GET /portfolio_dashboard/ HTTP/1.1" 200 57738
+INFO 2025-12-09 17:26:08,487 services 8904 22316 Retrieved cached data for META
+INFO 2025-12-09 17:26:08,489 services 8904 22316 Retrieved cached data for V
+INFO 2025-12-09 17:26:08,490 services 8904 22316 Retrieved cached data for TSLA
+INFO 2025-12-09 17:26:08,491 services 8904 22316 Retrieved cached data for KO
+INFO 2025-12-09 17:26:08,492 services 8904 22316 Retrieved cached data for PEP
+INFO 2025-12-09 17:26:08,493 services 8904 22316 Retrieved cached data for WMT
+INFO 2025-12-09 17:26:08,494 services 8904 22316 Retrieved cached data for AMZN
+INFO 2025-12-09 17:26:08,496 services 8904 22316 Retrieved cached data for BAC
+INFO 2025-12-09 17:26:08,535 basehttp 8904 22316 "GET /stocks/ HTTP/1.1" 200 94705
+INFO 2025-12-09 17:26:12,579 services 8904 22316 Retrieved cached data for TSLA
+INFO 2025-12-09 17:26:12,580 services 8904 22316 Retrieved cached data for NFLX
+INFO 2025-12-09 17:26:12,581 services 8904 22316 Retrieved cached data for AMZN
+INFO 2025-12-09 17:26:12,582 services 8904 22316 Retrieved cached data for BAC
+INFO 2025-12-09 17:26:12,583 services 8904 22316 Retrieved cached data for KO
+INFO 2025-12-09 17:26:12,583 services 8904 22316 Retrieved cached data for WMT
+INFO 2025-12-09 17:26:12,609 basehttp 8904 22316 "GET /dashboard/ HTTP/1.1" 200 22786
+INFO 2025-12-09 17:30:35,968 basehttp 8904 21908 "GET /stock-comparison/ HTTP/1.1" 200 12525
+INFO 2025-12-09 17:30:41,466 services 8904 1592 Retrieved cached data for NVDA
+INFO 2025-12-09 17:30:41,466 services 8904 1592 Retrieved cached data for NFLX
+INFO 2025-12-09 17:30:41,467 services 8904 1592 Retrieved cached data for INTC
+INFO 2025-12-09 17:30:41,468 services 8904 1592 Retrieved cached data for TSLA
+INFO 2025-12-09 17:30:41,468 services 8904 1592 Retrieved cached data for AAPL
+INFO 2025-12-09 17:30:41,470 services 8904 1592 Retrieved cached data for BAC
+INFO 2025-12-09 17:30:41,473 services 8904 1592 Retrieved cached data for META
+INFO 2025-12-09 17:30:41,474 services 8904 1592 Retrieved cached data for MA
+INFO 2025-12-09 17:30:41,475 services 8904 1592 Retrieved cached data for MSFT
+INFO 2025-12-09 17:30:41,476 services 8904 1592 Retrieved cached data for TSLA
+INFO 2025-12-09 17:30:41,547 basehttp 8904 1592 "GET / HTTP/1.1" 200 67863
+INFO 2025-12-09 17:30:53,083 basehttp 8904 5160 "GET /stock-comparison/ HTTP/1.1" 200 12525
+INFO 2025-12-09 17:30:54,951 services 8904 5160 Retrieved cached data for NVDA
+INFO 2025-12-09 17:30:54,951 services 8904 5160 Retrieved cached data for NFLX
+INFO 2025-12-09 17:30:54,952 services 8904 5160 Retrieved cached data for INTC
+INFO 2025-12-09 17:30:54,953 services 8904 5160 Retrieved cached data for TSLA
+INFO 2025-12-09 17:30:54,953 services 8904 5160 Retrieved cached data for AAPL
+INFO 2025-12-09 17:30:54,955 services 8904 5160 Retrieved cached data for BAC
+INFO 2025-12-09 17:30:54,958 services 8904 5160 Retrieved cached data for META
+INFO 2025-12-09 17:30:54,959 services 8904 5160 Retrieved cached data for MA
+INFO 2025-12-09 17:30:54,961 services 8904 5160 Retrieved cached data for MSFT
+INFO 2025-12-09 17:30:54,962 services 8904 5160 Retrieved cached data for TSLA
+INFO 2025-12-09 17:30:55,003 basehttp 8904 5160 "GET / HTTP/1.1" 200 67863
+INFO 2025-12-09 17:30:58,579 services 8904 12228 Retrieved cached data for TSLA
+INFO 2025-12-09 17:30:58,582 services 8904 12228 Retrieved cached data for NFLX
+INFO 2025-12-09 17:30:58,583 services 8904 12228 Retrieved cached data for AMZN
+INFO 2025-12-09 17:30:58,584 services 8904 12228 Retrieved cached data for BAC
+INFO 2025-12-09 17:30:58,586 services 8904 12228 Retrieved cached data for KO
+INFO 2025-12-09 17:30:58,588 services 8904 12228 Retrieved cached data for WMT
+INFO 2025-12-09 17:30:58,620 basehttp 8904 12228 "GET /dashboard/ HTTP/1.1" 200 22786
+INFO 2025-12-09 17:31:01,090 services 8904 12228 Retrieved cached data for META
+INFO 2025-12-09 17:31:01,091 services 8904 12228 Retrieved cached data for V
+INFO 2025-12-09 17:31:01,092 services 8904 12228 Retrieved cached data for TSLA
+INFO 2025-12-09 17:31:01,092 services 8904 12228 Retrieved cached data for KO
+INFO 2025-12-09 17:31:01,095 services 8904 12228 Retrieved cached data for PEP
+INFO 2025-12-09 17:31:01,096 services 8904 12228 Retrieved cached data for WMT
+INFO 2025-12-09 17:31:01,098 services 8904 12228 Retrieved cached data for AMZN
+INFO 2025-12-09 17:31:01,101 services 8904 12228 Retrieved cached data for BAC
+INFO 2025-12-09 17:31:01,142 basehttp 8904 12228 "GET /stocks/ HTTP/1.1" 200 94705
+INFO 2025-12-09 17:31:09,491 services 8904 22024 Retrieved cached data for V
+INFO 2025-12-09 17:31:09,508 services 8904 22024 Retrieved cached data for BAC
+INFO 2025-12-09 17:31:09,722 services 8904 14240 Retrieved cached data for V
+INFO 2025-12-09 17:31:09,732 services 8904 14240 Retrieved cached data for BAC
+INFO 2025-12-09 17:31:11,999 services 8904 22024 Cached data for JPM
+INFO 2025-12-09 17:31:12,004 services 8904 14240 Cached data for JPM
+INFO 2025-12-09 17:31:12,004 services 8904 22024 Retrieved cached data for MA
+INFO 2025-12-09 17:31:12,005 services 8904 14240 Retrieved cached data for MA
+INFO 2025-12-09 17:31:13,208 services 8904 22024 Cached data for PYPL
+INFO 2025-12-09 17:31:13,430 basehttp 8904 22024 - Broken pipe from ('127.0.0.1', 58323)
+INFO 2025-12-09 17:31:13,485 services 8904 14240 Cached data for PYPL
+INFO 2025-12-09 17:31:13,498 basehttp 8904 14240 "GET /stock/V/ HTTP/1.1" 200 27379
+INFO 2025-12-09 18:25:33,060 autoreload 8904 24912 C:\Users\91950\Desktop\Stock-Market-Place-main\stocks\services.py changed, reloading.
+INFO 2025-12-09 18:25:36,428 autoreload 22316 26552 Watching for file changes with StatReloader
